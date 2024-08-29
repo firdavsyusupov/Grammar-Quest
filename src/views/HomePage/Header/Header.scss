@@ -30,6 +30,7 @@
     }
   }
   &__text-blog {
+    width: 50%;
     &-text {
       color: #2b788b;
       font-weight: 700;
@@ -91,5 +92,9 @@
             letter-spacing: -0.5px;
         }
     }
+  }
+  &__img-blog{
+    position: absolute;
+    right: 0;
   }
 }

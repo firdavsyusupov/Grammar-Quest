@@ -14,7 +14,4 @@ import Footer from "@/components/Footer/Footer.vue";
     <IncreaseSection />
     <WatchSection />
   </main>
-  <footer>
-    <Footer />
-  </footer>
 </template>

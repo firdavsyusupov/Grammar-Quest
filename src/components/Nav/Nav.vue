@@ -1,15 +1,18 @@
 <script setup>
-import "./nav.scss";
+import { RouterLink } from 'vue-router'
+
 import RightIcon from "../../components/icons/RightIcon.vue";
 import Signup from "@/UI/Buttons/SignUp/SignUp.vue"
+import BottomIcon from "@/components/icons/BottomIcon.vue"
+import "./nav.scss";
 </script>
 <template>
   <nav class="nav">
     <div class="container">
       <div class="nav__links">
-        <div class="logo">
+        <RouterLink to="/" class="logo">
           <img src="@/assets/images/logo.svg" alt="" class="logo-img" />
-        </div>
+        </RouterLink>
         <ul class="nav__items">
           <li class="nav__item">
             <a href="#" class="nav__link">home</a>
@@ -20,8 +23,19 @@ import Signup from "@/UI/Buttons/SignUp/SignUp.vue"
           <li class="nav__item">
             <a href="#" class="nav__link">statistics</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item nav__item2">
             <a href="#" class="nav__link">games</a>
+            <BottomIcon :size="25" class="bottom-icon"/>
+            <div class="nav-dropdown">
+              <RouterLink to="/sprint" class="nav-dropdown-block">
+                <h5 class="nav-dropdown-block-text">Sprint</h5>
+                <RightIcon :size="20" class="nav-dropdown-block-icon"/>
+              </RouterLink>
+              <RouterLink to="/audio" class="nav-dropdown-block">
+                <h5 class="nav-dropdown-block-text">Audio-call</h5>
+                <RightIcon :size="20" class="nav-dropdown-block-icon"/>
+              </RouterLink>
+            </div>
           </li>
         </ul>
       </div>
@@ -40,7 +54,7 @@ import Signup from "@/UI/Buttons/SignUp/SignUp.vue"
           <p class="nav__signout-text">log in</p>
           <RightIcon :size="25" />
         </div>
-        <Signup/>
+        <Signup :text="'sign up'"/>
       </div>
     </div>
   </nav>

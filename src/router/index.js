@@ -9,11 +9,16 @@ const router = createRouter({
       name: 'home',
       component: HomePage
     },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   component: () => import('../views/AboutView.vue')
-    // }
+    {
+      path: '/sprint',
+      name: 'sprint',
+      component: () => import('@/pages/SprintPage.vue')
+    },
+    {
+      path: '/audio',
+      name: 'audio',
+      component: () => import('@/pages/AudioPage.vue')
+    }
   ]
 })
 

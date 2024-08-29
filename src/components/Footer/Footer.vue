@@ -1,5 +1,6 @@
 <script setup>
 import "./footer.scss";
+import {RouterLink} from 'vue-router'
 </script>
 <template>
   <footer class="footer">
@@ -7,7 +8,7 @@ import "./footer.scss";
       <div class="footer-top-block">
         <ul class="footer-top-block-blog">
           <li class="footer-top-block-blog-item">
-            <a href="#" class="footer-top-block-blog-item-link">home</a>
+            <RouterLink to="/" class="footer-top-block-blog-item-link">home</RouterLink>
           </li>
           <li class="footer-top-block-blog-item">
             <a href="#" class="footer-top-block-blog-item-link">textbook</a>
@@ -16,10 +17,10 @@ import "./footer.scss";
             <a href="#" class="footer-top-block-blog-item-link">statisticks</a>
           </li>
           <li class="footer-top-block-blog-item">
-            <a href="#" class="footer-top-block-blog-item-link">sprint</a>
+            <RouterLink to="/sprint" class="footer-top-block-blog-item-link">sprint</RouterLink>
           </li>
           <li class="footer-top-block-blog-item">
-            <a href="#" class="footer-top-block-blog-item-link">audio-call</a>
+            <RouterLink to="/audio" href="#" class="footer-top-block-blog-item-link">audio-call</RouterLink>
           </li>
         </ul>
         <div class="footer-top-block-blog">

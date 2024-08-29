@@ -41,7 +41,7 @@ import "./Header.scss";
       </div>
       <div class="header__img-blog">
         <img
-          src="@/assets/images/header-boy.svg"
+          src="@/assets/images/header-boy.png"
           alt=""
           class="header__img-blog-boy"
         />
