@@ -1,0 +1,95 @@
+.header {
+  min-height: 740px;
+  background: #f6f5f4;
+  & .container {
+    display: flex;
+    align-items: center;
+    min-height: 740px;
+    justify-content: space-between;
+  }
+  &__button {
+    color: #2b788b;
+    background: #C3DCE3;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    max-width: 165px;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    gap: 5px;
+    &:hover{
+      color: #fff;
+      background: #2B788B;
+    }
+  }
+  &__text-blog {
+    &-text {
+      color: #2b788b;
+      font-weight: 700;
+      padding-bottom: 25px;
+      letter-spacing: 3px;
+      &2 {
+        color: #757575;
+        font-size: 18px;
+        font-weight: 600;
+        width: 70%;
+        padding-bottom: 30px;
+      }
+    }
+    &-title {
+      color: #000;
+      font-family: "gothic";
+      font-size: 58px;
+      line-height: 120%;
+      letter-spacing: -2px;
+      padding-bottom: 30px;
+    }
+  }
+  &__text-blog-info{
+    display: flex;
+    align-items: center;
+    &-card1{
+        border-right: 1px solid #bbb;
+        padding-right: 50px;
+    }
+    &-card2{
+        padding-left: 50px;
+    }
+    &-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-top{
+            display: flex;
+            align-items: center;
+            &-text{
+                color: #000;
+                font-family: 'gothic';
+                font-size: 40px;
+                font-weight: 400;
+                padding-left: 5px;
+            }
+            &-plusicon{
+                color: #2B788B;
+                font-size: 40px;
+                font-family: 'gothic';
+            }
+        }
+        .lightning-icon{
+            color: #2B788B;
+        }
+        &-bot p{
+            color: #585858;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+    }
+  }
+}
