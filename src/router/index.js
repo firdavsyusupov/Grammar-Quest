@@ -18,7 +18,12 @@ const router = createRouter({
       path: '/audio',
       name: 'audio',
       component: () => import('@/pages/AudioPage.vue')
-    }
+    },
+    {
+      path: '/sprint-test',
+      name: 'sprint-test',
+      component: () => import('@/pages/SprintTest.vue')
+    },
   ]
 })
 

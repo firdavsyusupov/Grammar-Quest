@@ -8,6 +8,14 @@ const activeLevel = ref(null);
 const setActiveLevel = (level) => {
   activeLevel.value = level;
 };
+
+const handleButton = () => {
+  if (activeLevel.value) {
+    localStorage.setItem("levelSprint", activeLevel.value);
+  } else {
+    alert("Choose a level!");
+  }
+};
 </script>
 
 <template>
@@ -71,7 +79,9 @@ const setActiveLevel = (level) => {
               C2
             </div>
           </div>
-          <SignUpButton :text="'get started'" />
+          <RouterLink v-if="activeLevel" to="sprint-test">
+            <SignUpButton :text="'get started'" @click="handleButton" />
+          </RouterLink>
         </div>
       </div>
     </div>

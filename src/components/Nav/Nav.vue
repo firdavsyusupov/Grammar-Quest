@@ -15,7 +15,7 @@ import "./nav.scss";
         </RouterLink>
         <ul class="nav__items">
           <li class="nav__item">
-            <a href="#" class="nav__link">home</a>
+            <RouterLink to="/" class="nav__link">home</RouterLink>
           </li>
           <li class="nav__item">
             <a href="#" class="nav__link">textbook</a>

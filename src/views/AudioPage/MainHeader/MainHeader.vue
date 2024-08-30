@@ -8,6 +8,14 @@ const activeLevel = ref(null);
 const setActiveLevel = (level) => {
   activeLevel.value = level;
 };
+
+const handleButton = () => {
+  if (activeLevel.value) {
+    localStorage.setItem("levelAudio", activeLevel.value);
+  } else {
+    alert("Choose a level!");
+  }
+};
 </script>
 
 <template>
@@ -70,7 +78,7 @@ const setActiveLevel = (level) => {
               C2
             </div>
           </div>
-          <SignUpButton :text="'get started'" />
+          <SignUpButton :text="'get started'" @click="handleButton" />
         </div>
       </div>
     </div>
