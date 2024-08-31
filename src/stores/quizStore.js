@@ -12,6 +12,16 @@ export const useQuizStore = defineStore("quizStore", {
   getters: {
     remainingQuestions: (state) =>
       state.questions.length - state.currentQuestionIndex - 1,
+    wrongAnswersCount: (state) => {
+      let wrongCount = 1;
+      state.questions.forEach((question, index) => {
+        const userAnswer = state.userAnswers[index];
+        if (userAnswer && userAnswer !== question.correctAnswer) {
+          wrongCount++;
+        }
+      });
+      return wrongCount;
+    },
   },
   actions: {
     selectOption(option) {

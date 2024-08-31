@@ -35,6 +35,13 @@ onMounted(() => {
                 <h4>{{ quiz.correctAnswersCount }}</h4>
                 <span>correct answers</span>
               </div>
+              <div
+                class="sprint__answer-block-text-blogs-blog sprint__answer-block-text-blogs-blog3"
+              >
+                <p>{{quiz.questions.length}}/</p>
+                <h4>{{ quiz.wrongAnswersCount  }}</h4>
+                <span>wrong answers</span>
+              </div>
             </div>
           </div>
         </div>

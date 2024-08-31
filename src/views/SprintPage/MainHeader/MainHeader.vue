@@ -1,8 +1,9 @@
 <script setup>
 import { ref } from "vue";
 import SignUpButton from "@/UI/Buttons/SignUp/SignUp.vue";
+import { useQuizStore } from "@/stores/quizStore";
 import "./mainheader.scss";
-
+const quiz = useQuizStore();
 const activeLevel = ref(null);
 
 const setActiveLevel = (level) => {
@@ -79,7 +80,7 @@ const handleButton = () => {
               C2
             </div>
           </div>
-          <RouterLink v-if="activeLevel" to="sprint-test">
+          <RouterLink v-if="activeLevel" to="sprint-test" @click="quiz.resetQuiz">
             <SignUpButton :text="'get started'" @click="handleButton" />
           </RouterLink>
         </div>
