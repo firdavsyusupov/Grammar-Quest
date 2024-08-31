@@ -25,6 +25,7 @@ export const useQuizStore = defineStore("quizStore", {
       this.saveState();
     },
     async nextQuestion() {
+      this.checkAnswers();
       if (this.userAnswers[this.currentQuestionIndex] === null) {
         this.errorMessage =
           'Please select an answer or choose "I don\'t know" before proceeding.';
@@ -34,29 +35,32 @@ export const useQuizStore = defineStore("quizStore", {
           this.currentQuestionIndex++;
           this.saveState();
         } else {
-          this.checkAnswers(); 
+          this.checkAnswers();
         }
       }
     },
+
     checkAnswers() {
       let count = 0;
-      console.log('User Answers:', this.userAnswers);
+      if (this.questions.length !== this.userAnswers.length) {
+        return;
+      }
       this.questions.forEach((question, index) => {
-        console.log('Question:', question);
-        console.log('User Answer:', this.userAnswers[index]);
-        if (this.userAnswers[index] === question.correctAnswer) {
+        const userAnswer = this.userAnswers[index];
+        const correctAnswer = question.correctAnswer;
+        if (userAnswer === correctAnswer) {
           count++;
         }
       });
       this.correctAnswersCount = count;
-      console.log('Correct Answers Count:', count);
       this.saveState();
     },
+
     resetQuiz() {
       this.currentQuestionIndex = 0;
       this.userAnswers = Array(this.questions.length).fill(null);
       this.errorMessage = "";
-      this.correctAnswersCount = 0; 
+      this.correctAnswersCount = 0;
       this.saveState();
     },
     saveState() {
@@ -80,5 +84,5 @@ export const useQuizStore = defineStore("quizStore", {
       }
     },
   },
-  persist: true, 
+  persist: true,
 });

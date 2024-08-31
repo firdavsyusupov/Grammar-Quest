@@ -23,15 +23,15 @@ onMounted(() => {
             <h3 class="sprint__answer-block-text-title">Your Sprint</h3>
             <p class="sprint__answer-block-text-text">You did pretty good!</p>
             <div class="sprint__answer-block-text-blogs">
-              <div class="sprint__answer-block-text-blogs-blog">
+              <!-- <div class="sprint__answer-block-text-blogs-blog">
                 <p>retrieved</p>
                 <h4>{{ quiz.remainingQuestions }}</h4>
                 <span>points</span>
-              </div>
+              </div> -->
               <div
                 class="sprint__answer-block-text-blogs-blog sprint__answer-block-text-blogs-blog2"
               >
-                <p>retrieved</p>
+                <p>{{quiz.questions.length}}/</p>
                 <h4>{{ quiz.correctAnswersCount }}</h4>
                 <span>correct answers</span>
               </div>
@@ -65,7 +65,12 @@ onMounted(() => {
             <h4 class="remaining-questions-count">
               {{ quiz.remainingQuestions }}
             </h4>
-            <p v-if="quiz.remainingQuestions !== 1" class="remaining-questions-text">questions</p>
+            <p
+              v-if="quiz.remainingQuestions !== 1"
+              class="remaining-questions-text"
+            >
+              questions
+            </p>
             <p v-else class="remaining-questions-text">question</p>
           </div>
 
@@ -110,7 +115,7 @@ onMounted(() => {
           <p v-if="quiz.errorMessage" class="error-message">
             {{ quiz.errorMessage }}
           </p>
-          <button @click="quiz.nextQuestion " class="nextQuestion">
+          <button @click="quiz.nextQuestion" class="nextQuestion">
             {{
               quiz.currentQuestionIndex < quiz.questions.length - 1
                 ? "Next Question"
@@ -122,4 +127,3 @@ onMounted(() => {
     </div>
   </section>
 </template>
-
