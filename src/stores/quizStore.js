@@ -8,12 +8,14 @@ export const useQuizStore = defineStore("quizStore", {
     userAnswers: Array(questionsData.length).fill(null),
     errorMessage: "",
     correctAnswersCount: 0,
+    quizCompleted: false,
   }),
   getters: {
-    remainingQuestions: (state) =>
-      state.questions.length - state.currentQuestionIndex - 1,
+    completedQuestions: (state) => state.currentQuestionIndex + 1,
+
+
     wrongAnswersCount: (state) => {
-      let wrongCount = 1;
+      let wrongCount = 0;
       state.questions.forEach((question, index) => {
         const userAnswer = state.userAnswers[index];
         if (userAnswer && userAnswer !== question.correctAnswer) {
@@ -28,17 +30,18 @@ export const useQuizStore = defineStore("quizStore", {
       this.userAnswers[this.currentQuestionIndex] = option;
       this.errorMessage = "";
       this.saveState();
+      this.nextQuestion();
     },
     selectIDontKnow() {
       this.userAnswers[this.currentQuestionIndex] = "I don't know";
       this.errorMessage = "";
       this.saveState();
+      this.nextQuestion();
+
     },
     async nextQuestion() {
-      this.checkAnswers();
       if (this.userAnswers[this.currentQuestionIndex] === null) {
-        this.errorMessage =
-          'Please select an answer or choose "I don\'t know" before proceeding.';
+        this.errorMessage = 'Please select an answer or choose "I don\'t know" before proceeding.';
       } else {
         this.errorMessage = "";
         if (this.currentQuestionIndex < this.questions.length - 1) {
@@ -46,10 +49,12 @@ export const useQuizStore = defineStore("quizStore", {
           this.saveState();
         } else {
           this.checkAnswers();
+          this.quizCompleted = true;
+          this.saveState();
         }
       }
     },
-
+    
     checkAnswers() {
       let count = 0;
       if (this.questions.length !== this.userAnswers.length) {

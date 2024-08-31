@@ -7,7 +7,6 @@
     justify-content: center;
   }
   &-block {
-    height: 100%;
     display: flex;
     align-items: center;
     border: 1px solid #fff;
@@ -16,6 +15,7 @@
     border-radius: 15px;
     max-width: 800px;
     width: 100%;
+    justify-content: center;
     &-inner {
       display: flex;
       flex-direction: column;

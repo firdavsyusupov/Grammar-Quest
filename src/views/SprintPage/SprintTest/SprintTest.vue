@@ -12,7 +12,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section v-if="quiz.remainingQuestions === 0" class="sprint__answer">
+  <section v-if="quiz.quizCompleted" class="sprint__answer">
     <div class="container">
       <div class="sprint__answer-block">
         <div class="sprint__answer-block-inner">
@@ -23,23 +23,18 @@ onMounted(() => {
             <h3 class="sprint__answer-block-text-title">Your Sprint</h3>
             <p class="sprint__answer-block-text-text">You did pretty good!</p>
             <div class="sprint__answer-block-text-blogs">
-              <!-- <div class="sprint__answer-block-text-blogs-blog">
-                <p>retrieved</p>
-                <h4>{{ quiz.remainingQuestions }}</h4>
-                <span>points</span>
-              </div> -->
               <div
                 class="sprint__answer-block-text-blogs-blog sprint__answer-block-text-blogs-blog2"
               >
-                <p>{{quiz.questions.length}}/</p>
+                <p>{{ quiz.questions.length }}/</p>
                 <h4>{{ quiz.correctAnswersCount }}</h4>
                 <span>correct answers</span>
               </div>
               <div
                 class="sprint__answer-block-text-blogs-blog sprint__answer-block-text-blogs-blog3"
               >
-                <p>{{quiz.questions.length}}/</p>
-                <h4>{{ quiz.wrongAnswersCount  }}</h4>
+                <p>{{ quiz.questions.length }}/</p>
+                <h4>{{ quiz.wrongAnswersCount }}</h4>
                 <span>wrong answers</span>
               </div>
             </div>
@@ -50,13 +45,15 @@ onMounted(() => {
             <button class="sprint__answer-block-out-btn2">
               <RepeatIcon :size="25" />
               <p>Play it again</p>
-            </button>
+            </button> 
           </RouterLink>
-          <Button
-            :text="'Go to textbook'"
-            :icon="false"
-            class="sprint__answer-block-out-btn"
-          />
+          <RouterLink to="/textook">
+            <Button
+              :text="'Go to textbook'"
+              :icon="false"
+              class="sprint__answer-block-out-btn"
+            />
+          </RouterLink>
         </div>
       </div>
 
@@ -70,7 +67,7 @@ onMounted(() => {
         <div class="sprint__test-block-inner">
           <div class="remaining-questions">
             <h4 class="remaining-questions-count">
-              {{ quiz.remainingQuestions }}
+              {{ quiz.completedQuestions }} / {{ quiz.questions.length }}
             </h4>
             <p
               v-if="quiz.remainingQuestions !== 1"
@@ -103,7 +100,7 @@ onMounted(() => {
                   {{ option }}
                 </button>
               </div>
-              <div>
+              <!-- <div>
                 <button
                   class="option-button-inner"
                   :class="{
@@ -115,18 +112,18 @@ onMounted(() => {
                 >
                   I don't know
                 </button>
-              </div>
+              </div> -->
             </div>
           </div>
 
           <p v-if="quiz.errorMessage" class="error-message">
             {{ quiz.errorMessage }}
           </p>
-          <button @click="quiz.nextQuestion" class="nextQuestion">
+          <button @click="quiz.selectIDontKnow" class="nextQuestion">
             {{
               quiz.currentQuestionIndex < quiz.questions.length - 1
-                ? "Next Question"
-                : "Submit"
+                ? "I don't know"
+                : "I don't know"
             }}
           </button>
         </div>
