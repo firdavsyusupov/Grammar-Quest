@@ -3,6 +3,8 @@ import { onMounted } from "vue";
 import { useQuizStore } from "@/stores/quizStore";
 import RepeatIcon from "@/components/icons/RepeatIcon.vue";
 import Button from "@/UI/Buttons/HeaderButton/HeaderButton.vue";
+import Correct from "@/components/icons/CorrectIcon.vue";
+import Incorrect from "@/components/icons/IncorrectIcon.vue";
 import "./sprinttest.scss";
 
 const quiz = useQuizStore();
@@ -45,7 +47,7 @@ onMounted(() => {
             <button class="sprint__answer-block-out-btn2">
               <RepeatIcon :size="25" />
               <p>Play it again</p>
-            </button> 
+            </button>
           </RouterLink>
           <RouterLink to="/textook">
             <Button
@@ -57,7 +59,66 @@ onMounted(() => {
         </div>
       </div>
 
-      <div class="sprint__answer-block sprint__answer-block2"></div>
+      <!-- <div class="sprint__answer-block2">
+        <div class="sprint__answer-block2-blog">
+          <div class="sprint__answer-block2-blog-title">
+            <h3>I know</h3>
+            <span class="sprint__answer-block2-blog-title-text">15 words</span>
+          </div>
+          <div class="sprint__answer-block2-blog-title-main">
+            <div class="sprint__answer-block2-blog-title-main-blog"></div>
+          </div>
+        </div>
+        <div class="sprint__answer-block2-blog">
+          <div class="sprint__answer-block2-blog-title">
+            <h3>I don't know</h3>
+            <span
+              class="sprint__answer-block2-blog-title-text sprint__answer-block2-blog-title-text2"
+              >15 words</span
+            >
+          </div>
+          <div class="sprint__answer-block2-blog-title-main">
+            <div class="sprint__answer-block2-blog-title-main-blog">
+
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="sprint__answer-block2">
+        <div class="sprint__answer-block-inner2">
+          <h3 class="sprint__answer-block-text-title">I know</h3>
+          <ul>
+            <li v-for="(answer, index) in quiz.correctAnswers" :key="index">
+              <div>
+                <span class="list-number">{{ index + 1 }}.</span>
+                <p class="correct-answer">{{ answer.question }} <br /></p>
+              </div>
+              <div>
+                <p class="correct-answer3">{{ answer.userAnswer }}</p>
+                <Correct :size="20" class="correct-icon" />
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="sprint__answer-block-inner2">
+          <h3 class="sprint__answer-block-text-title">I don't know</h3>
+          <ul>
+            <li v-for="(answer, index) in quiz.incorrectAnswers" :key="index">
+              <div>
+                <span class="list-number">{{ index + 1 }}.</span>
+                <p class="incorrect-answer">{{ answer.question }} <br /></p>
+              </div>
+              <p class="incorrect-answer2">
+                Correct: {{ answer.correctAnswer }}
+                <Correct :size="20" class="correct-icon" />
+              </p>
+              <p class="incorrect-answer3">Yours: {{ answer.userAnswer }}
+                <Incorrect :size="25" class="correct-icon" />
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 

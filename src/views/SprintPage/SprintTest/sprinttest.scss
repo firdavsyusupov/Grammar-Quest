@@ -130,6 +130,102 @@
     background: #fff;
     display: flex;
     flex-direction: column;
+    &-inner2 {
+      width: 100%;
+      height: 300px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 10px;
+      box-sizing: border-box;
+      scrollbar-width: thin;
+      scrollbar-color: #757575 #f6f5f4;
+      counter-reset: list-counter;
+      & ul {
+        list-style: none;
+        padding: 0;
+
+        & li {
+          position: relative;
+          margin-bottom: 18px;
+          & div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            & .correct-icon{
+              color: #639b6d;
+            }
+          }
+        }
+      }
+
+      .correct-answer,
+      .incorrect-answer {
+        padding-bottom: 5px;
+        padding-top: 10px;
+        font-weight: 700;
+      }
+      .incorrect-answer2{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        & .correct-icon{
+          color: #639b6d;
+        }
+      }
+      .incorrect-answer3{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        & .correct-icon{
+          color: red;
+        }
+      }
+    }
+    &2 {
+      width: 60%;
+      height: 400px;
+      border-radius: 14px;
+      padding: 40px;
+      box-shadow: 0 23px 46px -11px rgba(52, 41, 39, 0.08);
+      background: #fff;
+      display: flex;
+      overflow: hidden;
+      gap: 40px;
+      &-blog {
+        width: 290px;
+        &-title {
+          display: flex;
+          align-items: start;
+          gap: 10px;
+          & h3 {
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 100%;
+            letter-spacing: -0.04em;
+            color: #000;
+            font-family: "gothic";
+          }
+          &-text {
+            width: 65px;
+            height: 25px;
+            display: flex;
+            background: #c3dce3;
+            border-radius: 6px;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 140%;
+            letter-spacing: -0.04em;
+            color: #2b788b;
+            &2 {
+              background: #f2d4dc;
+              color: #945069;
+            }
+          }
+        }
+      }
+    }
     &-inner {
       display: flex;
       align-items: center;
@@ -200,9 +296,7 @@
         }
       }
     }
-    &2 {
-      width: 50%;
-    }
+
     &-out {
       display: flex;
       align-items: center;

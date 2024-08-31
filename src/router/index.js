@@ -24,6 +24,11 @@ const router = createRouter({
       name: 'sprint-test',
       component: () => import('@/pages/SprintTest.vue')
     },
+    {
+      path: '/textbook',
+      name: 'textbook',
+      component: () => import('@/pages/Textbook.vue')
+    },
   ]
 })
 
