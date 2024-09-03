@@ -80,7 +80,7 @@ const handleButton = () => {
               C2
             </div>
           </div>
-          <RouterLink v-if="activeLevel" to="sprint-test" @click="quiz.resetQuiz">
+          <RouterLink v-if="activeLevel" to="/sprint-task1" @click="quiz.resetQuiz">
             <SignUpButton :text="'get started'" @click="handleButton; quiz.quizCompleted = false" />
           </RouterLink>
         </div>

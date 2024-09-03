@@ -12,7 +12,7 @@ import "./learnsection.scss"
                 <h3 class="learn-text-block-title">Learn a language in a playful way</h3>
                 <p class="learn-text-block-text">Make learning words more fun with mini-games</p>
                 <div class="learn-text-block-buttons">
-                    <RouterLink to="/sprint" class="learn-text-block-button">
+                    <RouterLink to="/textbook" class="learn-text-block-button">
                         <img class="learn-text-block-button-img" src="@/assets/images/learn-section-shoe.svg" alt="">
                         <div class="learn-text-block-button-text">
                             <p>Sprint</p>

@@ -18,16 +18,16 @@ import "./nav.scss";
             <RouterLink to="/" class="nav__link">home</RouterLink>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">textbook</a>
+            <RouterLink to="/textbook" class="nav__link">textbook</RouterLink>
           </li>
-          <li class="nav__item">
+          <!-- <li class="nav__item">
             <a href="#" class="nav__link">statistics</a>
-          </li>
+          </li> -->
           <li class="nav__item nav__item2">
             <a href="#" class="nav__link">games</a>
             <BottomIcon :size="25" class="bottom-icon"/>
             <div class="nav-dropdown">
-              <RouterLink to="/sprint" class="nav-dropdown-block">
+              <RouterLink to="/textbook" class="nav-dropdown-block">
                 <h5 class="nav-dropdown-block-text">Sprint</h5>
                 <RightIcon :size="20" class="nav-dropdown-block-icon"/>
               </RouterLink>
@@ -50,11 +50,11 @@ import "./nav.scss";
           <SignOut :size="25" />
         </div> -->
 
-        <div class="nav__signout">
+        <!-- <div class="nav__signout">
           <p class="nav__signout-text">log in</p>
           <RightIcon :size="25" />
         </div>
-        <Signup :text="'sign up'"/>
+        <Signup :text="'sign up'"/> -->
       </div>
     </div>
   </nav>

@@ -1,22 +1,32 @@
 <script setup>
-import { onMounted } from "vue";
-import { useQuizStore } from "@/stores/quizStore";
-import RepeatIcon from "@/components/icons/RepeatIcon.vue";
-import Button from "@/UI/Buttons/HeaderButton/HeaderButton.vue";
-import Correct from "@/components/icons/CorrectIcon.vue";
-import Incorrect from "@/components/icons/IncorrectIcon.vue";
-import "../SprintTest/sprinttest.scss";
+import { ref, onMounted, computed } from 'vue';
+import { useQuizStore } from '@/stores/quizStore';
+import RepeatIcon from '@/components/icons/RepeatIcon.vue';
+import Button from '@/UI/Buttons/HeaderButton/HeaderButton.vue';
+import Correct from '@/components/icons/CorrectIcon.vue';
+import Incorrect from '@/components/icons/IncorrectIcon.vue';
+import "../../SprintTest/sprinttest.scss";
 
 const quiz = useQuizStore();
+const currentTask = ref('task8');
+const taskData = ref([]);
 
-onMounted(() => {
-  quiz.loadQuestions('task1'); // Load Task 1 data on mount
-  quiz.loadState();
+onMounted(async () => {
+  try {
+    await quiz.loadQuestions(currentTask.value); 
+    quiz.loadState();
+    taskData.value = quiz.questions || [];
+  } catch (error) {
+    console.error('Error during component mount:', error);
+  }
+});
+
+const currentQuestion = computed(() => {
+  return taskData.value[quiz.currentQuestionIndex] || {};
 });
 </script>
 
 <template>
-  <!-- Completed Quiz Section -->
   <section v-if="quiz.quizCompleted" class="sprint__answer">
     <div class="container">
       <div class="sprint__answer-block">
@@ -29,12 +39,12 @@ onMounted(() => {
             <p class="sprint__answer-block-text-text">You did pretty good!</p>
             <div class="sprint__answer-block-text-blogs">
               <div class="sprint__answer-block-text-blogs-blog sprint__answer-block-text-blogs-blog2">
-                <p>{{ quiz.questions.length }}/</p>
+                <p>{{ taskData.length }}/</p>
                 <h4>{{ quiz.correctAnswersCount }}</h4>
                 <span>correct answers</span>
               </div>
               <div class="sprint__answer-block-text-blogs-blog sprint__answer-block-text-blogs-blog3">
-                <p>{{ quiz.questions.length }}/</p>
+                <p>{{ taskData.length }}/</p>
                 <h4>{{ quiz.wrongAnswersCount }}</h4>
                 <span>wrong answers</span>
               </div>
@@ -42,7 +52,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="sprint__answer-block-out">
-          <RouterLink to="/sprint-task1" @click="quiz.resetQuiz">
+          <RouterLink to="/sprint-task" @click="quiz.resetQuiz">
             <button class="sprint__answer-block-out-btn2">
               <RepeatIcon :size="25" />
               <p>Play it again</p>
@@ -95,15 +105,13 @@ onMounted(() => {
       </div>
     </div>
   </section>
-
-  <!-- Quiz Section -->
   <section v-else class="sprint__test">
     <div class="container">
       <div class="sprint__test-block">
         <div class="sprint__test-block-inner">
           <div class="remaining-questions">
             <h4 class="remaining-questions-count">
-              {{ quiz.completedQuestions }} / {{ quiz.questions.length }}
+              {{ quiz.completedQuestions }} / {{ taskData.length }}
             </h4>
             <p v-if="quiz.remainingQuestions !== 1" class="remaining-questions-text">
               questions
@@ -111,13 +119,13 @@ onMounted(() => {
             <p v-else class="remaining-questions-text">question</p>
           </div>
 
-          <div class="sprint__test-block-test">
+          <div class="sprint__test-block-test" v-if="taskData.length > 0">
             <p class="sprint__test-block-test-text">
-              {{ quiz.questions[quiz.currentQuestionIndex]?.question || 'No question available' }}
+              {{ currentQuestion.question }}
             </p>
             <div class="options">
               <div
-                v-for="option in quiz.questions[quiz.currentQuestionIndex]?.options || []"
+                v-for="option in currentQuestion.options || []"
                 :key="option"
                 class="option-button"
               >
@@ -139,7 +147,7 @@ onMounted(() => {
           </p>
           <button @click="quiz.selectIDontKnow" class="nextQuestion">
             {{
-              quiz.currentQuestionIndex < quiz.questions.length - 1
+              quiz.currentQuestionIndex < taskData.length - 1
                 ? "I don't know"
                 : "I don't know"
             }}

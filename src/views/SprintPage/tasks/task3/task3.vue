@@ -5,18 +5,16 @@ import RepeatIcon from "@/components/icons/RepeatIcon.vue";
 import Button from "@/UI/Buttons/HeaderButton/HeaderButton.vue";
 import Correct from "@/components/icons/CorrectIcon.vue";
 import Incorrect from "@/components/icons/IncorrectIcon.vue";
-import "../SprintTest/sprinttest.scss";
+import "../../SprintTest/sprinttest.scss";
 
 const quiz = useQuizStore();
-
 onMounted(() => {
-  quiz.loadQuestions('task1'); // Load Task 1 data on mount
+  quiz.loadQuestions('task3');
   quiz.loadState();
 });
 </script>
 
 <template>
-  <!-- Completed Quiz Section -->
   <section v-if="quiz.quizCompleted" class="sprint__answer">
     <div class="container">
       <div class="sprint__answer-block">
@@ -42,7 +40,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="sprint__answer-block-out">
-          <RouterLink to="/sprint-task1" @click="quiz.resetQuiz">
+          <RouterLink to="/sprint-task" @click="quiz.resetQuiz">
             <button class="sprint__answer-block-out-btn2">
               <RepeatIcon :size="25" />
               <p>Play it again</p>
@@ -96,56 +94,57 @@ onMounted(() => {
     </div>
   </section>
 
-  <!-- Quiz Section -->
   <section v-else class="sprint__test">
-    <div class="container">
-      <div class="sprint__test-block">
-        <div class="sprint__test-block-inner">
-          <div class="remaining-questions">
-            <h4 class="remaining-questions-count">
-              {{ quiz.completedQuestions }} / {{ quiz.questions.length }}
-            </h4>
-            <p v-if="quiz.remainingQuestions !== 1" class="remaining-questions-text">
-              questions
-            </p>
-            <p v-else class="remaining-questions-text">question</p>
-          </div>
+  <div class="container">
+    <div class="sprint__test-block">
+      <div class="sprint__test-block-inner">
+        <div class="remaining-questions">
+          <h4 class="remaining-questions-count">
+            {{ quiz.completedQuestions }} / {{ quiz.questions.length }}
+          </h4>
+          <p v-if="quiz.remainingQuestions !== 1" class="remaining-questions-text">
+            questions
+          </p>
+          <p v-else class="remaining-questions-text">question</p>
+        </div>
 
-          <div class="sprint__test-block-test">
-            <p class="sprint__test-block-test-text">
-              {{ quiz.questions[quiz.currentQuestionIndex]?.question || 'No question available' }}
-            </p>
-            <div class="options">
-              <div
-                v-for="option in quiz.questions[quiz.currentQuestionIndex]?.options || []"
-                :key="option"
-                class="option-button"
+        <div class="sprint__test-block-test" v-if="quiz.questions.length > 0">
+          <p class="sprint__test-block-test-text">
+            {{ quiz.questions[quiz.currentQuestionIndex]?.question }}
+          </p>
+          <div class="options">
+            <div
+              v-for="option in quiz.questions[quiz.currentQuestionIndex]?.options || []"
+              :key="option"
+              class="option-button"
+            >
+              <button
+                class="option-button-inner"
+                :class="{
+                  selected: quiz.userAnswers[quiz.currentQuestionIndex] === option,
+                }"
+                @click="quiz.selectOption(option)"
               >
-                <button
-                  class="option-button-inner"
-                  :class="{
-                    selected: quiz.userAnswers[quiz.currentQuestionIndex] === option,
-                  }"
-                  @click="quiz.selectOption(option)"
-                >
-                  {{ option }}
-                </button>
-              </div>
+                {{ option }}
+              </button>
             </div>
           </div>
-
-          <p v-if="quiz.errorMessage" class="error-message">
-            {{ quiz.errorMessage }}
-          </p>
-          <button @click="quiz.selectIDontKnow" class="nextQuestion">
-            {{
-              quiz.currentQuestionIndex < quiz.questions.length - 1
-                ? "I don't know"
-                : "I don't know"
-            }}
-          </button>
         </div>
+
+        <p v-if="quiz.errorMessage" class="error-message">
+          {{ quiz.errorMessage }}
+        </p>
+        <button @click="quiz.selectIDontKnow" class="nextQuestion">
+          {{
+            quiz.currentQuestionIndex < quiz.questions.length - 1
+              ? "I don't know"
+              : "I don't know"
+          }}
+        </button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 </template>
+
+

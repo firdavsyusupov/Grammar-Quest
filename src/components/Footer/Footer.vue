@@ -13,21 +13,16 @@ import {RouterLink} from 'vue-router'
           <li class="footer-top-block-blog-item">
             <a href="#" class="footer-top-block-blog-item-link">textbook</a>
           </li>
-          <li class="footer-top-block-blog-item">
+          <!-- <li class="footer-top-block-blog-item">
             <a href="#" class="footer-top-block-blog-item-link">statisticks</a>
-          </li>
+          </li> -->
           <li class="footer-top-block-blog-item">
-            <RouterLink to="/sprint" class="footer-top-block-blog-item-link">sprint</RouterLink>
+            <RouterLink to="/textbook" class="footer-top-block-blog-item-link">sprint</RouterLink>
           </li>
           <li class="footer-top-block-blog-item">
             <RouterLink to="/audio" href="#" class="footer-top-block-blog-item-link">audio-call</RouterLink>
           </li>
         </ul>
-        <div class="footer-top-block-blog">
-          <p>Alex</p>
-          <p>Gabriel</p>
-          <p>Marcus</p>
-        </div>
       </div>
       <hr>
       <div class="footer-bot-block">

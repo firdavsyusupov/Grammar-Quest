@@ -1,0 +1,33 @@
+[
+    {
+      "question": "I feel ___.",
+      "options": ["happy", "big", "red"],
+      "correctAnswer": "happy",
+      "category": "Emotion"
+    },
+    {
+      "question": "She is ___.",
+      "options": ["sad", "pencil", "chair"],
+      "correctAnswer": "sad",
+      "category": "Emotion"
+    },
+    {
+      "question": "They are ___.",
+      "options": ["excited", "table", "green"],
+      "correctAnswer": "excited",
+      "category": "Emotion"
+    },
+    {
+      "question": "He is ___.",
+      "options": ["angry", "hat", "blue"],
+      "correctAnswer": "angry",
+      "category": "Emotion"
+    },
+    {
+      "question": "We are ___.",
+      "options": ["scared", "door", "yellow"],
+      "correctAnswer": "scared",
+      "category": "Emotion"
+    }
+  ]
+  

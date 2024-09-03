@@ -8,15 +8,13 @@ import Incorrect from "@/components/icons/IncorrectIcon.vue";
 import "../SprintTest/sprinttest.scss";
 
 const quiz = useQuizStore();
-
 onMounted(() => {
-  quiz.loadQuestions('task1'); // Load Task 1 data on mount
+  quiz.loadQuestions('task2');
   quiz.loadState();
 });
 </script>
 
 <template>
-  <!-- Completed Quiz Section -->
   <section v-if="quiz.quizCompleted" class="sprint__answer">
     <div class="container">
       <div class="sprint__answer-block">
@@ -42,7 +40,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="sprint__answer-block-out">
-          <RouterLink to="/sprint-task1" @click="quiz.resetQuiz">
+          <RouterLink to="/sprint-task" @click="quiz.resetQuiz">
             <button class="sprint__answer-block-out-btn2">
               <RepeatIcon :size="25" />
               <p>Play it again</p>
@@ -96,7 +94,6 @@ onMounted(() => {
     </div>
   </section>
 
-  <!-- Quiz Section -->
   <section v-else class="sprint__test">
     <div class="container">
       <div class="sprint__test-block">
@@ -113,11 +110,11 @@ onMounted(() => {
 
           <div class="sprint__test-block-test">
             <p class="sprint__test-block-test-text">
-              {{ quiz.questions[quiz.currentQuestionIndex]?.question || 'No question available' }}
+              {{ quiz.questions[quiz.currentQuestionIndex].question }}
             </p>
             <div class="options">
               <div
-                v-for="option in quiz.questions[quiz.currentQuestionIndex]?.options || []"
+                v-for="option in quiz.questions[quiz.currentQuestionIndex].options"
                 :key="option"
                 class="option-button"
               >
@@ -130,6 +127,17 @@ onMounted(() => {
                 >
                   {{ option }}
                 </button>
+              </div>
+              <div>
+                <!-- <button
+                  class="option-button-inner"
+                  :class="{
+                    selected: quiz.userAnswers[quiz.currentQuestionIndex] === 'I don\'t know',
+                  }"
+                  @click="quiz.selectIDontKnow"
+                >
+                  I don't know
+                </button> -->
               </div>
             </div>
           </div>
@@ -149,3 +157,5 @@ onMounted(() => {
     </div>
   </section>
 </template>
+
+
