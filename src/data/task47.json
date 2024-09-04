@@ -1,0 +1,52 @@
+[
+    {
+        "question": "They ___ on this project for weeks.",
+        "options": ["worked", "have been working", "had worked", "have working"],
+        "correctAnswer": "have been working"
+    },
+    {
+        "question": "Identify the correct sentence with inversion:",
+        "options": ["Never I have seen such a thing.", "Never have I seen such a thing.", "Never I seen have such a thing.", "Never seen I have such a thing."],
+        "correctAnswer": "Never have I seen such a thing."
+    },
+    {
+        "question": "Choose the correct word to complete the sentence (Third Conditional): If she ___ (to know) about the meeting, she would have attended.",
+        "options": ["knows", "knew", "had known", "has known"],
+        "correctAnswer": "had known"
+    },
+    {
+        "question": "Fill in the blank with the correct form of the verb (Future Perfect): By this time tomorrow, I ___ (to finish) the report.",
+        "options": ["will finished", "will have finished", "will finishing", "will have finish"],
+        "correctAnswer": "will have finished"
+    },
+    {
+        "question": "Choose the correct sentence with a complex relative clause:",
+        "options": ["The house where I grew up is now sold.", "The house that I grew up is now sold.", "The house which I grew up is now sold.", "The house in which I grew up is now sold."],
+        "correctAnswer": "The house in which I grew up is now sold."
+    },
+    {
+        "question": "Identify the correct sentence with the subjunctive mood:",
+        "options": ["I suggest that he go to the doctor.", "I suggest that he goes to the doctor.", "I suggest that he going to the doctor.", "I suggest that he will go to the doctor."],
+        "correctAnswer": "I suggest that he go to the doctor."
+    },
+    {
+        "question": "Choose the correct linking word: She was tired; ____, she finished her work.",
+        "options": ["however", "because", "and", "but"],
+        "correctAnswer": "but"
+    },
+    {
+        "question": "Which of the following is an example of ellipsis?",
+        "options": ["She likes pizza, and I do too.", "She likes pizza and I like pizza.", "She likes pizza and so do I.", "She likes pizza, but I don't."],
+        "correctAnswer": "She likes pizza, and I do too."
+    },
+    {
+        "question": "Choose the correct phrasal verb:",
+        "options": ["give up", "give in", "give over", "give off"],
+        "correctAnswer": "give up"
+    },
+    {
+        "question": "Fill in the blank with the correct form of the verb (Past Perfect Continuous): He ___ (to wait) for two hours before she arrived.",
+        "options": ["waited", "had waited", "had been waiting", "has been waiting"],
+        "correctAnswer": "had been waiting"
+    }
+]

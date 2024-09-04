@@ -1,0 +1,32 @@
+[
+    {
+        "question": "I have ___ cat.",
+        "options": ["The", "A", "Omit"],
+        "correctAnswer": "A",
+        "type": "General"
+    },
+    {
+        "question": "___ cat that I have is very playful.",
+        "options": ["The", "A", "Omit"],
+        "correctAnswer": "The",
+        "type": "Specific"
+    },
+    {
+        "question": "She bought ___ book.",
+        "options": ["The", "A", "Omit"],
+        "correctAnswer": "A",
+        "type": "General"
+    },
+    {
+        "question": "___ book she bought was interesting.",
+        "options": ["The", "A", "Omit"],
+        "correctAnswer": "The",
+        "type": "Specific"
+    },
+    {
+        "question": "___ food here is delicious.",
+        "options": ["The", "A", "Omit"],
+        "correctAnswer": "The",
+        "type": "General"
+    }
+]

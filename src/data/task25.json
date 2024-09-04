@@ -1,0 +1,52 @@
+[
+    {
+        "question": "___ the sun shining?",
+        "options": ["Is", "Are", "Does"],
+        "correctAnswer": "Is"
+    },
+    {
+        "question": "Where ___ the car parked?",
+        "options": ["is", "are", "does"],
+        "correctAnswer": "is"
+    },
+    {
+        "question": "___ the baby sleeping?",
+        "options": ["Is", "Are", "Does"],
+        "correctAnswer": "Is"
+    },
+    {
+        "question": "What ___ the dog barking at?",
+        "options": ["is", "are", "does"],
+        "correctAnswer": "is"
+    },
+    {
+        "question": "___ the phone ringing?",
+        "options": ["Is", "Are", "Does"],
+        "correctAnswer": "Is"
+    },
+    {
+        "question": "Why ___ the children playing outside?",
+        "options": ["are", "is", "does"],
+        "correctAnswer": "are"
+    },
+    {
+        "question": "___ the teacher speaking now?",
+        "options": ["Is", "Are", "Does"],
+        "correctAnswer": "Is"
+    },
+    {
+        "question": "Who ___ the cat purring for?",
+        "options": ["is", "are", "does"],
+        "correctAnswer": "is"
+    },
+    {
+        "question": "___ the flowers blooming in the garden?",
+        "options": ["Are", "Is", "Does"],
+        "correctAnswer": "Are"
+    },
+    {
+        "question": "How ___ the birds singing so beautifully?",
+        "options": ["are", "is", "does"],
+        "correctAnswer": "are"
+    }
+]

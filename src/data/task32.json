@@ -1,0 +1,27 @@
+[
+    {
+        "question": "The book ___ I read was interesting.",
+        "options": ["that", "which", "who"],
+        "correctAnswer": "that"
+    },
+    {
+        "question": "The woman ___ lives next door is a doctor.",
+        "options": ["who", "which", "that"],
+        "correctAnswer": "who"
+    },
+    {
+        "question": "This is the place ___ we met.",
+        "options": ["where", "which", "who"],
+        "correctAnswer": "where"
+    },
+    {
+        "question": "The movie ___ we watched was scary.",
+        "options": ["that", "which", "who"],
+        "correctAnswer": "that"
+    },
+    {
+        "question": "The person ___ you called is not available.",
+        "options": ["who", "which", "that"],
+        "correctAnswer": "who"
+    }
+]

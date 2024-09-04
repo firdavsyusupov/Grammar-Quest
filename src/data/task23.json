@@ -1,0 +1,52 @@
+[
+    {
+        "question": "She stayed home ___ she was sick.",
+        "options": ["because", "although"],
+        "correctAnswer": "because"
+    },
+    {
+        "question": "He will come ___ he finishes his work.",
+        "options": ["if", "because"],
+        "correctAnswer": "if"
+    },
+    {
+        "question": "We went to the beach ___ it was raining.",
+        "options": ["even though", "because"],
+        "correctAnswer": "even though"
+    },
+    {
+        "question": "She studied hard ___ she could pass the exam.",
+        "options": ["so that", "because"],
+        "correctAnswer": "so that"
+    },
+    {
+        "question": "I will call you ___ I get home.",
+        "options": ["when", "because"],
+        "correctAnswer": "when"
+    },
+    {
+        "question": "He didn’t go to the party ___ he was tired.",
+        "options": ["because", "although"],
+        "correctAnswer": "because"
+    },
+    {
+        "question": "She was happy ___ she won the prize.",
+        "options": ["because", "although"],
+        "correctAnswer": "because"
+    },
+    {
+        "question": "They went outside ___ it was cold.",
+        "options": ["even though", "because"],
+        "correctAnswer": "even though"
+    },
+    {
+        "question": "He waited ___ she arrived.",
+        "options": ["until", "because"],
+        "correctAnswer": "until"
+    },
+    {
+        "question": "We can start ___ everyone is here.",
+        "options": ["after", "because"],
+        "correctAnswer": "after"
+    }
+]

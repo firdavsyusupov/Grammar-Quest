@@ -1,0 +1,27 @@
+[
+    {
+        "question": "We need to ___ this problem immediately.",
+        "options": ["sort out", "give up", "turn down"],
+        "correctAnswer": "sort out"
+    },
+    {
+        "question": "She ___ her new idea during the meeting.",
+        "options": ["brought up", "took off", "put up"],
+        "correctAnswer": "brought up"
+    },
+    {
+        "question": "He ___ with a great solution.",
+        "options": ["came up", "took up", "put up"],
+        "correctAnswer": "came up"
+    },
+    {
+        "question": "They ___ their differences and moved on.",
+        "options": ["made up", "looked up", "brought up"],
+        "correctAnswer": "made up"
+    },
+    {
+        "question": "She ___ the lights before going to bed.",
+        "options": ["turned off", "put off", "gave up"],
+        "correctAnswer": "turned off"
+    }
+]

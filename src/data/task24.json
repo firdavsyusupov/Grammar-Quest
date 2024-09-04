@@ -1,0 +1,52 @@
+[
+    {
+        "question": "The dog ___ (chewed, is chewed, chews) the bone.",
+        "options": ["chewed", "is chewed", "chews"],
+        "correctAnswer": "chewed"
+    },
+    {
+        "question": "The teacher ___ (explained, is explained, explains) the lesson.",
+        "options": ["explained", "is explained", "explains"],
+        "correctAnswer": "explained"
+    },
+    {
+        "question": "The artist ___ (created, creates, is created) a beautiful painting.",
+        "options": ["created", "creates", "is created"],
+        "correctAnswer": "created"
+    },
+    {
+        "question": "The children ___ (played, are played, play) in the park.",
+        "options": ["played", "are played", "play"],
+        "correctAnswer": "played"
+    },
+    {
+        "question": "The chef ___ (prepared, prepares, is prepared) a delicious meal.",
+        "options": ["prepared", "prepares", "is prepared"],
+        "correctAnswer": "prepared"
+    },
+    {
+        "question": "The student ___ (passed, passes, is passed) the exam.",
+        "options": ["passed", "passes", "is passed"],
+        "correctAnswer": "passed"
+    },
+    {
+        "question": "The cat ___ (chased, is chased, chases) the toy mouse.",
+        "options": ["chased", "is chased", "chases"],
+        "correctAnswer": "chased"
+    },
+    {
+        "question": "The gardener ___ (watered, waters, is watered) the flowers.",
+        "options": ["watered", "waters", "is watered"],
+        "correctAnswer": "watered"
+    },
+    {
+        "question": "The bird ___ (flew, flies, is flown) in the sky.",
+        "options": ["flew", "flies", "is flown"],
+        "correctAnswer": "flew"
+    },
+    {
+        "question": "The athlete ___ (won, wins, is won) the race.",
+        "options": ["won", "wins", "is won"],
+        "correctAnswer": "won"
+    }
+]

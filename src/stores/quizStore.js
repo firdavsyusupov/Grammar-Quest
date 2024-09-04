@@ -1,15 +1,54 @@
 import { defineStore } from "pinia";
-import task1Data from "@/data/data"; 
-import task2Data from "@/data/task2";
-import task3Data from "@/data/task3";
-import task4Data from "@/data/task4";
-import task5Data from "@/data/task5";
-import task6Data from "@/data/task6";
-import task7Data from "@/data/task7";
-import task8Data from "@/data/task8";
-import task9Data from "@/data/task9";
-import task10Data from "@/data/task10";
-import task11Data from "@/data/task11";
+
+const taskDataMap = {
+  task1: () => import("@/data/data"),
+  task2: () => import("@/data/task2"),
+  task3: () => import("@/data/task3"),
+  task4: () => import("@/data/task4"),
+  task5: () => import("@/data/task5"),
+  task6: () => import("@/data/task6"),
+  task7: () => import("@/data/task7"),
+  task8: () => import("@/data/task8"),
+  task9: () => import("@/data/task9"),
+  task10: () => import("@/data/task10"),
+  task11: () => import("@/data/task11"),
+  task12: () => import("@/data/task12"),
+  task13: () => import("@/data/task13"),
+  task14: () => import("@/data/task14"),
+  task15: () => import("@/data/task15"),
+  task16: () => import("@/data/task16"),
+  task17: () => import("@/data/task17"),
+  task18: () => import("@/data/task18"),
+  task19: () => import("@/data/task19"),
+  task20: () => import("@/data/task20"),
+  task21: () => import("@/data/task21"),
+  task22: () => import("@/data/task22"),
+  task23: () => import("@/data/task23"),
+  task24: () => import("@/data/task24"),
+  task25: () => import("@/data/task25"),
+  task26: () => import("@/data/task26"),
+  task27: () => import("@/data/task27"),
+  task28: () => import("@/data/task28"),
+  task29: () => import("@/data/task29"),
+  task30: () => import("@/data/task30"),
+  task31: () => import("@/data/task31"),
+  task32: () => import("@/data/task32"),
+  task33: () => import("@/data/task33"),
+  task34: () => import("@/data/task34"),
+  task35: () => import("@/data/task35"),
+  task36: () => import("@/data/task36"),
+  task37: () => import("@/data/task37"),
+  task38: () => import("@/data/task38"),
+  task39: () => import("@/data/task39"),
+  task40: () => import("@/data/task40"),
+  task41: () => import("@/data/task41"),
+  task42: () => import("@/data/task42"),
+  task43: () => import("@/data/task43"),
+  task44: () => import("@/data/task44"),
+  task45: () => import("@/data/task45"),
+  task46: () => import("@/data/task46"),
+  task47: () => import("@/data/task47"),
+};
 
 export const useQuizStore = defineStore("quizStore", {
   state: () => ({
@@ -27,35 +66,11 @@ export const useQuizStore = defineStore("quizStore", {
     wrongAnswersCount: (state) => state.incorrectAnswers.length,
   },
   actions: {
-    loadQuestions(task) {
+    async loadQuestions(task) {
       try {
-        if (task === "task2") {
-          this.questions = task2Data;
-        } else if (task === "task4") {
-          this.questions = task4Data;
-        } else if (task === "task3") {
-          this.questions = task3Data;
-        } else if(task === "task5"){
-          this.questions = task5Data
-        } else if(task === "task6"){
-          this.questions = task6Data
-        } else if(task === "task7"){
-          this.questions = task7Data
-        } else if(task === "task8"){
-          this.questions = task8Data
-        }
-        else if(task === "task9"){
-          this.questions = task9Data
-        }
-        else if(task === "task10"){
-          this.questions = task10Data
-        }
-        else if(task === "task11"){
-          this.questions = task11Data
-        }
-         else {
-          this.questions = task1Data;
-        }
+        const dataLoader = taskDataMap[task] || taskDataMap['task1'];
+        const { default: taskData } = await dataLoader();
+        this.questions = taskData;
         this.resetQuiz(); 
       } catch (error) {
         console.error("Failed to load task data:", error);
@@ -98,7 +113,6 @@ export const useQuizStore = defineStore("quizStore", {
       this.saveState();
       this.nextQuestion();
     },
-    
     async nextQuestion() {
       if (this.userAnswers[this.currentQuestionIndex] === null) {
         this.errorMessage =

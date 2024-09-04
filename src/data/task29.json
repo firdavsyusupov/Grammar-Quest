@@ -1,0 +1,27 @@
+[
+    {
+        "question": "She likes to read, ___ (but, and, or) she doesn't like writing.",
+        "options": ["but", "and", "or"],
+        "correctAnswer": "but"
+    },
+    {
+        "question": "He wanted to go to the park, ___ (but, so, because) it was raining.",
+        "options": ["but", "so", "because"],
+        "correctAnswer": "but"
+    },
+    {
+        "question": "I can stay home, ___ (or, but, because) I can go out with friends.",
+        "options": ["or", "but", "because"],
+        "correctAnswer": "or"
+    },
+    {
+        "question": "The sun is shining, ___ (but, so, because) it is still cold.",
+        "options": ["but", "so", "because"],
+        "correctAnswer": "but"
+    },
+    {
+        "question": "She studied hard, ___ (so, and, because) she passed the exam.",
+        "options": ["so", "and", "because"],
+        "correctAnswer": "so"
+    }
+]

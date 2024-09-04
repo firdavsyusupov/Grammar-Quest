@@ -9,7 +9,7 @@ import "../../SprintTest/sprinttest.scss";
 
 const quiz = useQuizStore();
 onMounted(() => {
-  quiz.loadQuestions('task2');
+  quiz.loadQuestions('task43');
   quiz.loadState();
 });
 </script>

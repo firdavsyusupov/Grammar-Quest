@@ -1,0 +1,27 @@
+[
+    {
+        "question": "The soup is ___ hot to eat.",
+        "options": ["very", "too", "enough"],
+        "correctAnswer": "too"
+    },
+    {
+        "question": "She is ___ tired to go out.",
+        "options": ["too", "very", "enough"],
+        "correctAnswer": "too"
+    },
+    {
+        "question": "He is ___ to lift that weight.",
+        "options": ["strong enough", "too strong", "very strong"],
+        "correctAnswer": "strong enough"
+    },
+    {
+        "question": "The movie was ___ long.",
+        "options": ["very", "too", "enough"],
+        "correctAnswer": "too"
+    },
+    {
+        "question": "The cake is ___ sweet.",
+        "options": ["too", "very", "enough"],
+        "correctAnswer": "very"
+    }
+]

@@ -1,0 +1,63 @@
+[
+    {
+      "question": "She saw ___ eagle soaring in the sky.",
+      "options": ["a", "the"],
+      "correctAnswer": "the",
+      "category": "Articles"
+    },
+    {
+      "question": "He is looking for ___ job.",
+      "options": ["a", "the"],
+      "correctAnswer": "a",
+      "category": "Articles"
+    },
+    {
+      "question": "They live in ___ small house on the hill.",
+      "options": ["a", "the"],
+      "correctAnswer": "a",
+      "category": "Articles"
+    },
+    {
+      "question": "___ dog barked loudly.",
+      "options": ["A", "The"],
+      "correctAnswer": "The",
+      "category": "Articles"
+    },
+    {
+      "question": "She picked up ___ newspaper from the table.",
+      "options": ["a", "the"],
+      "correctAnswer": "the",
+      "category": "Articles"
+    },
+    {
+      "question": "I saw ___ movie last night.",
+      "options": ["a", "the"],
+      "correctAnswer": "a",
+      "category": "Articles"
+    },
+    {
+      "question": "He wrote ___ letter to his friend.",
+      "options": ["a", "the"],
+      "correctAnswer": "a",
+      "category": "Articles"
+    },
+    {
+      "question": "We have ___ meeting at noon.",
+      "options": ["a", "the"],
+      "correctAnswer": "a",
+      "category": "Articles"
+    },
+    {
+      "question": "She found ___ wallet on the street.",
+      "options": ["a", "the"],
+      "correctAnswer": "a",
+      "category": "Articles"
+    },
+    {
+      "question": "He is ___ oldest student in the class.",
+      "options": ["a", "the"],
+      "correctAnswer": "the",
+      "category": "Articles"
+    }
+  ]
+  

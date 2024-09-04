@@ -1,0 +1,63 @@
+[
+    {
+      "question": "She saw ___ cat on the roof.",
+      "options": ["a", "the"],
+      "correctAnswer": "the",
+      "category": "Articles"
+    },
+    {
+      "question": "I need ___ pen to write a letter.",
+      "options": ["a", "the"],
+      "correctAnswer": "a",
+      "category": "Articles"
+    },
+    {
+      "question": "___ (An, The) apple a day keeps the doctor away.",
+      "options": ["An", "The"],
+      "correctAnswer": "An",
+      "category": "Articles"
+    },
+    {
+      "question": "He bought ___ new car yesterday.",
+      "options": ["a", "the"],
+      "correctAnswer": "a",
+      "category": "Articles"
+    },
+    {
+      "question": "We visited ___ museum last weekend.",
+      "options": ["a", "the"],
+      "correctAnswer": "the",
+      "category": "Articles"
+    },
+    {
+      "question": "She found ___ interesting book in the library.",
+      "options": ["a", "the"],
+      "correctAnswer": "an",
+      "category": "Articles"
+    },
+    {
+      "question": "I made ___ cake for the party.",
+      "options": ["a", "the"],
+      "correctAnswer": "a",
+      "category": "Articles"
+    },
+    {
+      "question": "He is ___ best player on the team.",
+      "options": ["a", "the"],
+      "correctAnswer": "the",
+      "category": "Articles"
+    },
+    {
+      "question": "We need ___ chair for the guest.",
+      "options": ["a", "the"],
+      "correctAnswer": "a",
+      "category": "Articles"
+    },
+    {
+      "question": "___ sun was shining brightly in the sky.",
+      "options": ["A", "The"],
+      "correctAnswer": "The",
+      "category": "Articles"
+    }
+  ]
+  
