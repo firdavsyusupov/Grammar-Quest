@@ -9,8 +9,13 @@
   align-items: center;
   padding: 10px 20px;
   background-color: #fff;
+  @media screen and (max-width: 520px) {
+    justify-content: center;
+  }
   &-left {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     & div {
       display: flex;
       align-items: center;
@@ -24,6 +29,9 @@
         letter-spacing: -0.04em;
         color: #000;
         font-family: "gothic";
+        @media screen and (max-width: 520px) {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -51,20 +59,21 @@
   display: flex;
   justify-content: center;
   padding: 15px 0;
+  flex-wrap: wrap;
 }
 
 .level-item {
-    font-size: 16px;
-    margin: 0 10px;
-    font-family: "gothic";
-    color: grey;
-    cursor: pointer;
-  
-    &.selected {
-      color: black;
-      border-bottom: 2px solid black;
-    }
+  font-size: 16px;
+  margin: 0 10px;
+  font-family: "gothic";
+  color: grey;
+  cursor: pointer;
+
+  &.selected {
+    color: black;
+    border-bottom: 2px solid black;
   }
+}
 
 .level-label {
   display: inline-block;
@@ -102,8 +111,6 @@
   flex-direction: column;
 }
 
-
-
 .word-image {
   width: 150px;
   height: auto;
@@ -119,10 +126,9 @@
   width: 80%;
 }
 
-.word-content{
+.word-content {
   padding-bottom: 20px;
   width: 80%;
-
 }
 
 .pronunciation {

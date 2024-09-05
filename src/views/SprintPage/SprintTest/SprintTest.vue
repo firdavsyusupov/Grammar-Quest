@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, ref, computed } from "vue";
 import { useQuizStore } from "@/stores/quizStore";
 import RepeatIcon from "@/components/icons/RepeatIcon.vue";
 import Button from "@/UI/Buttons/HeaderButton/HeaderButton.vue";

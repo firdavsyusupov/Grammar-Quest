@@ -5,6 +5,9 @@
     align-items: center;
     padding: 25px 0;
     justify-content: space-between;
+    @media screen and (max-width: 550px) {
+      flex-direction: column;
+    }
   }
   &__items {
     display: flex;
@@ -77,11 +80,17 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    @media screen and (max-width: 550px) {
+      flex-direction: column;
+    }
   }
   & .logo {
     border-right: 1px solid #585858;
     padding-right: 30px;
     cursor: pointer;
+    @media screen and (max-width: 550px) {
+      border: none;
+    }
   }
   &__link {
     color: #757575;

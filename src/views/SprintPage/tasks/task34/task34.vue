@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, ref, computed } from "vue";
 import { useQuizStore } from "@/stores/quizStore";
 import RepeatIcon from "@/components/icons/RepeatIcon.vue";
 import Button from "@/UI/Buttons/HeaderButton/HeaderButton.vue";
@@ -8,10 +8,23 @@ import Incorrect from "@/components/icons/IncorrectIcon.vue";
 import "../../SprintTest/sprinttest.scss";
 
 const quiz = useQuizStore();
-onMounted(() => {
-  quiz.loadQuestions('task34');
-  quiz.loadState();
+const currentTask = ref('task34');
+const taskData = ref([]);
+
+onMounted(async () => {
+  try {
+    await quiz.loadQuestions(currentTask.value);
+    quiz.loadState();
+    taskData.value = quiz.questions || [];
+  } catch (error) {
+    console.error('Error during component mount:', error);
+  }
 });
+
+const currentQuestion = computed(() => {
+  return taskData.value[quiz.currentQuestionIndex] || {};
+});
+
 </script>
 
 <template>
@@ -26,12 +39,16 @@ onMounted(() => {
             <h3 class="sprint__answer-block-text-title">Your Sprint</h3>
             <p class="sprint__answer-block-text-text">You did pretty good!</p>
             <div class="sprint__answer-block-text-blogs">
-              <div class="sprint__answer-block-text-blogs-blog sprint__answer-block-text-blogs-blog2">
+              <div
+                class="sprint__answer-block-text-blogs-blog sprint__answer-block-text-blogs-blog2"
+              >
                 <p>{{ quiz.questions.length }}/</p>
                 <h4>{{ quiz.correctAnswersCount }}</h4>
                 <span>correct answers</span>
               </div>
-              <div class="sprint__answer-block-text-blogs-blog sprint__answer-block-text-blogs-blog3">
+              <div
+                class="sprint__answer-block-text-blogs-blog sprint__answer-block-text-blogs-blog3"
+              >
                 <p>{{ quiz.questions.length }}/</p>
                 <h4>{{ quiz.wrongAnswersCount }}</h4>
                 <span>wrong answers</span>
@@ -40,12 +57,16 @@ onMounted(() => {
           </div>
         </div>
         <div class="sprint__answer-block-out">
-          <RouterLink to="/sprint-task" @click="quiz.resetQuiz">
+          <RouterLink
+            :to="{ name: `sprint-${currentTask}` }"
+            @click="quiz.resetQuiz"
+          >
             <button class="sprint__answer-block-out-btn2">
               <RepeatIcon :size="25" />
               <p>Play it again</p>
             </button>
           </RouterLink>
+
           <RouterLink to="/textbook">
             <Button
               :text="'Go to textbook'"
@@ -84,7 +105,8 @@ onMounted(() => {
                 Correct: {{ answer.correctAnswer }}
                 <Correct :size="20" class="correct-icon" />
               </p>
-              <p class="incorrect-answer3">Yours: {{ answer.userAnswer }}
+              <p class="incorrect-answer3">
+                Yours: {{ answer.userAnswer }}
                 <Incorrect :size="25" class="correct-icon" />
               </p>
             </li>
@@ -102,42 +124,36 @@ onMounted(() => {
             <h4 class="remaining-questions-count">
               {{ quiz.completedQuestions }} / {{ quiz.questions.length }}
             </h4>
-            <p v-if="quiz.remainingQuestions !== 1" class="remaining-questions-text">
+            <p
+              v-if="quiz.remainingQuestions !== 1"
+              class="remaining-questions-text"
+            >
               questions
             </p>
             <p v-else class="remaining-questions-text">question</p>
           </div>
 
-          <div class="sprint__test-block-test">
+          <div class="sprint__test-block-test" v-if="quiz.questions.length > 0">
             <p class="sprint__test-block-test-text">
-              {{ quiz.questions[quiz.currentQuestionIndex].question }}
+              {{ quiz.questions[quiz.currentQuestionIndex]?.question }}
             </p>
             <div class="options">
               <div
-                v-for="option in quiz.questions[quiz.currentQuestionIndex].options"
+                v-for="option in quiz.questions[quiz.currentQuestionIndex]
+                  ?.options || []"
                 :key="option"
                 class="option-button"
               >
                 <button
                   class="option-button-inner"
                   :class="{
-                    selected: quiz.userAnswers[quiz.currentQuestionIndex] === option,
+                    selected:
+                      quiz.userAnswers[quiz.currentQuestionIndex] === option,
                   }"
                   @click="quiz.selectOption(option)"
                 >
                   {{ option }}
                 </button>
-              </div>
-              <div>
-                <!-- <button
-                  class="option-button-inner"
-                  :class="{
-                    selected: quiz.userAnswers[quiz.currentQuestionIndex] === 'I don\'t know',
-                  }"
-                  @click="quiz.selectIDontKnow"
-                >
-                  I don't know
-                </button> -->
               </div>
             </div>
           </div>
@@ -157,5 +173,3 @@ onMounted(() => {
     </div>
   </section>
 </template>
-
-
