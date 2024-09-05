@@ -1,0 +1,52 @@
+[
+    {
+        "question": "She likes to swim ___ (and, but) bike.",
+        "options": ["and", "but"],
+        "correctAnswer": "and"
+    },
+    {
+        "question": "He wanted to go out, ___ (but, so) it started raining.",
+        "options": ["but", "so"],
+        "correctAnswer": "but"
+    },
+    {
+        "question": "We can go to the park, ___ (or, and) we can stay home.",
+        "options": ["or", "and"],
+        "correctAnswer": "or"
+    },
+    {
+        "question": "She was tired, ___ (but, and) she kept working.",
+        "options": ["but", "and"],
+        "correctAnswer": "but"
+    },
+    {
+        "question": "I like apples ___ (and, or) oranges.",
+        "options": ["and", "or"],
+        "correctAnswer": "and"
+    },
+    {
+        "question": "He studied hard, ___ (so, but) he passed the test.",
+        "options": ["so", "but"],
+        "correctAnswer": "so"
+    },
+    {
+        "question": "The weather is nice, ___ (so, but) we are going for a walk.",
+        "options": ["so", "but"],
+        "correctAnswer": "so"
+    },
+    {
+        "question": "She likes tea, ___ (and, but) he prefers coffee.",
+        "options": ["and", "but"],
+        "correctAnswer": "but"
+    },
+    {
+        "question": "You can have cake ___ (or, and) ice cream for dessert.",
+        "options": ["or", "and"],
+        "correctAnswer": "or"
+    },
+    {
+        "question": "They went to the movies, ___ (but, so) they missed the bus.",
+        "options": ["but", "so"],
+        "correctAnswer": "but"
+    }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "question": "I can ___.",
+    "options": ["run", "table", "shirt"],
+    "correctAnswer": "run"
+  },
+  {
+    "question": "She is ___.",
+    "options": ["happy", "apple", "sock"],
+    "correctAnswer": "happy"
+  },
+  {
+    "question": "He is ___.",
+    "options": ["tired", "pencil", "house"],
+    "correctAnswer": "tired"
+  },
+  {
+    "question": "They ___.",
+    "options": ["walk", "door", "pen"],
+    "correctAnswer": "walk"
+  },
+  {
+    "question": "We ___.",
+    "options": ["jump", "book", "window"],
+    "correctAnswer": "jump"
+  }
+]

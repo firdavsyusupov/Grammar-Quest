@@ -1,0 +1,52 @@
+[
+    {
+        "question": "The cat and the dog ___ (to chase) each other around the yard.",
+        "options": ["chase", "chases", "chasing"],
+        "correctAnswer": "chase"
+    },
+    {
+        "question": "Neither the teacher nor the students ___ (to understand) the question.",
+        "options": ["understand", "understands", "understanding"],
+        "correctAnswer": "understand"
+    },
+    {
+        "question": "The book, along with the papers, ___ (to be) on the desk.",
+        "options": ["is", "are", "be"],
+        "correctAnswer": "is"
+    },
+    {
+        "question": "Either the boys or the girl ___ (to win) the game.",
+        "options": ["win", "wins", "winning"],
+        "correctAnswer": "wins"
+    },
+    {
+        "question": "The committee ___ (to decide) on the proposal.",
+        "options": ["decide", "decides", "deciding"],
+        "correctAnswer": "decides"
+    },
+    {
+        "question": "The team ___ (to celebrate) their victory.",
+        "options": ["celebrates", "celebrate", "celebrating"],
+        "correctAnswer": "celebrates"
+    },
+    {
+        "question": "Both the manager and the employees ___ (to attend) the meeting.",
+        "options": ["attends", "attend", "attending"],
+        "correctAnswer": "attend"
+    },
+    {
+        "question": "The singer and the band ___ (to perform) together.",
+        "options": ["performs", "perform", "performing"],
+        "correctAnswer": "perform"
+    },
+    {
+        "question": "Either the cat or the dogs ___ (to be) outside.",
+        "options": ["is", "are", "being"],
+        "correctAnswer": "are"
+    },
+    {
+        "question": "The bouquet of flowers ___ (to brighten) the room.",
+        "options": ["brightens", "brighten", "brightening"],
+        "correctAnswer": "brightens"
+    }
+]

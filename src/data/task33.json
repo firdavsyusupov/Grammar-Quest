@@ -1,0 +1,27 @@
+[
+    {
+        "question": "This ___ is my favorite book.",
+        "options": ["This", "That", "These"],
+        "correctAnswer": "This"
+    },
+    {
+        "question": "These ___ are the shoes I bought yesterday.",
+        "options": ["These", "Those", "This"],
+        "correctAnswer": "These"
+    },
+    {
+        "question": "That ___ is the house where I grew up.",
+        "options": ["That", "This", "These"],
+        "correctAnswer": "That"
+    },
+    {
+        "question": "That ___ is my car over there.",
+        "options": ["That", "These", "This"],
+        "correctAnswer": "That"
+    },
+    {
+        "question": "Those ___ are the documents you asked for.",
+        "options": ["These", "This", "Those"],
+        "correctAnswer": "Those"
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "question": "They walked ___ (towards, from) the park.",
+        "options": ["towards", "from"],
+        "correctAnswer": "towards"
+    },
+    {
+        "question": "He ran ___ (up, down) the stairs.",
+        "options": ["up", "down"],
+        "correctAnswer": "up"
+    },
+    {
+        "question": "The car drove ___ (through, in) the tunnel.",
+        "options": ["through", "in"],
+        "correctAnswer": "through"
+    },
+    {
+        "question": "She moved ___ (away from, towards) the door.",
+        "options": ["away from", "towards"],
+        "correctAnswer": "towards"
+    },
+    {
+        "question": "The river flows ___ (under, over) the bridge.",
+        "options": ["under", "over"],
+        "correctAnswer": "under"
+    },
+    {
+        "question": "They traveled ___ (to, from) the city by train.",
+        "options": ["to", "from"],
+        "correctAnswer": "to"
+    },
+    {
+        "question": "He jumped ___ (into, out of) the pool.",
+        "options": ["into", "out of"],
+        "correctAnswer": "into"
+    },
+    {
+        "question": "The bird flew ___ (over, under) the tree.",
+        "options": ["over", "under"],
+        "correctAnswer": "over"
+    },
+    {
+        "question": "She turned right ___ (right, left) at the corner.",
+        "options": ["right", "left"],
+        "correctAnswer": "right"
+    },
+    {
+        "question": "The train went ___ (past, through) the station.",
+        "options": ["past", "through"],
+        "correctAnswer": "past"
+    }
+]

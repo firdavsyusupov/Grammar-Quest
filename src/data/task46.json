@@ -1,0 +1,52 @@
+[
+    {
+        "question": "They ___ Paris three times.",
+        "options": ["visited", "visits", "have visited", "had visited"],
+        "correctAnswer": "have visited"
+    },
+    {
+        "question": "Which sentence is a compound sentence?",
+        "options": ["I like tea, and he likes coffee.", "I went to the park because it was sunny.", "She runs every day.", "I stayed home since it was raining."],
+        "correctAnswer": "I like tea, and he likes coffee."
+    },
+    {
+        "question": "Choose the correct relative pronoun:",
+        "options": ["who", "that", "where", "whom"],
+        "correctAnswer": "that"
+    },
+    {
+        "question": "Identify the correct word order for adjectives:",
+        "options": ["beautiful red silk", "silk red beautiful", "red beautiful silk", "beautiful silk red"],
+        "correctAnswer": "beautiful red silk"
+    },
+    {
+        "question": "She ___ (to watch) TV when I called her.",
+        "options": ["was watching", "watched", "watching", "was watch"],
+        "correctAnswer": "was watching"
+    },
+    {
+        "question": "If I ___ more money, I would travel the world.",
+        "options": ["has", "have", "had", "having"],
+        "correctAnswer": "had"
+    },
+    {
+        "question": "Which sentence is in the passive voice?",
+        "options": ["The teacher explains the lesson.", "The lesson is explained by the teacher.", "The teacher will explain the lesson.", "The lesson explains itself."],
+        "correctAnswer": "The lesson is explained by the teacher."
+    },
+    {
+        "question": "He arrived ___ time for the meeting.",
+        "options": ["in", "at", "on", "by"],
+        "correctAnswer": "by"
+    },
+    {
+        "question": "Choose the correct conjunction:",
+        "options": ["because", "so", "but", "although"],
+        "correctAnswer": "so"
+    },
+    {
+        "question": "She ___ him to come to the party.",
+        "options": ["asked", "asking", "ask", "asks"],
+        "correctAnswer": "asked"
+    }
+]

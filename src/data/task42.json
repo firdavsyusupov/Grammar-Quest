@@ -1,0 +1,32 @@
+[
+    {
+        "question": "Today is ___.",
+        "options": ["Monday", "banana", "red"],
+        "correctAnswer": "Monday",
+        "category": "Days of the Week"
+    },
+    {
+        "question": "There are ___ days in a week.",
+        "options": ["seven", "apple", "green"],
+        "correctAnswer": "seven",
+        "category": "Numbers"
+    },
+    {
+        "question": "My birthday is in ___.",
+        "options": ["July", "chair", "blue"],
+        "correctAnswer": "July",
+        "category": "Months"
+    },
+    {
+        "question": "The number after five is ___.",
+        "options": ["six", "table", "yellow"],
+        "correctAnswer": "six",
+        "category": "Numbers"
+    },
+    {
+        "question": "There are twelve months in a ___.",
+        "options": ["year", "school", "red"],
+        "correctAnswer": "year",
+        "category": "Months"
+    }
+]

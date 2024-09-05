@@ -1,0 +1,27 @@
+[
+    {
+        "question": "He didn’t study ___, he failed the exam.",
+        "options": ["Therefore", "However", "In contrast"],
+        "correctAnswer": "Therefore"
+    },
+    {
+        "question": "The company is profitable ___, it faces challenges.",
+        "options": ["However", "Therefore", "In contrast"],
+        "correctAnswer": "However"
+    },
+    {
+        "question": "She was late ___, the meeting was delayed.",
+        "options": ["Therefore", "However", "In contrast"],
+        "correctAnswer": "Therefore"
+    },
+    {
+        "question": "The experiment was unsuccessful ___, it provided valuable insights.",
+        "options": ["However", "Therefore", "In contrast"],
+        "correctAnswer": "However"
+    },
+    {
+        "question": "The trip was exhausting ___, it was worth it.",
+        "options": ["However", "Therefore", "In contrast"],
+        "correctAnswer": "However"
+    }
+]

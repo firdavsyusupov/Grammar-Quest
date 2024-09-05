@@ -1,0 +1,28 @@
+.increase{
+    background: #F6F5F4;
+    padding-top: 20px;
+    & .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-text-block{
+        &-title{
+            color: #000;
+            font-family: 'gothic';
+            line-height: 100%;
+            letter-spacing: -2px;
+            font-weight: 400;
+            font-size: 48px;
+            padding-bottom: 30px;
+        }
+        &-text{
+            color: #757575;
+            line-height: 140%;
+            font-size: 18px;
+            font-weight: 600;
+            padding-bottom: 35px;
+            width: 70%;
+        }
+    }
+}

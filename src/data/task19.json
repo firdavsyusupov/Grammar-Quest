@@ -1,0 +1,63 @@
+[
+    {
+      "question": "The cat is ___ (under, on) the table.",
+      "options": ["under", "on"],
+      "correctAnswer": "under",
+      "category": "Prepositions of Place"
+    },
+    {
+      "question": "The book is ___ (in, on) the shelf.",
+      "options": ["in", "on"],
+      "correctAnswer": "on",
+      "category": "Prepositions of Place"
+    },
+    {
+      "question": "She is sitting ___ (next to, behind) him.",
+      "options": ["next to", "behind"],
+      "correctAnswer": "next to",
+      "category": "Prepositions of Place"
+    },
+    {
+      "question": "The keys are ___ (in, on) the drawer.",
+      "options": ["in", "on"],
+      "correctAnswer": "in",
+      "category": "Prepositions of Place"
+    },
+    {
+      "question": "The picture is ___ (on, above) the wall.",
+      "options": ["on", "above"],
+      "correctAnswer": "on",
+      "category": "Prepositions of Place"
+    },
+    {
+      "question": "The dog is sleeping ___ (on, in) the bed.",
+      "options": ["on", "in"],
+      "correctAnswer": "on",
+      "category": "Prepositions of Place"
+    },
+    {
+      "question": "The shoes are ___ (under, on) the bed.",
+      "options": ["under", "on"],
+      "correctAnswer": "under",
+      "category": "Prepositions of Place"
+    },
+    {
+      "question": "The clock is ___ (on, above) the fireplace.",
+      "options": ["on", "above"],
+      "correctAnswer": "above",
+      "category": "Prepositions of Place"
+    },
+    {
+      "question": "The car is parked ___ (in front of, behind) the house.",
+      "options": ["in front of", "behind"],
+      "correctAnswer": "in front of",
+      "category": "Prepositions of Place"
+    },
+    {
+      "question": "The children are playing ___ (in, on) the park.",
+      "options": ["in", "on"],
+      "correctAnswer": "in",
+      "category": "Prepositions of Place"
+    }
+  ]
+  

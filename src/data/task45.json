@@ -1,0 +1,52 @@
+[
+    {
+        "question": "I ___ a new book.",
+        "options": ["has", "have", "had", "is"],
+        "correctAnswer": "have"
+    },
+    {
+        "question": "What is the plural form of 'child'?",
+        "options": ["childs", "children", "childes", "childers"],
+        "correctAnswer": "children"
+    },
+    {
+        "question": "The cat is ___ the table.",
+        "options": ["on", "in", "at", "by"],
+        "correctAnswer": "on"
+    },
+    {
+        "question": "___ apple is red.",
+        "options": ["A", "An", "The", "No article"],
+        "correctAnswer": "An"
+    },
+    {
+        "question": "She ___ to school every day.",
+        "options": ["go", "goes", "going", "went"],
+        "correctAnswer": "goes"
+    },
+    {
+        "question": "___ you like pizza?",
+        "options": ["Do", "Are", "Does", "Have"],
+        "correctAnswer": "Do"
+    },
+    {
+        "question": "Which of the following is a proper noun?",
+        "options": ["car", "London", "dog", "apple"],
+        "correctAnswer": "London"
+    },
+    {
+        "question": "I ___ like coffee.",
+        "options": ["doesn't", "don't", "am not", "aren't"],
+        "correctAnswer": "don't"
+    },
+    {
+        "question": "What is the past form of the verb 'to eat'?",
+        "options": ["eated", "eaten", "ate", "eats"],
+        "correctAnswer": "ate"
+    },
+    {
+        "question": "The weather today is very ___.",
+        "options": ["hot", "hotter", "hottest", "heat"],
+        "correctAnswer": "hot"
+    }
+]

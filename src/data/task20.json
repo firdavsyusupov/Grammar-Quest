@@ -1,0 +1,52 @@
+[
+    {
+        "question": "The meeting starts ___ 9:00 AM.",
+        "options": ["at", "on"],
+        "correctAnswer": "at"
+    },
+    {
+        "question": "She was born ___ 2005.",
+        "options": ["in", "on"],
+        "correctAnswer": "in"
+    },
+    {
+        "question": "The party is ___ Friday night.",
+        "options": ["on", "at"],
+        "correctAnswer": "on"
+    },
+    {
+        "question": "We go to the gym every ___ morning.",
+        "options": ["every", "at"],
+        "correctAnswer": "every"
+    },
+    {
+        "question": "He left the house ___ sunrise.",
+        "options": ["before", "after"],
+        "correctAnswer": "before"
+    },
+    {
+        "question": "The movie will start ___ 15 minutes.",
+        "options": ["at", "in"],
+        "correctAnswer": "in"
+    },
+    {
+        "question": "The store closes ___ 8:00 PM.",
+        "options": ["at", "on"],
+        "correctAnswer": "at"
+    },
+    {
+        "question": "We will arrive ___ time for dinner.",
+        "options": ["in", "on"],
+        "correctAnswer": "in"
+    },
+    {
+        "question": "She works ___ Monday to Friday.",
+        "options": ["from", "at"],
+        "correctAnswer": "from"
+    },
+    {
+        "question": "The concert is ___ December.",
+        "options": ["in", "on"],
+        "correctAnswer": "in"
+    }
+]

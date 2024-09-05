@@ -1,0 +1,33 @@
+[
+    {
+      "question": "One cat, two ___.",
+      "options": ["cats", "cat", "cates"],
+      "correctAnswer": "cats",
+      "category": "Plural"
+    },
+    {
+      "question": "One apple, three ___.",
+      "options": ["apples", "apple", "applese"],
+      "correctAnswer": "apples",
+      "category": "Plural"
+    },
+    {
+      "question": "One shoe, two ___.",
+      "options": ["shoes", "shoe", "shoeing"],
+      "correctAnswer": "shoes",
+      "category": "Plural"
+    },
+    {
+      "question": "One book, five ___.",
+      "options": ["books", "book", "bookes"],
+      "correctAnswer": "books",
+      "category": "Plural"
+    },
+    {
+      "question": "One child, many ___.",
+      "options": ["children", "childs", "childes"],
+      "correctAnswer": "children",
+      "category": "Plural"
+    }
+  ]
+  

@@ -1,0 +1,27 @@
+[
+    {
+        "question": "She was tired. ___, she finished her work.",
+        "options": ["However", "Therefore", "In contrast"],
+        "correctAnswer": "However"
+    },
+    {
+        "question": "He studied hard. ___, he passed the exam.",
+        "options": ["Therefore", "However", "In contrast"],
+        "correctAnswer": "Therefore"
+    },
+    {
+        "question": "The weather was bad. ___, we went hiking.",
+        "options": ["However", "Therefore", "In contrast"],
+        "correctAnswer": "However"
+    },
+    {
+        "question": "The team played well. ___, they lost the game.",
+        "options": ["However", "Therefore", "In contrast"],
+        "correctAnswer": "However"
+    },
+    {
+        "question": "The project was challenging. ___, we completed it on time.",
+        "options": ["However", "Therefore", "In contrast"],
+        "correctAnswer": "However"
+    }
+]

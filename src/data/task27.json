@@ -1,0 +1,52 @@
+[
+    {
+        "question": "The dog ___ (to bark) at the mailman.",
+        "options": ["bark", "barks", "barking"],
+        "correctAnswer": "barks"
+    },
+    {
+        "question": "The children ___ (to play) in the park.",
+        "options": ["plays", "play", "playing"],
+        "correctAnswer": "play"
+    },
+    {
+        "question": "The teacher ___ (to explain) the lesson clearly.",
+        "options": ["explains", "explain", "explaining"],
+        "correctAnswer": "explains"
+    },
+    {
+        "question": "The birds ___ (to sing) every morning.",
+        "options": ["sings", "sing", "singing"],
+        "correctAnswer": "sing"
+    },
+    {
+        "question": "The car ___ (to stop) at the red light.",
+        "options": ["stops", "stop", "stopping"],
+        "correctAnswer": "stops"
+    },
+    {
+        "question": "The students ___ (to study) for the test.",
+        "options": ["studies", "study", "studying"],
+        "correctAnswer": "study"
+    },
+    {
+        "question": "The baby ___ (to sleep) in the crib.",
+        "options": ["sleeps", "sleep", "sleeping"],
+        "correctAnswer": "sleeps"
+    },
+    {
+        "question": "The flowers ___ (to bloom) in the spring.",
+        "options": ["blooms", "bloom", "blooming"],
+        "correctAnswer": "bloom"
+    },
+    {
+        "question": "The chef ___ (to prepare) the meal with care.",
+        "options": ["prepares", "prepare", "preparing"],
+        "correctAnswer": "prepares"
+    },
+    {
+        "question": "The dancers ___ (to perform) on stage.",
+        "options": ["performs", "perform", "performing"],
+        "correctAnswer": "perform"
+    }
+]

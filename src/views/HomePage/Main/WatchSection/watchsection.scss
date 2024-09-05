@@ -1,0 +1,26 @@
+.watch{
+    & .container{
+        display: flex;
+        align-items: center;
+        min-height: 600px;
+    }
+    &-text-block{
+        &-title{
+            color: #000;
+            font-family: 'gothic';
+            font-size: 48px;
+            line-height: 100%;
+            letter-spacing: -2px;
+            font-weight: 400;
+            width: 80%;
+            padding-bottom: 30px;
+        }
+        &-text{
+            color: #757575;
+            font-weight: 140%;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 35px;
+        }
+    }
+}
