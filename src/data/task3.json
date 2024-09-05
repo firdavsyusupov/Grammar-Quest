@@ -1,0 +1,53 @@
+[
+    {
+      "question": "She made the cake ___.",
+      "options": ["herself", "himself", "themselves"],
+      "correctAnswer": "herself"
+    },
+    {
+      "question": "He cut ___ while chopping vegetables.",
+      "options": ["himself", "herself", "themselves"],
+      "correctAnswer": "himself"
+    },
+    {
+      "question": "They did all the work ___.",
+      "options": ["themselves", "herself", "himself"],
+      "correctAnswer": "themselves"
+    },
+    {
+      "question": "I taught ___ how to play the guitar.",
+      "options": ["myself", "himself", "herself"],
+      "correctAnswer": "myself"
+    },
+    {
+      "question": "She fixed the computer ___.",
+      "options": ["herself", "himself", "themselves"],
+      "correctAnswer": "herself"
+    },
+    {
+      "question": "The cat cleaned ___.",
+      "options": ["itself", "herself", "himself"],
+      "correctAnswer": "itself"
+    },
+    {
+      "question": "We enjoyed ___ at the party.",
+      "options": ["ourselves", "themselves", "himself"],
+      "correctAnswer": "ourselves"
+    },
+    {
+      "question": "He solved the problem ___.",
+      "options": ["himself", "herself", "themselves"],
+      "correctAnswer": "himself"
+    },
+    {
+      "question": "They built the house ___.",
+      "options": ["themselves", "herself", "himself"],
+      "correctAnswer": "themselves"
+    },
+    {
+      "question": "I wrote the letter ___.",
+      "options": ["myself", "herself", "himself"],
+      "correctAnswer": "myself"
+    }
+  ]
+  

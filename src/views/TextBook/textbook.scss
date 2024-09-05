@@ -1,0 +1,166 @@
+.textbook {
+  background: #f6f5f4;
+  padding: 40px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  &-left {
+    display: flex;
+    & div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      padding-left: 20px;
+      & h2 {
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 100%;
+        letter-spacing: -0.04em;
+        color: #000;
+        font-family: "gothic";
+      }
+    }
+  }
+}
+
+.nav-item {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+.selected {
+  border-bottom: 2px solid #000;
+}
+
+.btn {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 8px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.level-selector {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.level-item {
+    font-size: 16px;
+    margin: 0 10px;
+    font-family: "gothic";
+    color: grey;
+    cursor: pointer;
+  
+    &.selected {
+      color: black;
+      border-bottom: 2px solid black;
+    }
+  }
+
+.level-label {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.easy {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.medium {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.hard {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.word-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+  color: #000;
+  flex-direction: column;
+}
+
+
+
+.word-image {
+  width: 150px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.word-content2 {
+  flex: 1;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 80%;
+}
+
+.word-content{
+  padding-bottom: 20px;
+  width: 80%;
+
+}
+
+.pronunciation {
+  font-size: 18px;
+  color: #666;
+}
+
+.compound-badge {
+  background-color: #e0e0e0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.definition {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.example {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.action-buttons {
+  margin-top: 15px;
+}
+
+.add-to-learned {
+  background-color: #28a745;
+  color: white;
+}
+
+.remove-from-dictionary {
+  background-color: #dc3545;
+  color: white;
+  margin-left: 10px;
+}

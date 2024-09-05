@@ -1,0 +1,33 @@
+[
+    {
+      "question": "The apple is ___.",
+      "options": ["red", "pencil", "car"],
+      "correctAnswer": "red",
+      "category": "Color"
+    },
+    {
+      "question": "The ball is ___.",
+      "options": ["round", "box", "table"],
+      "correctAnswer": "round",
+      "category": "Shape"
+    },
+    {
+      "question": "The box is ___.",
+      "options": ["square", "yellow", "shoes"],
+      "correctAnswer": "square",
+      "category": "Shape"
+    },
+    {
+      "question": "The dress is ___.",
+      "options": ["blue", "pen", "hat"],
+      "correctAnswer": "blue",
+      "category": "Color"
+    },
+    {
+      "question": "The elephant is ___.",
+      "options": ["big", "spoon", "cup"],
+      "correctAnswer": "big",
+      "category": "Size"
+    }
+  ]
+  

@@ -1,0 +1,52 @@
+[
+    {
+        "question": "If you heat water, it ___",
+        "options": ["boils", "will boil", "boiled"],
+        "correctAnswer": "boils"
+    },
+    {
+        "question": "If you touch fire, you ___",
+        "options": ["get", "will get", "got"],
+        "correctAnswer": "get"
+    },
+    {
+        "question": "If it rains, the ground ___",
+        "options": ["gets", "will get", "got"],
+        "correctAnswer": "gets"
+    },
+    {
+        "question": "If it rains, we ___",
+        "options": ["cancel", "will cancel", "canceled"],
+        "correctAnswer": "will cancel"
+    },
+    {
+        "question": "If she studies hard, she ___",
+        "options": ["passes", "will pass", "passed"],
+        "correctAnswer": "will pass"
+    },
+    {
+        "question": "If he eats too much, he ___",
+        "options": ["gets", "will get", "got"],
+        "correctAnswer": "will get"
+    },
+    {
+        "question": "If I had a million dollars, I ___",
+        "options": ["would buy", "will buy", "bought"],
+        "correctAnswer": "would buy"
+    },
+    {
+        "question": "If she were here, she ___",
+        "options": ["would help", "will help", "helped"],
+        "correctAnswer": "would help"
+    },
+    {
+        "question": "If they won the lottery, they ___",
+        "options": ["would travel", "will travel", "traveled"],
+        "correctAnswer": "would travel"
+    },
+    {
+        "question": "If I knew the answer, I ___",
+        "options": ["would tell", "will tell", "told"],
+        "correctAnswer": "would tell"
+    }
+]

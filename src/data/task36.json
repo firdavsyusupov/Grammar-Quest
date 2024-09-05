@@ -1,0 +1,27 @@
+[
+    {
+        "question": "___ water is essential for life.",
+        "options": ["The", "A", "Omit"],
+        "correctAnswer": "Omit"
+    },
+    {
+        "question": "She is ___ teacher at the school.",
+        "options": ["The", "A", "Omit"],
+        "correctAnswer": "A"
+    },
+    {
+        "question": "___ honesty is the best policy.",
+        "options": ["The", "A", "Omit"],
+        "correctAnswer": "Omit"
+    },
+    {
+        "question": "I love ___ chocolate.",
+        "options": ["The", "A", "Omit"],
+        "correctAnswer": "Omit"
+    },
+    {
+        "question": "___ knowledge is power.",
+        "options": ["The", "A", "Omit"],
+        "correctAnswer": "Omit"
+    }
+]

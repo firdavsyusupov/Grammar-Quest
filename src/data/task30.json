@@ -1,0 +1,27 @@
+[
+    {
+        "question": "___ she was tired, she finished her homework.",
+        "options": ["although", "because", "but"],
+        "correctAnswer": "although"
+    },
+    {
+        "question": "___ it was raining, they stayed inside.",
+        "options": ["because", "so", "although"],
+        "correctAnswer": "because"
+    },
+    {
+        "question": "___ you study hard, you will pass the test.",
+        "options": ["if", "because", "so"],
+        "correctAnswer": "if"
+    },
+    {
+        "question": "___ it was late, they decided to go home.",
+        "options": ["since", "although", "so"],
+        "correctAnswer": "since"
+    },
+    {
+        "question": "___ he arrived, everyone was already there.",
+        "options": ["when", "because", "although"],
+        "correctAnswer": "when"
+    }
+]

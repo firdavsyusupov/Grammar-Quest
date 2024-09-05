@@ -1,0 +1,27 @@
+[
+  {
+    "question": "This is my ___.",
+    "options": ["father", "table", "apple"],
+    "correctAnswer": "father"
+  },
+  {
+    "question": "She is wearing a ___.",
+    "options": ["hat", "car", "book"],
+    "correctAnswer": "hat"
+  },
+  {
+    "question": "I am eating a ___.",
+    "options": ["banana", "chair", "phone"],
+    "correctAnswer": "banana"
+  },
+  {
+    "question": "He is my ___.",
+    "options": ["brother", "school", "pen"],
+    "correctAnswer": "brother"
+  },
+  {
+    "question": "They are putting on their ___.",
+    "options": ["shoes", "door", "pencil"],
+    "correctAnswer": "shoes"
+  }
+]

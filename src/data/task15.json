@@ -1,0 +1,63 @@
+[
+    {
+      "question": "She always (always, never) wakes up early.",
+      "options": ["always", "never"],
+      "correctAnswer": "always",
+      "category": "Adverbs of Frequency"
+    },
+    {
+      "question": "They usually (usually, sometimes) go to the gym after work.",
+      "options": ["usually", "sometimes"],
+      "correctAnswer": "usually",
+      "category": "Adverbs of Frequency"
+    },
+    {
+      "question": "He rarely (rarely, often) eats breakfast.",
+      "options": ["rarely", "often"],
+      "correctAnswer": "rarely",
+      "category": "Adverbs of Frequency"
+    },
+    {
+      "question": "I frequently (frequently, seldom) travel for work.",
+      "options": ["frequently", "seldom"],
+      "correctAnswer": "frequently",
+      "category": "Adverbs of Frequency"
+    },
+    {
+      "question": "We never (always, never) watch TV before bed.",
+      "options": ["always", "never"],
+      "correctAnswer": "never",
+      "category": "Adverbs of Frequency"
+    },
+    {
+      "question": "She occasionally (occasionally, always) takes a walk in the evening.",
+      "options": ["occasionally", "always"],
+      "correctAnswer": "occasionally",
+      "category": "Adverbs of Frequency"
+    },
+    {
+      "question": "They usually (never, usually) arrive late to meetings.",
+      "options": ["never", "usually"],
+      "correctAnswer": "usually",
+      "category": "Adverbs of Frequency"
+    },
+    {
+      "question": "He often (often, rarely) calls his parents on the weekend.",
+      "options": ["often", "rarely"],
+      "correctAnswer": "often",
+      "category": "Adverbs of Frequency"
+    },
+    {
+      "question": "I sometimes (sometimes, always) read before going to sleep.",
+      "options": ["sometimes", "always"],
+      "correctAnswer": "sometimes",
+      "category": "Adverbs of Frequency"
+    },
+    {
+      "question": "We usually (seldom, usually) have coffee together in the morning.",
+      "options": ["seldom", "usually"],
+      "correctAnswer": "usually",
+      "category": "Adverbs of Frequency"
+    }
+  ]
+  

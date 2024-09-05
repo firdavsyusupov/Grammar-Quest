@@ -1,0 +1,33 @@
+[
+    {
+      "question": "How much ___ this?",
+      "options": ["is", "chair", "red"],
+      "correctAnswer": "is",
+      "category": "Shopping"
+    },
+    {
+      "question": "I would like to buy ___.",
+      "options": ["this", "blue", "big"],
+      "correctAnswer": "this",
+      "category": "Shopping"
+    },
+    {
+      "question": "___ do you sell apples?",
+      "options": ["Do", "Hat", "Yellow"],
+      "correctAnswer": "Do",
+      "category": "Shopping"
+    },
+    {
+      "question": "The price is ___.",
+      "options": ["five", "small", "blue"],
+      "correctAnswer": "five",
+      "category": "Shopping"
+    },
+    {
+      "question": "___ I help you?",
+      "options": ["Can", "Big", "Blue"],
+      "correctAnswer": "Can",
+      "category": "Shopping"
+    }
+  ]
+  

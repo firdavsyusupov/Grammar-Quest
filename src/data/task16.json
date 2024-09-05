@@ -1,0 +1,63 @@
+[
+    {
+      "question": "She speaks ___ (quietly, loudly) in the library.",
+      "options": ["quietly", "loudly"],
+      "correctAnswer": "quietly",
+      "category": "Adverbs of Manner"
+    },
+    {
+      "question": "They worked ___ (hard, lazily) to finish the project.",
+      "options": ["hard", "lazily"],
+      "correctAnswer": "hard",
+      "category": "Adverbs of Manner"
+    },
+    {
+      "question": "He drives ___ (carefully, recklessly) on the highway.",
+      "options": ["carefully", "recklessly"],
+      "correctAnswer": "carefully",
+      "category": "Adverbs of Manner"
+    },
+    {
+      "question": "I answered the question ___ (correctly, incorrectly).",
+      "options": ["correctly", "incorrectly"],
+      "correctAnswer": "correctly",
+      "category": "Adverbs of Manner"
+    },
+    {
+      "question": "We walked ___ (quickly, slowly) to catch the bus.",
+      "options": ["quickly", "slowly"],
+      "correctAnswer": "quickly",
+      "category": "Adverbs of Manner"
+    },
+    {
+      "question": "She danced ___ (gracefully, awkwardly) at the party.",
+      "options": ["gracefully", "awkwardly"],
+      "correctAnswer": "gracefully",
+      "category": "Adverbs of Manner"
+    },
+    {
+      "question": "They solved the puzzle ___ (easily, difficultly).",
+      "options": ["easily", "difficultly"],
+      "correctAnswer": "easily",
+      "category": "Adverbs of Manner"
+    },
+    {
+      "question": "He finished the race ___ (quickly, slowly).",
+      "options": ["quickly", "slowly"],
+      "correctAnswer": "quickly",
+      "category": "Adverbs of Manner"
+    },
+    {
+      "question": "I prepared the meal ___ (carefully, hastily).",
+      "options": ["carefully", "hastily"],
+      "correctAnswer": "carefully",
+      "category": "Adverbs of Manner"
+    },
+    {
+      "question": "We cleaned the house ___ (thoroughly, carelessly).",
+      "options": ["thoroughly", "carelessly"],
+      "correctAnswer": "thoroughly",
+      "category": "Adverbs of Manner"
+    }
+  ]
+  

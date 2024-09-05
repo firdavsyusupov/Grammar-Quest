@@ -1,0 +1,52 @@
+[
+    {
+        "question": "The sun is not ___ (not, isn’t, don’t) shining.",
+        "options": ["not", "isn’t", "don’t"],
+        "correctAnswer": "isn’t"
+    },
+    {
+        "question": "The birds are not ___ (not, isn’t, don’t) singing.",
+        "options": ["not", "isn’t", "don’t"],
+        "correctAnswer": "isn’t"
+    },
+    {
+        "question": "The car is not ___ (not, isn’t, don’t) parked.",
+        "options": ["not", "isn’t", "don’t"],
+        "correctAnswer": "isn’t"
+    },
+    {
+        "question": "The baby is not ___ (not, isn’t, don’t) sleeping.",
+        "options": ["not", "isn’t", "don’t"],
+        "correctAnswer": "isn’t"
+    },
+    {
+        "question": "The dog is not ___ (not, isn’t, don’t) barking.",
+        "options": ["not", "isn’t", "don’t"],
+        "correctAnswer": "isn’t"
+    },
+    {
+        "question": "The phone is not ___ (not, isn’t, don’t) ringing.",
+        "options": ["not", "isn’t", "don’t"],
+        "correctAnswer": "isn’t"
+    },
+    {
+        "question": "The children are not ___ (not, isn’t, don’t) playing.",
+        "options": ["not", "isn’t", "don’t"],
+        "correctAnswer": "aren’t"
+    },
+    {
+        "question": "The teacher is not ___ (not, isn’t, don’t) speaking.",
+        "options": ["not", "isn’t", "don’t"],
+        "correctAnswer": "isn’t"
+    },
+    {
+        "question": "The cat is not ___ (not, isn’t, don’t) purring.",
+        "options": ["not", "isn’t", "don’t"],
+        "correctAnswer": "isn’t"
+    },
+    {
+        "question": "The flowers are not ___ (not, isn’t, don’t) blooming.",
+        "options": ["not", "isn’t", "don’t"],
+        "correctAnswer": "aren’t"
+    }
+]

@@ -1,0 +1,33 @@
+[
+    {
+      "question": "She is very ___ (happy).",
+      "options": ["happily", "happiness", "happying"],
+      "correctAnswer": "happily",
+      "category": "Suffix"
+    },
+    {
+      "question": "He ___ (walk) to school every day.",
+      "options": ["walked", "walking", "walker"],
+      "correctAnswer": "walked",
+      "category": "Suffix"
+    },
+    {
+      "question": "She ___ (talk) to her friend yesterday.",
+      "options": ["talked", "talking", "talker"],
+      "correctAnswer": "talked",
+      "category": "Suffix"
+    },
+    {
+      "question": "The child ___ (cry) because he was sad.",
+      "options": ["cried", "crying", "cryer"],
+      "correctAnswer": "cried",
+      "category": "Suffix"
+    },
+    {
+      "question": "The project was completed ___ (quick).",
+      "options": ["quickly", "quickness", "quicking"],
+      "correctAnswer": "quickly",
+      "category": "Suffix"
+    }
+  ]
+  

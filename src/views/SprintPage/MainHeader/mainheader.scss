@@ -1,0 +1,135 @@
+.sprint__header {
+    background: #f6f5f4;
+    & .container {
+      padding: 125px;
+    }
+    &-block {
+      background: #fff;
+      max-width: 800px;
+      width: 100%;
+      min-height: 440px;
+      margin: 0 auto;
+      border-radius: 14px;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      &-text {
+        &-title {
+          display: flex;
+          gap: 20px;
+          & h3 {
+            color: #000;
+            font-size: 48px;
+            font-family: "gothic";
+            font-weight: 400;
+            letter-spacing: -0.04em;
+          }
+          & span {
+            background: #c3dce3;
+            border-radius: 6px;
+            padding: 4px 8px;
+            margin-top: 20px;
+            height: 25px;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 140%;
+            letter-spacing: -0.04em;
+            color: #2b788b;
+          }
+        }
+        &-text {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 140%;
+          letter-spacing: -0.04em;
+          color: #757575;
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+        &-levels {
+          display: flex;
+          gap: 25px;
+          align-items: center;
+          padding-bottom: 30px;
+          &-level {
+            border: 3px solid #639b6d;
+            border-radius: 100px;
+            padding: 14px 13px;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: -0.04em;
+            color: #639b6d;
+            cursor: pointer;
+            &:hover {
+              background: #639b6d5d;
+            }
+            &.active {
+              background: #639b6d;
+              color: #ffffff;
+            }
+          }
+          .level2 {
+            border: 3px solid #c4a24c;
+            color: #c4a24c;
+            &:hover {
+              background: #c4a24c57;
+            }
+            &.active {
+              background: #c4a24c;
+              color: #ffffff;
+            }
+          }
+          .level3 {
+            border: 3px solid #cb5b43;
+            color: #cb5b43;
+            &:hover {
+              background: rgba(203, 91, 67, 0.3);
+            }
+            &.active {
+              background: #cb5b43;
+              color: #ffffff;
+            }
+          }
+          .level4 {
+            border: 3px solid #a95151;
+            color: #a95151;
+            &:hover {
+              background: #a951514b;
+            }
+            &.active {
+              background: #a95151;
+              color: #ffffff;
+            }
+          }
+          .level5 {
+            border: 3px solid #a15993;
+            color: #a15993;
+            &:hover {
+              background: #a1599359;
+            }
+            &.active {
+              background: #a15993;
+              color: #ffffff;
+            }
+          }
+          .level6 {
+            border: 3px solid #5996a5;
+            color: #5996a5;
+            &:hover {
+              background: #5996a558;
+            }
+            &.active {
+              background: #5996a5;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }

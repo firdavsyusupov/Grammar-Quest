@@ -1,0 +1,33 @@
+[
+    {
+      "question": "She is ___ (happy) with the results.",
+      "options": ["unhappy", "unhappiness", "happying"],
+      "correctAnswer": "unhappy",
+      "category": "Prefix"
+    },
+    {
+      "question": "He is ___ (lucky) to have won the lottery.",
+      "options": ["unlucky", "unluckily", "lucking"],
+      "correctAnswer": "unlucky",
+      "category": "Prefix"
+    },
+    {
+      "question": "This statement is ___ (true).",
+      "options": ["untrue", "truly", "truing"],
+      "correctAnswer": "untrue",
+      "category": "Prefix"
+    },
+    {
+      "question": "That decision was very ___ (fair).",
+      "options": ["unfair", "fairness", "fairing"],
+      "correctAnswer": "unfair",
+      "category": "Prefix"
+    },
+    {
+      "question": "She felt ___ (comfortable) in the new dress.",
+      "options": ["uncomfortable", "comfort", "comforting"],
+      "correctAnswer": "uncomfortable",
+      "category": "Prefix"
+    }
+  ]
+  

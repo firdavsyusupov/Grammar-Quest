@@ -1,0 +1,33 @@
+[
+    {
+      "question": "I can ___.",
+      "options": ["run", "table", "shirt"],
+      "correctAnswer": "run",
+      "category": "Verb"
+    },
+    {
+      "question": "She is ___.",
+      "options": ["happy", "apple", "sock"],
+      "correctAnswer": "happy",
+      "category": "Adjective"
+    },
+    {
+      "question": "He is ___.",
+      "options": ["tired", "pencil", "house"],
+      "correctAnswer": "tired",
+      "category": "Adjective"
+    },
+    {
+      "question": "They ___.",
+      "options": ["walk", "door", "pen"],
+      "correctAnswer": "walk",
+      "category": "Verb"
+    },
+    {
+      "question": "We ___.",
+      "options": ["jump", "book", "window"],
+      "correctAnswer": "jump",
+      "category": "Verb"
+    }
+  ]
+  

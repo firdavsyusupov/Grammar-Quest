@@ -1,0 +1,27 @@
+[
+    {
+        "question": "Who ___ is coming to the party?",
+        "options": ["Who", "What", "Which"],
+        "correctAnswer": "Who"
+    },
+    {
+        "question": "What ___ did you say?",
+        "options": ["What", "Who", "Which"],
+        "correctAnswer": "What"
+    },
+    {
+        "question": "What ___ is your favorite color?",
+        "options": ["What", "Which", "Who"],
+        "correctAnswer": "What"
+    },
+    {
+        "question": "Which ___ of these books do you like the most?",
+        "options": ["Which", "What", "Who"],
+        "correctAnswer": "Which"
+    },
+    {
+        "question": "Who ___ did you talk to yesterday?",
+        "options": ["Who", "What", "Which"],
+        "correctAnswer": "Who"
+    }
+]

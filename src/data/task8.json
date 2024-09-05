@@ -1,0 +1,33 @@
+[
+    {
+      "question": "___, how are you?",
+      "options": ["Hello", "Chair", "Green"],
+      "correctAnswer": "Hello",
+      "category": "Greeting"
+    },
+    {
+      "question": "___ is my name.",
+      "options": ["My", "Red", "Chair"],
+      "correctAnswer": "My",
+      "category": "Introduction"
+    },
+    {
+      "question": "___ to meet you.",
+      "options": ["Nice", "Blue", "Table"],
+      "correctAnswer": "Nice",
+      "category": "Introduction"
+    },
+    {
+      "question": "Good ___.",
+      "options": ["morning", "pencil", "yellow"],
+      "correctAnswer": "morning",
+      "category": "Greeting"
+    },
+    {
+      "question": "___ you later.",
+      "options": ["See", "Red", "Pen"],
+      "correctAnswer": "See",
+      "category": "Greeting"
+    }
+  ]
+  
