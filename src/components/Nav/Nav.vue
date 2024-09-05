@@ -20,6 +20,9 @@ import "./nav.scss";
           <li class="nav__item">
             <RouterLink to="/textbook" class="nav__link">textbook</RouterLink>
           </li>
+          <li class="nav__item">
+            <RouterLink to="/about" class="nav__link">our team</RouterLink>
+          </li>
           <!-- <li class="nav__item">
             <a href="#" class="nav__link">statistics</a>
           </li> -->

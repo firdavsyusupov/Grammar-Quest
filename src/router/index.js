@@ -23,6 +23,11 @@
       component: () => import("@/pages/AudioPage.vue"),
     },
     {
+      path: "/about",
+      name: "about",
+      component: () => import("@/pages/AboutPage.vue"),
+    },
+    {
       path: "/sprint-task1",
       name: "sprint-task1",
       component: () => import("@/views/SprintPage/SprintTest/SprintTest.vue"),

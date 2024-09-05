@@ -1,0 +1,18 @@
+.our-team {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+
+  &__title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
