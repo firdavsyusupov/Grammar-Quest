@@ -1,0 +1,32 @@
+.team-member {
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  width: 50%;
+  @media screen and (max-width: 650px) {
+    width: 100%;
+  }
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &__photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  &__role {
+    color: #666;
+    font-size: 1rem;
+  }
+}
+
+

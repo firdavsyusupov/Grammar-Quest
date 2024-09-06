@@ -11,7 +11,13 @@ import {RouterLink} from 'vue-router'
             <RouterLink to="/" class="footer-top-block-blog-item-link">home</RouterLink>
           </li>
           <li class="footer-top-block-blog-item">
-            <a href="#" class="footer-top-block-blog-item-link">textbook</a>
+            <RouterLink to="/textbook" class="footer-top-block-blog-item-link">textbook</RouterLink>
+          </li>
+          <li class="footer-top-block-blog-item">
+            <RouterLink to="/about" class="footer-top-block-blog-item-link">our team</RouterLink>
+          </li>
+           <li class="footer-top-block-blog-item">
+            <RouterLink to="/platform" class="footer-top-block-blog-item-link">platforms</RouterLink>
           </li>
           <!-- <li class="footer-top-block-blog-item">
             <a href="#" class="footer-top-block-blog-item-link">statisticks</a>
