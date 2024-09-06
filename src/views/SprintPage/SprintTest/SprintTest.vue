@@ -10,13 +10,12 @@ import "../SprintTest/sprinttest.scss";
 const quiz = useQuizStore();
 
 onMounted(() => {
-  quiz.loadQuestions('task1'); // Load Task 1 data on mount
+  quiz.loadQuestions('task1');
   quiz.loadState();
 });
 </script>
 
 <template>
-  <!-- Completed Quiz Section -->
   <section v-if="quiz.quizCompleted" class="sprint__answer">
     <div class="container">
       <div class="sprint__answer-block">
@@ -96,7 +95,6 @@ onMounted(() => {
     </div>
   </section>
 
-  <!-- Quiz Section -->
   <section v-else class="sprint__test">
     <div class="container">
       <div class="sprint__test-block">

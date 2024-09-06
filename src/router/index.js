@@ -28,6 +28,11 @@
       component: () => import("@/pages/AboutPage.vue"),
     },
     {
+      path: "/platform",
+      name: "platform",
+      component: () => import("@/pages/PlatformPage.vue"),
+    },
+    {
       path: "/sprint-task1",
       name: "sprint-task1",
       component: () => import("@/views/SprintPage/SprintTest/SprintTest.vue"),

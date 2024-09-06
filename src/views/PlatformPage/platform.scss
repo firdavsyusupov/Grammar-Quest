@@ -1,0 +1,76 @@
+.platform-title .title {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+.platform-title{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.platform-title .inactive {
+  color: grey;
+}
+
+.platform-title .active {
+  color: black;
+}
+
+.platform-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 100px 0 50px 0;
+  justify-content: center;
+}
+
+.platform-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+  text-align: center;
+  max-width: 380px;
+  width: 100%;
+}
+
+.platform-card:hover {
+  transform: translateY(-5px);
+}
+
+.platform-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.platform-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.platform-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.platform-card a {
+  font-weight: bold;
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.platform-card a:hover {
+  text-decoration: underline;
+}
