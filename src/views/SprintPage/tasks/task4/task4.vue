@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue';
+import { ref, onMounted, ref, computed, computed } from 'vue';
 import { useQuizStore } from '@/stores/quizStore';
 import RepeatIcon from '@/components/icons/RepeatIcon.vue';
 import Button from '@/UI/Buttons/HeaderButton/HeaderButton.vue';
@@ -11,13 +11,10 @@ const quiz = useQuizStore();
 const currentTask = ref('task4');
 const taskData = ref([]);
 
-// Use a single onMounted hook
 onMounted(async () => {
   try {
-    await quiz.loadQuestions(currentTask.value); // Assuming this is an async function
+    await quiz.loadQuestions(currentTask.value);
     quiz.loadState();
-    
-    // Update taskData once questions are loaded
     taskData.value = quiz.questions || [];
   } catch (error) {
     console.error('Error during component mount:', error);

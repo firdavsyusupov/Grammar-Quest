@@ -16,11 +16,17 @@
     max-width: 800px;
     width: 100%;
     justify-content: center;
+    @media screen and (max-width: 600px) {
+      padding: 100px 0;
+    }
     &-inner {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 30px;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
     }
     &-test-text {
       font-size: 30px;
@@ -64,6 +70,9 @@
     gap: 10px;
     justify-content: center;
     transition: 0.4s;
+    @media screen and (max-width: 600px) {
+      flex-wrap: wrap;
+    }
   }
   .remaining-questions {
     display: flex;
@@ -118,8 +127,11 @@
     display: flex;
     align-items: center;
     max-width: 1330px;
-    // width: 100%;
+    width: 100%;
     gap: 10px;
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+    }
   }
   &-block {
     width: 50%;
@@ -130,6 +142,10 @@
     background: #fff;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+      align-items: center;
+    }
     &-inner2 {
       width: 100%;
       height: 300px;
@@ -140,6 +156,7 @@
       scrollbar-width: thin;
       scrollbar-color: #757575 #f6f5f4;
       counter-reset: list-counter;
+      
       & ul {
         list-style: none;
         padding: 0;
@@ -181,6 +198,11 @@
         }
       }
     }
+    .sprint__answer-block-img img{
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
     &2 {
       width: 60%;
       height: 400px;
@@ -191,6 +213,13 @@
       display: flex;
       overflow: hidden;
       gap: 40px;
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+      }
+      @media screen and (max-width: 600px) {
+       flex-direction: column;
+       height: auto;
+      }
       &-blog {
         width: 290px;
         &-title {
@@ -229,6 +258,12 @@
     &-inner {
       display: flex;
       align-items: center;
+      @media screen and (max-width: 600px) {
+        
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
     }
     &-text {
       &-title {
@@ -303,6 +338,9 @@
       justify-content: center;
       margin-top: 30px;
       gap: 10px;
+      @media screen and (max-width: 420px) {
+        flex-direction: column;
+      }
       &-btn2 {
         display: flex;
         align-items: center;

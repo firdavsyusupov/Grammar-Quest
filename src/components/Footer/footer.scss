@@ -9,6 +9,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 100%;
         &-blog{
             display: flex;
             gap: 30px;
@@ -35,6 +36,7 @@
         align-items: center;
         justify-content: space-between;
         padding-top: 20px;
+        width: 95%;
         &-icons{
             display: flex;
             align-items: center;

@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from "vue";
+import { computed, onMounted } from "vue";
 
 import StudentIcon from "@/components/icons/StudentIcon.vue";
 import BookIcon from "@/components/icons/BookIcon.vue";
@@ -19,7 +19,7 @@ const levelLabelClass = (level) => {
   return "";
 };
 
-onMounted(() => {
+computed(() => {
   quiz.resetQuiz();
 });
 </script>
@@ -39,10 +39,10 @@ onMounted(() => {
             <h2 class="nav-item">Dictionary</h2>
           </div>
         </div>
-        <div class="navbar-right">
+        <!-- <div class="navbar-right">
           <button class="btn">Sprint</button>
           <button class="btn">Audio-Call</button>
-        </div>
+        </div> -->
       </div>
       <div class="level-selector">
         <span
@@ -181,7 +181,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="word-content word-content2">
-          <h2>Task 6</h2>
+          <h2>Task 7</h2>
           <p class="definition">Frequency Adverbs</p>
           <p class="example">
             ⦁ After completing the sentence, read it again to ensure that the
@@ -200,7 +200,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="word-content word-content2">
-          <h2>Task 7</h2>
+          <h2>Task 8</h2>
           <p class="definition">Manner Adverbs</p>
           <p class="example">
             ⦁ For each sentence below, fill in the blank with the correct adverb
@@ -220,7 +220,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="word-content word-content2">
-          <h2>Task 8</h2>
+          <h2>Task 9</h2>
           <p class="definition">Definite and Indefinite Articles</p>
           <p class="example">
             ⦁ Bonus points for first-time accuracy in article selection.
@@ -238,7 +238,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="word-content word-content2">
-          <h2>Task 9</h2>
+          <h2>Task 10</h2>
           <p class="definition">Definite and Indefinite Articles</p>
           <p class="example">
             ⦁ Some sentences might require you to choose between articles based
@@ -257,7 +257,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="word-content word-content2">
-          <h2>Task 10</h2>
+          <h2>Task 11</h2>
           <p class="definition">Prepositions of Place</p>
           <p class="example">
             ⦁ Some sentences may require more than one preposition or may have
@@ -276,7 +276,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="word-content word-content2">
-          <h2>Task 11</h2>
+          <h2>Task 12</h2>
           <p class="definition">Prepositions of Time</p>
           <p class="example">
             ⦁ Extra rewards for accurate use of prepositions on the first try.
@@ -294,7 +294,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="word-content word-content2">
-          <h2>Task 12</h2>
+          <h2>Task 13</h2>
           <p class="definition">Singular vs. Plural Subjects and Verbs</p>
           <p class="example">
             ⦁ Once you’ve chosen the correct verb, categorize the sentence as
@@ -313,7 +313,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="word-content word-content2">
-          <h2>Task 13</h2>
+          <h2>Task 14</h2>
           <p class="definition">
             Singular and Plural Subjects in Complex Sentences
           </p>
@@ -335,7 +335,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="word-content word-content2">
-          <h2>Task 14</h2>
+          <h2>Task 15</h2>
           <p class="definition">
             English Language Level Pre-Test
           </p>
