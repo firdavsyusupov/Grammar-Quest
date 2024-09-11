@@ -16,6 +16,7 @@ import "./learnsection.scss"
                         <img class="learn-text-block-button-img" src="@/assets/images/learn-section-shoe.svg" alt="">
                         <div class="learn-text-block-button-text">
                             <p>Sprint</p>
+                            
                             <RightIcon :size="15"/>
                         </div>
                     </RouterLink>
