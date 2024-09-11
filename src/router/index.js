@@ -17,11 +17,11 @@
       name: "home",
       component: HomePage,
     },
-    {
-      path: "/audio",
-      name: "audio",
-      component: () => import("@/pages/AudioPage.vue"),
-    },
+    // {
+    //   path: "/audio",
+    //   name: "audio",
+    //   component: () => import("@/pages/AudioPage.vue"),
+    // },
     {
       path: "/about",
       name: "about",

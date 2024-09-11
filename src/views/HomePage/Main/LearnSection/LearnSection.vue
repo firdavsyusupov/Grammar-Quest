@@ -19,13 +19,13 @@ import "./learnsection.scss"
                             <RightIcon :size="15"/>
                         </div>
                     </RouterLink>
-                    <RouterLink to="/audio" class="learn-text-block-button learn-text-block-button2">
+                    <!-- <RouterLink to="/audio" class="learn-text-block-button learn-text-block-button2">
                         <img class="learn-text-block-button-img2" src="@/assets/images/learn-section-button-img.svg" alt="">
                         <div class="learn-text-block-button-text learn-text-block-button-text2">
                             <p>Audio-call</p>
                             <RightIcon :size="15"/>
                         </div>
-                    </RouterLink>
+                    </RouterLink> -->
                 </div>
             </div>
         </div>

@@ -37,10 +37,10 @@ import "./nav.scss";
                 <h5 class="nav-dropdown-block-text">Sprint</h5>
                 <RightIcon :size="20" class="nav-dropdown-block-icon"/>
               </RouterLink>
-              <RouterLink to="/audio" class="nav-dropdown-block">
+              <!-- <RouterLink to="/audio" class="nav-dropdown-block">
                 <h5 class="nav-dropdown-block-text">Audio-call</h5>
                 <RightIcon :size="20" class="nav-dropdown-block-icon"/>
-              </RouterLink>
+              </RouterLink> -->
             </div>
           </li>
         </ul>

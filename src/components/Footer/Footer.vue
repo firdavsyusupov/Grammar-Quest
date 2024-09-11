@@ -25,9 +25,9 @@ import {RouterLink} from 'vue-router'
           <li class="footer-top-block-blog-item">
             <RouterLink to="/textbook" class="footer-top-block-blog-item-link">sprint</RouterLink>
           </li>
-          <li class="footer-top-block-blog-item">
+          <!-- <li class="footer-top-block-blog-item">
             <RouterLink to="/audio" href="#" class="footer-top-block-blog-item-link">audio-call</RouterLink>
-          </li>
+          </li> -->
         </ul>
       </div>
       <hr>
