@@ -1,53 +1,52 @@
 [
-    {
-      "question": "This is ___ book.",
-      "options": ["my", "his", "their"],
-      "correctAnswer": "my"
-    },
-    {
-      "question": "That car is ___.",
-      "options": ["mine", "hers", "ours"],
-      "correctAnswer": "hers"
-    },
-    {
-      "question": "___ house is on the corner.",
-      "options": ["Her", "Their", "His"],
-      "correctAnswer": "Their"
-    },
-    {
-      "question": "The dog wagged ___ tail.",
-      "options": ["its", "his", "their"],
-      "correctAnswer": "its"
-    },
-    {
-      "question": "This pen is ___.",
-      "options": ["mine", "hers", "theirs"],
-      "correctAnswer": "mine"
-    },
-    {
-      "question": "We are going to ___ house for the party.",
-      "options": ["their", "his", "her"],
-      "correctAnswer": "their"
-    },
-    {
-      "question": "The cat cleaned ___ fur.",
-      "options": ["its", "his", "her"],
-      "correctAnswer": "its"
-    },
-    {
-      "question": "___ decision is final.",
-      "options": ["Your", "Our", "Their"],
-      "correctAnswer": "Your"
-    },
-    {
-      "question": "The bike is ___.",
-      "options": ["mine", "his", "hers"],
-      "correctAnswer": "his"
-    },
-    {
-      "question": "Is this ___ jacket?",
-      "options": ["your", "my", "their"],
-      "correctAnswer": "your"
-    }
-  ]
-  
+  {
+    "question": "This is ___ book.",
+    "options": ["my", "an", "ours"],
+    "correctAnswer": "my"
+  },
+  {
+    "question": "That car is ___.",
+    "options": ["your", "his", "hers"],
+    "correctAnswer": "hers"
+  },
+  {
+    "question": "___ house is on the corner.",
+    "options": ["Their", "Two", "There"],
+    "correctAnswer": "Their"
+  },
+  {
+    "question": "The dog wagged ___ tail.",
+    "options": ["its", "her", "my"],
+    "correctAnswer": "its"
+  },
+  {
+    "question": "This pen is ___.",
+    "options": ["mine", "hers", "his"],
+    "correctAnswer": "mine"
+  },
+  {
+    "question": "We are going to ___ house for the party.",
+    "options": ["there", "their", "those"],
+    "correctAnswer": "their"
+  },
+  {
+    "question": "The cat cleaned ___ fur.",
+    "options": ["its", "her", "his"],
+    "correctAnswer": "its"
+  },
+  {
+    "question": "___ decision is final.",
+    "options": ["Our", "Them", "Your"],
+    "correctAnswer": "Your"
+  },
+  {
+    "question": "The bike is ___.",
+    "options": ["hers", "ours", "his"],
+    "correctAnswer": "his"
+  },
+  {
+    "question": "Is this ___ jacket?",
+    "options": ["your", "her", "his"],
+    "correctAnswer": "your"
+  }
+]

@@ -1,53 +1,52 @@
 [
-    {
-      "question": "___ is my best friend.",
-      "options": ["He", "She", "They"],
-      "correctAnswer": "She"
-    },
-    {
-      "question": "___ went to the store to buy groceries.",
-      "options": ["He", "She", "They"],
-      "correctAnswer": "He"
-    },
-    {
-      "question": "I saw ___ at the park yesterday.",
-      "options": ["him", "her", "them"],
-      "correctAnswer": "him"
-    },
-    {
-      "question": "___ are going to the concert tonight.",
-      "options": ["We", "They", "He"],
-      "correctAnswer": "They"
-    },
-    {
-      "question": "I asked ___ to help me with my homework.",
-      "options": ["him", "her", "them"],
-      "correctAnswer": "her"
-    },
-    {
-      "question": "___ loves playing soccer after school.",
-      "options": ["He", "She", "They"],
-      "correctAnswer": "He"
-    },
-    {
-      "question": "___ arrived at the party late.",
-      "options": ["He", "She", "They"],
-      "correctAnswer": "She"
-    },
-    {
-      "question": "Can you give this book to ___?",
-      "options": ["him", "her", "them"],
-      "correctAnswer": "her"
-    },
-    {
-      "question": "___ will meet you at the restaurant.",
-      "options": ["He", "She", "They"],
-      "correctAnswer": "They"
-    },
-    {
-      "question": "I invited ___ to join us for dinner.",
-      "options": ["him", "her", "them"],
-      "correctAnswer": "them"
-    }
-  ]
-  
+  {
+    "question": "___ is my best friend.",
+    "options": ["He", "We", "They"],
+    "correctAnswer": "He"
+  },
+  {
+    "question": " ___ to the store to buy groceries.",
+    "options": ["He went", "He go", "They goes"],
+    "correctAnswer": "He went"
+  },
+  {
+    "question": "I saw ___ at the park yesterday.",
+    "options": ["his", "her", "theirs"],
+    "correctAnswer": "her"
+  },
+  {
+    "question": "___ are going to the concert tonight.",
+    "options": ["We", "She", "He"],
+    "correctAnswer": "We"
+  },
+  {
+    "question": "I asked ___ to help me with my homework.",
+    "options": ["his", "hers", "them"],
+    "correctAnswer": "them"
+  },
+  {
+    "question": "___ loves playing soccer after school.",
+    "options": ["He", "We", "They"],
+    "correctAnswer": "He"
+  },
+  {
+    "question": "___ arrived at the party late.",
+    "options": ["Me", "She", "Them"],
+    "correctAnswer": "She"
+  },
+  {
+    "question": "Can you give this book to ___?",
+    "options": ["his", "her", "their"],
+    "correctAnswer": "her"
+  },
+  {
+    "question": "___ will meet you at the restaurant.",
+    "options": ["Me", "It's", "They"],
+    "correctAnswer": "They"
+  },
+  {
+    "question": "I invited ___ to join us for dinner.",
+    "options": ["himself", "herself", "them"],
+    "correctAnswer": "them"
+  }
+]
