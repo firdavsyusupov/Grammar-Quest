@@ -1,9 +1,13 @@
 <script setup>
 import { ref, computed, onMounted } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import cardsData from "@/data/card.json";
+import IncorrectIcon from "@/components/icons/IncorrectIcon.vue";
+
+import "./quest.scss";
 
 const route = useRoute();
+const router = useRouter();
 
 const cardId = ref(null);
 const currentQuestionIndex = ref(0);
@@ -12,6 +16,10 @@ const answerChecked = ref(false);
 const answerFeedback = ref("");
 const incorrectAnswers = ref([]);
 const showReviewSection = ref(false);
+const reviewButtonClicked = ref(false);
+const showModal = ref(false);
+const confirmExitModal = ref(false);
+const isCardCompleted = ref(false);
 
 const selectedCard = computed(() =>
   cardsData.find((card) => card.id === cardId.value)
@@ -19,9 +27,12 @@ const selectedCard = computed(() =>
 const selectedCardQuestions = computed(() =>
   selectedCard.value ? selectedCard.value.questions : []
 );
-const currentQuestion = computed(
-  () => selectedCardQuestions.value[currentQuestionIndex.value] || {}
-);
+const currentQuestion = computed(() => {
+  if (showReviewSection.value) {
+    return incorrectAnswers.value[currentQuestionIndex.value] || {};
+  }
+  return selectedCardQuestions.value[currentQuestionIndex.value] || {};
+});
 
 onMounted(() => {
   const id = Number(route.params.id);
@@ -35,33 +46,99 @@ onMounted(() => {
 const checkAnswer = () => {
   if (!currentQuestion.value.question) return;
 
-  if (selectedAnswer.value === currentQuestion.value.correctAnswer) {
-    answerFeedback.value = "Correct!";
+  if (showReviewSection.value) {
+    if (selectedAnswer.value === currentQuestion.correct) {
+      answerFeedback.value = "Correct!";
+      incorrectAnswers.value = incorrectAnswers.value.filter((answer) => {
+        return answer.question !== currentQuestion.question;
+      });
+    } else {
+      answerFeedback.value = `Incorrect! The correct answer is: ${currentQuestion.correct}`;
+    }
   } else {
-    answerFeedback.value = `Incorrect! The correct answer is: ${currentQuestion.value.correctAnswer}`;
-    addIncorrectAnswer(currentQuestion.value);
+    if (selectedAnswer.value === currentQuestion.value.correctAnswer) {
+      answerFeedback.value = "Correct!";
+    } else {
+      answerFeedback.value = `Incorrect! The correct answer is: ${currentQuestion.value.correctAnswer}`;
+      addIncorrectAnswer(currentQuestion.value);
+    }
   }
-  answerChecked.value = true; 
+
+  answerChecked.value = true;
+};
+
+const skipQuestion = () => {
+  answerFeedback.value = `Incorrect! The correct answer is: ${currentQuestion.value.correctAnswer}`;
+  addIncorrectAnswer(currentQuestion.value);
+  answerChecked.value = true;
 };
 
 const addIncorrectAnswer = (question) => {
-  if (!incorrectAnswers.value.includes(question)) {
-    incorrectAnswers.value.push(question);
-  }
+  const incorrectAnswer = {
+    question: question.question,
+    options: question.options,
+    selected: selectedAnswer.value,
+    correct: question.correctAnswer,
+  };
+  incorrectAnswers.value.push(incorrectAnswer);
+};
+
+const allQuestionsAnsweredCorrectly = () => {
+  return incorrectAnswers.value.length === 0;
 };
 
 const nextQuestion = () => {
-  if (currentQuestionIndex.value < selectedCardQuestions.value.length - 1) {
-    currentQuestionIndex.value++;
-    resetAnswerState();
+  if (!showReviewSection.value) {
+    if (currentQuestionIndex.value < selectedCardQuestions.value.length - 1) {
+      currentQuestionIndex.value++;
+      resetAnswerState();
+    } else {
+      if (allQuestionsAnsweredCorrectly()) {
+        showModal.value = true;
+      } else {
+        showReviewSection.value = true;
+      }
+    }
   } else {
-    showReviewSection.value = true; 
+    if (currentQuestionIndex.value < incorrectAnswers.value.length - 1) {
+      currentQuestionIndex.value++;
+      resetAnswerState();
+    } else {
+      showModal.value = true;
+    }
   }
 };
 
 const reviewIncorrectAnswers = () => {
-  currentQuestionIndex.value = 0; 
+  currentQuestionIndex.value = 0;
   resetAnswerState();
+  reviewButtonClicked.value = true;
+  showReviewSection.value = true;
+};
+
+const exit = () => {
+  localStorage.setItem(`card${cardId.value}Completed`, "true");
+  isCardCompleted.value = true;
+
+  const currentCardIndex = cardsData.findIndex(card => card.id === cardId.value);
+  const nextCardId = currentCardIndex + 2 <= cardsData.length ? currentCardIndex + 2 : null;
+
+  if (nextCardId) {
+    router.push({ name: 'Questions', params: { id: nextCardId } });
+  } else {
+    router.push("/lessons");
+  }
+};
+
+const confirmExit = () => {
+  confirmExitModal.value = true;
+};
+
+const handleExitConfirmation = (confirm) => {
+  if (confirm) {
+    exit();
+  }
+  confirmExitModal.value = false;
 };
 
 const resetAnswerState = () => {
@@ -70,10 +147,13 @@ const resetAnswerState = () => {
   answerFeedback.value = "";
 };
 </script>
+
 <template>
   <div class="container">
     <div class="questions-page">
-      <h2>Questions for Card {{ cardId }}</h2>
+      <div class="incorrect-mark" @click="confirmExit">
+        <IncorrectIcon :size="25" />
+      </div>
       <div v-if="selectedCardQuestions.length > 0 && !showReviewSection">
         <p v-if="currentQuestion.question">{{ currentQuestion.question }}</p>
         <ul>
@@ -94,46 +174,8 @@ const resetAnswerState = () => {
             {{ option }}
           </li>
         </ul>
-        <button
-          @click="checkAnswer"
-          :disabled="!selectedAnswer"
-          v-if="!answerChecked"
-        >
-          Check
-        </button>
-        <button
-          @click="nextQuestion"
-          v-if="answerChecked && !showReviewSection"
-        >
-          Next Question
-        </button>
-        <p v-if="answerFeedback">{{ answerFeedback }}</p>
-      </div>
-
-      <div v-else-if="showReviewSection">
-        <h3>Review Incorrect Answers</h3>
-        <div v-if="incorrectAnswers.length > 0">
-          <p>
-            <strong>Incorrect Question:</strong> {{ currentQuestion.question }}
-          </p>
-          <ul>
-            <li
-              v-for="(option, optIndex) in currentQuestion.options"
-              :key="optIndex"
-              @click="selectedAnswer = option"
-              :class="{
-                selected: selectedAnswer === option,
-                correct:
-                  answerChecked && option === currentQuestion.correctAnswer,
-                incorrect:
-                  answerChecked &&
-                  selectedAnswer === option &&
-                  selectedAnswer !== currentQuestion.correctAnswer,
-              }"
-            >
-              {{ option }}
-            </li>
-          </ul>
+        <div class="buttons">
+          <button @click="skipQuestion" v-if="!answerChecked">Skip</button>
           <button
             @click="checkAnswer"
             :disabled="!selectedAnswer"
@@ -141,66 +183,122 @@ const resetAnswerState = () => {
           >
             Check
           </button>
-          <button @click="nextQuestion" v-if="answerChecked">
+          <button
+            @click="nextQuestion"
+            v-if="answerChecked && !showReviewSection"
+          >
             Next Question
           </button>
-          <p v-if="answerFeedback">{{ answerFeedback }}</p>
         </div>
+        <p
+          v-if="answerFeedback"
+          :class="{
+            incorrect: answerFeedback.includes('Incorrect'),
+            correct: answerFeedback.includes('Correct'),
+          }"
+        >
+          {{ answerFeedback }}
+        </p>
       </div>
 
-      <div v-else>
-        <p>No questions available for this card.</p>
+      <div v-else-if="showReviewSection">
+        <div v-if="reviewButtonClicked">
+          <h3 class="h3">Review Incorrect Answers</h3>
+        </div>
+        <div v-if="incorrectAnswers.length > 0">
+          <p><strong>Question:</strong> {{ currentQuestion.question }}</p>
+          <ul>
+            <li
+              v-for="(option, optIndex) in currentQuestion.options"
+              :key="optIndex"
+              @click="selectedAnswer = option"
+              :class="{
+                selected: selectedAnswer === option,
+                correct: answerChecked && option === currentQuestion.correct,
+                incorrect:
+                  answerChecked &&
+                  selectedAnswer === option &&
+                  selectedAnswer !== currentQuestion.correct,
+              }"
+            >
+              {{ option }}
+            </li>
+          </ul>
+          <div class="buttons">
+            <button
+              @click="checkAnswer"
+              :disabled="!selectedAnswer"
+              v-if="!answerChecked"
+            >
+              Check
+            </button>
+            <button
+              @click="nextQuestion"
+              v-if="reviewButtonClicked && answerChecked"
+            >
+              Next Incorrect Answer
+            </button>
+            <div
+              v-if="showReviewSection && reviewButtonClicked === false"
+              class="showbtn"
+            >
+              <button @click="reviewIncorrectAnswers">
+                Review Incorrect Answers
+              </button>
+              <button @click="confirmExit">Exit</button>
+            </div>
+          </div>
+          <p
+            v-if="answerFeedback"
+            :class="{
+              incorrect: answerFeedback.includes('Incorrect'),
+              correct: answerFeedback.includes('Correct'),
+            }"
+          >
+            {{ answerFeedback }}
+          </p>
+        </div>
       </div>
     </div>
-    <button v-if="showReviewSection" @click="reviewIncorrectAnswers">
-      Review Incorrect Answers
-    </button>
+    <modal v-if="showModal" @close="showModal = false">
+      <template #header>
+        <h2>Card Completed!</h2>
+      </template>
+      <template #default>
+        <p>All questions answered correctly!</p>
+      </template>
+      <template #footer>
+        <button @click="handleExitConfirmation(false)">Cancel</button>
+        <button @click="handleExitConfirmation(true)">Exit</button>
+      </template>
+    </modal>
+
+    <modal v-if="confirmExitModal" @close="confirmExitModal = false">
+      <template #header>
+        <h2>Exit Confirmation</h2>
+      </template>
+      <template #default>
+        <p>Are you sure you want to exit?</p>
+      </template>
+      <template #footer>
+        <button @click="handleExitConfirmation(false)">Cancel</button>
+        <button @click="handleExitConfirmation(true)">Confirm</button>
+      </template>
+    </modal>
   </div>
 </template>
 
-<style scoped>
-.questions-page {
-  padding: 20px;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  cursor: pointer;
-  margin-bottom: 10px;
-  transition: background-color 0.3s;
-}
-
-li:hover {
-  text-decoration: underline;
-}
-
+<style>
 .selected {
-  font-weight: bold;
+  background-color: #d3d3d3;
 }
-
 .correct {
   color: green;
 }
-
 .incorrect {
   color: red;
 }
-
-button {
-  margin-top: 20px;
-}
-
-p {
-  margin-top: 10px;
+.questions-page {
+  padding: 20px;
 }
 </style>
-
-  

@@ -1,3 +1,7 @@
+.main{
+  min-height: 73vh;
+  padding: 50px 0;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -25,4 +29,6 @@
 
 .deactive {
   opacity: 0.5; 
+  cursor: not-allowed;
+  pointer-events: none;
 }
