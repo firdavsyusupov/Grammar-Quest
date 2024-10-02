@@ -11,6 +11,7 @@ const goToQuestionsPage = (id) => {
 };
 </script>
 
+
 <template>
   <section class="main">
     <div class="container">
@@ -22,7 +23,7 @@ const goToQuestionsPage = (id) => {
           :key="card.id"
           @click="goToQuestionsPage(card.id)" 
         >
-        
+
           <StarIcon :size="32" :color="'red'" />
           <p>Card {{ card.id }}</p>
         </div>
