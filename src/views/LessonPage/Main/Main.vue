@@ -12,6 +12,7 @@ const goToQuestionsPage = (id) => {
 </script>
 
 
+
 <template>
   <section class="main">
     <div class="container">
