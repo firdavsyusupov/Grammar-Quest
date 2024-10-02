@@ -284,6 +284,7 @@ const resetAnswerState = () => {
         <button @click="handleExitConfirmation(false)">Cancel</button>
         <button @click="handleExitConfirmation(true)">Confirm</button>
       </template>
+      
     </modal>
   </div>
 </template>
