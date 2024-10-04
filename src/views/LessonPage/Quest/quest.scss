@@ -104,3 +104,16 @@ p {
 .incorrect-mark {
   cursor: pointer; /* Change cursor to pointer to indicate clickability */
 }
+
+.selected {
+  background-color: #d3d3d3;
+}
+.correct {
+  color: green;
+}
+.incorrect {
+  color: red;
+}
+.questions-page {
+  padding: 20px;
+}

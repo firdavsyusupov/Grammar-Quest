@@ -3,7 +3,6 @@ import { ref, computed, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import cardsData from "@/data/card.json";
 import IncorrectIcon from "@/components/icons/IncorrectIcon.vue";
-
 import "./quest.scss";
 
 const route = useRoute();
@@ -20,19 +19,29 @@ const reviewButtonClicked = ref(false);
 const showModal = ref(false);
 const confirmExitModal = ref(false);
 const isCardCompleted = ref(false);
+const completedCards = ref([]);
 
-const selectedCard = computed(() =>
-  cardsData.find((card) => card.id === cardId.value)
-);
-const selectedCardQuestions = computed(() =>
-  selectedCard.value ? selectedCard.value.questions : []
-);
-const currentQuestion = computed(() => {
-  if (showReviewSection.value) {
-    return incorrectAnswers.value[currentQuestionIndex.value] || {};
+const loadCompletedCards = () => {
+  const completed = JSON.parse(localStorage.getItem('completedCards')) || [];
+  completedCards.value = completed;
+};
+
+const saveCompletedCards = () => {
+  localStorage.setItem('completedCards', JSON.stringify(completedCards.value));
+};
+
+const unlockNextCard = (id) => {
+  if (id === 1 && !completedCards.value.includes(2)) {
+    completedCards.value.push(2);
+    saveCompletedCards();
+  } else if (id === 2 && !completedCards.value.includes(3)) {
+    completedCards.value.push(3);
+    saveCompletedCards();
+  } else if (id === 3 && !completedCards.value.includes(4)) {
+    completedCards.value.push(4);
+    saveCompletedCards();
   }
-  return selectedCardQuestions.value[currentQuestionIndex.value] || {};
-});
+};
 
 onMounted(() => {
   const id = Number(route.params.id);
@@ -41,6 +50,7 @@ onMounted(() => {
     return;
   }
   cardId.value = id;
+  loadCompletedCards();
 });
 
 const checkAnswer = () => {
@@ -117,17 +127,10 @@ const reviewIncorrectAnswers = () => {
 };
 
 const exit = () => {
+  unlockNextCard(cardId.value);
   localStorage.setItem(`card${cardId.value}Completed`, "true");
   isCardCompleted.value = true;
-
-  const currentCardIndex = cardsData.findIndex(card => card.id === cardId.value);
-  const nextCardId = currentCardIndex + 2 <= cardsData.length ? currentCardIndex + 2 : null;
-
-  if (nextCardId) {
-    router.push({ name: 'Questions', params: { id: nextCardId } });
-  } else {
-    router.push("/lessons");
-  }
+  router.push("/lessons");
 };
 
 const confirmExit = () => {
@@ -146,6 +149,19 @@ const resetAnswerState = () => {
   answerChecked.value = false;
   answerFeedback.value = "";
 };
+
+const selectedCard = computed(() =>
+  cardsData.find((card) => card.id === cardId.value)
+);
+const selectedCardQuestions = computed(() =>
+  selectedCard.value ? selectedCard.value.questions : []
+);
+const currentQuestion = computed(() => {
+  if (showReviewSection.value) {
+    return incorrectAnswers.value[currentQuestionIndex.value] || {};
+  }
+  return selectedCardQuestions.value[currentQuestionIndex.value] || {};
+});
 </script>
 
 <template>
@@ -259,47 +275,58 @@ const resetAnswerState = () => {
           </p>
         </div>
       </div>
-    </div>
-    <modal v-if="showModal" @close="showModal = false">
-      <template #header>
-        <h2>Card Completed!</h2>
-      </template>
-      <template #default>
-        <p>All questions answered correctly!</p>
-      </template>
-      <template #footer>
-        <button @click="handleExitConfirmation(false)">Cancel</button>
-        <button @click="handleExitConfirmation(true)">Exit</button>
-      </template>
-    </modal>
 
-    <modal v-if="confirmExitModal" @close="confirmExitModal = false">
-      <template #header>
-        <h2>Exit Confirmation</h2>
-      </template>
-      <template #default>
-        <p>Are you sure you want to exit?</p>
-      </template>
-      <template #footer>
-        <button @click="handleExitConfirmation(false)">Cancel</button>
-        <button @click="handleExitConfirmation(true)">Confirm</button>
-      </template>
-      
-    </modal>
+      <div v-else>
+        <p>No questions available for this card.</p>
+      </div>
+    </div>
+
+    <div v-if="showModal" class="modal">
+      <div class="modal-content">
+        <h2>Congratulations!</h2>
+        <p>You have completed all questions.</p>
+        <button @click="exit">Exit</button>
+      </div>
+    </div>
+
+    <div v-if="confirmExitModal" class="modal">
+      <div class="modal-content">
+        <h2>Are you sure you want to exit?</h2>
+        <div class="buttons">
+          <button @click="handleExitConfirmation(true)">Yes, Exit</button>
+          <button @click="handleExitConfirmation(false)">Cancel</button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style>
-.selected {
-  background-color: #d3d3d3;
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.correct {
-  color: green;
-}
-.incorrect {
-  color: red;
-}
-.questions-page {
+
+.modal-content {
+  background-color: white;
   padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.incorrect-mark {
+  cursor: pointer;
+}
+
+.card.deactive {
+  pointer-events: none;
+  opacity: 0.5;
 }
 </style>
