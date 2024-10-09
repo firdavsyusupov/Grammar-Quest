@@ -1,20 +1,19 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
-import StarIcon from "@/components/icons/StarIcon.vue";
-import cardsData from "@/data/card.json"; 
+import { ref, computed, onMounted } from "vue";
+import { useRouter } from "vue-router";
+import cardsData from "@/data/card.json";
 import "./main.scss";
 
 const router = useRouter();
 const completedCards = ref([]);
 
 const loadCompletedCards = () => {
-  const completed = JSON.parse(localStorage.getItem('completedCards')) || [];
+  const completed = JSON.parse(localStorage.getItem("completedCards")) || [];
   completedCards.value = completed;
 };
 
 const saveCompletedCards = () => {
-  localStorage.setItem('completedCards', JSON.stringify(completedCards.value));
+  localStorage.setItem("completedCards", JSON.stringify(completedCards.value));
 };
 
 const goToQuestionsPage = (id) => {
@@ -23,7 +22,7 @@ const goToQuestionsPage = (id) => {
     saveCompletedCards();
   }
   unlockNextCard(id);
-  router.push({ name: 'Questions', params: { id } });
+  router.push({ name: "Questions", params: { id } });
 };
 
 const unlockNextCard = (id) => {
@@ -37,10 +36,11 @@ const unlockNextCard = (id) => {
 };
 
 const cardsWithActiveState = computed(() => {
-  return cardsData.map((card) => {
+  return cardsData.map((card, index) => {
     return {
       ...card,
-      isActive: completedCards.value.includes(card.id) || card.id === 1
+      isActive: completedCards.value.includes(card.id) || card.id === 1,
+      alignRight: index % 2 === 0, 
     };
   });
 });
@@ -53,25 +53,23 @@ onMounted(() => {
 <template>
   <section class="main">
     <div class="container">
-      <div class="cards">
-        <div 
-          class="card"
-          :class="{ deactive: !card.isActive }" 
-          v-for="card in cardsWithActiveState" 
-          :key="card.id"
-          @click="card.isActive ? goToQuestionsPage(card.id) : null" 
-        >
-          <StarIcon :size="32" :color="'red'" />
-          <p>Card {{ card.id }}</p>
+      <div class="con">
+        <div class="cards">
+          <div
+            class="card"
+            :class="{
+              deactive: !card.isActive,
+              'align-right': card.alignRight,
+            }"
+            v-for="card in cardsWithActiveState"
+            :key="card.id"
+            @click="card.isActive ? goToQuestionsPage(card.id) : null"
+          >
+            <p>Card {{ card.id }}</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<style>
-.card.deactive {
-  pointer-events: none;
-  opacity: 0.5;
-}
-</style>
