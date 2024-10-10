@@ -2,6 +2,8 @@
 import { ref, computed, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import cardsData from "@/data/card.json";
+import uzQuestions from "@/locales/uz.json";
+import ruQuestions from "@/locales/ru.json";
 import IncorrectIcon from "@/components/icons/IncorrectIcon.vue";
 import "./quest.scss";
 
@@ -18,9 +20,11 @@ const reviewButtonClicked = ref(false);
 const showModal = ref(false);
 const showExitConfirm = ref(false);
 const completedCards = ref([]);
+const selectedLanguage = ref(localStorage.getItem("selectedLanguage") || "uz");
 
 const loadCompletedCards = () => {
-  completedCards.value = JSON.parse(localStorage.getItem("completedCards")) || [];
+  completedCards.value =
+    JSON.parse(localStorage.getItem("completedCards")) || [];
 };
 
 const saveCompletedCards = () => {
@@ -43,8 +47,15 @@ onMounted(() => {
 });
 
 const checkAnswer = () => {
-  const isCorrect = selectedAnswer.value === currentQuestion.value.correctAnswer;
-  answerFeedback.value = isCorrect ? "Correct!" : `Incorrect! The correct answer is: ${currentQuestion.value.correctAnswer}`;
+  const isCorrect =
+    selectedAnswer.value === currentQuestion.value.correctAnswer;
+  answerFeedback.value = isCorrect
+    ? selectedLanguage.value === "uz"
+      ? "To'g'ri!"
+      : "Правильно!"
+    : selectedLanguage.value === "uz"
+    ? `Noto'g'ri! To'g'ri javob: ${currentQuestion.value.correctAnswer}`
+    : `Неправильно! Правильный ответ: ${currentQuestion.value.correctAnswer}`;
   if (!isCorrect) incorrectAnswers.value.push(currentQuestion.value);
   answerChecked.value = true;
 };
@@ -88,11 +99,24 @@ const resetState = () => {
 
 const allQuestionsAnsweredCorrectly = () => incorrectAnswers.value.length === 0;
 
-const selectedCard = computed(() => cardsData.find((card) => card.id === cardId.value));
-const selectedCardQuestions = computed(() => selectedCard.value?.questions || []);
-const currentQuestion = computed(() => 
-  showReviewSection.value ? incorrectAnswers.value[currentQuestionIndex.value] : selectedCardQuestions.value[currentQuestionIndex.value]
+const selectedCard = computed(() =>
+  cardsData.find((card) => card.id === cardId.value)
 );
+const selectedCardQuestions = computed(
+  () => selectedCard.value?.questions || []
+);
+const currentQuestion = computed(() => {
+  const languageQuestions =
+    selectedLanguage.value === "uz"
+      ? uzQuestions.questions
+      : ruQuestions.questions;
+  return showReviewSection.value
+    ? incorrectAnswers.value[currentQuestionIndex.value]
+    : {
+        ...selectedCardQuestions.value[currentQuestionIndex.value],
+        question: languageQuestions[currentQuestionIndex.value],
+      };
+});
 </script>
 
 <template>
@@ -110,31 +134,74 @@ const currentQuestion = computed(() =>
             @click="selectedAnswer = option"
             :class="{
               selected: selectedAnswer === option,
-              correct: answerChecked && option === currentQuestion.correctAnswer,
-              incorrect: answerChecked && selectedAnswer === option && selectedAnswer !== currentQuestion.correctAnswer,
+              correct:
+                answerChecked && option === currentQuestion.correctAnswer,
+              incorrect:
+                answerChecked &&
+                selectedAnswer === option &&
+                selectedAnswer !== currentQuestion.correctAnswer,
             }"
           >
             {{ option }}
           </li>
         </ul>
         <div class="buttons">
-          <button class="skip" @click="nextQuestion" v-if="!answerChecked">Skip</button>
-          <button class="check" @click="checkAnswer" :disabled="!selectedAnswer" v-if="!answerChecked">Check</button>
-          <button class="nextQuestion" @click="nextQuestion" v-if="answerChecked">Next Question</button>
+          <button class="skip" @click="nextQuestion" v-if="!answerChecked">
+            {{ selectedLanguage === "uz" ? "Oʻtkazib yuborish" : "Пропустить" }}
+          </button>
+          <button
+            class="check"
+            @click="checkAnswer"
+            :disabled="!selectedAnswer"
+            v-if="!answerChecked"
+          >
+            {{ selectedLanguage === "uz" ? "Tekshirish" : "Проверить" }}
+          </button>
+          <button
+            class="nextQuestion"
+            @click="nextQuestion"
+            v-if="answerChecked"
+          >
+            {{
+              selectedLanguage === "uz" ? "Keyingi Savol" : "Следующий Вопрос"
+            }}
+          </button>
         </div>
-        <p :class="{ incorrect: answerFeedback.includes('Incorrect'), correct: answerFeedback.includes('Correct') }">
+        <p
+          :class="{
+            incorrect: answerFeedback.includes(
+              selectedLanguage === 'uz' ? 'Noto\'g\'ri' : 'Неправильно'
+            ),
+            correct: answerFeedback.includes(
+              selectedLanguage === 'uz' ? 'To\'g\'ri' : 'Правильно'
+            ),
+          }"
+        >
           {{ answerFeedback }}
         </p>
       </div>
 
       <div v-else-if="showReviewSection">
         <div v-if="!reviewButtonClicked" class="showbtn">
-          <button class="skip" @click="reviewIncorrectAnswers">Review Incorrect Answers</button>
-          <button class="skip" @click="showExitConfirm = true">Exit</button>
+          <button class="skip" @click="reviewIncorrectAnswers">
+            {{
+              selectedLanguage === "uz"
+                ? "Xatolarni Ko'rib Chiqish"
+                : "Проверить Ошибки"
+            }}
+          </button>
+          <button class="skip" @click="showExitConfirm = true">
+            {{ selectedLanguage === "uz" ? "Chiqish" : "Выход" }}
+          </button>
         </div>
 
         <div v-else>
-          <p><strong>Question:</strong> {{ currentQuestion.question }}</p>
+          <p>
+            <strong>{{
+              selectedLanguage === "uz" ? "Savol:" : "Вопрос:"
+            }}</strong>
+            {{ currentQuestion.question }}
+          </p>
           <ul>
             <li
               v-for="(option, idx) in currentQuestion.options"
@@ -142,18 +209,48 @@ const currentQuestion = computed(() =>
               @click="selectedAnswer = option"
               :class="{
                 selected: selectedAnswer === option,
-                correct: answerChecked && option === currentQuestion.correct,
-                incorrect: answerChecked && selectedAnswer === option && selectedAnswer !== currentQuestion.correct,
+                correct:
+                  answerChecked && option === currentQuestion.correctAnswer,
+                incorrect:
+                  answerChecked &&
+                  selectedAnswer === option &&
+                  selectedAnswer !== currentQuestion.correctAnswer,
               }"
             >
               {{ option }}
             </li>
           </ul>
           <div class="buttons">
-            <button class="check" @click="checkAnswer" :disabled="!selectedAnswer" v-if="!answerChecked">Check</button>
-            <button class="nextQuestion" @click="nextQuestion" v-if="answerChecked">Next Incorrect Answer</button>
+            <button
+              class="check"
+              @click="checkAnswer"
+              :disabled="!selectedAnswer"
+              v-if="!answerChecked"
+            >
+              {{ selectedLanguage === "uz" ? "Tekshirish" : "Проверить" }}
+            </button>
+            <button
+              class="nextQuestion"
+              @click="nextQuestion"
+              v-if="answerChecked"
+            >
+              {{
+                selectedLanguage === "uz"
+                  ? "Keyingi Noto'g'ri Javob"
+                  : "Следующий Неправильный Ответ"
+              }}
+            </button>
           </div>
-          <p :class="{ incorrect: answerFeedback.includes('Incorrect'), correct: answerFeedback.includes('Correct') }">
+          <p
+            :class="{
+              incorrect: answerFeedback.includes(
+                selectedLanguage === 'uz' ? 'Noto\'g\'ri' : 'Неправильно'
+              ),
+              correct: answerFeedback.includes(
+                selectedLanguage === 'uz' ? 'To\'g\'ri' : 'Правильно'
+              ),
+            }"
+          >
             {{ answerFeedback }}
           </p>
         </div>
@@ -164,18 +261,38 @@ const currentQuestion = computed(() =>
 
     <div v-if="showModal" class="modal">
       <div class="modal-content">
-        <h2 class="cong">Congratulations!</h2>
-        <p>You have completed all questions.</p>
-        <button class="skip" @click="exit(true)">Exit</button>
+        <h2 class="cong">
+          {{ selectedLanguage === "uz" ? "Tabriklaymiz!" : "Поздравляем!" }}
+        </h2>
+        <p>
+          {{
+            selectedLanguage === "uz"
+              ? "Barcha savollarni tugatdingiz."
+              : "Вы завершили все вопросы."
+          }}
+        </p>
+        <button class="skip" @click="exit(true)">
+          {{ selectedLanguage === "uz" ? "Chiqish" : "Выход" }}
+        </button>
       </div>
     </div>
 
     <div v-if="showExitConfirm" class="modal">
       <div class="modal-content">
-        <h2>Are you sure you want to exit?</h2>
+        <h2>
+          {{
+            selectedLanguage === "uz"
+              ? "Chiqishni xohlaysizmi?"
+              : "Вы уверены, что хотите выйти?"
+          }}
+        </h2>
         <div class="buttons">
-          <button class="skip" @click="exit(allQuestionsAnsweredCorrectly)">Yes, Exit</button>
-          <button class="skip" @click="showExitConfirm = false">Cancel</button>
+          <button class="skip" @click="exit(false)">
+            {{ selectedLanguage === "uz" ? "Ha, chiqish" : "Да, выйти" }}
+          </button>
+          <button class="skip" @click="showExitConfirm = false">
+            {{ selectedLanguage === "uz" ? "Bekor qilish" : "Отмена" }}
+          </button>
         </div>
       </div>
     </div>

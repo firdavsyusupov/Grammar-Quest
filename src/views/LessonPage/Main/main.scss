@@ -1,8 +1,9 @@
 .main {
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 80vh;
+  flex-direction: column;
+  gap: 150px;
 }
 
 .con {
@@ -54,17 +55,81 @@
   transform: translateX(-40px);
 }
 
-/* Fix for the hover issue */
 .card:hover {
-  /* Maintain the translateX while scaling */
   transform: scale(1.1) translateX(var(--translate-x, 0));
 }
 
-/* Ensure translateX is properly applied */
 .align-right:hover {
   --translate-x: 40px;
 }
 
 .card:not(.align-right):hover {
   --translate-x: -40px;
+}
+.lan {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-transform: capitalize;
+}
+
+.lan-img {
+  cursor: pointer;
+}
+
+.lan-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10; 
+  width: 150px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & hr{
+    width: 100%;
+  }
+}
+
+.lan-dropdown div {
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  width: 100%;
+  justify-content: center;
+}
+
+.lan-dropdown div:hover {
+  background: #cdcdcd; 
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+
+.ru{
+  & img{
+
+    height: 60px;
+  }
+}
+
+.uz{
+  & img{
+
+    height: 60px;
+  }
 }
