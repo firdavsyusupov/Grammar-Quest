@@ -32,7 +32,7 @@
   },
   {
     "id": 2,
-    "isActive": false,
+    "isActive": true,
     "questions": [
       {
         "question": "Выберите перевод буквы 'А'",
@@ -63,7 +63,7 @@
   },
   {
     "id": 3,
-    "isActive": false,
+    "isActive": true,
     "questions": [
       {
         "question": "Выберите перевод слова 'Тихий'",
@@ -94,7 +94,7 @@
   },
   {
     "id": 4,
-    "isActive": false,
+    "isActive": true,
     "questions": [
       {
         "question": "Выберите перевод слова 'Париж'",
@@ -125,7 +125,7 @@
   },
   {
     "id": 5,
-    "isActive": false,
+    "isActive": true,
     "questions": [
       {
         "question": "Выберите перевод слова 'гепард'",

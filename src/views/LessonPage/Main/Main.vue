@@ -1,10 +1,11 @@
 <script setup>
-import { ref, computed, onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import cardsData from "@/data/card.json";
 import uz from "@/assets/images/uz.png";
 import ru from "@/assets/images/ru.png";
 import "./main.scss";
+import StarIcon from "@/components/icons/StarIcon.vue";
 
 const router = useRouter();
 const completedCards = ref([]);
@@ -12,76 +13,89 @@ const selectedLanguage = ref("uz");
 const dropdownVisible = ref(false);
 
 const texts = ref({
-  selectedLan: "Tanlangan til:", // Default text for Uzbek
+  selectedLan: "Tanlangan til:", 
 });
 
-// Function to set the selected language text
+// Tanlangan til matnini yangilash
 const updateSelectedLanText = () => {
   texts.value.selectedLan = selectedLanguage.value === "uz" ? "Tanlangan til:" : "Выбранный язык:";
 };
 
+// Tugallangan kartalarni yuklash
 const loadCompletedCards = () => {
-  const completed = JSON.parse(localStorage.getItem("completedCards")) || [];
-  completedCards.value = completed;
+  completedCards.value = JSON.parse(localStorage.getItem("completedCards")) || [];
+};
+const finishQuestions = () => {
+  // Barcha savollarga javob berilgandan so'ng
+  unlockNextCard(currentCardId); // O'zgaruvchini moslashtiring
+  router.push({ name: "Main" }); // Asosiy sahifaga qaytish
 };
 
+// Tugallangan kartalarni saqlash
 const saveCompletedCards = () => {
   localStorage.setItem("completedCards", JSON.stringify(completedCards.value));
 };
 
+// Tanlangan tildan keyin kartalarga o'tish
 const loadSelectedLanguage = () => {
-  const language = localStorage.getItem("selectedLanguage") || "uz";
-  selectedLanguage.value = language;
-  updateSelectedLanText(); // Update text when loading language
+  selectedLanguage.value = localStorage.getItem("selectedLanguage") || "uz";
+  updateSelectedLanText();
 };
 
+// Tanlangan tilni saqlash
 const saveSelectedLanguage = () => {
   localStorage.setItem("selectedLanguage", selectedLanguage.value);
 };
 
+// Savollar sahifasiga o'tish
 const goToQuestionsPage = (id) => {
+  // Karta tugallanganda keyingi kartani qulfdan chiqarish
   if (!completedCards.value.includes(id)) {
     completedCards.value.push(id);
-    saveCompletedCards();
+    saveCompletedCards(); // Tugallangan kartani saqlash
+    unlockNextCard(id); // Keyingi kartani qulfdan chiqarish
   }
-  unlockNextCard(id);
+  // Savollar sahifasiga o'tish
   router.push({ name: "Questions", params: { id } });
 };
 
+// Keyingi kartani qulfdan chiqarish
 const unlockNextCard = (id) => {
-  if (id === 2 && !completedCards.value.includes(3)) {
-    completedCards.value.push(2);
-    saveCompletedCards();
-  } else if (id === 3 && !completedCards.value.includes(4)) {
-    completedCards.value.push(3);
+  if (id < cardsData.length && !completedCards.value.includes(id + 1)) {
+    completedCards.value.push(id + 1);
     saveCompletedCards();
   }
 };
 
-const cardsWithActiveState = computed(() => {
-  return cardsData.map((card, index) => {
-    return {
-      ...card,
-      isActive: completedCards.value.includes(card.id) || card.id === 1,
-      alignRight: index % 2 === 0,
-    };
-  });
-});
+const cardsWithActiveState = ref([]);
 
+// Kartalar uslublarini yangilash
+const updateCardStyles = () => {
+  cardsWithActiveState.value = cardsData.map((card, index) => ({
+    ...card,
+    isActive: completedCards.value.includes(card.id) || card.id === 1,
+    alignRight: index % 2 === 0,
+  }));
+};
+
+// Til tanlashni ko'rsatish/yoqish
 const toggleDropdown = () => {
   dropdownVisible.value = !dropdownVisible.value;
 };
 
+// Tilni tanlash
 const selectLanguage = (lang) => {
   selectedLanguage.value = lang;
   saveSelectedLanguage();
-  updateSelectedLanText(); // Update text based on selected language
+  updateSelectedLanText();
   dropdownVisible.value = false;
 };
 
+// Sahifa yuklanganda
 onMounted(() => {
   loadCompletedCards();
   loadSelectedLanguage();
+  updateCardStyles();
 });
 </script>
 
@@ -120,7 +134,7 @@ onMounted(() => {
             :key="card.id"
             @click="card.isActive ? goToQuestionsPage(card.id) : null"
           >
-            <p>Card {{ card.id }}</p>
+            <StarIcon :size="30" :color="'green'" />
           </div>
         </div>
       </div>

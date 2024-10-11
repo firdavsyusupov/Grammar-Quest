@@ -25,7 +25,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: #2c2c2c;
+  background-color: #4b4b4b;
   transition: all 0.3s ease;
   position: relative;
   cursor: pointer;
@@ -33,7 +33,10 @@
 
 .card p {
   color: white;
-  margin-top: 8px;
+  position: absolute; /* O'rtaga joylashtirish */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* O'rtaga joylashtirish */
 }
 
 .card.deactive {
@@ -66,6 +69,7 @@
 .card:not(.align-right):hover {
   --translate-x: -40px;
 }
+
 .lan {
   position: relative;
   display: flex;
@@ -91,9 +95,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  & hr{
-    width: 100%;
-  }
 }
 
 .lan-dropdown div {
@@ -119,17 +120,7 @@
   opacity: 0;
 }
 
-
-.ru{
-  & img{
-
-    height: 60px;
-  }
-}
-
-.uz{
-  & img{
-
-    height: 60px;
-  }
+.ru img,
+.uz img {
+  height: 60px;
 }
