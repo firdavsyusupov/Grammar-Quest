@@ -49,6 +49,7 @@ const checkAnswer = () => {
   const currentQData = currentQuestion.value;
   const isCorrect = selectedAnswer.value === currentQData.correctAnswer;
 
+  
   answerFeedback.value = isCorrect
     ? selectedLanguage.value === "uz"
       ? "To'g'ri!"
