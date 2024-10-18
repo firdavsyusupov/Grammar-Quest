@@ -17,11 +17,11 @@
       name: "home",
       component: HomePage,
     },
-    {
-      path: "/audio",
-      name: "audio",
-      component: () => import("@/pages/AudioPage.vue"),
-    },
+    // {
+    //   path: "/audio",
+    //   name: "audio",
+    //   component: () => import("@/pages/AudioPage.vue"),
+    // },
     {
       path: "/about",
       name: "about",
@@ -42,6 +42,16 @@
       path: "/textbook",
       name: "textbook",
       component: () => import("@/pages/Textbook.vue"),
+    },
+    {
+      path: "/lessons",
+      name: "lessons",
+      component: () => import("@/pages/LessonPage.vue")
+    },
+    {
+      path: '/questions/:id', 
+      name: 'Questions',
+      component: () => import("@/views/LessonPage/Quest/Quest.vue"),
     },
   ];
 

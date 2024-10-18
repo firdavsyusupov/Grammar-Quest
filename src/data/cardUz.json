@@ -1,0 +1,158 @@
+[
+    {
+      "id": 1,
+      "isActive": true,
+      "questions": [
+        {
+          "question": "'Sut'ning tarjimasini tanlang",
+          "options": ["milk", "salt", "tea"],
+          "correctAnswer": "milk"
+        },
+        {
+          "question": "'Tuz'ning tarjimasini tanlang",
+          "options": ["butter", "bread", "salt"],
+          "correctAnswer": "salt"
+        },
+        {
+          "question": "'Issiq'ning tarjimasini tanlang",
+          "options": ["hot", "cold", "warm"],
+          "correctAnswer": "hot"
+        },
+        {
+          "question": "'Yetti'ning tarjimasini tanlang",
+          "options": ["five", "six", "seven"],
+          "correctAnswer": "seven"
+        },
+        {
+          "question": "'Ikki'ning tarjimasini tanlang",
+          "options": ["one", "two", "three"],
+          "correctAnswer": "two"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "isActive": true,
+      "questions": [
+        {
+          "question": "'A' harfning tarjimasini tanlang",
+          "options": ["A", "B", "C"],
+          "correctAnswer": "A"
+        },
+        {
+          "question": "'Kichik'ning tarjimasini tanlang",
+          "options": ["big", "small", "large"],
+          "correctAnswer": "small"
+        },
+        {
+          "question": "'Sariq'ning tarjimasini tanlang",
+          "options": ["blue", "yellow", "green"],
+          "correctAnswer": "yellow"
+        },
+        {
+          "question": "'Vashington'ning tarjimasini tanlang",
+          "options": ["New York", "Washington", "Los Angeles"],
+          "correctAnswer": "Washington"
+        },
+        {
+          "question": "'Sakkiz'ning tarjimasini tanlang",
+          "options": ["six", "eight", "ten"],
+          "correctAnswer": "eight"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "isActive": true,
+      "questions": [
+        {
+          "question": "'Tinch'ning tarjimasini tanlang",
+          "options": ["Atlantic", "Indian", "Pacific"],
+          "correctAnswer": "Pacific"
+        },
+        {
+          "question": "'Mars'ning tarjimasini tanlang",
+          "options": ["Mars", "Earth", "Jupiter"],
+          "correctAnswer": "Mars"
+        },
+        {
+          "question": "'Asal'ning tarjimasini tanlang",
+          "options": ["milk", "honey", "wax"],
+          "correctAnswer": "honey"
+        },
+        {
+          "question": "'Qit'a'ning tarjimasini tanlang",
+          "options": ["island", "continent", "soup"],
+          "correctAnswer": "continent"
+        },
+        {
+          "question": "'Inglizcha'ning tarjimasini tanlang",
+          "options": ["english", "french", "spanish"],
+          "correctAnswer": "english"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "isActive": true,
+      "questions": [
+        {
+          "question": "'Parij'ning tarjimasini tanlang",
+          "options": ["Berlin", "Madrid", "Paris"],
+          "correctAnswer": "Paris"
+        },
+        {
+          "question": "'Avokado'ning tarjimasini tanlang",
+          "options": ["tomato", "avocado", "pepper"],
+          "correctAnswer": "avocado"
+        },
+        {
+          "question": "'Sher'ning tarjimasini tanlang",
+          "options": ["tiger", "lion", "elephant"],
+          "correctAnswer": "lion"
+        },
+        {
+          "question": "'Yigirma besh'ning tarjimasini tanlang",
+          "options": ["ten", "twenty", "twenty-five"],
+          "correctAnswer": "twenty-five"
+        },
+        {
+          "question": "'Qish'ning tarjimasini tanlang",
+          "options": ["summer", "winter", "autumn"],
+          "correctAnswer": "winter"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "isActive": true,
+      "questions": [
+        {
+          "question": "'Gepard'ning tarjimasini tanlang",
+          "options": ["cheetah", "horse", "elephant"],
+          "correctAnswer": "cheetah"
+        },
+        {
+          "question": "'Tokio'ning tarjimasini tanlang",
+          "options": ["Seoul", "Beijing", "Tokyo"],
+          "correctAnswer": "Tokyo"
+        },
+        {
+          "question": "'Delfin'ning tarjimasini tanlang",
+          "options": ["shark", "dolphin", "octopus"],
+          "correctAnswer": "dolphin"
+        },
+        {
+          "question": "'Olti'ning tarjimasini tanlang",
+          "options": ["five", "six", "seven"],
+          "correctAnswer": "six"
+        },
+        {
+          "question": "'Sabzi'ning tarjimasini tanlang",
+          "options": ["carrot", "banana", "grape"],
+          "correctAnswer": "carrot"
+        }
+      ]
+    }
+  ]
+  
