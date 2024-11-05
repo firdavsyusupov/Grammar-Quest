@@ -1,0 +1,45 @@
+{
+  "questions": [
+    "«Sut» so'zining tarjimasini tanlang",
+    "«Tuz» so'zining tarjimasini tanlang",
+    "«Issiq» so'zining tarjimasini tanlang",
+    "«Yetti» so'zining tarjimasini tanlang",
+    "«Ikki» sonining tarjimasini tanlang",
+    "«A» harfini tanlang",
+    "«Kichik» so'zining tarjimasini tanlang",
+    "«Sariq» so'zining tarjimasini tanlang",
+    "«Vashington» so'zining tarjimasini tanlang",
+    "«Sakkiz» sonining tarjimasini tanlang",
+    "«Tinch» so'zining tarjimasini tanlang",
+    "«Mars» so'zining tarjimasini tanlang",
+    "«Asal» so'zining tarjimasini tanlang",
+    "«Kontinent» so'zining tarjimasini tanlang",
+    "«Ingliz» so'zining tarjimasini tanlang",
+    "«Parij» so'zining tarjimasini tanlang",
+    "«Avokado» so'zining tarjimasini tanlang",
+    "«Sher» so'zining tarjimasini tanlang",
+    "«Yigirma besh» sonining tarjimasini tanlang",
+    "«Qish» so'zining tarjimasini tanlang",
+    "«Gepard» so'zining tarjimasini tanlang",
+    "«Tokio» so'zining tarjimasini tanlang",
+    "«Delfin» so'zining tarjimasini tanlang",
+    "«Olti» sonining tarjimasini tanlang",
+    "«Sabzi» so'zining tarjimasini tanlang"
+  ],
+  "buttons": {
+    "skip": "O'tkazib yuborish",
+    "check": "Tekshirish",
+    "nextQuestion": "Keyingi Savol",
+    "reviewIncorrectAnswers": "Noto'g'ri Javoblarni Ko'rish",
+    "exit": "Chiqish",
+    "yesExit": "Ha, Chiqish",
+    "cancel": "Bekor qilish"
+  },
+  "texts": {
+    "congratulations": "Tabriklaymiz!",
+    "completedAllQuestions": "Siz barcha savollarga javob berdingiz.",
+    "areYouSureExit": "Chiqmoqchimisiz?",
+    "noQuestionsAvailable": "Bu karta uchun savollar mavjud emas.",
+    "selectedLan": "Tanlangan til:"
+  }
+}

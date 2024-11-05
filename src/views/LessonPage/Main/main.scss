@@ -1,0 +1,126 @@
+.main {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  flex-direction: column;
+  gap: 150px;
+}
+
+.con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #4b4b4b;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.card p {
+  color: white;
+  position: absolute; /* O'rtaga joylashtirish */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* O'rtaga joylashtirish */
+}
+
+.card.deactive {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.card.active {
+  background-color: #4caf50;
+}
+
+.align-right {
+  align-self: flex-end;
+  transform: translateX(40px);
+}
+
+.card:not(.align-right) {
+  align-self: flex-start;
+  transform: translateX(-40px);
+}
+
+.card:hover {
+  transform: scale(1.1) translateX(var(--translate-x, 0));
+}
+
+.align-right:hover {
+  --translate-x: 40px;
+}
+
+.card:not(.align-right):hover {
+  --translate-x: -40px;
+}
+
+.lan {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-transform: capitalize;
+}
+
+.lan-img {
+  cursor: pointer;
+}
+
+.lan-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10; 
+  width: 150px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lan-dropdown div {
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  width: 100%;
+  justify-content: center;
+}
+
+.lan-dropdown div:hover {
+  background: #cdcdcd; 
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.ru img,
+.uz img {
+  height: 60px;
+}
