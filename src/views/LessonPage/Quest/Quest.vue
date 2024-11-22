@@ -150,7 +150,7 @@ const currentQuestion = computed(() => {
       <div v-if="selectedCardQuestions.length > 0 && !showReviewSection">
         <p class="question">{{ currentQuestion.question }}</p>
         <ul>
-          <li
+          <li class="li"
             v-for="(option, idx) in currentQuestion.options"
             :key="idx"
             @click="selectedAnswer = option"
