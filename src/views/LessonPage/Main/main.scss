@@ -1,9 +1,11 @@
 .main {
   display: flex;
   align-items: center;
-  min-height: 80vh;
+  justify-content: center;
+  min-height: 100vh;
   flex-direction: column;
-  gap: 150px;
+  gap: 50px;
+  background: linear-gradient(135deg, #f3f4f6, #e0e7ff);
 }
 
 .con {
@@ -16,58 +18,55 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  gap: 40px;
 }
 
 .card {
-  width: 80px;
-  height: 80px;
+  width: 160px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  background-color: #4b4b4b;
-  transition: all 0.3s ease;
-  position: relative;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #6a5acd, #483d8b);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
-.card p {
-  color: white;
-  position: absolute; /* O'rtaga joylashtirish */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* O'rtaga joylashtirish */
-}
-
 .card.deactive {
+  background: linear-gradient(135deg, #d1d5db, #9ca3af);
+  color: #ffffff90;
+  box-shadow: none;
+  cursor: not-allowed;
   pointer-events: none;
-  opacity: 0.6;
-}
-
-.card.active {
-  background-color: #4caf50;
 }
 
 .align-right {
   align-self: flex-end;
-  transform: translateX(40px);
+  transform: translateX(60px);
 }
 
 .card:not(.align-right) {
   align-self: flex-start;
-  transform: translateX(-40px);
+  transform: translateX(-60px);
 }
 
 .card:hover {
-  transform: scale(1.1) translateX(var(--translate-x, 0));
+  transform: scale(1.1);
+  background: linear-gradient(145deg, #7b68ee, #4b0082);
+  color: #fffdf9;
 }
 
 .align-right:hover {
-  --translate-x: 40px;
+  transform: scale(1.1) translateX(60px);
 }
 
 .card:not(.align-right):hover {
-  --translate-x: -40px;
+  transform: scale(1.1) translateX(-60px);
 }
 
 .lan {
@@ -75,52 +74,62 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  text-transform: capitalize;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  width: 260px;
 }
 
 .lan-img {
   cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.lan-img img {
+  height: 100%;
+  width: 100%;
 }
 
 .lan-dropdown {
   position: absolute;
-  top: 100%;
+  top: 120%;
   left: 0;
   border: 1px solid #bbb;
   border-radius: 10px;
   background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 10; 
-  width: 150px; 
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  width: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .lan-dropdown div {
-  padding: 5px;
+  padding: 12px;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 10px;
-  border-radius: 5px;
+  border-radius: 8px;
   width: 100%;
   justify-content: center;
+  transition: background 0.3s;
 }
 
 .lan-dropdown div:hover {
-  background: #cdcdcd; 
+  background: #eceff1;
 }
 
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active,
+.fade-leave-active {
   transition: opacity 0.3s ease;
 }
 
-.fade-enter, .fade-leave-to {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
-}
-
-.ru img,
-.uz img {
-  height: 60px;
 }

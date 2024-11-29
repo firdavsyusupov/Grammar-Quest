@@ -26,7 +26,8 @@ const selectedLanguage = ref(localStorage.getItem("selectedLanguage") || "uz"); 
 
 // Load completed cards from localStorage
 const loadCompletedCards = () => {
-  completedCards.value = JSON.parse(localStorage.getItem("completedCards")) || [];
+  completedCards.value =
+    JSON.parse(localStorage.getItem("completedCards")) || [];
 };
 
 // Save completed cards to localStorage
@@ -69,7 +70,6 @@ const checkAnswer = () => {
 };
 
 console.log(uzQuestions);
-
 
 // Go to the next question or review incorrect answers
 const nextQuestion = () => {
@@ -120,15 +120,20 @@ const allQuestionsAnsweredCorrectly = () => {
 
 // Get the selected card based on the card ID and if it is active
 const selectedCard = computed(() => {
-  return cardsData.find((card) => card.id === cardId.value && card.isActive) || { questions: [] };
+  return (
+    cardsData.find((card) => card.id === cardId.value && card.isActive) || {
+      questions: [],
+    }
+  );
 });
 
 // Get the selected questions based on the chosen language
 const selectedCardQuestions = computed(() => {
   if (!selectedCard.value) return []; // Safeguard against undefined
-  return selectedLanguage.value === "uz" ? uzQuestions[cardId.value]?.questions || [] : selectedCard.value.questions; // Use uzQuestions for Uzbek
+  return selectedLanguage.value === "uz"
+    ? uzQuestions[cardId.value]?.questions || []
+    : selectedCard.value.questions; // Use uzQuestions for Uzbek
 });
-
 
 // Get the current question, either for review or for answering
 const currentQuestion = computed(() => {
@@ -142,22 +147,27 @@ const currentQuestion = computed(() => {
 </script>
 
 <template>
-  <div class="container">
-    <div class="questions-page">
+  <div class="questions-page">
+    <div class="container">
       <div class="incorrect-mark" @click="showExitConfirm = true">
         <IncorrectIcon :size="25" />
       </div>
       <div v-if="selectedCardQuestions.length > 0 && !showReviewSection">
         <p class="question">{{ currentQuestion.question }}</p>
         <ul>
-          <li class="li"
+          <li
+            class="li"
             v-for="(option, idx) in currentQuestion.options"
             :key="idx"
             @click="selectedAnswer = option"
             :class="{
               selected: selectedAnswer === option,
-              correct: answerChecked && option === currentQuestion.correctAnswer,
-              incorrect: answerChecked && selectedAnswer === option && selectedAnswer !== currentQuestion.correctAnswer,
+              correct:
+                answerChecked && option === currentQuestion.correctAnswer,
+              incorrect:
+                answerChecked &&
+                selectedAnswer === option &&
+                selectedAnswer !== currentQuestion.correctAnswer,
             }"
           >
             {{ option }}
@@ -187,14 +197,32 @@ const currentQuestion = computed(() => {
         </div>
         <p
           :class="{
-            incorrect: answerFeedback.includes(selectedLanguage === 'uz' ? 'Noto\'g\'ri' : 'Неправильно'),
-            correct: answerFeedback.includes(selectedLanguage === 'uz' ? 'To\'g\'ri' : 'Правильно'),
+            incorrect: answerFeedback.includes(
+              selectedLanguage === 'uz' ? 'Noto\'g\'ri' : 'Неправильно'
+            ),
+            correct: answerFeedback.includes(
+              selectedLanguage === 'uz' ? 'To\'g\'ri' : 'Правильно'
+            ),
           }"
         >
           {{ answerFeedback }}
         </p>
       </div>
       <div v-else-if="showReviewSection">
+        <div class="resultDiv">
+
+          <h2 class="showResult">
+            {{
+              selectedLanguage === "uz"
+                ? `${
+                    selectedCardQuestions.length - incorrectAnswers.length
+                  } / ${selectedCardQuestions.length}`
+                : `${
+                    selectedCardQuestions.length - incorrectAnswers.length
+                  } / ${selectedCardQuestions.length}`
+            }}
+          </h2>
+        </div>
         <div v-if="!reviewButtonClicked" class="showbtn">
           <button class="skip" @click="reviewIncorrectAnswers">
             {{
@@ -203,7 +231,7 @@ const currentQuestion = computed(() => {
                 : "Проверить Ошибки"
             }}
           </button>
-          <button class="skip" @click="showExitConfirm = true">
+          <button class="check" @click="showExitConfirm = true">
             {{ selectedLanguage === "uz" ? "Chiqish" : "Выход" }}
           </button>
         </div>
@@ -211,7 +239,8 @@ const currentQuestion = computed(() => {
           <p>
             <strong>{{
               selectedLanguage === "uz" ? "Savol:" : "Вопрос:"
-            }}</strong> {{ currentQuestion.question }}
+            }}</strong>
+            {{ currentQuestion.question }}
           </p>
           <ul>
             <li
@@ -220,8 +249,12 @@ const currentQuestion = computed(() => {
               @click="selectedAnswer = option"
               :class="{
                 selected: selectedAnswer === option,
-                correct: answerChecked && option === currentQuestion.correctAnswer,
-                incorrect: answerChecked && selectedAnswer === option && selectedAnswer !== currentQuestion.correctAnswer,
+                correct:
+                  answerChecked && option === currentQuestion.correctAnswer,
+                incorrect:
+                  answerChecked &&
+                  selectedAnswer === option &&
+                  selectedAnswer !== currentQuestion.correctAnswer,
               }"
             >
               {{ option }}
@@ -250,8 +283,12 @@ const currentQuestion = computed(() => {
           </div>
           <p
             :class="{
-              incorrect: answerFeedback.includes(selectedLanguage === 'uz' ? 'Noto\'g\'ri' : 'Неправильно'),
-              correct: answerFeedback.includes(selectedLanguage === 'uz' ? 'To\'g\'ri' : 'Правильно'),
+              incorrect: answerFeedback.includes(
+                selectedLanguage === 'uz' ? 'Noto\'g\'ri' : 'Неправильно'
+              ),
+              correct: answerFeedback.includes(
+                selectedLanguage === 'uz' ? 'To\'g\'ri' : 'Правильно'
+              ),
             }"
           >
             {{ answerFeedback }}
@@ -266,7 +303,11 @@ const currentQuestion = computed(() => {
           {{ selectedLanguage === "uz" ? "Tabriklaymiz!" : "Поздравляем!" }}
         </h2>
         <p>
-          {{ selectedLanguage === "uz" ? "Barcha savollarni tugatdingiz." : "Вы завершили все вопросы." }}
+          {{
+            selectedLanguage === "uz"
+              ? "Barcha savollarni tugatdingiz."
+              : "Вы завершили все вопросы."
+          }}
         </p>
         <button class="skip" @click="exit(true)">
           {{ selectedLanguage === "uz" ? "Chiqish" : "Выход" }}
