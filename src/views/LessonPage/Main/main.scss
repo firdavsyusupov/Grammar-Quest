@@ -6,6 +6,11 @@
   flex-direction: column;
   gap: 50px;
   background: linear-gradient(135deg, #f3f4f6, #e0e7ff);
+  position: relative;
+  &-img{
+    position: absolute;
+    right: 10%;
+  }
 }
 
 .con {
@@ -80,6 +85,7 @@
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
   width: 260px;
+  font-size: 14px;
 }
 
 .lan-img {

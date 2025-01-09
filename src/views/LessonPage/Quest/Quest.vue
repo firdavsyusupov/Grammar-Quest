@@ -1,58 +1,54 @@
 <script setup>
 import { ref, computed, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import cardsData from "@/data/card.json";
-import uzQuestions from "@/data/cardUz.json"; // Ensure this file has the correct structure
+import cardsData from "@/data/cardRu.json";
+import uzQuestions from "@/data/cardUz.json";
 import IncorrectIcon from "@/components/icons/IncorrectIcon.vue";
 import "./quest.scss";
 
-// Define the route and router
 const route = useRoute();
 const router = useRouter();
 
-// Reactive state variables
-const cardId = ref(null); // To store the current card ID
-const currentQuestionIndex = ref(0); // To track the index of the current question
-const selectedAnswer = ref(null); // To store the selected answer
-const answerChecked = ref(false); // To check if an answer has been validated
-const answerFeedback = ref(""); // To store feedback for the answer
-const incorrectAnswers = ref([]); // To store indices of incorrect answers
-const showReviewSection = ref(false); // Toggle for review section
-const reviewButtonClicked = ref(false); // To track if the review button is clicked
-const showModal = ref(false); // To display the modal after completion
-const showExitConfirm = ref(false); // To show the exit confirmation modal
-const completedCards = ref([]); // Store the completed cards
-const selectedLanguage = ref(localStorage.getItem("selectedLanguage") || "uz"); // Get the selected language
+const cardId = ref(null);
+const currentQuestionIndex = ref(0);
+const selectedAnswer = ref(null);
+const answerChecked = ref(false);
+const answerFeedback = ref("");
+const incorrectAnswers = ref([]);
+const showReviewSection = ref(false);
+const reviewButtonClicked = ref(false);
+const showModal = ref(false);
+const showExitConfirm = ref(false);
+const completedCards = ref([]);
+const selectedLanguage = ref(localStorage.getItem("selectedLanguage") || "ru");
 
-// Load completed cards from localStorage
 const loadCompletedCards = () => {
-  completedCards.value =
-    JSON.parse(localStorage.getItem("completedCards")) || [];
+  completedCards.value = JSON.parse(localStorage.getItem("completedCards")) || [
+    1,
+  ];
 };
 
-// Save completed cards to localStorage
 const saveCompletedCards = () => {
   localStorage.setItem("completedCards", JSON.stringify(completedCards.value));
 };
 
-// Unlock the next card if available
 const unlockNextCard = (id) => {
-  if (id < cardsData.length && !completedCards.value.includes(id + 1)) {
-    completedCards.value.push(id + 1);
+  const idtrue = id + 1;
+  if (incorrectAnswers.value.length === 0) {
+    completedCards.value.push(idtrue + 1);
     saveCompletedCards();
   }
 };
 
-// On component mount, set cardId and load completed cards
 onMounted(() => {
-  const id = Number(route.params.id); // Get the card ID from route params
+  const id = Number(route.params.id);
+
   if (!isNaN(id) && cardsData.length > 0) {
-    cardId.value = id - 1; // Adjust the ID if necessary
+    cardId.value = id - 1;
     loadCompletedCards();
   }
 });
 
-// Check if the selected answer is correct
 const checkAnswer = () => {
   const currentQData = currentQuestion.value;
   const isCorrect = selectedAnswer.value === currentQData.correctAnswer;
@@ -69,56 +65,55 @@ const checkAnswer = () => {
   answerChecked.value = true;
 };
 
-console.log(uzQuestions);
-
-// Go to the next question or review incorrect answers
 const nextQuestion = () => {
   if (showReviewSection.value) {
     if (currentQuestionIndex.value < incorrectAnswers.value.length - 1) {
       currentQuestionIndex.value++;
     } else {
-      showModal.value = true; // Show modal after reviewing all questions
+      showModal.value = true;
+      unlockNextCard(cardId.value);
     }
   } else {
     if (currentQuestionIndex.value < selectedCardQuestions.value.length - 1) {
       currentQuestionIndex.value++;
     } else {
       if (allQuestionsAnsweredCorrectly()) {
-        showModal.value = true; // Show modal if all questions are answered correctly
+        showModal.value = true;
+        unlockNextCard(cardId.value);
       } else {
-        showReviewSection.value = true; // Go to review section if incorrect answers exist
+        showReviewSection.value = true;
       }
     }
   }
   resetState();
 };
 
-// Review incorrect answers
 const reviewIncorrectAnswers = () => {
   currentQuestionIndex.value = 0;
   reviewButtonClicked.value = true;
   resetState();
 };
 
-// Exit the quiz, optionally unlock the next card
 const exit = (unlock = false) => {
-  if (unlock && allQuestionsAnsweredCorrectly()) unlockNextCard(cardId.value);
-  router.push("/lessons"); // Navigate back to lessons page
+  if (allQuestionsAnsweredCorrectly()) {
+    showModal.value = true;
+    unlockNextCard(cardId.value);
+  } else {
+    showModal.value = true;
+  }
+
+  router.push("/lessons");
 };
 
-// Reset the state for the next question
 const resetState = () => {
   selectedAnswer.value = null;
   answerChecked.value = false;
   answerFeedback.value = "";
 };
 
-// Check if all questions have been answered correctly
 const allQuestionsAnsweredCorrectly = () => {
   return incorrectAnswers.value.length === 0;
 };
-
-// Get the selected card based on the card ID and if it is active
 const selectedCard = computed(() => {
   return (
     cardsData.find((card) => card.id === cardId.value && card.isActive) || {
@@ -127,23 +122,25 @@ const selectedCard = computed(() => {
   );
 });
 
-// Get the selected questions based on the chosen language
 const selectedCardQuestions = computed(() => {
-  if (!selectedCard.value) return []; // Safeguard against undefined
+  if (!selectedCard.value) return [];
   return selectedLanguage.value === "uz"
     ? uzQuestions[cardId.value]?.questions || []
-    : selectedCard.value.questions; // Use uzQuestions for Uzbek
+    : cardsData[cardId.value]?.questions || [];
 });
 
-// Get the current question, either for review or for answering
 const currentQuestion = computed(() => {
   if (showReviewSection.value) {
     const incorrectIndex = incorrectAnswers.value[currentQuestionIndex.value];
-    return selectedCardQuestions.value[incorrectIndex] || {}; // Safeguard
+    return selectedCardQuestions.value[incorrectIndex] || {};
   } else {
-    return selectedCardQuestions.value[currentQuestionIndex.value] || {}; // Safeguard
+    return selectedCardQuestions.value[currentQuestionIndex.value] || {};
   }
 });
+
+function quesexit() {
+  router.push("/lessons");
+}
 </script>
 
 <template>
@@ -210,7 +207,6 @@ const currentQuestion = computed(() => {
       </div>
       <div v-else-if="showReviewSection">
         <div class="resultDiv">
-
           <h2 class="showResult">
             {{
               selectedLanguage === "uz"
@@ -324,11 +320,8 @@ const currentQuestion = computed(() => {
           }}
         </h2>
         <div class="buttons">
-          <button class="skip" @click="exit(false)">
+          <button class="skip" @click="quesexit">
             {{ selectedLanguage === "uz" ? "Ha, chiqish" : "Да, выйти" }}
-          </button>
-          <button class="skip" @click="showExitConfirm = false">
-            {{ selectedLanguage === "uz" ? "Bekor qilish" : "Отмена" }}
           </button>
         </div>
       </div>

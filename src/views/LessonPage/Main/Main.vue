@@ -1,35 +1,30 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
-import cardsData from "@/data/card.json";
+import cardsData from "@/data/cardRu.json";
 import uz from "@/assets/images/uz.png";
 import ru from "@/assets/images/ru.png";
-import "./main.scss"
+import "./main.scss";
 
 const router = useRouter();
 const completedCards = ref([]);
-const selectedLanguage = ref("uz");
+const selectedLanguage = ref("ru");
 const dropdownVisible = ref(false);
 const texts = ref({ selectedLan: "Tanlangan til:" });
 const cardsWithActiveState = ref([]);
 
 const updateSelectedLanText = () => {
-  texts.value.selectedLan = selectedLanguage.value === "uz" ? "Tanlangan til:" : "Выбранный язык:";
+  texts.value.selectedLan =
+    selectedLanguage.value === "uz" ? "Tanlangan til:" : "Выбранный язык:";
 };
 
 const loadCompletedCards = () => {
-  completedCards.value = JSON.parse(localStorage.getItem("completedCards")) || [];
+  completedCards.value =
+    JSON.parse(localStorage.getItem("completedCards")) || [];
 };
 
 const saveCompletedCards = () => {
   localStorage.setItem("completedCards", JSON.stringify(completedCards.value));
-};
-
-const unlockNextCard = (id) => {
-  if (id < cardsData.length && !completedCards.value.includes(id + 1)) {
-    completedCards.value.push(id + 1);
-    saveCompletedCards();
-  }
 };
 
 const generateLabel = (index) => {
@@ -58,17 +53,14 @@ const selectLanguage = (lang) => {
 };
 
 const goToQuestionsPage = (id) => {
-  if (!completedCards.value.includes(id)) {
-    completedCards.value.push(id);
-    saveCompletedCards();
-    unlockNextCard(id);
+  if (cardsWithActiveState.value.find((card) => card.id === id)?.isActive) {
+    router.push({ name: "Questions", params: { id } });
   }
-  router.push({ name: "Questions", params: { id } });
 };
 
 onMounted(() => {
   loadCompletedCards();
-  selectedLanguage.value = localStorage.getItem("selectedLanguage") || "uz";
+  selectedLanguage.value = localStorage.getItem("selectedLanguage") || "ru";
   updateSelectedLanText();
   updateCardStyles();
 });
@@ -76,10 +68,11 @@ onMounted(() => {
 
 <template>
   <section class="main">
+    <img src="@/assets/images/main-page.svg" alt="" class="main-img">
     <div class="lan">
       <h3>{{ texts.selectedLan }}</h3>
       <div class="lan-img" @click="toggleDropdown">
-        <img :src="selectedLanguage === 'uz' ? uz : ru" alt="Language" />
+        <img :src="selectedLanguage === 'ru' ? ru : uz" alt="Language" />
       </div>
       <transition name="fade">
         <div class="lan-dropdown" v-if="dropdownVisible">
@@ -100,7 +93,10 @@ onMounted(() => {
         <div class="cards">
           <div
             class="card"
-            :class="{ deactive: !card.isActive, 'align-right': card.alignRight }"
+            :class="{
+              deactive: !card.isActive,
+              'align-right': card.alignRight,
+            }"
             v-for="card in cardsWithActiveState"
             :key="card.id"
             @click="card.isActive ? goToQuestionsPage(card.id) : null"
@@ -112,5 +108,3 @@ onMounted(() => {
     </div>
   </section>
 </template>
-
-
