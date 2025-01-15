@@ -1,14 +1,14 @@
 <script setup>
 import { ref, computed, onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
-import cardsData from "@/data/card.json";
-import uzQuestions from "@/data/cardUz.json"; // Ensure this file has the correct structure
-import ruQuestions from "@/data/card.json"; // This is likely not needed for Uzbek questions
+import cardsData from "@/data/cardRu.json";
+import uzQuestions from "@/data/cardUz.json";
 import IncorrectIcon from "@/components/icons/IncorrectIcon.vue";
 import "./quest.scss";
 
 const route = useRoute();
 const router = useRouter();
+
 const cardId = ref(null);
 const currentQuestionIndex = ref(0);
 const selectedAnswer = ref(null);
@@ -20,10 +20,12 @@ const reviewButtonClicked = ref(false);
 const showModal = ref(false);
 const showExitConfirm = ref(false);
 const completedCards = ref([]);
-const selectedLanguage = ref(localStorage.getItem("selectedLanguage") || "uz");
+const selectedLanguage = ref(localStorage.getItem("selectedLanguage") || "ru");
 
 const loadCompletedCards = () => {
-  completedCards.value = JSON.parse(localStorage.getItem("completedCards")) || [];
+  completedCards.value = JSON.parse(localStorage.getItem("completedCards")) || [
+    1,
+  ];
 };
 
 const saveCompletedCards = () => {
@@ -31,16 +33,18 @@ const saveCompletedCards = () => {
 };
 
 const unlockNextCard = (id) => {
-  if (id < cardsData.length && !completedCards.value.includes(id + 1)) {
-    completedCards.value.push(id + 1);
+  const idtrue = id + 1;
+  if (incorrectAnswers.value.length === 0) {
+    completedCards.value.push(idtrue + 1);
     saveCompletedCards();
   }
 };
 
 onMounted(() => {
   const id = Number(route.params.id);
+
   if (!isNaN(id) && cardsData.length > 0) {
-    cardId.value = id;
+    cardId.value = id - 1;
     loadCompletedCards();
   }
 });
@@ -49,7 +53,6 @@ const checkAnswer = () => {
   const currentQData = currentQuestion.value;
   const isCorrect = selectedAnswer.value === currentQData.correctAnswer;
 
-  
   answerFeedback.value = isCorrect
     ? selectedLanguage.value === "uz"
       ? "To'g'ri!"
@@ -67,16 +70,18 @@ const nextQuestion = () => {
     if (currentQuestionIndex.value < incorrectAnswers.value.length - 1) {
       currentQuestionIndex.value++;
     } else {
-      showModal.value = true; // Show modal when all questions have been reviewed
+      showModal.value = true;
+      unlockNextCard(cardId.value);
     }
   } else {
     if (currentQuestionIndex.value < selectedCardQuestions.value.length - 1) {
       currentQuestionIndex.value++;
     } else {
       if (allQuestionsAnsweredCorrectly()) {
-        showModal.value = true; // Show modal when all questions are answered correctly
+        showModal.value = true;
+        unlockNextCard(cardId.value);
       } else {
-        showReviewSection.value = true; // Go to review section if there are incorrect answers
+        showReviewSection.value = true;
       }
     }
   }
@@ -90,7 +95,13 @@ const reviewIncorrectAnswers = () => {
 };
 
 const exit = (unlock = false) => {
-  if (unlock && allQuestionsAnsweredCorrectly()) unlockNextCard(cardId.value);
+  if (allQuestionsAnsweredCorrectly()) {
+    showModal.value = true;
+    unlockNextCard(cardId.value);
+  } else {
+    showModal.value = true;
+  }
+
   router.push("/lessons");
 };
 
@@ -103,33 +114,38 @@ const resetState = () => {
 const allQuestionsAnsweredCorrectly = () => {
   return incorrectAnswers.value.length === 0;
 };
-
 const selectedCard = computed(() => {
-  return cardsData.find((card) => card.id === cardId.value && card.isActive) || { questions: [] };
+  return (
+    cardsData.find((card) => card.id === cardId.value && card.isActive) || {
+      questions: [],
+    }
+  );
 });
 
-// Updated to correctly select questions based on the language
 const selectedCardQuestions = computed(() => {
-  if (!selectedCard.value) return []; // Safeguard against undefined
-  return selectedLanguage.value === "uz" ? uzQuestions : selectedCard.value.questions; // Use uzQuestions for Uzbek
+  if (!selectedCard.value) return [];
+  return selectedLanguage.value === "uz"
+    ? uzQuestions[cardId.value]?.questions || []
+    : cardsData[cardId.value]?.questions || [];
 });
 
 const currentQuestion = computed(() => {
   if (showReviewSection.value) {
     const incorrectIndex = incorrectAnswers.value[currentQuestionIndex.value];
-    return selectedCardQuestions.value[incorrectIndex] || {}; // Safeguard
+    return selectedCardQuestions.value[incorrectIndex] || {};
   } else {
-    return selectedCardQuestions.value[currentQuestionIndex.value] || {}; // Safeguard
+    return selectedCardQuestions.value[currentQuestionIndex.value] || {};
   }
 });
+
+function quesexit() {
+  router.push("/lessons");
+}
 </script>
 
-
-
-
 <template>
-  <div class="container">
-    <div class="questions-page">
+  <div class="questions-page">
+    <div class="container">
       <div class="incorrect-mark" @click="showExitConfirm = true">
         <IncorrectIcon :size="25" />
       </div>
@@ -137,13 +153,18 @@ const currentQuestion = computed(() => {
         <p class="question">{{ currentQuestion.question }}</p>
         <ul>
           <li
+            class="li"
             v-for="(option, idx) in currentQuestion.options"
             :key="idx"
             @click="selectedAnswer = option"
             :class="{
               selected: selectedAnswer === option,
-              correct: answerChecked && option === currentQuestion.correctAnswer,
-              incorrect: answerChecked && selectedAnswer === option && selectedAnswer !== currentQuestion.correctAnswer,
+              correct:
+                answerChecked && option === currentQuestion.correctAnswer,
+              incorrect:
+                answerChecked &&
+                selectedAnswer === option &&
+                selectedAnswer !== currentQuestion.correctAnswer,
             }"
           >
             {{ option }}
@@ -173,14 +194,31 @@ const currentQuestion = computed(() => {
         </div>
         <p
           :class="{
-            incorrect: answerFeedback.includes(selectedLanguage === 'uz' ? 'Noto\'g\'ri' : 'Неправильно'),
-            correct: answerFeedback.includes(selectedLanguage === 'uz' ? 'To\'g\'ri' : 'Правильно'),
+            incorrect: answerFeedback.includes(
+              selectedLanguage === 'uz' ? 'Noto\'g\'ri' : 'Неправильно'
+            ),
+            correct: answerFeedback.includes(
+              selectedLanguage === 'uz' ? 'To\'g\'ri' : 'Правильно'
+            ),
           }"
         >
           {{ answerFeedback }}
         </p>
       </div>
       <div v-else-if="showReviewSection">
+        <div class="resultDiv">
+          <h2 class="showResult">
+            {{
+              selectedLanguage === "uz"
+                ? `${
+                    selectedCardQuestions.length - incorrectAnswers.length
+                  } / ${selectedCardQuestions.length}`
+                : `${
+                    selectedCardQuestions.length - incorrectAnswers.length
+                  } / ${selectedCardQuestions.length}`
+            }}
+          </h2>
+        </div>
         <div v-if="!reviewButtonClicked" class="showbtn">
           <button class="skip" @click="reviewIncorrectAnswers">
             {{
@@ -189,7 +227,7 @@ const currentQuestion = computed(() => {
                 : "Проверить Ошибки"
             }}
           </button>
-          <button class="skip" @click="showExitConfirm = true">
+          <button class="check" @click="showExitConfirm = true">
             {{ selectedLanguage === "uz" ? "Chiqish" : "Выход" }}
           </button>
         </div>
@@ -197,7 +235,8 @@ const currentQuestion = computed(() => {
           <p>
             <strong>{{
               selectedLanguage === "uz" ? "Savol:" : "Вопрос:"
-            }}</strong> {{ currentQuestion.question }}
+            }}</strong>
+            {{ currentQuestion.question }}
           </p>
           <ul>
             <li
@@ -206,8 +245,12 @@ const currentQuestion = computed(() => {
               @click="selectedAnswer = option"
               :class="{
                 selected: selectedAnswer === option,
-                correct: answerChecked && option === currentQuestion.correctAnswer,
-                incorrect: answerChecked && selectedAnswer === option && selectedAnswer !== currentQuestion.correctAnswer,
+                correct:
+                  answerChecked && option === currentQuestion.correctAnswer,
+                incorrect:
+                  answerChecked &&
+                  selectedAnswer === option &&
+                  selectedAnswer !== currentQuestion.correctAnswer,
               }"
             >
               {{ option }}
@@ -236,8 +279,12 @@ const currentQuestion = computed(() => {
           </div>
           <p
             :class="{
-              incorrect: answerFeedback.includes(selectedLanguage === 'uz' ? 'Noto\'g\'ri' : 'Неправильно'),
-              correct: answerFeedback.includes(selectedLanguage === 'uz' ? 'To\'g\'ri' : 'Правильно'),
+              incorrect: answerFeedback.includes(
+                selectedLanguage === 'uz' ? 'Noto\'g\'ri' : 'Неправильно'
+              ),
+              correct: answerFeedback.includes(
+                selectedLanguage === 'uz' ? 'To\'g\'ri' : 'Правильно'
+              ),
             }"
           >
             {{ answerFeedback }}
@@ -252,7 +299,11 @@ const currentQuestion = computed(() => {
           {{ selectedLanguage === "uz" ? "Tabriklaymiz!" : "Поздравляем!" }}
         </h2>
         <p>
-          {{"selectedLanguage === 'uz' ? 'Barcha savollarni tugatdingiz.' : 'Вы завершили все вопросы.'"}}
+          {{
+            selectedLanguage === "uz"
+              ? "Barcha savollarni tugatdingiz."
+              : "Вы завершили все вопросы."
+          }}
         </p>
         <button class="skip" @click="exit(true)">
           {{ selectedLanguage === "uz" ? "Chiqish" : "Выход" }}
@@ -269,15 +320,11 @@ const currentQuestion = computed(() => {
           }}
         </h2>
         <div class="buttons">
-          <button class="skip" @click="exit(false)">
+          <button class="skip" @click="quesexit">
             {{ selectedLanguage === "uz" ? "Ha, chiqish" : "Да, выйти" }}
-          </button>
-          <button class="skip" @click="showExitConfirm = false">
-            {{ selectedLanguage === "uz" ? "Bekor qilish" : "Отмена" }}
           </button>
         </div>
       </div>
     </div>
   </div>
 </template>
-
