@@ -1,110 +1,78 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
-import cardsData from "@/data/card.json";
+import cardsData from "@/data/cardRu.json";
 import uz from "@/assets/images/uz.png";
 import ru from "@/assets/images/ru.png";
 import "./main.scss";
-import StarIcon from "@/components/icons/StarIcon.vue";
 
 const router = useRouter();
 const completedCards = ref([]);
-const selectedLanguage = ref("uz");
+const selectedLanguage = ref("ru");
 const dropdownVisible = ref(false);
+const texts = ref({ selectedLan: "Tanlangan til:" });
+const cardsWithActiveState = ref([]);
 
-const texts = ref({
-  selectedLan: "Tanlangan til:", 
-});
-
-// Tanlangan til matnini yangilash
 const updateSelectedLanText = () => {
-  texts.value.selectedLan = selectedLanguage.value === "uz" ? "Tanlangan til:" : "Выбранный язык:";
+  texts.value.selectedLan =
+    selectedLanguage.value === "uz" ? "Tanlangan til:" : "Выбранный язык:";
 };
 
-// Tugallangan kartalarni yuklash
 const loadCompletedCards = () => {
-  completedCards.value = JSON.parse(localStorage.getItem("completedCards")) || [];
-};
-const finishQuestions = () => {
-  // Barcha savollarga javob berilgandan so'ng
-  unlockNextCard(currentCardId); // O'zgaruvchini moslashtiring
-  router.push({ name: "Main" }); // Asosiy sahifaga qaytish
+  completedCards.value =
+    JSON.parse(localStorage.getItem("completedCards")) || [];
 };
 
-// Tugallangan kartalarni saqlash
 const saveCompletedCards = () => {
   localStorage.setItem("completedCards", JSON.stringify(completedCards.value));
 };
 
-// Tanlangan tildan keyin kartalarga o'tish
-const loadSelectedLanguage = () => {
-  selectedLanguage.value = localStorage.getItem("selectedLanguage") || "uz";
-  updateSelectedLanText();
+const generateLabel = (index) => {
+  const levels = ["A", "B", "C"];
+  return `${levels[Math.floor(index / 2)]}${(index % 2) + 1}`;
 };
 
-// Tanlangan tilni saqlash
-const saveSelectedLanguage = () => {
-  localStorage.setItem("selectedLanguage", selectedLanguage.value);
-};
-
-// Savollar sahifasiga o'tish
-const goToQuestionsPage = (id) => {
-  // Karta tugallanganda keyingi kartani qulfdan chiqarish
-  if (!completedCards.value.includes(id)) {
-    completedCards.value.push(id);
-    saveCompletedCards(); // Tugallangan kartani saqlash
-    unlockNextCard(id); // Keyingi kartani qulfdan chiqarish
-  }
-  // Savollar sahifasiga o'tish
-  router.push({ name: "Questions", params: { id } });
-};
-
-// Keyingi kartani qulfdan chiqarish
-const unlockNextCard = (id) => {
-  if (id < cardsData.length && !completedCards.value.includes(id + 1)) {
-    completedCards.value.push(id + 1);
-    saveCompletedCards();
-  }
-};
-
-const cardsWithActiveState = ref([]);
-
-// Kartalar uslublarini yangilash
 const updateCardStyles = () => {
   cardsWithActiveState.value = cardsData.map((card, index) => ({
     ...card,
     isActive: completedCards.value.includes(card.id) || card.id === 1,
     alignRight: index % 2 === 0,
+    label: generateLabel(index),
   }));
 };
 
-// Til tanlashni ko'rsatish/yoqish
 const toggleDropdown = () => {
   dropdownVisible.value = !dropdownVisible.value;
 };
 
-// Tilni tanlash
 const selectLanguage = (lang) => {
   selectedLanguage.value = lang;
-  saveSelectedLanguage();
+  localStorage.setItem("selectedLanguage", lang);
   updateSelectedLanText();
   dropdownVisible.value = false;
 };
 
-// Sahifa yuklanganda
+const goToQuestionsPage = (id) => {
+  if (cardsWithActiveState.value.find((card) => card.id === id)?.isActive) {
+    router.push({ name: "Questions", params: { id } });
+  }
+};
+
 onMounted(() => {
   loadCompletedCards();
-  loadSelectedLanguage();
+  selectedLanguage.value = localStorage.getItem("selectedLanguage") || "ru";
+  updateSelectedLanText();
   updateCardStyles();
 });
 </script>
 
 <template>
   <section class="main">
+    <img src="@/assets/images/main-page.svg" alt="" class="main-img">
     <div class="lan">
       <h3>{{ texts.selectedLan }}</h3>
       <div class="lan-img" @click="toggleDropdown">
-        <img :src="selectedLanguage === 'uz' ? uz : ru" alt="Language" />
+        <img :src="selectedLanguage === 'ru' ? ru : uz" alt="Language" />
       </div>
       <transition name="fade">
         <div class="lan-dropdown" v-if="dropdownVisible">
@@ -120,7 +88,6 @@ onMounted(() => {
         </div>
       </transition>
     </div>
-
     <div class="container">
       <div class="con">
         <div class="cards">
@@ -134,7 +101,7 @@ onMounted(() => {
             :key="card.id"
             @click="card.isActive ? goToQuestionsPage(card.id) : null"
           >
-            <StarIcon :size="30" :color="'green'" />
+            {{ card.label }}
           </div>
         </div>
       </div>
