@@ -1,158 +1,1055 @@
 [
-    {
-      "id": 1,
-      "isActive": true,
-      "questions": [
-        {
-          "question": "'Sut'ning tarjimasini tanlang",
-          "options": ["milk", "salt", "tea"],
-          "correctAnswer": "milk"
-        },
-        {
-          "question": "'Tuz'ning tarjimasini tanlang",
-          "options": ["butter", "bread", "salt"],
-          "correctAnswer": "salt"
-        },
-        {
-          "question": "'Issiq'ning tarjimasini tanlang",
-          "options": ["hot", "cold", "warm"],
-          "correctAnswer": "hot"
-        },
-        {
-          "question": "'Yetti'ning tarjimasini tanlang",
-          "options": ["five", "six", "seven"],
-          "correctAnswer": "seven"
-        },
-        {
-          "question": "'Ikki'ning tarjimasini tanlang",
-          "options": ["one", "two", "three"],
-          "correctAnswer": "two"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "isActive": true,
-      "questions": [
-        {
-          "question": "'A' harfning tarjimasini tanlang",
-          "options": ["A", "B", "C"],
-          "correctAnswer": "A"
-        },
-        {
-          "question": "'Kichik'ning tarjimasini tanlang",
-          "options": ["big", "small", "large"],
-          "correctAnswer": "small"
-        },
-        {
-          "question": "'Sariq'ning tarjimasini tanlang",
-          "options": ["blue", "yellow", "green"],
-          "correctAnswer": "yellow"
-        },
-        {
-          "question": "'Vashington'ning tarjimasini tanlang",
-          "options": ["New York", "Washington", "Los Angeles"],
-          "correctAnswer": "Washington"
-        },
-        {
-          "question": "'Sakkiz'ning tarjimasini tanlang",
-          "options": ["six", "eight", "ten"],
-          "correctAnswer": "eight"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "isActive": true,
-      "questions": [
-        {
-          "question": "'Tinch'ning tarjimasini tanlang",
-          "options": ["Atlantic", "Indian", "Pacific"],
-          "correctAnswer": "Pacific"
-        },
-        {
-          "question": "'Mars'ning tarjimasini tanlang",
-          "options": ["Mars", "Earth", "Jupiter"],
-          "correctAnswer": "Mars"
-        },
-        {
-          "question": "'Asal'ning tarjimasini tanlang",
-          "options": ["milk", "honey", "wax"],
-          "correctAnswer": "honey"
-        },
-        {
-          "question": "'Qit'a'ning tarjimasini tanlang",
-          "options": ["island", "continent", "soup"],
-          "correctAnswer": "continent"
-        },
-        {
-          "question": "'Inglizcha'ning tarjimasini tanlang",
-          "options": ["english", "french", "spanish"],
-          "correctAnswer": "english"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "isActive": true,
-      "questions": [
-        {
-          "question": "'Parij'ning tarjimasini tanlang",
-          "options": ["Berlin", "Madrid", "Paris"],
-          "correctAnswer": "Paris"
-        },
-        {
-          "question": "'Avokado'ning tarjimasini tanlang",
-          "options": ["tomato", "avocado", "pepper"],
-          "correctAnswer": "avocado"
-        },
-        {
-          "question": "'Sher'ning tarjimasini tanlang",
-          "options": ["tiger", "lion", "elephant"],
-          "correctAnswer": "lion"
-        },
-        {
-          "question": "'Yigirma besh'ning tarjimasini tanlang",
-          "options": ["ten", "twenty", "twenty-five"],
-          "correctAnswer": "twenty-five"
-        },
-        {
-          "question": "'Qish'ning tarjimasini tanlang",
-          "options": ["summer", "winter", "autumn"],
-          "correctAnswer": "winter"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "isActive": true,
-      "questions": [
-        {
-          "question": "'Gepard'ning tarjimasini tanlang",
-          "options": ["cheetah", "horse", "elephant"],
-          "correctAnswer": "cheetah"
-        },
-        {
-          "question": "'Tokio'ning tarjimasini tanlang",
-          "options": ["Seoul", "Beijing", "Tokyo"],
-          "correctAnswer": "Tokyo"
-        },
-        {
-          "question": "'Delfin'ning tarjimasini tanlang",
-          "options": ["shark", "dolphin", "octopus"],
-          "correctAnswer": "dolphin"
-        },
-        {
-          "question": "'Olti'ning tarjimasini tanlang",
-          "options": ["five", "six", "seven"],
-          "correctAnswer": "six"
-        },
-        {
-          "question": "'Sabzi'ning tarjimasini tanlang",
-          "options": ["carrot", "banana", "grape"],
-          "correctAnswer": "carrot"
-        }
-      ]
-    }
-  ]
-  
+  {
+    "id": 1,
+    "level": "A1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "«Sut» so'zining to'g'ri tarjimasi nima?",
+        "options": ["milk", "salt", "tea"],
+        "correctAnswer": "milk"
+      },
+      {
+        "question": "«Tuz» so'zining to'g'ri tarjimasi nima?",
+        "options": ["butter", "bread", "salt"],
+        "correctAnswer": "salt"
+      },
+      {
+        "question": "«Issiq» so'zining to'g'ri tarjimasi nima?",
+        "options": ["hot", "cold", "warm"],
+        "correctAnswer": "hot"
+      },
+      {
+        "question": "«Yetti» so'zining to'g'ri tarjimasi nima?",
+        "options": ["five", "six", "seven"],
+        "correctAnswer": "seven"
+      },
+      {
+        "question": "«Ikki» so'zining to'g'ri tarjimasi nima?",
+        "options": ["one", "two", "three"],
+        "correctAnswer": "two"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "level": "A1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "«A» harfi qaysi tilga to'g'ri tarjima qilingan?",
+        "options": ["A", "B", "C"],
+        "correctAnswer": "A"
+      },
+      {
+        "question": "«Kichik» so'zining to'g'ri tarjimasi nima?",
+        "options": ["big", "small", "large"],
+        "correctAnswer": "small"
+      },
+      {
+        "question": "«Sariq» so'zining to'g'ri tarjimasi nima?",
+        "options": ["blue", "yellow", "green"],
+        "correctAnswer": "yellow"
+      },
+      {
+        "question": "«Vashington» qaysi shaharga to'g'ri tarjima qilingan?",
+        "options": ["New York", "Washington", "Los Angeles"],
+        "correctAnswer": "Washington"
+      },
+      {
+        "question": "«Sakkiz» so'zining to'g'ri tarjimasi nima?",
+        "options": ["six", "eight", "ten"],
+        "correctAnswer": "eight"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "level": "A1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "«Ota» so'zining to'g'ri tarjimasi nima?",
+        "options": ["father", "mother", "brother"],
+        "correctAnswer": "father"
+      },
+      {
+        "question": "«Ona» so'zining to'g'ri tarjimasi nima?",
+        "options": ["father", "mother", "sister"],
+        "correctAnswer": "mother"
+      },
+      {
+        "question": "«Do'stlik» so'zining to'g'ri tarjimasi nima?",
+        "options": ["friendship", "family", "love"],
+        "correctAnswer": "friendship"
+      },
+      {
+        "question": "«It» so'zining to'g'ri tarjimasi nima?",
+        "options": ["cat", "dog", "bird"],
+        "correctAnswer": "dog"
+      },
+      {
+        "question": "«Mushuk» so'zining to'g'ri tarjimasi nima?",
+        "options": ["cat", "dog", "hamster"],
+        "correctAnswer": "cat"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "level": "A1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "«Quyosh» so'zining to'g'ri tarjimasi nima?",
+        "options": ["moon", "star", "sun"],
+        "correctAnswer": "sun"
+      },
+      {
+        "question": "«Yer» so'zining to'g'ri tarjimasi nima?",
+        "options": ["earth", "sky", "sea"],
+        "correctAnswer": "earth"
+      },
+      {
+        "question": "«Kitob» so'zining to'g'ri tarjimasi nima?",
+        "options": ["pen", "book", "paper"],
+        "correctAnswer": "book"
+      },
+      {
+        "question": "«O'n» so'zining to'g'ri tarjimasi nima?",
+        "options": ["ten", "five", "eight"],
+        "correctAnswer": "ten"
+      },
+      {
+        "question": "«Uch» so'zining to'g'ri tarjimasi nima?",
+        "options": ["two", "three", "four"],
+        "correctAnswer": "three"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "level": "A1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "«Stol» so'zining to'g'ri tarjimasi nima?",
+        "options": ["chair", "table", "sofa"],
+        "correctAnswer": "table"
+      },
+      {
+        "question": "«Stul» so'zining to'g'ri tarjimasi nima?",
+        "options": ["table", "chair", "bed"],
+        "correctAnswer": "chair"
+      },
+      {
+        "question": "«Oynadan» so'zining to'g'ri tarjimasi nima?",
+        "options": ["window", "door", "ceiling"],
+        "correctAnswer": "window"
+      },
+      {
+        "question": "«Esik» so'zining to'g'ri tarjimasi nima?",
+        "options": ["door", "window", "wall"],
+        "correctAnswer": "door"
+      },
+      {
+        "question": "«Kreslo» so'zining to'g'ri tarjimasi nima?",
+        "options": ["sofa", "bed", "desk"],
+        "correctAnswer": "bed"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "level": "A2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "«Tinch» so'zining to'g'ri tarjimasi nima?",
+        "options": ["Atlantic", "Indian", "Pacific"],
+        "correctAnswer": "Pacific"
+      },
+      {
+        "question": "«Mars» so'zining to'g'ri tarjimasi nima?",
+        "options": ["Mars", "Earth", "Jupiter"],
+        "correctAnswer": "Mars"
+      },
+      {
+        "question": "«Asal» so'zining to'g'ri tarjimasi nima?",
+        "options": ["milk", "honey", "wax"],
+        "correctAnswer": "honey"
+      },
+      {
+        "question": "«Kontinent» so'zining to'g'ri tarjimasi nima?",
+        "options": ["island", "continent", "soup"],
+        "correctAnswer": "continent"
+      },
+      {
+        "question": "«Ingliz» so'zining to'g'ri tarjimasi nima?",
+        "options": ["english", "french", "spanish"],
+        "correctAnswer": "english"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "level": "A2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "«Parij» so'zining to'g'ri tarjimasi nima?",
+        "options": ["Berlin", "Madrid", "Paris"],
+        "correctAnswer": "Paris"
+      },
+      {
+        "question": "«Avokado» so'zining to'g'ri tarjimasi nima?",
+        "options": ["tomato", "avocado", "pepper"],
+        "correctAnswer": "avocado"
+      },
+      {
+        "question": "«Sher» so'zining to'g'ri tarjimasi nima?",
+        "options": ["tiger", "lion", "elephant"],
+        "correctAnswer": "lion"
+      },
+      {
+        "question": "«Yigirma besh» so'zining to'g'ri tarjimasi nima?",
+        "options": ["ten", "twenty", "twenty-five"],
+        "correctAnswer": "twenty-five"
+      },
+      {
+        "question": "«Qish» so'zining to'g'ri tarjimasi nima?",
+        "options": ["summer", "winter", "autumn"],
+        "correctAnswer": "winter"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "level": "A2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "«Xat» so'zining to'g'ri tarjimasi nima?",
+        "options": ["letter", "email", "message"],
+        "correctAnswer": "letter"
+      },
+      {
+        "question": "«Quyosh» so'zining to'g'ri tarjimasi nima?",
+        "options": ["sun", "moon", "star"],
+        "correctAnswer": "sun"
+      },
+      {
+        "question": "«Sevgi» so'zining to'g'ri tarjimasi nima?",
+        "options": ["love", "hate", "anger"],
+        "correctAnswer": "love"
+      },
+      {
+        "question": "«Hayvon» so'zining to'g'ri tarjimasi nima?",
+        "options": ["human", "animal", "plant"],
+        "correctAnswer": "animal"
+      },
+      {
+        "question": "«Suv» so'zining to'g'ri tarjimasi nima?",
+        "options": ["water", "air", "fire"],
+        "correctAnswer": "water"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "level": "A2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "«Uy» so'zining to'g'ri tarjimasi nima?",
+        "options": ["house", "apartment", "building"],
+        "correctAnswer": "house"
+      },
+      {
+        "question": "«Tishlar» so'zining to'g'ri tarjimasi nima?",
+        "options": ["teeth", "hair", "eyes"],
+        "correctAnswer": "teeth"
+      },
+      {
+        "question": "«Do'stlik» so'zining to'g'ri tarjimasi nima?",
+        "options": ["friendship", "love", "family"],
+        "correctAnswer": "friendship"
+      },
+      {
+        "question": "«It» so'zining to'g'ri tarjimasi nima?",
+        "options": ["cat", "dog", "rabbit"],
+        "correctAnswer": "dog"
+      },
+      {
+        "question": "«Avtomobil» so'zining to'g'ri tarjimasi nima?",
+        "options": ["car", "bicycle", "plane"],
+        "correctAnswer": "car"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "level": "A2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "«Okean» so'zining to'g'ri tarjimasi nima?",
+        "options": ["sea", "ocean", "lake"],
+        "correctAnswer": "ocean"
+      },
+      {
+        "question": "«Tog'» so'zining to'g'ri tarjimasi nima?",
+        "options": ["mountain", "hill", "valley"],
+        "correctAnswer": "mountain"
+      },
+      {
+        "question": "«Restoran» so'zining to'g'ri tarjimasi nima?",
+        "options": ["restaurant", "cafe", "bar"],
+        "correctAnswer": "restaurant"
+      },
+      {
+        "question": "«Kitob» so'zining to'g'ri tarjimasi nima?",
+        "options": ["book", "pen", "paper"],
+        "correctAnswer": "book"
+      },
+      {
+        "question": "«Daryo» so'zining to'g'ri tarjimasi nima?",
+        "options": ["lake", "river", "ocean"],
+        "correctAnswer": "river"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "level": "B1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "«Gepard» so'zining to'g'ri tarjimasi nima?",
+        "options": ["cheetah", "horse", "elephant"],
+        "correctAnswer": "cheetah"
+      },
+      {
+        "question": "Bo'sh joyni to'ldiring: 'I love to drink ___.'",
+        "options": ["tea", "milk", "salt"],
+        "correctAnswer": "tea"
+      },
+      {
+        "question": "Qaysi so'z boshqa so'zlarga tegishli emas?",
+        "options": ["dog", "cat", "milk"],
+        "correctAnswer": "milk"
+      },
+      {
+        "question": "To'g'ri gapni tanlang: 'My friends often play ___.'",
+        "options": ["soccer", "milk", "tree"],
+        "correctAnswer": "soccer"
+      },
+      {
+        "question": "«Issiq» so'ziga antonim bo'lgan so'z qaysi?",
+        "options": ["cold", "warm", "hot"],
+        "correctAnswer": "cold"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "level": "B1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "«Tokio» so'zining to'g'ri tarjimasi nima?",
+        "options": ["Seoul", "Beijing", "Tokyo"],
+        "correctAnswer": "Tokyo"
+      },
+      {
+        "question": "Bo'sh joyni to'ldiring: 'This is not my ___, it's his.'",
+        "options": ["mobile", "table", "backpack"],
+        "correctAnswer": "mobile"
+      },
+      {
+        "question": "Bo'sh joyni to'ldiring: 'I saw him ___ at the store.'",
+        "options": ["yesterday", "tomorrow", "today"],
+        "correctAnswer": "yesterday"
+      },
+      {
+        "question": "Qaysi jumla to'g'ri?",
+        "options": [
+          "I like to read the book.",
+          "I like the book to read.",
+          "The book to read I like."
+        ],
+        "correctAnswer": "I like to read the book."
+      },
+      {
+        "question": "Qaysi so'z ism sifatida ishlatiladi?",
+        "options": ["funny", "smile", "dog"],
+        "correctAnswer": "dog"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "level": "B1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Quyidagi jumlaning to'g'ri tarjimasini tanlang: 'I need to finish my work.'",
+        "options": [
+          "Menga ishni tugatishim kerak.",
+          "Men ishni tugatayapman.",
+          "Men ishni tugatdim."
+        ],
+        "correctAnswer": "Menga ishni tugatishim kerak."
+      },
+      {
+        "question": "Quyidagi jumlaning to'g'ri tugashini tanlang: 'He ___ to the cafe every day.'",
+        "options": ["boradi", "bordi", "borardi"],
+        "correctAnswer": "boradi"
+      },
+      {
+        "question": "Qaysi so'z bu yerda ortiqcha?",
+        "options": ["yugurmoq", "suzyapmoq", "tez"],
+        "correctAnswer": "tez"
+      },
+      {
+        "question": "‘Birinchi qadamni tashlash’ iborasi nima anglatadi?",
+        "options": [
+          "boshqarishni boshlash",
+          "narsani tugatish",
+          "holatni murakkablashtirish"
+        ],
+        "correctAnswer": "boshqarishni boshlash"
+      },
+      {
+        "question": "Bo'sh joyni to'ldiring: 'Bu juda ___ qaror.'",
+        "options": ["qiyin", "qiyinchilik bilan", "qiyinchiliklar"],
+        "correctAnswer": "qiyin"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "level": "B1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "‘Tez’ so'zini quyidagi jumlaga qo'shsangiz nima bo'ladi: 'He ___ runs.'",
+        "options": ["tez", "tez yuguradi", "tez u yuguradi"],
+        "correctAnswer": "tez yuguradi"
+      },
+      {
+        "question": "Quyidagi jumlaning to'g'ri tarjimasini tanlang: 'I will call you later.'",
+        "options": [
+          "Men sizga keyinroq qo'ng'iroq qilaman.",
+          "Men sizga keyinroq qo'ng'iroq qildim.",
+          "Men sizga o'tgan paytda qo'ng'iroq qilaman."
+        ],
+        "correctAnswer": "Men sizga keyinroq qo'ng'iroq qilaman."
+      },
+      {
+        "question": "‘Uqil’ so'zining sinonimi qaysi?",
+        "options": ["ahmoq", "aqlli", "donishmand"],
+        "correctAnswer": "donishmand"
+      },
+      {
+        "question": "Qaysi jumla savolni ifodalaydi?",
+        "options": [
+          "Sen Moskvaga bording.",
+          "Sen Moskvaga bordingmi?",
+          "Sen Moskvaga bording!"
+        ],
+        "correctAnswer": "Sen Moskvaga bordingmi?"
+      },
+      {
+        "question": "Bo'sh joyni to'ldiring: 'Biz ___ parkka dam olish uchun boramiz.'",
+        "options": ["boramiz", "bordik", "boramizni"],
+        "correctAnswer": "boramiz"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "level": "B1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "‘I can't find my keys.’ jumlasining to'g'ri tarjimasini tanlang.",
+        "options": [
+          "Mening kalitlarimni topa olmayman.",
+          "Mening kalitimni topa olmayman.",
+          "Mening kalitlarimni topdim."
+        ],
+        "correctAnswer": "Mening kalitlarimni topa olmayman."
+      },
+      {
+        "question": "Quyidagi jumlalardan qaysi biri to'g'ri?",
+        "options": [
+          "Biz kafe ichida qahva ichdik.",
+          "Biz kafe ichida qahva ichamiz.",
+          "Biz kafe ichida ichgan qahvani ichdik."
+        ],
+        "correctAnswer": "Biz kafe ichida qahva ichdik."
+      },
+      {
+        "question": "Bo'sh joyni to'ldiring: 'Sen ___ kinoga borishni rejalashtirgan eding?'",
+        "options": ["bording", "bordik", "boramiz"],
+        "correctAnswer": "bording"
+      },
+      {
+        "question": "‘Biz kechki ovqatni yedik.’ jumlasiga mos bo'lgan variantni tanlang.",
+        "options": [
+          "Biz kechki ovqatni yedik.",
+          "Biz kechki ovqatni yedik.",
+          "Biz kechki ovqatni yedik kecha."
+        ],
+        "correctAnswer": "Biz kechki ovqatni yedik."
+      },
+      {
+        "question": "Qaysi so'z bu yerda fe'l?",
+        "options": ["kitob", "suzmoq", "it"],
+        "correctAnswer": "suzmoq"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "level": "B2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "‘She has been working here for five years.’ jumlasining to'g'ri tarjimasini tanlang.",
+        "options": [
+          "U besh yil davomida bu yerda ishlaydi.",
+          "U besh yil oldin bu yerda ishlagan.",
+          "U besh yil davomida bu yerda ishlayapti."
+        ],
+        "correctAnswer": "U besh yil davomida bu yerda ishlayapti."
+      },
+      {
+        "question": "Bo'sh joyni to'ldiring: 'Agar men ___ bo'lsam, yordam berardim.'",
+        "options": ["bo'lsa", "bo'lsam", "yordam berar edim"],
+        "correctAnswer": "bo'lsam"
+      },
+      {
+        "question": "‘Yaratish’ so'zining sinonimi qaysi?",
+        "options": ["yapmoq", "qilish", "foydalanmoq"],
+        "correctAnswer": "qilish"
+      },
+      {
+        "question": "Bo'sh joyni to'ldiring: 'U yetib kelganida, biz ___ ishni tugatgan bo'lamiz.'",
+        "options": ["tugatamiz", "tugatdik", "tugatgan bo'lamiz"],
+        "correctAnswer": "tugatgan bo'lamiz"
+      },
+      {
+        "question": "‘I ____ (know) him since we were kids.’ jumlasining to'g'ri shaklini tanlang.",
+        "options": ["bilaman", "bilsam", "bilganman"],
+        "correctAnswer": "bilaman"
+      }
+    ]
+  },
+
+  {
+    "id": 17,
+    "level": "B2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Jumlani to'g'ri tugating: 'If I had known about the meeting, I ____.'",
+        "options": ["would attend", "would have attended", "attended"],
+        "correctAnswer": "would have attended"
+      },
+      {
+        "question": "Qaysi so'z mos kelmaydi? 'summer', 'winter', 'quickly', 'autumn'",
+        "options": ["quickly", "summer", "winter", "autumn"],
+        "correctAnswer": "quickly"
+      },
+      {
+        "question": "Bo'sh joyni to'ldiring: 'She ____ (study) when I called her.'",
+        "options": ["was studying", "is studying", "studied"],
+        "correctAnswer": "was studying"
+      },
+      {
+        "question": "To'g'ri tarjimani tanlang: 'We were waiting for the train.'",
+        "options": [
+          "We waited for the train.",
+          "We will wait for the train.",
+          "We waited for a train."
+        ],
+        "correctAnswer": "We waited for the train."
+      },
+      {
+        "question": "‘to stand still’ ifodasi nima degan ma’noni anglatadi?",
+        "options": [
+          "bo'lib o'tayotgan",
+          "harakatlanmaslik",
+          "tez harakatlanish"
+        ],
+        "correctAnswer": "harakatlanmaslik"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "level": "B2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Bo'sh joyni to'ldiring: 'If I ____ more time, I would have read the book.'",
+        "options": ["had", "have", "will have"],
+        "correctAnswer": "had"
+      },
+      {
+        "question": "Bo'sh joyni to'ldiring: 'He ____ (work) here since last year.'",
+        "options": ["has been working", "worked", "works"],
+        "correctAnswer": "has been working"
+      },
+      {
+        "question": "Jumlani to'g'ri tugating: 'I can’t understand why she ____ the decision.'",
+        "options": ["has made", "had made", "make"],
+        "correctAnswer": "has made"
+      },
+      {
+        "question": "Qaysi so'z mos kelmaydi? 'loudly', 'quickly', 'beautiful', 'carefully'",
+        "options": ["beautiful", "loudly", "quickly", "carefully"],
+        "correctAnswer": "beautiful"
+      },
+      {
+        "question": "Jumlani to'g'ri tugating: 'They have been working ____ they were young.'",
+        "options": ["since", "for", "before"],
+        "correctAnswer": "since"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "level": "B2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Bo'sh joyni to'ldiring: 'By next month, they ____ (finish) the project.'",
+        "options": ["will have finished", "finished", "will finish"],
+        "correctAnswer": "will have finished"
+      },
+      {
+        "question": "To'g'ri variantni tanlang: 'She ____ (learn) English for 3 years by the end of this year.'",
+        "options": ["will have learned", "has learned", "learned"],
+        "correctAnswer": "will have learned"
+      },
+      {
+        "question": "Qaysi so'z mos kelmaydi? 'rainy', 'snowy', 'walk', 'cloudy'",
+        "options": ["walk", "rainy", "snowy", "cloudy"],
+        "correctAnswer": "walk"
+      },
+      {
+        "question": "Bo'sh joyni to'ldiring: 'If he ____ more time, he would have finished the task.'",
+        "options": ["had", "would have", "has"],
+        "correctAnswer": "had"
+      },
+      {
+        "question": "To'g'ri tarjimani tanlang: 'I have been studying for two hours.'",
+        "options": [
+          "Men ikki soat o'qiyapman.",
+          "Men ikki soat o'rgandim.",
+          "Men ikki soat o'qiyapman."
+        ],
+        "correctAnswer": "Men ikki soat o'qiyapman."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "level": "B2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Bo'sh joyni to'ldiring: 'I would have gone to the party if I ____ (be) invited.'",
+        "options": ["had been", "was", "have been"],
+        "correctAnswer": "had been"
+      },
+      {
+        "question": "To'g'ri variantni tanlang: 'By the time you arrive, I ____ (leave) already.'",
+        "options": ["will have left", "left", "will leave"],
+        "correctAnswer": "will have left"
+      },
+      {
+        "question": "‘By quick’ so'zining sinonimi qaysi?",
+        "options": ["quick", "slow", "steady"],
+        "correctAnswer": "quick"
+      },
+      {
+        "question": "Jumlani to'g'ri yakunlang: 'I’ve never seen such a ____ movie before.'",
+        "options": ["interesting", "interest", "interests"],
+        "correctAnswer": "interesting"
+      },
+      {
+        "question": "Bo'sh joyni to'ldiring: 'He would have helped you if he ____ (know) about the problem.'",
+        "options": ["had known", "knows", "would have known"],
+        "correctAnswer": "had known"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "level": "C1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "To'g'ri jumlani tanlang: 'By the time they arrive, the meeting ____.'",
+        "options": ["will start", "will have started", "starts"],
+        "correctAnswer": "will have started"
+      },
+      {
+        "question": "Jumlani to'ldiring: 'Had I known about the event, I ____ to it.'",
+        "options": ["would go", "would have gone", "will go"],
+        "correctAnswer": "would have gone"
+      },
+      {
+        "question": "Qaysi jumla grammatik jihatdan to'g'ri?",
+        "options": [
+          "She has been studying since three hours.",
+          "She studied for three hours.",
+          "She has been studying for three hours."
+        ],
+        "correctAnswer": "She has been studying for three hours."
+      },
+      {
+        "question": "Jumlaga eng mos keladigan so'zni tanlang: 'Her answer was so ___ that I couldn’t believe it.'",
+        "options": ["definite", "definitive", "definitively"],
+        "correctAnswer": "definitive"
+      },
+      {
+        "question": "Qaysi jumla murakkab jumla?",
+        "options": [
+          "He likes tennis, but she prefers football.",
+          "He likes tennis.",
+          "She prefers football."
+        ],
+        "correctAnswer": "He likes tennis, but she prefers football."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "level": "C1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Quyidagi jumlaning to'g'ri passiv shaklini tanlang: 'The company will release the new product next month.'",
+        "options": [
+          "The new product will be released by the company next month.",
+          "The new product will release by the company next month.",
+          "The new product was released by the company next month."
+        ],
+        "correctAnswer": "The new product will be released by the company next month."
+      },
+      {
+        "question": "Jumlani to'ldiring: 'The manager insists that the employees ____ the project by Friday.'",
+        "options": ["finish", "finished", "will finish"],
+        "correctAnswer": "finish"
+      },
+      {
+        "question": "Eng mos keladigan iborani tanlang: 'The research conducted over the past decade ____ our understanding of the disease.'",
+        "options": ["has revolutionized", "revolutionizes", "revolutionized"],
+        "correctAnswer": "has revolutionized"
+      },
+      {
+        "question": "To'g'ri keladigan so'zni tanlang: 'The researcher’s findings were ____ and contributed greatly to the academic community.'",
+        "options": ["groundbreaking", "groundbreak", "groundbreaker"],
+        "correctAnswer": "groundbreaking"
+      },
+      {
+        "question": "Qaysi jumlalar xato?",
+        "options": [
+          "If I had known about the meeting, I would have attended.",
+          "If I had known about the meeting, I would have attend.",
+          "If I had known about the meeting, I would attend."
+        ],
+        "correctAnswer": "If I had known about the meeting, I would have attend."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "level": "C1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Qaysi jumla grammatik jihatdan to'g'ri?",
+        "options": [
+          "If he had worked harder, he would have passed the exam.",
+          "If he had worked harder, he will pass the exam.",
+          "If he worked harder, he would pass the exam."
+        ],
+        "correctAnswer": "If he had worked harder, he would have passed the exam."
+      },
+      {
+        "question": "Jumlani to'ldiring: 'They ____ the proposal by the time we return.'",
+        "options": ["will have approved", "have approved", "had approved"],
+        "correctAnswer": "will have approved"
+      },
+      {
+        "question": "Jumlaga eng mos keladigan so'zni tanlang: 'The company will ____ a new strategy next quarter.'",
+        "options": ["formulate", "formulates", "formulated"],
+        "correctAnswer": "formulate"
+      },
+      {
+        "question": "To'g'ri shartli shakldan foydalanilgan jumlani tanlang:",
+        "options": [
+          "If you had asked me earlier, I would help you.",
+          "If you asked me earlier, I would have helped you.",
+          "If you had asked me earlier, I would have helped you."
+        ],
+        "correctAnswer": "If you had asked me earlier, I would have helped you."
+      },
+      {
+        "question": "Qaysi so'z ushbu jumlada eng mos keladi: 'His speech was so ____ that everyone in the room was captivated.'",
+        "options": ["eloquent", "eloquence", "eloquently"],
+        "correctAnswer": "eloquent"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "level": "C1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Qaysi jumla to'g'ri shartli otliqlarni ishlatadi?",
+        "options": [
+          "It is important that he attends the meeting.",
+          "It is important that he attend the meeting.",
+          "It is important that he attended the meeting."
+        ],
+        "correctAnswer": "It is important that he attend the meeting."
+      },
+      {
+        "question": "To'g'ri shakldagi jumlani tanlang: 'She _______ a proposal by the time you arrive.'",
+        "options": ["has prepared", "will prepare", "will have prepared"],
+        "correctAnswer": "will have prepared"
+      },
+      {
+        "question": "Qaysi variant jumlani to'g'ri yakunlaydi? 'The debate was so intense that ____ an immediate decision.'",
+        "options": [
+          "no one could reach",
+          "no one could reached",
+          "no one could reaches"
+        ],
+        "correctAnswer": "no one could reach"
+      },
+      {
+        "question": "To'g'ri struktura bilan jumlani tanlang: 'By the time the movie started, the audience ____ for hours.'",
+        "options": ["has been waiting", "had been waiting", "was waiting"],
+        "correctAnswer": "had been waiting"
+      },
+      {
+        "question": "Jumlani yakunlang: 'I wish I ____ more time to complete the project.'",
+        "options": ["had", "have", "will have"],
+        "correctAnswer": "had"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "level": "C1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Qaysi jumla to'g'ri kelajakda tugagan holatni ishlatadi?",
+        "options": [
+          "By the time they arrive, we will finish the work.",
+          "By the time they arrive, we will have finished the work.",
+          "By the time they arrive, we finish the work."
+        ],
+        "correctAnswer": "By the time they arrive, we will have finished the work."
+      },
+      {
+        "question": "Qaysi jumla to'g'ri?",
+        "options": [
+          "If I would have known about the event, I would have attended.",
+          "If I had known about the event, I would have attended.",
+          "If I had known about the event, I would attended."
+        ],
+        "correctAnswer": "If I had known about the event, I would have attended."
+      },
+      {
+        "question": "Jumlani yakunlang: 'I would have helped you if I ____ about the problem.'",
+        "options": ["had known", "knew", "have known"],
+        "correctAnswer": "had known"
+      },
+      {
+        "question": "Qaysi variant jumlani to'g'ri yakunlaydi? 'If you ____ harder, you would have passed the exam.'",
+        "options": ["studied", "had studied", "study"],
+        "correctAnswer": "had studied"
+      },
+      {
+        "question": "Eng mos so'zni tanlang: 'The lawyer’s argument was so ____ that the judge had no choice but to rule in his favor.'",
+        "options": ["convincing", "convince", "convinced"],
+        "correctAnswer": "convincing"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "level": "C2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "To'g'ri fe'l shaklini tanlang: 'If I ____ the opportunity, I would have taken the job offer.'",
+        "options": ["had known", "knew", "have known"],
+        "correctAnswer": "had known"
+      },
+      {
+        "question": "Qaysi jumla to'g'ri kelajakdagi tugagan davomli holatni ishlatadi?",
+        "options": [
+          "By this time tomorrow, I will be working on the project.",
+          "By this time tomorrow, I will have been working on the project.",
+          "By this time tomorrow, I will work on the project."
+        ],
+        "correctAnswer": "By this time tomorrow, I will have been working on the project."
+      },
+      {
+        "question": "Jumlani yakunlang: 'He ____ at the company for five years by the time he retires.'",
+        "options": ["will have worked", "has worked", "had worked"],
+        "correctAnswer": "will have worked"
+      },
+      {
+        "question": "To'g'ri fe'l shaklini tanlang: 'She will not go out unless she ____ her homework first.'",
+        "options": ["finishes", "will finish", "finish"],
+        "correctAnswer": "finishes"
+      },
+      {
+        "question": "Jumlani yakunlang: 'If I had more experience, I ____ for the promotion.'",
+        "options": ["would have applied", "would apply", "have applied"],
+        "correctAnswer": "would have applied"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "level": "C2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Jumlani yakunlang: 'By next year, the company ____ its new strategy.'",
+        "options": ["will have implemented", "will implement", "implements"],
+        "correctAnswer": "will have implemented"
+      },
+      {
+        "question": "Qaysi jumla to'g'ri shartli otliqlarni ishlatadi?",
+        "options": [
+          "It is essential that he attends the meeting.",
+          "It is essential that he attend the meeting.",
+          "It is essential that he attended the meeting."
+        ],
+        "correctAnswer": "It is essential that he attend the meeting."
+      },
+      {
+        "question": "Qaysi variant jumlani to'g'ri yakunlaydi? 'Had I known how difficult the task was, I ____ it.'",
+        "options": [
+          "would not have accepted",
+          "will not accept",
+          "would not accept"
+        ],
+        "correctAnswer": "would not have accepted"
+      },
+      {
+        "question": "Eng mos so'zni tanlang: 'The manager gave a ____ response to the client’s request, which helped resolve the issue quickly.'",
+        "options": ["diplomatic", "diplomatically", "diplomacy"],
+        "correctAnswer": "diplomatic"
+      },
+      {
+        "question": "Qaysi jumla to'g'ri o'tgan perfect davomli vaqtni ishlatadi?",
+        "options": [
+          "She had been working on the report for three hours before she took a break.",
+          "She has been working on the report for three hours before she took a break.",
+          "She worked on the report for three hours before she took a break."
+        ],
+        "correctAnswer": "She had been working on the report for three hours before she took a break."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "level": "C2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Qaysi fe'l vaqtini tanlashingiz kerak: 'By the time you arrive, I ____ the letter.'",
+        "options": ["will have sent", "will send", "sent"],
+        "correctAnswer": "will have sent"
+      },
+      {
+        "question": "Jumlani yakunlang: 'If I ____ known that the meeting was rescheduled, I would have attended.'",
+        "options": ["had", "have", "would have"],
+        "correctAnswer": "had"
+      },
+      {
+        "question": "Qaysi variant xato o'z ichiga oladi?",
+        "options": [
+          "He was wondering if I would join the team.",
+          "He was wondering if I will join the team.",
+          "He was wondering if I had joined the team."
+        ],
+        "correctAnswer": "He was wondering if I will join the team."
+      },
+      {
+        "question": "Qaysi jumla to'g'ri?",
+        "options": [
+          "By the time I finish my report, I will be working for five hours.",
+          "By the time I finish my report, I will have worked for five hours.",
+          "By the time I finish my report, I will have been working for five hours."
+        ],
+        "correctAnswer": "By the time I finish my report, I will have worked for five hours."
+      },
+      {
+        "question": "Eng mos so'zni tanlang: 'The student’s ____ response demonstrated a deep understanding of the subject.'",
+        "options": ["insightful", "insight", "insightfully"],
+        "correctAnswer": "insightful"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "level": "C2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Qaysi jumla uchinchi shartli otliqni to'g'ri ishlatadi?",
+        "options": [
+          "If I had known about the event, I would have attended.",
+          "If I know about the event, I will attend.",
+          "If I had known about the event, I would attend."
+        ],
+        "correctAnswer": "If I had known about the event, I would have attended."
+      },
+      {
+        "question": "Jumlani yakunlang: 'Had she known about the difficulties, she ____ the project.'",
+        "options": [
+          "would have never started",
+          "would never have started",
+          "will never start"
+        ],
+        "correctAnswer": "would never have started"
+      },
+      {
+        "question": "Qaysi variant to'g'ri yakunlaydi? 'By the time the book was published, the author ____ for over a decade.'",
+        "options": ["had been writing", "has written", "wrote"],
+        "correctAnswer": "had been writing"
+      },
+      {
+        "question": "Qaysi jumla to'g'ri?",
+        "options": [
+          "I have been reading the book for two hours.",
+          "I read the book for two hours.",
+          "I had read the book for two hours."
+        ],
+        "correctAnswer": "I have been reading the book for two hours."
+      },
+      {
+        "question": "Eng mos so'zni tanlang: 'The film was so ____ that it left a lasting impression on the audience.'",
+        "options": ["captivating", "captivate", "captivation"],
+        "correctAnswer": "captivating"
+      }
+    ]
+  }
+]

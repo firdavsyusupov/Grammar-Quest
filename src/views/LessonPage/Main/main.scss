@@ -139,3 +139,30 @@
 .fade-leave-to {
   opacity: 0;
 }
+
+.levels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.level {
+  padding: 10px 20px;
+  border-radius: 10px;
+  max-width: 120px;
+  width: 100%;
+  cursor: pointer;
+  background: linear-gradient(135deg, #6a5acd, #483d8b);
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  text-align: center;
+}
+
+.level:hover {
+  background: linear-gradient(145deg, #7b68ee, #4b0082);
+}
+
+.level.active {
+  background: linear-gradient(145deg, #3e3475, #37005f);
+}
