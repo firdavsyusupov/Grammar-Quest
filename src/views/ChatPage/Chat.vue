@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import "./Chat.scss";
+
 const userInput = ref("");
 const messages = ref([]);
 
@@ -17,41 +18,40 @@ const loadMessagesFromLocalStorage = () => {
 
 const sendMessage = async () => {
   if (!userInput.value.trim()) return;
+
   const userMessage = {
     content: userInput.value,
     role: "user",
-    time: new Date().toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
-    }),
+    time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
   };
   messages.value.push(userMessage);
-  saveMessagesToLocalStorage();
-
-  const res = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: "gpt-4o-mini",
-      messages: [{ role: "user", content: userInput.value }],
-    }),
-  });
-
-  const data = await res.json();
-  const botMessage = {
-    content: data.choices[0].message.content,
-    role: "assistant",
-    time: new Date().toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
-    }),
-  };
-  messages.value.push(botMessage);
-  saveMessagesToLocalStorage();
   userInput.value = "";
+  saveMessagesToLocalStorage();
+
+  try {
+    const res = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
+      },
+      body: JSON.stringify({
+        model: "gpt-4o-mini",
+        messages: [{ role: "user", content: userMessage.content }],
+      }),
+    });
+
+    const data = await res.json();
+    const botMessage = {
+      content: data.choices[0].message.content,
+      role: "assistant",
+      time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+    };
+    messages.value.push(botMessage);
+    saveMessagesToLocalStorage();
+  } catch (error) {
+    console.error("Error:", error);
+  }
 };
 
 onMounted(() => {
@@ -62,6 +62,7 @@ onMounted(() => {
 <template>
   <div class="chat">
     <div class="container-x">
+    <h2 class="chat-title">ChatGPT 4o-mini</h2>
       <div class="messages">
         <div
           v-for="(msg, index) in messages"

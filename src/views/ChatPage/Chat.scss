@@ -3,19 +3,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 73vh;
+  min-height: 73vh;
   background: #f5f5f5;
 }
 
+.chat-title{
+  border-bottom: 1px solid grey;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 .container-x {
-  width: 400px;
+  width: 500px;
+  margin: 10px;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   display: flex;
   flex-direction: column;
-  min-height: 50vh;
+  height: 70vh;
 }
 
 .messages {
