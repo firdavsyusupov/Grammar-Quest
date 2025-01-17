@@ -21,7 +21,6 @@ onMounted(async () => {
   }
 });
 
-// Computed property for current question
 const currentQuestion = computed(() => {
   return taskData.value[quiz.currentQuestionIndex] || {};
 });
