@@ -38,8 +38,8 @@ import {RouterLink} from 'vue-router'
             <img src="@/assets/images/youtube-icon.svg" alt="">
         </div>
         <div class="footer-bot-block-text">
-            <p>©2024 Grammar Quest. Project for </p>
-            <p class="footer-bot-block-text-p">Grammar Quest</p>
+            <span>©2024 Grammar Quest. Project for </span>
+            <span class="footer-bot-block-text-p">Grammar Quest</span>
         </div>
       </div>
     </div>

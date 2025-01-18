@@ -26,6 +26,9 @@ import "./nav.scss";
            <li class="nav__item">
             <RouterLink to="/platform" class="nav__link">platforms</RouterLink>
           </li>
+          <li class="nav__item">
+            <RouterLink to="/chat" class="nav__link">Chat</RouterLink>
+          </li>
           <!-- <li class="nav__item">
             <a href="#" class="nav__link">statistics</a>
           </li> -->

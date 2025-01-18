@@ -5,27 +5,27 @@
     "isActive": true,
     "questions": [
       {
-        "question": "«Sut» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'молоко'",
         "options": ["milk", "salt", "tea"],
         "correctAnswer": "milk"
       },
       {
-        "question": "«Tuz» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'соль'",
         "options": ["butter", "bread", "salt"],
         "correctAnswer": "salt"
       },
       {
-        "question": "«Issiq» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'горячий'",
         "options": ["hot", "cold", "warm"],
         "correctAnswer": "hot"
       },
       {
-        "question": "«Yetti» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'семь'",
         "options": ["five", "six", "seven"],
         "correctAnswer": "seven"
       },
       {
-        "question": "«Ikki» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод числа 'два'",
         "options": ["one", "two", "three"],
         "correctAnswer": "two"
       }
@@ -37,27 +37,27 @@
     "isActive": true,
     "questions": [
       {
-        "question": "«A» harfi qaysi tilga to'g'ri tarjima qilingan?",
+        "question": "Выберите перевод буквы 'А'",
         "options": ["A", "B", "C"],
         "correctAnswer": "A"
       },
       {
-        "question": "«Kichik» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'маленький'",
         "options": ["big", "small", "large"],
         "correctAnswer": "small"
       },
       {
-        "question": "«Sariq» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'жёлтый'",
         "options": ["blue", "yellow", "green"],
         "correctAnswer": "yellow"
       },
       {
-        "question": "«Vashington» qaysi shaharga to'g'ri tarjima qilingan?",
+        "question": "Выберите перевод слова 'Вашингтон'",
         "options": ["New York", "Washington", "Los Angeles"],
         "correctAnswer": "Washington"
       },
       {
-        "question": "«Sakkiz» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод числа 'восемь'",
         "options": ["six", "eight", "ten"],
         "correctAnswer": "eight"
       }
@@ -69,27 +69,27 @@
     "isActive": true,
     "questions": [
       {
-        "question": "«Ota» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'папа'",
         "options": ["father", "mother", "brother"],
         "correctAnswer": "father"
       },
       {
-        "question": "«Ona» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'мама'",
         "options": ["father", "mother", "sister"],
         "correctAnswer": "mother"
       },
       {
-        "question": "«Do'stlik» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'дружба'",
         "options": ["friendship", "family", "love"],
         "correctAnswer": "friendship"
       },
       {
-        "question": "«It» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'собака'",
         "options": ["cat", "dog", "bird"],
         "correctAnswer": "dog"
       },
       {
-        "question": "«Mushuk» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'кошка'",
         "options": ["cat", "dog", "hamster"],
         "correctAnswer": "cat"
       }
@@ -101,27 +101,27 @@
     "isActive": true,
     "questions": [
       {
-        "question": "«Quyosh» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'солнце'",
         "options": ["moon", "star", "sun"],
         "correctAnswer": "sun"
       },
       {
-        "question": "«Yer» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'земля'",
         "options": ["earth", "sky", "sea"],
         "correctAnswer": "earth"
       },
       {
-        "question": "«Kitob» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'книга'",
         "options": ["pen", "book", "paper"],
         "correctAnswer": "book"
       },
       {
-        "question": "«O'n» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод числа 'десять'",
         "options": ["ten", "five", "eight"],
         "correctAnswer": "ten"
       },
       {
-        "question": "«Uch» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод числа 'три'",
         "options": ["two", "three", "four"],
         "correctAnswer": "three"
       }
@@ -133,27 +133,27 @@
     "isActive": true,
     "questions": [
       {
-        "question": "«Stol» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'стол'",
         "options": ["chair", "table", "sofa"],
         "correctAnswer": "table"
       },
       {
-        "question": "«Stul» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'стул'",
         "options": ["table", "chair", "bed"],
         "correctAnswer": "chair"
       },
       {
-        "question": "«Oynadan» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'окно'",
         "options": ["window", "door", "ceiling"],
         "correctAnswer": "window"
       },
       {
-        "question": "«Esik» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'дверь'",
         "options": ["door", "window", "wall"],
         "correctAnswer": "door"
       },
       {
-        "question": "«Kreslo» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'кровать'",
         "options": ["sofa", "bed", "desk"],
         "correctAnswer": "bed"
       }
@@ -165,27 +165,27 @@
     "isActive": true,
     "questions": [
       {
-        "question": "«Tinch» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'Тихий'",
         "options": ["Atlantic", "Indian", "Pacific"],
         "correctAnswer": "Pacific"
       },
       {
-        "question": "«Mars» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'Марс'",
         "options": ["Mars", "Earth", "Jupiter"],
         "correctAnswer": "Mars"
       },
       {
-        "question": "«Asal» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'мёд'",
         "options": ["milk", "honey", "wax"],
         "correctAnswer": "honey"
       },
       {
-        "question": "«Kontinent» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'континент'",
         "options": ["island", "continent", "soup"],
         "correctAnswer": "continent"
       },
       {
-        "question": "«Ingliz» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'английский'",
         "options": ["english", "french", "spanish"],
         "correctAnswer": "english"
       }
@@ -197,27 +197,27 @@
     "isActive": true,
     "questions": [
       {
-        "question": "«Parij» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'Париж'",
         "options": ["Berlin", "Madrid", "Paris"],
         "correctAnswer": "Paris"
       },
       {
-        "question": "«Avokado» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'авокадо'",
         "options": ["tomato", "avocado", "pepper"],
         "correctAnswer": "avocado"
       },
       {
-        "question": "«Sher» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'лев'",
         "options": ["tiger", "lion", "elephant"],
         "correctAnswer": "lion"
       },
       {
-        "question": "«Yigirma besh» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод числа 'двадцать пять'",
         "options": ["ten", "twenty", "twenty-five"],
         "correctAnswer": "twenty-five"
       },
       {
-        "question": "«Qish» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'зима'",
         "options": ["summer", "winter", "autumn"],
         "correctAnswer": "winter"
       }
@@ -229,29 +229,29 @@
     "isActive": true,
     "questions": [
       {
-        "question": "«Xat» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'письмо'",
         "options": ["letter", "email", "message"],
         "correctAnswer": "letter"
       },
       {
-        "question": "«Quyosh» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'солнце'",
         "options": ["sun", "moon", "star"],
         "correctAnswer": "sun"
       },
       {
-        "question": "«Sevgi» so'zining to'g'ri tarjimasi nima?",
-        "options": ["love", "hate", "anger"],
-        "correctAnswer": "love"
+        "question": "Выберите перевод слова 'река'",
+        "options": ["lake", "river", "ocean"],
+        "correctAnswer": "river"
       },
       {
-        "question": "«Hayvon» so'zining to'g'ri tarjimasi nima?",
-        "options": ["human", "animal", "plant"],
-        "correctAnswer": "animal"
+        "question": "Выберите перевод слова 'горячий'",
+        "options": ["cold", "hot", "warm"],
+        "correctAnswer": "hot"
       },
       {
-        "question": "«Suv» so'zining to'g'ri tarjimasi nima?",
-        "options": ["water", "air", "fire"],
-        "correctAnswer": "water"
+        "question": "Выберите перевод слова 'птица'",
+        "options": ["fish", "bird", "insect"],
+        "correctAnswer": "bird"
       }
     ]
   },
@@ -261,27 +261,27 @@
     "isActive": true,
     "questions": [
       {
-        "question": "«Uy» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'дом'",
         "options": ["house", "apartment", "building"],
         "correctAnswer": "house"
       },
       {
-        "question": "«Tishlar» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'зубы'",
         "options": ["teeth", "hair", "eyes"],
         "correctAnswer": "teeth"
       },
       {
-        "question": "«Do'stlik» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'дружба'",
         "options": ["friendship", "love", "family"],
         "correctAnswer": "friendship"
       },
       {
-        "question": "«It» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'собака'",
         "options": ["cat", "dog", "rabbit"],
         "correctAnswer": "dog"
       },
       {
-        "question": "«Avtomobil» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'машина'",
         "options": ["car", "bicycle", "plane"],
         "correctAnswer": "car"
       }
@@ -293,27 +293,27 @@
     "isActive": true,
     "questions": [
       {
-        "question": "«Okean» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'океан'",
         "options": ["sea", "ocean", "lake"],
         "correctAnswer": "ocean"
       },
       {
-        "question": "«Tog'» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'гора'",
         "options": ["mountain", "hill", "valley"],
         "correctAnswer": "mountain"
       },
       {
-        "question": "«Restoran» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'ресторан'",
         "options": ["restaurant", "cafe", "bar"],
         "correctAnswer": "restaurant"
       },
       {
-        "question": "«Kitob» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'книга'",
         "options": ["book", "pen", "paper"],
         "correctAnswer": "book"
       },
       {
-        "question": "«Daryo» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'река'",
         "options": ["lake", "river", "ocean"],
         "correctAnswer": "river"
       }
@@ -325,27 +325,27 @@
     "isActive": true,
     "questions": [
       {
-        "question": "«Gepard» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'гепард'.",
         "options": ["cheetah", "horse", "elephant"],
         "correctAnswer": "cheetah"
       },
       {
-        "question": "Bo'sh joyni to'ldiring: 'I love to drink ___.'",
+        "question": "Заполните пропуск: 'I love to drink ___.'",
         "options": ["tea", "milk", "salt"],
         "correctAnswer": "tea"
       },
       {
-        "question": "Qaysi so'z boshqa so'zlarga tegishli emas?",
+        "question": "Какое слово не относится к другим?",
         "options": ["dog", "cat", "milk"],
         "correctAnswer": "milk"
       },
       {
-        "question": "To'g'ri gapni tanlang: 'My friends often play ___.'",
+        "question": "Выберите правильное завершение предложения: 'My friends often play ___.'",
         "options": ["soccer", "milk", "tree"],
         "correctAnswer": "soccer"
       },
       {
-        "question": "«Issiq» so'ziga antonim bo'lgan so'z qaysi?",
+        "question": "Какое слово является антонимом к слову 'горячий'?",
         "options": ["cold", "warm", "hot"],
         "correctAnswer": "cold"
       }
@@ -357,22 +357,22 @@
     "isActive": true,
     "questions": [
       {
-        "question": "«Tokio» so'zining to'g'ri tarjimasi nima?",
+        "question": "Выберите перевод слова 'Токио'.",
         "options": ["Seoul", "Beijing", "Tokyo"],
         "correctAnswer": "Tokyo"
       },
       {
-        "question": "Bo'sh joyni to'ldiring: 'This is not my ___, it's his.'",
+        "question": "Заполните пропуск: 'This is not my ___, it's his.'",
         "options": ["mobile", "table", "backpack"],
         "correctAnswer": "mobile"
       },
       {
-        "question": "Bo'sh joyni to'ldiring: 'I saw him ___ at the store.'",
+        "question": "Заполните пропуск: 'I saw him ___ at the store.'",
         "options": ["yesterday", "tomorrow", "today"],
         "correctAnswer": "yesterday"
       },
       {
-        "question": "Qaysi jumla to'g'ri?",
+        "question": "Which of these sentences is correct?",
         "options": [
           "I like to read the book.",
           "I like the book to read.",
@@ -381,49 +381,50 @@
         "correctAnswer": "I like to read the book."
       },
       {
-        "question": "Qaysi so'z ism sifatida ishlatiladi?",
+        "question": "Which of these words is a noun?",
         "options": ["funny", "smile", "dog"],
         "correctAnswer": "dog"
       }
     ]
   },
+
   {
     "id": 13,
     "level": "B1",
     "isActive": true,
     "questions": [
       {
-        "question": "Quyidagi jumlaning to'g'ri tarjimasini tanlang: 'I need to finish my work.'",
+        "question": "Выберите правильный перевод фразы: 'I need to finish my work.'",
         "options": [
-          "Menga ishni tugatishim kerak.",
-          "Men ishni tugatayapman.",
-          "Men ishni tugatdim."
+          "Мне нужно закончить работу.",
+          "Я заканчиваю работу.",
+          "Я закончил работу."
         ],
-        "correctAnswer": "Menga ishni tugatishim kerak."
+        "correctAnswer": "Мне нужно закончить работу."
       },
       {
-        "question": "Quyidagi jumlaning to'g'ri tugashini tanlang: 'He ___ to the cafe every day.'",
-        "options": ["boradi", "bordi", "borardi"],
-        "correctAnswer": "boradi"
+        "question": "Выберите правильное завершение предложения: 'He ___ to the cafe every day.'",
+        "options": ["goes", "went", "would go"],
+        "correctAnswer": "goes"
       },
       {
-        "question": "Qaysi so'z bu yerda ortiqcha?",
-        "options": ["yugurmoq", "suzyapmoq", "tez"],
-        "correctAnswer": "tez"
+        "question": "Какое слово здесь лишнее?",
+        "options": ["run", "swim", "fast"],
+        "correctAnswer": "fast"
       },
       {
-        "question": "‘Birinchi qadamni tashlash’ iborasi nima anglatadi?",
+        "question": "Что означает выражение 'делать первый шаг'?",
         "options": [
-          "boshqarishni boshlash",
-          "narsani tugatish",
-          "holatni murakkablashtirish"
+          "start something",
+          "finish something",
+          "complicate the situation"
         ],
-        "correctAnswer": "boshqarishni boshlash"
+        "correctAnswer": "start something"
       },
       {
-        "question": "Bo'sh joyni to'ldiring: 'Bu juda ___ qaror.'",
-        "options": ["qiyin", "qiyinchilik bilan", "qiyinchiliklar"],
-        "correctAnswer": "qiyin"
+        "question": "Заполните пропуск: 'Это очень ___ решение.'",
+        "options": ["difficult", "difficultly", "difficulties"],
+        "correctAnswer": "difficult"
       }
     ]
   },
@@ -433,37 +434,37 @@
     "isActive": true,
     "questions": [
       {
-        "question": "‘Tez’ so'zini quyidagi jumlaga qo'shsangiz nima bo'ladi: 'He ___ runs.'",
-        "options": ["tez", "tez yuguradi", "tez u yuguradi"],
-        "correctAnswer": "tez yuguradi"
+        "question": "Что будет, если вы добавите 'быстро' в предложение: 'He ___ runs.'",
+        "options": ["quickly", "quickly runs", "quickly he runs"],
+        "correctAnswer": "quickly runs"
       },
       {
-        "question": "Quyidagi jumlaning to'g'ri tarjimasini tanlang: 'I will call you later.'",
+        "question": "Выберите правильный перевод фразы: 'I will call you later.'",
         "options": [
-          "Men sizga keyinroq qo'ng'iroq qilaman.",
-          "Men sizga keyinroq qo'ng'iroq qildim.",
-          "Men sizga o'tgan paytda qo'ng'iroq qilaman."
+          "I will call you later.",
+          "I called you later.",
+          "I will call you in the past."
         ],
-        "correctAnswer": "Men sizga keyinroq qo'ng'iroq qilaman."
+        "correctAnswer": "I will call you later."
       },
       {
-        "question": "‘Uqil’ so'zining sinonimi qaysi?",
-        "options": ["ahmoq", "aqlli", "donishmand"],
-        "correctAnswer": "donishmand"
+        "question": "Выберите синоним для слова 'умный'.",
+        "options": ["stupid", "smart", "intelligent"],
+        "correctAnswer": "intelligent"
       },
       {
-        "question": "Qaysi jumla savolni ifodalaydi?",
+        "question": "Какая из этих фраз является вопросом?",
         "options": [
-          "Sen Moskvaga bording.",
-          "Sen Moskvaga bordingmi?",
-          "Sen Moskvaga bording!"
+          "You went to Moscow.",
+          "Did you go to Moscow?",
+          "You went to Moscow!"
         ],
-        "correctAnswer": "Sen Moskvaga bordingmi?"
+        "correctAnswer": "Did you go to Moscow?"
       },
       {
-        "question": "Bo'sh joyni to'ldiring: 'Biz ___ parkka dam olish uchun boramiz.'",
-        "options": ["boramiz", "bordik", "boramizni"],
-        "correctAnswer": "boramiz"
+        "question": "Заполните пропуск: 'We ___ to the park on the weekend.'",
+        "options": ["go", "went", "will go"],
+        "correctAnswer": "will go"
       }
     ]
   },
@@ -473,41 +474,41 @@
     "isActive": true,
     "questions": [
       {
-        "question": "‘I can't find my keys.’ jumlasining to'g'ri tarjimasini tanlang.",
+        "question": "Выберите правильный перевод фразы: 'I can't find my keys.'",
         "options": [
-          "Mening kalitlarimni topa olmayman.",
-          "Mening kalitimni topa olmayman.",
-          "Mening kalitlarimni topdim."
+          "I can't find my keys.",
+          "I can't find my key.",
+          "I couldn't find my keys."
         ],
-        "correctAnswer": "Mening kalitlarimni topa olmayman."
+        "correctAnswer": "I can't find my keys."
       },
       {
-        "question": "Quyidagi jumlalardan qaysi biri to'g'ri?",
+        "question": "Какое из этих предложений является правильным?",
         "options": [
-          "Biz kafe ichida qahva ichdik.",
-          "Biz kafe ichida qahva ichamiz.",
-          "Biz kafe ichida ichgan qahvani ichdik."
+          "We drank coffee in the cafe.",
+          "We drink coffee in the cafe.",
+          "We drank in the cafe coffee."
         ],
-        "correctAnswer": "Biz kafe ichida qahva ichdik."
+        "correctAnswer": "We drank coffee in the cafe."
       },
       {
-        "question": "Bo'sh joyni to'ldiring: 'Sen ___ kinoga borishni rejalashtirgan eding?'",
-        "options": ["bording", "bordik", "boramiz"],
-        "correctAnswer": "bording"
+        "question": "Заполните пропуск: 'Did you ___ to the cinema on the weekend?'",
+        "options": ["go", "went", "will go"],
+        "correctAnswer": "go"
       },
       {
-        "question": "‘Biz kechki ovqatni yedik.’ jumlasiga mos bo'lgan variantni tanlang.",
+        "question": "Какой из этих вариантов соответствует утверждению: 'We are having dinner.'?",
         "options": [
-          "Biz kechki ovqatni yedik.",
-          "Biz kechki ovqatni yedik.",
-          "Biz kechki ovqatni yedik kecha."
+          "We are having dinner.",
+          "We had dinner.",
+          "We are having dinner yesterday."
         ],
-        "correctAnswer": "Biz kechki ovqatni yedik."
+        "correctAnswer": "We are having dinner."
       },
       {
-        "question": "Qaysi so'z bu yerda fe'l?",
-        "options": ["kitob", "suzmoq", "it"],
-        "correctAnswer": "suzmoq"
+        "question": "Какой из этих слов является глаголом?",
+        "options": ["book", "swim", "dog"],
+        "correctAnswer": "swim"
       }
     ]
   },
@@ -517,33 +518,33 @@
     "isActive": true,
     "questions": [
       {
-        "question": "‘She has been working here for five years.’ jumlasining to'g'ri tarjimasini tanlang.",
+        "question": "Выберите правильный перевод фразы: 'She has been working here for five years.'",
         "options": [
-          "U besh yil davomida bu yerda ishlaydi.",
-          "U besh yil oldin bu yerda ishlagan.",
-          "U besh yil davomida bu yerda ishlayapti."
+          "Она работает здесь пять лет.",
+          "Она работает здесь пять лет назад.",
+          "Она работает здесь уже пять лет."
         ],
-        "correctAnswer": "U besh yil davomida bu yerda ishlayapti."
+        "correctAnswer": "Она работает здесь уже пять лет."
       },
       {
-        "question": "Bo'sh joyni to'ldiring: 'Agar men ___ bo'lsam, yordam berardim.'",
-        "options": ["bo'lsa", "bo'lsam", "yordam berar edim"],
-        "correctAnswer": "bo'lsam"
+        "question": "Заполните пропуск: 'If I ____ you, I would have helped.'",
+        "options": ["were", "was", "am"],
+        "correctAnswer": "were"
       },
       {
-        "question": "‘Yaratish’ so'zining sinonimi qaysi?",
-        "options": ["yapmoq", "qilish", "foydalanmoq"],
-        "correctAnswer": "qilish"
+        "question": "Какое слово является синонимом слова 'делать'? ",
+        "options": ["работать", "создавать", "использовать"],
+        "correctAnswer": "создавать"
       },
       {
-        "question": "Bo'sh joyni to'ldiring: 'U yetib kelganida, biz ___ ishni tugatgan bo'lamiz.'",
-        "options": ["tugatamiz", "tugatdik", "tugatgan bo'lamiz"],
-        "correctAnswer": "tugatgan bo'lamiz"
+        "question": "Заполните пропуск: 'By the time he arrives, we ____ the work.'",
+        "options": ["will finish", "finished", "will have finished"],
+        "correctAnswer": "will have finished"
       },
       {
-        "question": "‘I ____ (know) him since we were kids.’ jumlasining to'g'ri shaklini tanlang.",
-        "options": ["bilaman", "bilsam", "bilganman"],
-        "correctAnswer": "bilaman"
+        "question": "Выберите правильный вариант: 'I ____ (know) him since we were kids.'",
+        "options": ["have known", "knew", "will know"],
+        "correctAnswer": "have known"
       }
     ]
   },
@@ -554,22 +555,22 @@
     "isActive": true,
     "questions": [
       {
-        "question": "Jumlani to'g'ri tugating: 'If I had known about the meeting, I ____.'",
+        "question": "Выберите правильное завершение предложения: 'If I had known about the meeting, I ____.'",
         "options": ["would attend", "would have attended", "attended"],
         "correctAnswer": "would have attended"
       },
       {
-        "question": "Qaysi so'z mos kelmaydi? 'summer', 'winter', 'quickly', 'autumn'",
+        "question": "Какое слово не подходит? 'summer', 'winter', 'quickly', 'autumn'",
         "options": ["quickly", "summer", "winter", "autumn"],
         "correctAnswer": "quickly"
       },
       {
-        "question": "Bo'sh joyni to'ldiring: 'She ____ (study) when I called her.'",
+        "question": "Заполните пропуск: 'She ____ (study) when I called her.'",
         "options": ["was studying", "is studying", "studied"],
         "correctAnswer": "was studying"
       },
       {
-        "question": "To'g'ri tarjimani tanlang: 'We were waiting for the train.'",
+        "question": "Выберите правильный перевод фразы: 'We were waiting for the train.'",
         "options": [
           "We waited for the train.",
           "We will wait for the train.",
@@ -578,13 +579,9 @@
         "correctAnswer": "We waited for the train."
       },
       {
-        "question": "‘to stand still’ ifodasi nima degan ma’noni anglatadi?",
-        "options": [
-          "bo'lib o'tayotgan",
-          "harakatlanmaslik",
-          "tez harakatlanish"
-        ],
-        "correctAnswer": "harakatlanmaslik"
+        "question": "Что означает выражение 'стоять на месте'? ",
+        "options": ["быть в процессе", "не двигаться", "двигаться быстро"],
+        "correctAnswer": "не двигаться"
       }
     ]
   },
@@ -594,27 +591,27 @@
     "isActive": true,
     "questions": [
       {
-        "question": "Bo'sh joyni to'ldiring: 'If I ____ more time, I would have read the book.'",
+        "question": "Заполните пропуск: 'If I ____ more time, I would have read the book.'",
         "options": ["had", "have", "will have"],
         "correctAnswer": "had"
       },
       {
-        "question": "Bo'sh joyni to'ldiring: 'He ____ (work) here since last year.'",
+        "question": "Заполните пропуск: 'He ____ (work) here since last year.'",
         "options": ["has been working", "worked", "works"],
         "correctAnswer": "has been working"
       },
       {
-        "question": "Jumlani to'g'ri tugating: 'I can’t understand why she ____ the decision.'",
+        "question": "Выберите правильное завершение предложения: 'I can’t understand why she ____ the decision.'",
         "options": ["has made", "had made", "make"],
         "correctAnswer": "has made"
       },
       {
-        "question": "Qaysi so'z mos kelmaydi? 'loudly', 'quickly', 'beautiful', 'carefully'",
+        "question": "Какое слово не подходит? 'loudly', 'quickly', 'beautiful', 'carefully'",
         "options": ["beautiful", "loudly", "quickly", "carefully"],
         "correctAnswer": "beautiful"
       },
       {
-        "question": "Jumlani to'g'ri tugating: 'They have been working ____ they were young.'",
+        "question": "Выберите правильное завершение предложения: 'They have been working ____ they were young.'",
         "options": ["since", "for", "before"],
         "correctAnswer": "since"
       }
@@ -626,33 +623,33 @@
     "isActive": true,
     "questions": [
       {
-        "question": "Bo'sh joyni to'ldiring: 'By next month, they ____ (finish) the project.'",
+        "question": "Заполните пропуск: 'By next month, they ____ (finish) the project.'",
         "options": ["will have finished", "finished", "will finish"],
         "correctAnswer": "will have finished"
       },
       {
-        "question": "To'g'ri variantni tanlang: 'She ____ (learn) English for 3 years by the end of this year.'",
+        "question": "Выберите правильный вариант: 'She ____ (learn) English for 3 years by the end of this year.'",
         "options": ["will have learned", "has learned", "learned"],
         "correctAnswer": "will have learned"
       },
       {
-        "question": "Qaysi so'z mos kelmaydi? 'rainy', 'snowy', 'walk', 'cloudy'",
+        "question": "Какое слово не подходит? 'rainy', 'snowy', 'walk', 'cloudy'",
         "options": ["walk", "rainy", "snowy", "cloudy"],
         "correctAnswer": "walk"
       },
       {
-        "question": "Bo'sh joyni to'ldiring: 'If he ____ more time, he would have finished the task.'",
+        "question": "Заполните пропуск: 'If he ____ more time, he would have finished the task.'",
         "options": ["had", "would have", "has"],
         "correctAnswer": "had"
       },
       {
-        "question": "To'g'ri tarjimani tanlang: 'I have been studying for two hours.'",
+        "question": "Выберите правильный перевод фразы: 'I have been studying for two hours.'",
         "options": [
-          "Men ikki soat o'qiyapman.",
-          "Men ikki soat o'rgandim.",
-          "Men ikki soat o'qiyapman."
+          "Я учился два часа.",
+          "Я учусь два часа.",
+          "Я учу два часа."
         ],
-        "correctAnswer": "Men ikki soat o'qiyapman."
+        "correctAnswer": "Я учусь два часа."
       }
     ]
   },
@@ -662,27 +659,27 @@
     "isActive": true,
     "questions": [
       {
-        "question": "Bo'sh joyni to'ldiring: 'I would have gone to the party if I ____ (be) invited.'",
+        "question": "Заполните пропуск: 'I would have gone to the party if I ____ (be) invited.'",
         "options": ["had been", "was", "have been"],
         "correctAnswer": "had been"
       },
       {
-        "question": "To'g'ri variantni tanlang: 'By the time you arrive, I ____ (leave) already.'",
+        "question": "Выберите правильный вариант: 'By the time you arrive, I ____ (leave) already.'",
         "options": ["will have left", "left", "will leave"],
         "correctAnswer": "will have left"
       },
       {
-        "question": "‘By quick’ so'zining sinonimi qaysi?",
+        "question": "Какое слово является синонимом слова 'быстрый'? ",
         "options": ["quick", "slow", "steady"],
         "correctAnswer": "quick"
       },
       {
-        "question": "Jumlani to'g'ri yakunlang: 'I’ve never seen such a ____ movie before.'",
+        "question": "Выберите правильное завершение предложения: 'I’ve never seen such a ____ movie before.'",
         "options": ["interesting", "interest", "interests"],
         "correctAnswer": "interesting"
       },
       {
-        "question": "Bo'sh joyni to'ldiring: 'He would have helped you if he ____ (know) about the problem.'",
+        "question": "Заполните пропуск: 'He would have helped you if he ____ (know) about the problem.'",
         "options": ["had known", "knows", "would have known"],
         "correctAnswer": "had known"
       }
@@ -694,17 +691,17 @@
     "isActive": true,
     "questions": [
       {
-        "question": "To'g'ri jumlani tanlang: 'By the time they arrive, the meeting ____.'",
+        "question": "Выберите правильное предложение: 'By the time they arrive, the meeting ____.'",
         "options": ["will start", "will have started", "starts"],
         "correctAnswer": "will have started"
       },
       {
-        "question": "Jumlani to'ldiring: 'Had I known about the event, I ____ to it.'",
+        "question": "Завершите предложение: 'Had I known about the event, I ____ to it.'",
         "options": ["would go", "would have gone", "will go"],
         "correctAnswer": "would have gone"
       },
       {
-        "question": "Qaysi jumla grammatik jihatdan to'g'ri?",
+        "question": "Какое из следующих предложений грамматически правильно?",
         "options": [
           "She has been studying since three hours.",
           "She studied for three hours.",
@@ -713,12 +710,12 @@
         "correctAnswer": "She has been studying for three hours."
       },
       {
-        "question": "Jumlaga eng mos keladigan so'zni tanlang: 'Her answer was so ___ that I couldn’t believe it.'",
+        "question": "Выберите слово, которое лучше всего подходит для предложения: 'Her answer was so ___ that I couldn’t believe it.'",
         "options": ["definite", "definitive", "definitively"],
         "correctAnswer": "definitive"
       },
       {
-        "question": "Qaysi jumla murakkab jumla?",
+        "question": "Какой из этих вариантов является сложным предложением?",
         "options": [
           "He likes tennis, but she prefers football.",
           "He likes tennis.",
@@ -734,7 +731,7 @@
     "isActive": true,
     "questions": [
       {
-        "question": "Quyidagi jumlaning to'g'ri passiv shaklini tanlang: 'The company will release the new product next month.'",
+        "question": "Какова правильная пассивная форма предложения: 'The company will release the new product next month.'?",
         "options": [
           "The new product will be released by the company next month.",
           "The new product will release by the company next month.",
@@ -743,22 +740,22 @@
         "correctAnswer": "The new product will be released by the company next month."
       },
       {
-        "question": "Jumlani to'ldiring: 'The manager insists that the employees ____ the project by Friday.'",
+        "question": "Завершите предложение: 'The manager insists that the employees ____ the project by Friday.'",
         "options": ["finish", "finished", "will finish"],
         "correctAnswer": "finish"
       },
       {
-        "question": "Eng mos keladigan iborani tanlang: 'The research conducted over the past decade ____ our understanding of the disease.'",
+        "question": "Выберите наиболее подходящую фразу: 'The research conducted over the past decade ____ our understanding of the disease.'",
         "options": ["has revolutionized", "revolutionizes", "revolutionized"],
         "correctAnswer": "has revolutionized"
       },
       {
-        "question": "To'g'ri keladigan so'zni tanlang: 'The researcher’s findings were ____ and contributed greatly to the academic community.'",
+        "question": "Выберите слово, которое подходит по контексту: 'The researcher’s findings were ____ and contributed greatly to the academic community.'",
         "options": ["groundbreaking", "groundbreak", "groundbreaker"],
         "correctAnswer": "groundbreaking"
       },
       {
-        "question": "Qaysi jumlalar xato?",
+        "question": "В каком из следующих предложений есть ошибка?",
         "options": [
           "If I had known about the meeting, I would have attended.",
           "If I had known about the meeting, I would have attend.",
@@ -774,7 +771,7 @@
     "isActive": true,
     "questions": [
       {
-        "question": "Qaysi jumla grammatik jihatdan to'g'ri?",
+        "question": "Какое предложение грамматически правильно?",
         "options": [
           "If he had worked harder, he would have passed the exam.",
           "If he had worked harder, he will pass the exam.",
@@ -783,17 +780,17 @@
         "correctAnswer": "If he had worked harder, he would have passed the exam."
       },
       {
-        "question": "Jumlani to'ldiring: 'They ____ the proposal by the time we return.'",
+        "question": "Завершите предложение: 'They ____ the proposal by the time we return.'",
         "options": ["will have approved", "have approved", "had approved"],
         "correctAnswer": "will have approved"
       },
       {
-        "question": "Jumlaga eng mos keladigan so'zni tanlang: 'The company will ____ a new strategy next quarter.'",
+        "question": "Выберите слово, которое подходит для предложения: 'The company will ____ a new strategy next quarter.'",
         "options": ["formulate", "formulates", "formulated"],
         "correctAnswer": "formulate"
       },
       {
-        "question": "To'g'ri shartli shakldan foydalanilgan jumlani tanlang:",
+        "question": "Выберите предложение, которое использует правильную форму условного наклонения:",
         "options": [
           "If you had asked me earlier, I would help you.",
           "If you asked me earlier, I would have helped you.",
@@ -802,7 +799,7 @@
         "correctAnswer": "If you had asked me earlier, I would have helped you."
       },
       {
-        "question": "Qaysi so'z ushbu jumlada eng mos keladi: 'His speech was so ____ that everyone in the room was captivated.'",
+        "question": "Какое слово наиболее подходит для этого предложения: 'His speech was so ____ that everyone in the room was captivated.'",
         "options": ["eloquent", "eloquence", "eloquently"],
         "correctAnswer": "eloquent"
       }
@@ -814,7 +811,7 @@
     "isActive": true,
     "questions": [
       {
-        "question": "Qaysi jumla to'g'ri shartli otliqlarni ishlatadi?",
+        "question": "Какое предложение использует правильную форму сослагательного наклонения?",
         "options": [
           "It is important that he attends the meeting.",
           "It is important that he attend the meeting.",
@@ -823,12 +820,12 @@
         "correctAnswer": "It is important that he attend the meeting."
       },
       {
-        "question": "To'g'ri shakldagi jumlani tanlang: 'She _______ a proposal by the time you arrive.'",
+        "question": "Выберите правильную версию предложения: 'She _______ a proposal by the time you arrive.'",
         "options": ["has prepared", "will prepare", "will have prepared"],
         "correctAnswer": "will have prepared"
       },
       {
-        "question": "Qaysi variant jumlani to'g'ri yakunlaydi? 'The debate was so intense that ____ an immediate decision.'",
+        "question": "Какой вариант правильно завершает предложение? 'The debate was so intense that ____ an immediate decision.'",
         "options": [
           "no one could reach",
           "no one could reached",
@@ -837,12 +834,12 @@
         "correctAnswer": "no one could reach"
       },
       {
-        "question": "To'g'ri struktura bilan jumlani tanlang: 'By the time the movie started, the audience ____ for hours.'",
+        "question": "Выберите предложение с правильной структурой: 'By the time the movie started, the audience ____ for hours.'",
         "options": ["has been waiting", "had been waiting", "was waiting"],
         "correctAnswer": "had been waiting"
       },
       {
-        "question": "Jumlani yakunlang: 'I wish I ____ more time to complete the project.'",
+        "question": "Завершите предложение: 'I wish I ____ more time to complete the project.'",
         "options": ["had", "have", "will have"],
         "correctAnswer": "had"
       }
@@ -854,7 +851,7 @@
     "isActive": true,
     "questions": [
       {
-        "question": "Qaysi jumla to'g'ri kelajakda tugagan holatni ishlatadi?",
+        "question": "Какое предложение использует правильную форму будущего совершенного времени?",
         "options": [
           "By the time they arrive, we will finish the work.",
           "By the time they arrive, we will have finished the work.",
@@ -863,7 +860,7 @@
         "correctAnswer": "By the time they arrive, we will have finished the work."
       },
       {
-        "question": "Qaysi jumla to'g'ri?",
+        "question": "Какое из следующих предложений правильно?",
         "options": [
           "If I would have known about the event, I would have attended.",
           "If I had known about the event, I would have attended.",
@@ -872,17 +869,17 @@
         "correctAnswer": "If I had known about the event, I would have attended."
       },
       {
-        "question": "Jumlani yakunlang: 'I would have helped you if I ____ about the problem.'",
+        "question": "Завершите предложение: 'I would have helped you if I ____ about the problem.'",
         "options": ["had known", "knew", "have known"],
         "correctAnswer": "had known"
       },
       {
-        "question": "Qaysi variant jumlani to'g'ri yakunlaydi? 'If you ____ harder, you would have passed the exam.'",
+        "question": "Какой вариант правильно завершает предложение? 'If you ____ harder, you would have passed the exam.'",
         "options": ["studied", "had studied", "study"],
         "correctAnswer": "had studied"
       },
       {
-        "question": "Eng mos so'zni tanlang: 'The lawyer’s argument was so ____ that the judge had no choice but to rule in his favor.'",
+        "question": "Выберите слово, которое подходит лучше всего: 'The lawyer’s argument was so ____ that the judge had no choice but to rule in his favor.'",
         "options": ["convincing", "convince", "convinced"],
         "correctAnswer": "convincing"
       }
@@ -894,12 +891,12 @@
     "isActive": true,
     "questions": [
       {
-        "question": "To'g'ri fe'l shaklini tanlang: 'If I ____ the opportunity, I would have taken the job offer.'",
+        "question": "Выберите правильную форму глагола: 'If I ____ the opportunity, I would have taken the job offer.'",
         "options": ["had known", "knew", "have known"],
         "correctAnswer": "had known"
       },
       {
-        "question": "Qaysi jumla to'g'ri kelajakdagi tugagan davomli holatni ishlatadi?",
+        "question": "Какое из следующих предложений использует правильную структуру будущего совершенного продолженного времени?",
         "options": [
           "By this time tomorrow, I will be working on the project.",
           "By this time tomorrow, I will have been working on the project.",
@@ -908,17 +905,17 @@
         "correctAnswer": "By this time tomorrow, I will have been working on the project."
       },
       {
-        "question": "Jumlani yakunlang: 'He ____ at the company for five years by the time he retires.'",
+        "question": "Завершите предложение: 'He ____ at the company for five years by the time he retires.'",
         "options": ["will have worked", "has worked", "had worked"],
         "correctAnswer": "will have worked"
       },
       {
-        "question": "To'g'ri fe'l shaklini tanlang: 'She will not go out unless she ____ her homework first.'",
+        "question": "Выберите правильную форму предложения: 'She will not go out unless she ____ her homework first.'",
         "options": ["finishes", "will finish", "finish"],
         "correctAnswer": "finishes"
       },
       {
-        "question": "Jumlani yakunlang: 'If I had more experience, I ____ for the promotion.'",
+        "question": "Завершите предложение: 'If I had more experience, I ____ for the promotion.'",
         "options": ["would have applied", "would apply", "have applied"],
         "correctAnswer": "would have applied"
       }
@@ -930,12 +927,12 @@
     "isActive": true,
     "questions": [
       {
-        "question": "Jumlani yakunlang: 'By next year, the company ____ its new strategy.'",
+        "question": "Завершите предложение: 'By next year, the company ____ its new strategy.'",
         "options": ["will have implemented", "will implement", "implements"],
         "correctAnswer": "will have implemented"
       },
       {
-        "question": "Qaysi jumla to'g'ri shartli otliqlarni ishlatadi?",
+        "question": "Какой из следующих вариантов правильно использует сослагательное наклонение?",
         "options": [
           "It is essential that he attends the meeting.",
           "It is essential that he attend the meeting.",
@@ -944,7 +941,7 @@
         "correctAnswer": "It is essential that he attend the meeting."
       },
       {
-        "question": "Qaysi variant jumlani to'g'ri yakunlaydi? 'Had I known how difficult the task was, I ____ it.'",
+        "question": "Какой вариант правильно завершает предложение? 'Had I known how difficult the task was, I ____ it.'",
         "options": [
           "would not have accepted",
           "will not accept",
@@ -953,12 +950,12 @@
         "correctAnswer": "would not have accepted"
       },
       {
-        "question": "Eng mos so'zni tanlang: 'The manager gave a ____ response to the client’s request, which helped resolve the issue quickly.'",
+        "question": "Выберите слово, которое лучше всего подходит в предложение: 'The manager gave a ____ response to the client’s request, which helped resolve the issue quickly.'",
         "options": ["diplomatic", "diplomatically", "diplomacy"],
         "correctAnswer": "diplomatic"
       },
       {
-        "question": "Qaysi jumla to'g'ri o'tgan perfect davomli vaqtni ishlatadi?",
+        "question": "Какое предложение использует правильную форму прошедшего перфектного продолженного времени?",
         "options": [
           "She had been working on the report for three hours before she took a break.",
           "She has been working on the report for three hours before she took a break.",
@@ -974,17 +971,17 @@
     "isActive": true,
     "questions": [
       {
-        "question": "Qaysi fe'l vaqtini tanlashingiz kerak: 'By the time you arrive, I ____ the letter.'",
+        "question": "Выберите правильное время глагола: 'By the time you arrive, I ____ the letter.'",
         "options": ["will have sent", "will send", "sent"],
         "correctAnswer": "will have sent"
       },
       {
-        "question": "Jumlani yakunlang: 'If I ____ known that the meeting was rescheduled, I would have attended.'",
+        "question": "Завершите предложение: 'If I ____ known that the meeting was rescheduled, I would have attended.'",
         "options": ["had", "have", "would have"],
         "correctAnswer": "had"
       },
       {
-        "question": "Qaysi variant xato o'z ichiga oladi?",
+        "question": "Какой из следующих вариантов содержит ошибку?",
         "options": [
           "He was wondering if I would join the team.",
           "He was wondering if I will join the team.",
@@ -993,7 +990,7 @@
         "correctAnswer": "He was wondering if I will join the team."
       },
       {
-        "question": "Qaysi jumla to'g'ri?",
+        "question": "Какое предложение правильно?",
         "options": [
           "By the time I finish my report, I will be working for five hours.",
           "By the time I finish my report, I will have worked for five hours.",
@@ -1002,7 +999,7 @@
         "correctAnswer": "By the time I finish my report, I will have worked for five hours."
       },
       {
-        "question": "Eng mos so'zni tanlang: 'The student’s ____ response demonstrated a deep understanding of the subject.'",
+        "question": "Выберите самое подходящее слово: 'The student’s ____ response demonstrated a deep understanding of the subject.'",
         "options": ["insightful", "insight", "insightfully"],
         "correctAnswer": "insightful"
       }
@@ -1014,7 +1011,7 @@
     "isActive": true,
     "questions": [
       {
-        "question": "Qaysi jumla uchinchi shartli otliqni to'g'ri ishlatadi?",
+        "question": "Какой из следующих вариантов является примером предложения третьего условного наклонения?",
         "options": [
           "If I had known about the event, I would have attended.",
           "If I know about the event, I will attend.",
@@ -1023,7 +1020,7 @@
         "correctAnswer": "If I had known about the event, I would have attended."
       },
       {
-        "question": "Jumlani yakunlang: 'Had she known about the difficulties, she ____ the project.'",
+        "question": "Завершите предложение: 'Had she known about the difficulties, she ____ the project.'",
         "options": [
           "would have never started",
           "would never have started",
@@ -1032,12 +1029,12 @@
         "correctAnswer": "would never have started"
       },
       {
-        "question": "Qaysi variant to'g'ri yakunlaydi? 'By the time the book was published, the author ____ for over a decade.'",
+        "question": "Какой вариант завершает предложение правильно? 'By the time the book was published, the author ____ for over a decade.'",
         "options": ["had been writing", "has written", "wrote"],
         "correctAnswer": "had been writing"
       },
       {
-        "question": "Qaysi jumla to'g'ri?",
+        "question": "Какое из следующих предложений грамматически правильно?",
         "options": [
           "I have been reading the book for two hours.",
           "I read the book for two hours.",
@@ -1046,10 +1043,11 @@
         "correctAnswer": "I have been reading the book for two hours."
       },
       {
-        "question": "Eng mos so'zni tanlang: 'The film was so ____ that it left a lasting impression on the audience.'",
+        "question": "Выберите слово, которое лучше всего завершает предложение: 'The film was so ____ that it left a lasting impression on the audience.'",
         "options": ["captivating", "captivate", "captivation"],
         "correctAnswer": "captivating"
       }
     ]
   }
+  
 ]

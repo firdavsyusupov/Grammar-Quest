@@ -1,16 +1,21 @@
 .questions-page {
-  min-height: 65vh;
+  min-height: 75vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 100px;
   position: relative;
+  background: linear-gradient(135deg, #f0f9ff, #cfeffd);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
   margin-bottom: 20px;
   text-align: center;
+  color: #064663;
+  font-size: 2rem;
 }
 
 ul {
@@ -20,134 +25,97 @@ ul {
   justify-content: center;
   gap: 50px;
 }
-
-li {
+.incorrect-mark {
+  position: absolute;
+  top: 10%;
+  cursor: pointer;
+}
+.li {
   cursor: pointer;
   margin-bottom: 10px;
-  transition: background-color 0.3s;
-  text-align: center;
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  background-color: #e8f6f3;
+  color: #064663;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.skip{
-  padding: 10px 20px;
-  font-size: 20px;
-  border-radius: 10px;
-  border: 1px solid #bbb;
-  cursor: pointer;
-  transition: 0.3s;
-  &:hover{
-    box-shadow: 0px 10px 20px #bbb;
-    transform: translateY(-5px);
-  }
-}
-
-.nextQuestion{
-  padding: 10px 20px;
-  font-size: 20px;
-  border-radius: 10px;
-  border: 1px solid #bbb;
-  cursor: pointer;
-  transition: 0.3s;
-  &:hover{
-    box-shadow: 0px 10px 20px #bbb;
-    transform: translateY(-5px);
-  }
-}
-
-.check {
-  padding: 10px 20px;
-  font-size: 20px;
-  border-radius: 10px;
-  border: 1px solid #bbb;
-  cursor: pointer;
-  transition: 0.3s;
-  
-  /* Styling when disable class is active */
-  &.disable {
-    cursor: no-drop;
-    box-shadow: none;
-    transform: none;
-  }
-
-  /* Hover effect only when disable class is NOT present */
-  &:not(.disable):hover {
-    box-shadow: 0px 10px 20px #bbb;
-    transform: translateY(-5px);
-  }
-}
-
-li:hover {
-  background: #bbb;
+.li:hover {
+  background-color: #cde4e1;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .selected {
+  background-color: #82c9c2;
+  color: white;
   font-weight: bold;
 }
 
+.correct {
+  color: #4caf50;
+}
+
+.incorrect {
+  color: #f44336;
+}
 
 button {
   margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button.skip {
+  background-color: #f0f9ff;
+  color: #064663;
+}
+
+button.skip:hover {
+  background-color: #d6e6f2;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button.check {
+  background-color: #064663;
+  color: white;
+}
+
+button.check:hover {
+  background-color: #052e40;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.question {
+  font-size: 25px;
+}
+
+button.nextQuestion {
+  background-color: #4caf50;
+  color: white;
+}
+
+button.nextQuestion:hover {
+  background-color: #3b9d40;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 p {
   margin-top: 10px;
   text-align: center;
   margin-bottom: 50px;
+  font-size: 1.1rem;
+  color: #064663;
 }
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 50px;
-}
-
-.h3 {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.showbtn {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
-
-.incorrect-mark {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  cursor: pointer;
-  &:hover {
-    color: red;
-  }
-
-}
-
-.question{
-  font-size: 30px;
-}
-
-.incorrect-mark {
-  cursor: pointer; /* Change cursor to pointer to indicate clickability */
-}
-
-.selected {
-  background-color: #d3d3d3;
-}
-.correct {
-  color: green;
-}
-.incorrect {
-  color: red;
-}
-.questions-page {
-  padding: 20px;
-}
-
-
 
 .modal {
   display: flex;
@@ -159,7 +127,6 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-
 }
 
 .modal-content {
@@ -167,14 +134,38 @@ p {
   padding: 50px;
   border-radius: 8px;
   text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
-
-.card.deactive {
-  pointer-events: none;
-  opacity: 0.5;
+.cong {
+  color: #4caf50;
+  font-size: 1.5rem;
 }
 
-.cong{
-  color: green;
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 100px;
+}
+
+.showbtn{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.showResult{
+  border: 3px solid green;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.resultDiv{
+  display: flex;
+  justify-content: center;
 }

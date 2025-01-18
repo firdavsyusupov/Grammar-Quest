@@ -49,6 +49,11 @@
       component: () => import("@/pages/LessonPage.vue")
     },
     {
+      path: "/chat",
+      name: "chat",
+      component: () => import("@/pages/ChatPage.vue")
+    },
+    {
       path: '/questions/:id', 
       name: 'Questions',
       component: () => import("@/views/LessonPage/Quest/Quest.vue"),
