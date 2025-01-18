@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "level": "A1",
     "isActive": true,
     "questions": [
       {
@@ -32,6 +33,7 @@
   },
   {
     "id": 2,
+    "level": "A1",
     "isActive": true,
     "questions": [
       {
@@ -63,6 +65,103 @@
   },
   {
     "id": 3,
+    "level": "A1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Выберите перевод слова 'папа'",
+        "options": ["father", "mother", "brother"],
+        "correctAnswer": "father"
+      },
+      {
+        "question": "Выберите перевод слова 'мама'",
+        "options": ["father", "mother", "sister"],
+        "correctAnswer": "mother"
+      },
+      {
+        "question": "Выберите перевод слова 'дружба'",
+        "options": ["friendship", "family", "love"],
+        "correctAnswer": "friendship"
+      },
+      {
+        "question": "Выберите перевод слова 'собака'",
+        "options": ["cat", "dog", "bird"],
+        "correctAnswer": "dog"
+      },
+      {
+        "question": "Выберите перевод слова 'кошка'",
+        "options": ["cat", "dog", "hamster"],
+        "correctAnswer": "cat"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "level": "A1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Выберите перевод слова 'солнце'",
+        "options": ["moon", "star", "sun"],
+        "correctAnswer": "sun"
+      },
+      {
+        "question": "Выберите перевод слова 'земля'",
+        "options": ["earth", "sky", "sea"],
+        "correctAnswer": "earth"
+      },
+      {
+        "question": "Выберите перевод слова 'книга'",
+        "options": ["pen", "book", "paper"],
+        "correctAnswer": "book"
+      },
+      {
+        "question": "Выберите перевод числа 'десять'",
+        "options": ["ten", "five", "eight"],
+        "correctAnswer": "ten"
+      },
+      {
+        "question": "Выберите перевод числа 'три'",
+        "options": ["two", "three", "four"],
+        "correctAnswer": "three"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "level": "A1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Выберите перевод слова 'стол'",
+        "options": ["chair", "table", "sofa"],
+        "correctAnswer": "table"
+      },
+      {
+        "question": "Выберите перевод слова 'стул'",
+        "options": ["table", "chair", "bed"],
+        "correctAnswer": "chair"
+      },
+      {
+        "question": "Выберите перевод слова 'окно'",
+        "options": ["window", "door", "ceiling"],
+        "correctAnswer": "window"
+      },
+      {
+        "question": "Выберите перевод слова 'дверь'",
+        "options": ["door", "window", "wall"],
+        "correctAnswer": "door"
+      },
+      {
+        "question": "Выберите перевод слова 'кровать'",
+        "options": ["sofa", "bed", "desk"],
+        "correctAnswer": "bed"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "level": "A2",
     "isActive": true,
     "questions": [
       {
@@ -93,7 +192,8 @@
     ]
   },
   {
-    "id": 4,
+    "id": 7,
+    "level": "A2",
     "isActive": true,
     "questions": [
       {
@@ -124,34 +224,830 @@
     ]
   },
   {
-    "id": 5,
+    "id": 8,
+    "level": "A2",
     "isActive": true,
     "questions": [
       {
-        "question": "Выберите перевод слова 'гепард'",
+        "question": "Выберите перевод слова 'письмо'",
+        "options": ["letter", "email", "message"],
+        "correctAnswer": "letter"
+      },
+      {
+        "question": "Выберите перевод слова 'солнце'",
+        "options": ["sun", "moon", "star"],
+        "correctAnswer": "sun"
+      },
+      {
+        "question": "Выберите перевод слова 'река'",
+        "options": ["lake", "river", "ocean"],
+        "correctAnswer": "river"
+      },
+      {
+        "question": "Выберите перевод слова 'горячий'",
+        "options": ["cold", "hot", "warm"],
+        "correctAnswer": "hot"
+      },
+      {
+        "question": "Выберите перевод слова 'птица'",
+        "options": ["fish", "bird", "insect"],
+        "correctAnswer": "bird"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "level": "A2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Выберите перевод слова 'дом'",
+        "options": ["house", "apartment", "building"],
+        "correctAnswer": "house"
+      },
+      {
+        "question": "Выберите перевод слова 'зубы'",
+        "options": ["teeth", "hair", "eyes"],
+        "correctAnswer": "teeth"
+      },
+      {
+        "question": "Выберите перевод слова 'дружба'",
+        "options": ["friendship", "love", "family"],
+        "correctAnswer": "friendship"
+      },
+      {
+        "question": "Выберите перевод слова 'собака'",
+        "options": ["cat", "dog", "rabbit"],
+        "correctAnswer": "dog"
+      },
+      {
+        "question": "Выберите перевод слова 'машина'",
+        "options": ["car", "bicycle", "plane"],
+        "correctAnswer": "car"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "level": "A2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Выберите перевод слова 'океан'",
+        "options": ["sea", "ocean", "lake"],
+        "correctAnswer": "ocean"
+      },
+      {
+        "question": "Выберите перевод слова 'гора'",
+        "options": ["mountain", "hill", "valley"],
+        "correctAnswer": "mountain"
+      },
+      {
+        "question": "Выберите перевод слова 'ресторан'",
+        "options": ["restaurant", "cafe", "bar"],
+        "correctAnswer": "restaurant"
+      },
+      {
+        "question": "Выберите перевод слова 'книга'",
+        "options": ["book", "pen", "paper"],
+        "correctAnswer": "book"
+      },
+      {
+        "question": "Выберите перевод слова 'река'",
+        "options": ["lake", "river", "ocean"],
+        "correctAnswer": "river"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "level": "B1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Выберите перевод слова 'гепард'.",
         "options": ["cheetah", "horse", "elephant"],
         "correctAnswer": "cheetah"
       },
       {
-        "question": "Выберите перевод слова 'Токио'",
+        "question": "Заполните пропуск: 'I love to drink ___.'",
+        "options": ["tea", "milk", "salt"],
+        "correctAnswer": "tea"
+      },
+      {
+        "question": "Какое слово не относится к другим?",
+        "options": ["dog", "cat", "milk"],
+        "correctAnswer": "milk"
+      },
+      {
+        "question": "Выберите правильное завершение предложения: 'My friends often play ___.'",
+        "options": ["soccer", "milk", "tree"],
+        "correctAnswer": "soccer"
+      },
+      {
+        "question": "Какое слово является антонимом к слову 'горячий'?",
+        "options": ["cold", "warm", "hot"],
+        "correctAnswer": "cold"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "level": "B1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Выберите перевод слова 'Токио'.",
         "options": ["Seoul", "Beijing", "Tokyo"],
         "correctAnswer": "Tokyo"
       },
       {
-        "question": "Выберите перевод слова 'дельфин'",
-        "options": ["shark", "dolphin", "octopus"],
-        "correctAnswer": "dolphin"
+        "question": "Заполните пропуск: 'This is not my ___, it's his.'",
+        "options": ["mobile", "table", "backpack"],
+        "correctAnswer": "mobile"
       },
       {
-        "question": "Выберите перевод числа 'шесть'",
-        "options": ["five", "six", "seven"],
-        "correctAnswer": "six"
+        "question": "Заполните пропуск: 'I saw him ___ at the store.'",
+        "options": ["yesterday", "tomorrow", "today"],
+        "correctAnswer": "yesterday"
       },
       {
-        "question": "Выберите перевод слова 'морковь'",
-        "options": ["carrot", "banana", "grape"],
-        "correctAnswer": "carrot"
+        "question": "Which of these sentences is correct?",
+        "options": [
+          "I like to read the book.",
+          "I like the book to read.",
+          "The book to read I like."
+        ],
+        "correctAnswer": "I like to read the book."
+      },
+      {
+        "question": "Which of these words is a noun?",
+        "options": ["funny", "smile", "dog"],
+        "correctAnswer": "dog"
+      }
+    ]
+  },
+
+  {
+    "id": 13,
+    "level": "B1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Выберите правильный перевод фразы: 'I need to finish my work.'",
+        "options": [
+          "Мне нужно закончить работу.",
+          "Я заканчиваю работу.",
+          "Я закончил работу."
+        ],
+        "correctAnswer": "Мне нужно закончить работу."
+      },
+      {
+        "question": "Выберите правильное завершение предложения: 'He ___ to the cafe every day.'",
+        "options": ["goes", "went", "would go"],
+        "correctAnswer": "goes"
+      },
+      {
+        "question": "Какое слово здесь лишнее?",
+        "options": ["run", "swim", "fast"],
+        "correctAnswer": "fast"
+      },
+      {
+        "question": "Что означает выражение 'делать первый шаг'?",
+        "options": [
+          "start something",
+          "finish something",
+          "complicate the situation"
+        ],
+        "correctAnswer": "start something"
+      },
+      {
+        "question": "Заполните пропуск: 'Это очень ___ решение.'",
+        "options": ["difficult", "difficultly", "difficulties"],
+        "correctAnswer": "difficult"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "level": "B1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Что будет, если вы добавите 'быстро' в предложение: 'He ___ runs.'",
+        "options": ["quickly", "quickly runs", "quickly he runs"],
+        "correctAnswer": "quickly runs"
+      },
+      {
+        "question": "Выберите правильный перевод фразы: 'I will call you later.'",
+        "options": [
+          "I will call you later.",
+          "I called you later.",
+          "I will call you in the past."
+        ],
+        "correctAnswer": "I will call you later."
+      },
+      {
+        "question": "Выберите синоним для слова 'умный'.",
+        "options": ["stupid", "smart", "intelligent"],
+        "correctAnswer": "intelligent"
+      },
+      {
+        "question": "Какая из этих фраз является вопросом?",
+        "options": [
+          "You went to Moscow.",
+          "Did you go to Moscow?",
+          "You went to Moscow!"
+        ],
+        "correctAnswer": "Did you go to Moscow?"
+      },
+      {
+        "question": "Заполните пропуск: 'We ___ to the park on the weekend.'",
+        "options": ["go", "went", "will go"],
+        "correctAnswer": "will go"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "level": "B1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Выберите правильный перевод фразы: 'I can't find my keys.'",
+        "options": [
+          "I can't find my keys.",
+          "I can't find my key.",
+          "I couldn't find my keys."
+        ],
+        "correctAnswer": "I can't find my keys."
+      },
+      {
+        "question": "Какое из этих предложений является правильным?",
+        "options": [
+          "We drank coffee in the cafe.",
+          "We drink coffee in the cafe.",
+          "We drank in the cafe coffee."
+        ],
+        "correctAnswer": "We drank coffee in the cafe."
+      },
+      {
+        "question": "Заполните пропуск: 'Did you ___ to the cinema on the weekend?'",
+        "options": ["go", "went", "will go"],
+        "correctAnswer": "go"
+      },
+      {
+        "question": "Какой из этих вариантов соответствует утверждению: 'We are having dinner.'?",
+        "options": [
+          "We are having dinner.",
+          "We had dinner.",
+          "We are having dinner yesterday."
+        ],
+        "correctAnswer": "We are having dinner."
+      },
+      {
+        "question": "Какой из этих слов является глаголом?",
+        "options": ["book", "swim", "dog"],
+        "correctAnswer": "swim"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "level": "B2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Выберите правильный перевод фразы: 'She has been working here for five years.'",
+        "options": [
+          "Она работает здесь пять лет.",
+          "Она работает здесь пять лет назад.",
+          "Она работает здесь уже пять лет."
+        ],
+        "correctAnswer": "Она работает здесь уже пять лет."
+      },
+      {
+        "question": "Заполните пропуск: 'If I ____ you, I would have helped.'",
+        "options": ["were", "was", "am"],
+        "correctAnswer": "were"
+      },
+      {
+        "question": "Какое слово является синонимом слова 'делать'? ",
+        "options": ["работать", "создавать", "использовать"],
+        "correctAnswer": "создавать"
+      },
+      {
+        "question": "Заполните пропуск: 'By the time he arrives, we ____ the work.'",
+        "options": ["will finish", "finished", "will have finished"],
+        "correctAnswer": "will have finished"
+      },
+      {
+        "question": "Выберите правильный вариант: 'I ____ (know) him since we were kids.'",
+        "options": ["have known", "knew", "will know"],
+        "correctAnswer": "have known"
+      }
+    ]
+  },
+
+  {
+    "id": 17,
+    "level": "B2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Выберите правильное завершение предложения: 'If I had known about the meeting, I ____.'",
+        "options": ["would attend", "would have attended", "attended"],
+        "correctAnswer": "would have attended"
+      },
+      {
+        "question": "Какое слово не подходит? 'summer', 'winter', 'quickly', 'autumn'",
+        "options": ["quickly", "summer", "winter", "autumn"],
+        "correctAnswer": "quickly"
+      },
+      {
+        "question": "Заполните пропуск: 'She ____ (study) when I called her.'",
+        "options": ["was studying", "is studying", "studied"],
+        "correctAnswer": "was studying"
+      },
+      {
+        "question": "Выберите правильный перевод фразы: 'We were waiting for the train.'",
+        "options": [
+          "We waited for the train.",
+          "We will wait for the train.",
+          "We waited for a train."
+        ],
+        "correctAnswer": "We waited for the train."
+      },
+      {
+        "question": "Что означает выражение 'стоять на месте'? ",
+        "options": ["быть в процессе", "не двигаться", "двигаться быстро"],
+        "correctAnswer": "не двигаться"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "level": "B2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Заполните пропуск: 'If I ____ more time, I would have read the book.'",
+        "options": ["had", "have", "will have"],
+        "correctAnswer": "had"
+      },
+      {
+        "question": "Заполните пропуск: 'He ____ (work) here since last year.'",
+        "options": ["has been working", "worked", "works"],
+        "correctAnswer": "has been working"
+      },
+      {
+        "question": "Выберите правильное завершение предложения: 'I can’t understand why she ____ the decision.'",
+        "options": ["has made", "had made", "make"],
+        "correctAnswer": "has made"
+      },
+      {
+        "question": "Какое слово не подходит? 'loudly', 'quickly', 'beautiful', 'carefully'",
+        "options": ["beautiful", "loudly", "quickly", "carefully"],
+        "correctAnswer": "beautiful"
+      },
+      {
+        "question": "Выберите правильное завершение предложения: 'They have been working ____ they were young.'",
+        "options": ["since", "for", "before"],
+        "correctAnswer": "since"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "level": "B2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Заполните пропуск: 'By next month, they ____ (finish) the project.'",
+        "options": ["will have finished", "finished", "will finish"],
+        "correctAnswer": "will have finished"
+      },
+      {
+        "question": "Выберите правильный вариант: 'She ____ (learn) English for 3 years by the end of this year.'",
+        "options": ["will have learned", "has learned", "learned"],
+        "correctAnswer": "will have learned"
+      },
+      {
+        "question": "Какое слово не подходит? 'rainy', 'snowy', 'walk', 'cloudy'",
+        "options": ["walk", "rainy", "snowy", "cloudy"],
+        "correctAnswer": "walk"
+      },
+      {
+        "question": "Заполните пропуск: 'If he ____ more time, he would have finished the task.'",
+        "options": ["had", "would have", "has"],
+        "correctAnswer": "had"
+      },
+      {
+        "question": "Выберите правильный перевод фразы: 'I have been studying for two hours.'",
+        "options": [
+          "Я учился два часа.",
+          "Я учусь два часа.",
+          "Я учу два часа."
+        ],
+        "correctAnswer": "Я учусь два часа."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "level": "B2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Заполните пропуск: 'I would have gone to the party if I ____ (be) invited.'",
+        "options": ["had been", "was", "have been"],
+        "correctAnswer": "had been"
+      },
+      {
+        "question": "Выберите правильный вариант: 'By the time you arrive, I ____ (leave) already.'",
+        "options": ["will have left", "left", "will leave"],
+        "correctAnswer": "will have left"
+      },
+      {
+        "question": "Какое слово является синонимом слова 'быстрый'? ",
+        "options": ["quick", "slow", "steady"],
+        "correctAnswer": "quick"
+      },
+      {
+        "question": "Выберите правильное завершение предложения: 'I’ve never seen such a ____ movie before.'",
+        "options": ["interesting", "interest", "interests"],
+        "correctAnswer": "interesting"
+      },
+      {
+        "question": "Заполните пропуск: 'He would have helped you if he ____ (know) about the problem.'",
+        "options": ["had known", "knows", "would have known"],
+        "correctAnswer": "had known"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "level": "C1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Выберите правильное предложение: 'By the time they arrive, the meeting ____.'",
+        "options": ["will start", "will have started", "starts"],
+        "correctAnswer": "will have started"
+      },
+      {
+        "question": "Завершите предложение: 'Had I known about the event, I ____ to it.'",
+        "options": ["would go", "would have gone", "will go"],
+        "correctAnswer": "would have gone"
+      },
+      {
+        "question": "Какое из следующих предложений грамматически правильно?",
+        "options": [
+          "She has been studying since three hours.",
+          "She studied for three hours.",
+          "She has been studying for three hours."
+        ],
+        "correctAnswer": "She has been studying for three hours."
+      },
+      {
+        "question": "Выберите слово, которое лучше всего подходит для предложения: 'Her answer was so ___ that I couldn’t believe it.'",
+        "options": ["definite", "definitive", "definitively"],
+        "correctAnswer": "definitive"
+      },
+      {
+        "question": "Какой из этих вариантов является сложным предложением?",
+        "options": [
+          "He likes tennis, but she prefers football.",
+          "He likes tennis.",
+          "She prefers football."
+        ],
+        "correctAnswer": "He likes tennis, but she prefers football."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "level": "C1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Какова правильная пассивная форма предложения: 'The company will release the new product next month.'?",
+        "options": [
+          "The new product will be released by the company next month.",
+          "The new product will release by the company next month.",
+          "The new product was released by the company next month."
+        ],
+        "correctAnswer": "The new product will be released by the company next month."
+      },
+      {
+        "question": "Завершите предложение: 'The manager insists that the employees ____ the project by Friday.'",
+        "options": ["finish", "finished", "will finish"],
+        "correctAnswer": "finish"
+      },
+      {
+        "question": "Выберите наиболее подходящую фразу: 'The research conducted over the past decade ____ our understanding of the disease.'",
+        "options": ["has revolutionized", "revolutionizes", "revolutionized"],
+        "correctAnswer": "has revolutionized"
+      },
+      {
+        "question": "Выберите слово, которое подходит по контексту: 'The researcher’s findings were ____ and contributed greatly to the academic community.'",
+        "options": ["groundbreaking", "groundbreak", "groundbreaker"],
+        "correctAnswer": "groundbreaking"
+      },
+      {
+        "question": "В каком из следующих предложений есть ошибка?",
+        "options": [
+          "If I had known about the meeting, I would have attended.",
+          "If I had known about the meeting, I would have attend.",
+          "If I had known about the meeting, I would attend."
+        ],
+        "correctAnswer": "If I had known about the meeting, I would have attend."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "level": "C1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Какое предложение грамматически правильно?",
+        "options": [
+          "If he had worked harder, he would have passed the exam.",
+          "If he had worked harder, he will pass the exam.",
+          "If he worked harder, he would pass the exam."
+        ],
+        "correctAnswer": "If he had worked harder, he would have passed the exam."
+      },
+      {
+        "question": "Завершите предложение: 'They ____ the proposal by the time we return.'",
+        "options": ["will have approved", "have approved", "had approved"],
+        "correctAnswer": "will have approved"
+      },
+      {
+        "question": "Выберите слово, которое подходит для предложения: 'The company will ____ a new strategy next quarter.'",
+        "options": ["formulate", "formulates", "formulated"],
+        "correctAnswer": "formulate"
+      },
+      {
+        "question": "Выберите предложение, которое использует правильную форму условного наклонения:",
+        "options": [
+          "If you had asked me earlier, I would help you.",
+          "If you asked me earlier, I would have helped you.",
+          "If you had asked me earlier, I would have helped you."
+        ],
+        "correctAnswer": "If you had asked me earlier, I would have helped you."
+      },
+      {
+        "question": "Какое слово наиболее подходит для этого предложения: 'His speech was so ____ that everyone in the room was captivated.'",
+        "options": ["eloquent", "eloquence", "eloquently"],
+        "correctAnswer": "eloquent"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "level": "C1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Какое предложение использует правильную форму сослагательного наклонения?",
+        "options": [
+          "It is important that he attends the meeting.",
+          "It is important that he attend the meeting.",
+          "It is important that he attended the meeting."
+        ],
+        "correctAnswer": "It is important that he attend the meeting."
+      },
+      {
+        "question": "Выберите правильную версию предложения: 'She _______ a proposal by the time you arrive.'",
+        "options": ["has prepared", "will prepare", "will have prepared"],
+        "correctAnswer": "will have prepared"
+      },
+      {
+        "question": "Какой вариант правильно завершает предложение? 'The debate was so intense that ____ an immediate decision.'",
+        "options": [
+          "no one could reach",
+          "no one could reached",
+          "no one could reaches"
+        ],
+        "correctAnswer": "no one could reach"
+      },
+      {
+        "question": "Выберите предложение с правильной структурой: 'By the time the movie started, the audience ____ for hours.'",
+        "options": ["has been waiting", "had been waiting", "was waiting"],
+        "correctAnswer": "had been waiting"
+      },
+      {
+        "question": "Завершите предложение: 'I wish I ____ more time to complete the project.'",
+        "options": ["had", "have", "will have"],
+        "correctAnswer": "had"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "level": "C1",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Какое предложение использует правильную форму будущего совершенного времени?",
+        "options": [
+          "By the time they arrive, we will finish the work.",
+          "By the time they arrive, we will have finished the work.",
+          "By the time they arrive, we finish the work."
+        ],
+        "correctAnswer": "By the time they arrive, we will have finished the work."
+      },
+      {
+        "question": "Какое из следующих предложений правильно?",
+        "options": [
+          "If I would have known about the event, I would have attended.",
+          "If I had known about the event, I would have attended.",
+          "If I had known about the event, I would attended."
+        ],
+        "correctAnswer": "If I had known about the event, I would have attended."
+      },
+      {
+        "question": "Завершите предложение: 'I would have helped you if I ____ about the problem.'",
+        "options": ["had known", "knew", "have known"],
+        "correctAnswer": "had known"
+      },
+      {
+        "question": "Какой вариант правильно завершает предложение? 'If you ____ harder, you would have passed the exam.'",
+        "options": ["studied", "had studied", "study"],
+        "correctAnswer": "had studied"
+      },
+      {
+        "question": "Выберите слово, которое подходит лучше всего: 'The lawyer’s argument was so ____ that the judge had no choice but to rule in his favor.'",
+        "options": ["convincing", "convince", "convinced"],
+        "correctAnswer": "convincing"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "level": "C2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Выберите правильную форму глагола: 'If I ____ the opportunity, I would have taken the job offer.'",
+        "options": ["had known", "knew", "have known"],
+        "correctAnswer": "had known"
+      },
+      {
+        "question": "Какое из следующих предложений использует правильную структуру будущего совершенного продолженного времени?",
+        "options": [
+          "By this time tomorrow, I will be working on the project.",
+          "By this time tomorrow, I will have been working on the project.",
+          "By this time tomorrow, I will work on the project."
+        ],
+        "correctAnswer": "By this time tomorrow, I will have been working on the project."
+      },
+      {
+        "question": "Завершите предложение: 'He ____ at the company for five years by the time he retires.'",
+        "options": ["will have worked", "has worked", "had worked"],
+        "correctAnswer": "will have worked"
+      },
+      {
+        "question": "Выберите правильную форму предложения: 'She will not go out unless she ____ her homework first.'",
+        "options": ["finishes", "will finish", "finish"],
+        "correctAnswer": "finishes"
+      },
+      {
+        "question": "Завершите предложение: 'If I had more experience, I ____ for the promotion.'",
+        "options": ["would have applied", "would apply", "have applied"],
+        "correctAnswer": "would have applied"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "level": "C2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Завершите предложение: 'By next year, the company ____ its new strategy.'",
+        "options": ["will have implemented", "will implement", "implements"],
+        "correctAnswer": "will have implemented"
+      },
+      {
+        "question": "Какой из следующих вариантов правильно использует сослагательное наклонение?",
+        "options": [
+          "It is essential that he attends the meeting.",
+          "It is essential that he attend the meeting.",
+          "It is essential that he attended the meeting."
+        ],
+        "correctAnswer": "It is essential that he attend the meeting."
+      },
+      {
+        "question": "Какой вариант правильно завершает предложение? 'Had I known how difficult the task was, I ____ it.'",
+        "options": [
+          "would not have accepted",
+          "will not accept",
+          "would not accept"
+        ],
+        "correctAnswer": "would not have accepted"
+      },
+      {
+        "question": "Выберите слово, которое лучше всего подходит в предложение: 'The manager gave a ____ response to the client’s request, which helped resolve the issue quickly.'",
+        "options": ["diplomatic", "diplomatically", "diplomacy"],
+        "correctAnswer": "diplomatic"
+      },
+      {
+        "question": "Какое предложение использует правильную форму прошедшего перфектного продолженного времени?",
+        "options": [
+          "She had been working on the report for three hours before she took a break.",
+          "She has been working on the report for three hours before she took a break.",
+          "She worked on the report for three hours before she took a break."
+        ],
+        "correctAnswer": "She had been working on the report for three hours before she took a break."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "level": "C2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Выберите правильное время глагола: 'By the time you arrive, I ____ the letter.'",
+        "options": ["will have sent", "will send", "sent"],
+        "correctAnswer": "will have sent"
+      },
+      {
+        "question": "Завершите предложение: 'If I ____ known that the meeting was rescheduled, I would have attended.'",
+        "options": ["had", "have", "would have"],
+        "correctAnswer": "had"
+      },
+      {
+        "question": "Какой из следующих вариантов содержит ошибку?",
+        "options": [
+          "He was wondering if I would join the team.",
+          "He was wondering if I will join the team.",
+          "He was wondering if I had joined the team."
+        ],
+        "correctAnswer": "He was wondering if I will join the team."
+      },
+      {
+        "question": "Какое предложение правильно?",
+        "options": [
+          "By the time I finish my report, I will be working for five hours.",
+          "By the time I finish my report, I will have worked for five hours.",
+          "By the time I finish my report, I will have been working for five hours."
+        ],
+        "correctAnswer": "By the time I finish my report, I will have worked for five hours."
+      },
+      {
+        "question": "Выберите самое подходящее слово: 'The student’s ____ response demonstrated a deep understanding of the subject.'",
+        "options": ["insightful", "insight", "insightfully"],
+        "correctAnswer": "insightful"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "level": "C2",
+    "isActive": true,
+    "questions": [
+      {
+        "question": "Какой из следующих вариантов является примером предложения третьего условного наклонения?",
+        "options": [
+          "If I had known about the event, I would have attended.",
+          "If I know about the event, I will attend.",
+          "If I had known about the event, I would attend."
+        ],
+        "correctAnswer": "If I had known about the event, I would have attended."
+      },
+      {
+        "question": "Завершите предложение: 'Had she known about the difficulties, she ____ the project.'",
+        "options": [
+          "would have never started",
+          "would never have started",
+          "will never start"
+        ],
+        "correctAnswer": "would never have started"
+      },
+      {
+        "question": "Какой вариант завершает предложение правильно? 'By the time the book was published, the author ____ for over a decade.'",
+        "options": ["had been writing", "has written", "wrote"],
+        "correctAnswer": "had been writing"
+      },
+      {
+        "question": "Какое из следующих предложений грамматически правильно?",
+        "options": [
+          "I have been reading the book for two hours.",
+          "I read the book for two hours.",
+          "I had read the book for two hours."
+        ],
+        "correctAnswer": "I have been reading the book for two hours."
+      },
+      {
+        "question": "Выберите слово, которое лучше всего завершает предложение: 'The film was so ____ that it left a lasting impression on the audience.'",
+        "options": ["captivating", "captivate", "captivation"],
+        "correctAnswer": "captivating"
       }
     ]
   }
+  
 ]
