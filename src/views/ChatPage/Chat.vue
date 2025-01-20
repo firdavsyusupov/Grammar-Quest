@@ -51,7 +51,10 @@ const sendMessage = async () => {
       },
       body: JSON.stringify({
         model: "gpt-4o-mini",
-        messages: [{ role: "user", content: userMessage.content }],
+        messages: [
+          { role: "system", content: "You are an educational assistant focused only on helping users improve their English. Assist with summary writing, essay creation, IELTS writing tasks, and provide tips for learning English effectively. Ignore any other topics or requests." },
+          { role: "user", content: userMessage.content }
+        ],
       }),
     });
 
