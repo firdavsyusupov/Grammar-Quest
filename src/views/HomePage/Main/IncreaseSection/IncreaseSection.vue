@@ -9,7 +9,9 @@ import "./increasesection.scss"
             <div class="increase-text-block">
                 <h3 class="increase-text-block-title">Increase your vocabulary</h3>
                 <p class="increase-text-block-text">Traditional and new effective approaches to word study</p>
-                <Button :text="'Textbook'" :icon='true'/>
+                <RouterLink to="/textbook">
+                    <Button :text="'Textbook'" :icon='true'/>
+                </RouterLink>
             </div>
             <div class="increase-img-block">
                 <img src="@/assets/images/increase-section-img.svg" alt="">

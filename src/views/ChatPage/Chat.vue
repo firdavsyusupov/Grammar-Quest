@@ -267,12 +267,12 @@ onMounted(() => {
         />
         <button
           @click="startRecognition"
-          class="voice-btn"
+          class="voice-btn inputbtn"
           aria-label="Start voice recognition"
         >
           <MicIcon :size="20" />
         </button>
-        <button @click="sendMessage" aria-label="Send message">
+        <button @click="sendMessage" aria-label="Send message" class="inputbtn">
           <SendIcon :size="20" />
         </button>
       </div>
