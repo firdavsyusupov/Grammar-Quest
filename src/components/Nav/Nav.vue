@@ -6,30 +6,47 @@ import BottomIcon from "@/components/icons/BottomIcon.vue";
 import { onMounted, onUnmounted, ref } from "vue";
 import "./nav.scss";
 
-const isOpen = ref(false);
+const isOpen = ref(false); // Main menu toggle
+const dropdownOpen = ref(false); // Dropdown menu toggle
 
+// Toggle the main menu
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
 };
+
+// Toggle the dropdown menu
+const toggleDropdown = () => {
+  dropdownOpen.value = !dropdownOpen.value;
+};
+
+// Prevent the menu from closing when clicking on the dropdown
+const stopClickPropagation = (e) => {
+  e.stopPropagation();
+};
+
 const closeMenu = (e) => {
-  if (!e.target.closest('.bar') && !e.target.closest('.nav__links')) {
+  if (!e.target.closest(".bar") && !e.target.closest(".nav__links")) {
     isOpen.value = false;
   }
+  if (!e.target.closest(".nav__item2") && dropdownOpen.value) {
+    dropdownOpen.value = false;
+  }
 };
+
 const closeMenuOnScroll = () => {
   if (isOpen.value) {
     isOpen.value = false;
   }
 };
+
 onMounted(() => {
-  document.addEventListener('click', closeMenu);
-  document.addEventListener('scroll', closeMenuOnScroll);
+  document.addEventListener("click", closeMenu);
+  document.addEventListener("scroll", closeMenuOnScroll);
 });
 
-// Komponent olib tashlanganida hodisalarni to'xtatish
 onUnmounted(() => {
-  document.removeEventListener('click', closeMenu);
-  document.removeEventListener('scroll', closeMenuOnScroll);
+  document.removeEventListener("click", closeMenu);
+  document.removeEventListener("scroll", closeMenuOnScroll);
 });
 </script>
 <template>
@@ -65,10 +82,10 @@ onUnmounted(() => {
           <!-- <li class="nav__item">
             <a href="#" class="nav__link">statistics</a>
           </li> -->
-          <li class="nav__item nav__item2">
+          <li class="nav__item nav__item2" @click="toggleDropdown" @click.stop>
             <a href="#" class="nav__link">games</a>
             <BottomIcon :size="25" class="bottom-icon" />
-            <div class="nav-dropdown">
+            <div class="nav-dropdown" v-show="dropdownOpen">
               <RouterLink to="/textbook" class="nav-dropdown-block">
                 <h5 class="nav-dropdown-block-text">Sprint</h5>
                 <RightIcon :size="20" class="nav-dropdown-block-icon" />

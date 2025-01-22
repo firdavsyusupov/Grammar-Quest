@@ -33,7 +33,6 @@ computed(() => {
             <StudentIcon :size="30" />
             <h2 class="nav-item">Textbook</h2>
           </div>
-          <hr />
           <div>
             <BookIcon :size="30" />
             <h2 class="nav-item">Dictionary</h2>
