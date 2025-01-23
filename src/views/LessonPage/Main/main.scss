@@ -1,4 +1,5 @@
 .main {
+  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,6 +87,7 @@
   margin-top: 20px;
   width: 260px;
   font-size: 14px;
+  margin-bottom: 20px;
 }
 
 .lan-img {
@@ -149,15 +151,17 @@
 
 .levels {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 30px;
   margin-top: 10px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .level {
   padding: 10px 20px;
   border-radius: 10px;
-  max-width: 120px;
+  max-width: 100px;
   width: 100%;
   cursor: pointer;
   background: linear-gradient(135deg, #6a5acd, #483d8b);
