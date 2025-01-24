@@ -26,12 +26,9 @@
         font-weight: 600;
       }
       &-item-link {
-        @media screen and (max-width: 440px) {
-          font-size: 12px;
-        }
         text-transform: capitalize;
         color: #757575;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 600;
         &:hover {
           color: #000;
@@ -74,7 +71,6 @@
       @media screen and (max-width: 400px) {
         font-size: 10px;
       }
-
     }
   }
 }

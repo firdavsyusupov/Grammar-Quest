@@ -189,6 +189,10 @@ button:hover {
   transform: translateY(0);
 }
 
+.modal-buttons{
+  width: 150px;
+}
+
 .tooltip {
   position: absolute;
   bottom: 150%;
@@ -420,4 +424,20 @@ button.cancel:hover {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+.close{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #bbb;
+  top: -3%;
+  right: -3%;
+  font-size: 20px;
+  transition: 0.3s;
+  &:hover{
+    background: #bbb;
+  }
 }
