@@ -253,10 +253,18 @@ const closeModal = () => {
     <div class="container-x">
       <div class="title">
         <div class="gptchat">
-          <img class="gpt-img" src="@/assets/images/chatgpt.webp" alt="ChatGPT logo" />
+          <img
+            class="gpt-img"
+            src="@/assets/images/chatgpt.webp"
+            alt="ChatGPT logo"
+          />
           <h2 class="chat-title">ChatGPT 4o-mini</h2>
         </div>
-        <div class="icon-container" @click="clearHistory" aria-label="Clear History">
+        <div
+          class="icon-container"
+          @click="clearHistory"
+          aria-label="Clear History"
+        >
           <RecycleIcon :size="20" class="icon" />
         </div>
       </div>
@@ -267,45 +275,94 @@ const closeModal = () => {
         </div>
       </div>
       <div class="messages custom-scroll">
-        <div v-for="(msg, index) in nonVoiceMessages" :key="index" :class="['message', msg.role]">
+        <div
+          v-for="(msg, index) in nonVoiceMessages"
+          :key="index"
+          :class="['message', msg.role]"
+        >
           <div class="meta">
             <span class="time">{{ msg.time }}</span>
           </div>
           <p>{{ msg.content }}</p>
         </div>
-        <div v-if="isTyping" class="message assistant typing-indicator" aria-live="polite">
+        <div
+          v-if="isTyping"
+          class="message assistant typing-indicator"
+          aria-live="polite"
+        >
           <span></span><span></span><span></span>
         </div>
       </div>
       <div class="input-section">
-        <input v-model="userInput" placeholder="Type your message" @keydown.enter="sendMessageText" aria-label="Input message" />
-        <button @click="startRecognition" class="voice-btn inputbtn" aria-label="Start voice recognition">
+        <input
+          v-model="userInput"
+          placeholder="Type your message"
+          @keydown.enter="sendMessageText"
+          aria-label="Input message"
+        />
+        <button
+          @click="startRecognition"
+          class="voice-btn inputbtn"
+          aria-label="Start voice recognition"
+        >
           <MicIcon :size="20" />
         </button>
-        <button @click="sendMessageText" aria-label="Send message" class="inputbtn">
+        <button
+          @click="sendMessageText"
+          aria-label="Send message"
+          class="inputbtn"
+        >
           <SendIcon :size="20" />
         </button>
       </div>
     </div>
-    <div v-if="showModal" class="modal-overlay" @click.self="closeModal" aria-hidden="false">
+    <div
+      v-if="showModal"
+      class="modal-overlay"
+      @click.self="closeModal"
+      aria-hidden="false"
+    >
       <div class="modal" role="dialog" aria-modal="true">
         <div class="modal-content">
-          <button class="close" @click="closeModal" aria-label="Close modal">X</button>
+          <button class="close" @click="closeModal" aria-label="Close modal">
+            X
+          </button>
           <h3>Assistant</h3>
           <p>{{ modalMessage }}</p>
-          <button @click="isReading ? stopReading() : sendMessageVoice()" aria-label="Send or Stop reading" class="close-btn">
+          <button
+            @click="isReading ? stopReading() : sendMessageVoice()"
+            aria-label="Send or Stop reading"
+            class="close-btn"
+          >
             {{ isReading ? "Stop" : "Send" }}
           </button>
         </div>
       </div>
     </div>
-    <div v-if="showClearModal" class="modal-overlay" @click.self="cancelClearHistory" aria-hidden="false">
+    <div
+      v-if="showClearModal"
+      class="modal-overlay"
+      @click.self="cancelClearHistory"
+      aria-hidden="false"
+    >
       <div class="modal">
         <div class="modal-content">
           <h3>Are you sure you want to clear the chat history?</h3>
           <div class="modal-actions">
-            <button class="confirm modal-buttons" @click="confirmClearHistory" aria-label="Confirm clear history">Yes</button>
-            <button class="cancel modal-buttons" @click="cancelClearHistory" aria-label="Cancel clear history">No</button>
+            <button
+              class="confirm modal-buttons"
+              @click="confirmClearHistory"
+              aria-label="Confirm clear history"
+            >
+              Yes
+            </button>
+            <button
+              class="cancel modal-buttons"
+              @click="cancelClearHistory"
+              aria-label="Cancel clear history"
+            >
+              No
+            </button>
           </div>
         </div>
       </div>

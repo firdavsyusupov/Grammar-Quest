@@ -1,5 +1,5 @@
 .margin {
-  height: 78px;
+  height: 76px;
 }
 .nav {
   border-bottom: 1px solid #585858;
@@ -186,7 +186,7 @@
   justify-content: space-around;
   align-items: center;
   width: 40px;
-  height: 30px;
+  height: 25px;
   cursor: pointer;
   transition: transform 0.3s ease;
 
@@ -200,7 +200,7 @@
 
   &.open {
     span:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
+      transform: rotate(45deg) translate(5px, 6px);
     }
 
     span:nth-child(2) {
@@ -208,7 +208,7 @@
     }
 
     span:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
+      transform: rotate(-45deg) translate(5px, -6px);
     }
   }
 }
@@ -223,7 +223,7 @@
     border: 1px solid grey;
     padding: 10px 0;
     flex-direction: column;
-    top: 80px;
+    top: 75px;
     width: 100%;
     background: #fff;
     z-index: -1;

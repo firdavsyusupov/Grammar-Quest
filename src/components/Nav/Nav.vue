@@ -6,22 +6,16 @@ import BottomIcon from "@/components/icons/BottomIcon.vue";
 import { onMounted, onUnmounted, ref } from "vue";
 import "./nav.scss";
 
-const isOpen = ref(false); // Main menu toggle
-const dropdownOpen = ref(false); // Dropdown menu toggle
+const isOpen = ref(false);
+const dropdownOpen = ref(false);
 
-// Toggle the main menu
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
 };
 
-// Toggle the dropdown menu
-const toggleDropdown = () => {
-  dropdownOpen.value = !dropdownOpen.value;
-};
-
-// Prevent the menu from closing when clicking on the dropdown
-const stopClickPropagation = (e) => {
+const toggleDropdown = (e) => {
   e.stopPropagation();
+  dropdownOpen.value = !dropdownOpen.value;
 };
 
 const closeMenu = (e) => {
@@ -49,6 +43,7 @@ onUnmounted(() => {
   document.removeEventListener("scroll", closeMenuOnScroll);
 });
 </script>
+
 <template>
   <nav class="nav">
     <div class="container">
@@ -79,10 +74,10 @@ onUnmounted(() => {
           <li class="nav__item">
             <RouterLink to="/chat" class="nav__link">Chat</RouterLink>
           </li>
-          <!-- <li class="nav__item">
-            <a href="#" class="nav__link">statistics</a>
-          </li> -->
-          <li class="nav__item nav__item2" @click="toggleDropdown" @click.stop>
+          <li
+            class="nav__item nav__item2"
+            @click="toggleDropdown"
+          >
             <a href="#" class="nav__link">games</a>
             <BottomIcon :size="25" class="bottom-icon" />
             <div class="nav-dropdown" v-show="dropdownOpen">
@@ -98,23 +93,7 @@ onUnmounted(() => {
           </li>
         </ul>
       </div>
-      <div class="nav__login">
-        <!-- <div class="nav__login-name">
-          <p class="nav__login-name-img">F</p>
-          <p class="nav__login-name-text">Firdavs</p>
-        </div> -->
-
-        <!-- <div class="nav__signout">
-          <p class="nav__signout-text">sign out</p>
-          <SignOut :size="25" />
-        </div> -->
-
-        <!-- <div class="nav__signout">
-          <p class="nav__signout-text">log in</p>
-          <RightIcon :size="25" />
-        </div>
-        <Signup :text="'sign up'"/> -->
-      </div>
+      <div class="nav__login"></div>
     </div>
   </nav>
 </template>
