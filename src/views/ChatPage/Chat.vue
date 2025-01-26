@@ -156,7 +156,7 @@ const sendMessageVoice = async () => {
     messages.value[messages.value.length - 1] = botMessage;
     modalMessage.value = botMessage.content;
     saveMessagesToLocalStorage();
-    readBotMessage(botMessage.content);
+    readBotMessage(botMessage.content); // Ovoz chiqarishni boshlash
   } catch {
     modalMessage.value = "Failed to get a response. Please try again.";
     isReading.value = false;
@@ -177,10 +177,16 @@ const readBotMessage = (text) => {
 
   utterance.onend = () => {
     isReading.value = false;
+    modalMessage.value = "You can speak again...";
+    if (voiceMode.value) {
+      recognition.start();
+      recognizing.value = true;
+    }
   };
 
   speechSynthesis.speak(utterance);
 };
+
 
 const stopReading = () => {
   speechSynthesis.cancel();
@@ -221,15 +227,61 @@ onMounted(() => {
     recognition.lang = "en-US";
     recognition.continuous = false;
 
-    recognition.onresult = (event) => {
+    recognition.onresult = async (event) => {
       const transcript = event.results[0][0].transcript;
       userInput.value = transcript;
       modalMessage.value = transcript;
+
+      // Determine language based on transcript
+      const isRussian = /[а-яё]/i.test(transcript);
+      recognition.lang = isRussian ? "ru-RU" : "en-US";
+
+      // Adjust ChatGPT response based on language
+      const languagePrompt = isRussian
+        ? "Вы - образовательный помощник, который помогает пользователям улучшать их знания английского языка."
+        : "You are an educational assistant focused on helping users improve their English.";
+
+      try {
+        const res = await fetch("https://api.openai.com/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
+          },
+          body: JSON.stringify({
+            model: "gpt-4o-mini",
+            messages: [
+              { role: "system", content: languagePrompt },
+              { role: "user", content: transcript },
+            ],
+          }),
+        });
+
+        const data = await res.json();
+        const botMessage = {
+          content: data.choices[0].message.content,
+          role: "assistant",
+          time: new Date().toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+          }),
+          isVoice: true,
+        };
+
+        messages.value.push(botMessage);
+        modalMessage.value = botMessage.content;
+        saveMessagesToLocalStorage();
+
+        // Read the bot's message aloud in the detected language
+        readBotMessage(botMessage.content);
+      } catch {
+        modalMessage.value = "Failed to get a response. Please try again.";
+      }
     };
 
     recognition.onend = () => {
       recognizing.value = false;
-      if (voiceMode.value) {
+      if (voiceMode.value && !isReading.value) {
         modalMessage.value = userInput.value || "You can speak again...";
         recognition.start();
         recognizing.value = true;
@@ -245,6 +297,7 @@ const closeModal = () => {
   recognition.stop();
   isReading.value = false;
   speechSynthesis.cancel();
+  userInput.value = "";
 };
 </script>
 
