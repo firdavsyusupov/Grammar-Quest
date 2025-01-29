@@ -1,69 +1,76 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, watch } from "vue";
 import { useRouter } from "vue-router";
 import cardsData from "@/data/cardRu.json";
-import uz from "@/assets/images/uz.png";
-import ru from "@/assets/images/ru.png";
 import "./main.scss";
 
 const router = useRouter();
 const completedCards = ref([]);
-const selectedLanguage = ref("ru");
 const selectedLevel = ref("A1");
-const dropdownVisible = ref(false);
-const texts = ref({ selectedLan: "Tanlangan til:" });
 const cardsWithActiveState = ref([]);
 const selectedCard = ref(null);
-
-const updateSelectedLanText = () => {
-  texts.value.selectedLan =
-    selectedLanguage.value === "uz" ? "Tanlangan til:" : "Выбранный язык:";
-};
+const lastCompletedCard = ref(null);
+const answeredQuestions = ref(0);
+const currentQuestionIndex = ref(0);
 
 const loadCompletedCards = () => {
-  completedCards.value =
-    JSON.parse(localStorage.getItem("completedCards")) || [];
+  completedCards.value = JSON.parse(localStorage.getItem("completedCards")) || [
+    1,
+  ];
+  lastCompletedCard.value =
+    completedCards.value.length > 0 ? completedCards.value.at(-1) : null;
 };
 
-const saveCompletedCards = () => {
-  localStorage.setItem("completedCards", JSON.stringify(completedCards.value));
+const loadCurrentQuestionIndex = () => {
+  const storedIndex = localStorage.getItem("currentQuestionIndex_1") || 0;
+  if (storedIndex !== null) {
+    currentQuestionIndex.value = JSON.parse(storedIndex);
+  }
 };
 
 const generateLabel = (level, index) => {
   const levels = ["A1", "A2", "B1", "B2", "C1", "C2"];
-
-  const levelIndex = levels.indexOf(level);
-
-  let totalCardsBeforeLevel = 0;
-  for (let i = 0; i < levelIndex; i++) {
-    totalCardsBeforeLevel += cardsData.filter(
-      (card) => card.level === levels[i]
-    ).length;
-  }
-
+  let totalCardsBeforeLevel = levels
+    .slice(0, levels.indexOf(level))
+    .reduce(
+      (acc, cur) => acc + cardsData.filter((card) => card.level === cur).length,
+      0
+    );
   return totalCardsBeforeLevel + index + 1;
+};
+
+const updateProgress = (card) => {
+  const answeredQuestionsForCard = completedCards.value.filter(
+    (completedCardId) => completedCardId === card.id
+  ).length;
+
+  const totalQuestions = card.questions?.length || 1;
+
+  const progress =
+    totalQuestions > 0
+      ? Math.round((answeredQuestionsForCard / totalQuestions) * 100)
+      : 0;
+
+  return progress;
 };
 
 const updateCardStyles = () => {
   cardsWithActiveState.value = cardsData
     .filter((card) => card.level === selectedLevel.value)
-    .map((card, index) => ({
-      ...card,
-      isActive: completedCards.value.includes(card.id) || card.id === 1,
-      alignRight: index % 2 === 0,
-      label: generateLabel(card.level, index),
-    }));
-};
-
-const toggleDropdown = () => {
-  dropdownVisible.value = !dropdownVisible.value;
-};
-
-const selectLanguage = (lang) => {
-  selectedLanguage.value = lang;
-  localStorage.setItem("selectedLanguage", lang);
-  updateSelectedLanText();
-  dropdownVisible.value = false;
+    .map((card, index) => {
+      const progress = updateProgress(card);
+      const isActive = completedCards.value.includes(card.id) || card.id === 1;
+      const isStart = card.id === lastCompletedCard.value;
+      return {
+        ...card,
+        isActive,
+        alignRight: index % 2 === 0,
+        label: generateLabel(card.level, index),
+        isStart,
+        progress,
+        progressPercentage: progress,
+      };
+    });
 };
 
 const goToQuestionsPage = (id) => {
@@ -75,13 +82,48 @@ const goToQuestionsPage = (id) => {
   }
 };
 
+const selectLevel = (level) => {
+  selectedLevel.value = level;
+  updateCardStyles();
+};
+
+const getDifficulty = (level) => {
+  if (["A1", "A2"].includes(level)) return "Easy";
+  if (["B1", "B2"].includes(level)) return "Medium";
+  return "Hard";
+};
+
+const getDifficultyClass = (level) => {
+  if (["A1", "A2"].includes(level)) return "easy";
+  if (["B1", "B2"].includes(level)) return "medium";
+  return "hard";
+};
+
+const getCardClasses = (card) => ({
+  deactive: !card.isActive,
+  "align-right": card.alignRight,
+  completed: card.progress > 0,
+  "progress-filled": card.progress > 0,
+});
+
+watch(currentQuestionIndex, (newIndex) => {
+  localStorage.setItem("currentQuestionIndex", JSON.stringify(newIndex));
+});
+
 onMounted(() => {
   loadCompletedCards();
-  selectedLanguage.value = localStorage.getItem("selectedLanguage") || "ru";
-  updateSelectedLanText();
+  loadCurrentQuestionIndex();
   updateCardStyles();
 });
+
+const getRectanglePerimeter = (width, height, id) => {
+  const storedIndex = JSON.parse(
+    localStorage.getItem(`currentQuestionIndex_${id}`) || "0"
+  );
+  return storedIndex * 2 * (width + height);
+};
 </script>
+
 <template>
   <section class="main">
     <div class="container">
@@ -91,61 +133,71 @@ onMounted(() => {
           class="level"
           v-for="level in ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']"
           :key="level"
-          @click="
-            selectedLevel = level;
-            updateCardStyles();
-          "
+          @click="selectLevel(level)"
           :class="{ active: selectedLevel === level }"
         >
           {{ level }}
+          <span class="level-name" :class="getDifficultyClass(level)">
+            {{ getDifficulty(level) }}
+          </span>
         </div>
-      </div>
-      <div class="lan">
-        <h3>{{ texts.selectedLan }}</h3>
-        <div class="lan-img" @click="toggleDropdown">
-          <img :src="selectedLanguage === 'ru' ? ru : uz" alt="Language" />
-        </div>
-        <transition name="fade">
-          <div class="lan-dropdown" v-if="dropdownVisible">
-            <div class="uz" @click="selectLanguage('uz')">
-              <span>uz</span>
-              <img :src="uz" alt="Uzbek" />
-            </div>
-            <hr />
-            <div class="ru" @click="selectLanguage('ru')">
-              <span>ru</span>
-              <img :src="ru" alt="Russian" />
-            </div>
-          </div>
-        </transition>
       </div>
       <div class="con">
+        <img
+          src="@/assets/images/lessons-img1.svg"
+          alt="Image"
+          class="lessons-img"
+        />
+        <img
+          src="@/assets/images/lessons-img2.svg"
+          alt="Image"
+          class="lessons-img lessons-img2"
+        />
         <div class="cards">
           <div
             class="card"
-            :class="{
-              deactive: !card.isActive,
-              'align-right': card.alignRight,
-            }"
+            :class="getCardClasses(card)"
             v-for="card in cardsWithActiveState"
             :key="card.id"
             @click="goToQuestionsPage(card.id)"
           >
+            <div class="anim">
+              <div v-if="card.isStart" class="start-label">Start</div>
+              <span v-if="card.isStart" class="st"></span>
+            </div>
             {{ card.label }}
-          </div>
-        </div>
+            <div v-if="card.progress > 0" class="progress-rectangle">
+              <svg class="progress-svg" viewBox="0 0 160 100">
+                <rect
+                  x="0"
+                  y="0"
+                  width="160"
+                  height="100"
+                  rx="20"
+                  ry="20"
+                  class="circle-background"
+                />
 
-        <div v-if="selectedCard" class="questions-section">
-          <div v-for="(question, index) in selectedCard.questions" :key="index">
-            <p>{{ question.question }}</p>
-            <div>
-              <button
-                v-for="(option, idx) in question.options"
-                :key="idx"
-                @click="checkAnswer(option, question.correctAnswer)"
-              >
-                {{ option }}
-              </button>
+                <rect
+                  x="0"
+                  y="0"
+                  width="160"
+                  height="100"
+                  rx="30"
+                  ry="30"
+                  class="circle-progress-bar"
+                  stroke-width="10"
+                  stroke="blue"
+                  fill="transparent"
+                  stroke-linecap="round"
+                  :style="{
+                    strokeDasharray: getRectanglePerimeter(160, 100, card.id),
+                    strokeDashoffset:
+                      getRectanglePerimeter(160, 100, card.id) *
+                      (1 - card.progressPercentage / 100),
+                  }"
+                />
+              </svg>
             </div>
           </div>
         </div>

@@ -8,13 +8,20 @@
   z-index: 11111;
   background: #fff;
   margin-bottom: 100px;
+  &.nav--green {
+    background: #ffefd7;
+    opacity: 1;
+  }
   & .container {
     display: flex;
     align-items: center;
-    padding: 25px 0px;
+    padding: 25px 10px;
     justify-content: space-between;
     @media screen and (max-width: 550px) {
       flex-direction: column;
+    }
+    &.nav-con {
+      padding: 7px 0;
     }
   }
   &__items {
@@ -86,13 +93,12 @@
         }
       }
     }
-    
+
     .nav__item2 .nav-dropdown {
       transform: translateY(0) scale(1);
       opacity: 1;
       z-index: 1;
     }
-    
   }
   &__links {
     display: flex;
@@ -104,6 +110,14 @@
   }
   & .logo {
     cursor: pointer;
+    border-right: 1px solid #000;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+      padding: 0;
+      border-right: none;
+    }
   }
   &__link {
     color: #757575;
@@ -243,10 +257,92 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
+
+
 
 .nav__items.active {
   z-index: 2;
   transform: scale(1) translateY(0);
+}
+
+.lang {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.lan {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: white;
+  padding: 10px 10px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  font-size: 12px;
+  height: 60px;
+}
+
+.lan-img {
+  cursor: pointer;
+}
+
+.lan-img img {
+  height: 40px;
+  width: 40px;
+}
+
+.lan-dropdown {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lan-dropdown div {
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  width: 100%;
+  justify-content: center;
+  transition: background 0.3s;
+  height: 60px;
+  & img {
+    height: 50px;
+  }
+}
+
+.lan-dropdown div:hover {
+  background: #eceff1;
+}
+
+.lan-dropdown .selected {
+  background: rgb(197, 197, 197);
+  color: white;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }

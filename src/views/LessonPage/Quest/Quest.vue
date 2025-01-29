@@ -40,14 +40,25 @@ const unlockNextCard = (id) => {
   }
 };
 
+const saveCurrentQuestionIndex = () => {
+  localStorage.setItem(`currentQuestionIndex_${cardId.value + 1}`, currentQuestionIndex.value);
+};
+
 onMounted(() => {
   const id = Number(route.params.id);
 
   if (!isNaN(id) && cardsData.length > 0) {
-    cardId.value = id - 1;
+    cardId.value = id - 1; 
     loadCompletedCards();
+    currentQuestionIndex.value = 0;
+    const savedIndex = localStorage.getItem(`currentQuestionIndex_${id}`);
+    if (savedIndex) {
+      currentQuestionIndex.value = Number(savedIndex);
+    }
   }
 });
+
+
 
 const checkAnswer = () => {
   const currentQData = currentQuestion.value;
@@ -85,12 +96,15 @@ const nextQuestion = () => {
       }
     }
   }
+  saveCurrentQuestionIndex();
   resetState();
 };
+
 
 const reviewIncorrectAnswers = () => {
   currentQuestionIndex.value = 0;
   reviewButtonClicked.value = true;
+  saveCurrentQuestionIndex();
   resetState();
 };
 
@@ -101,7 +115,7 @@ const exit = (unlock = false) => {
   } else {
     showModal.value = true;
   }
-
+  saveCurrentQuestionIndex();
   router.push("/lessons");
 };
 
@@ -141,7 +155,9 @@ const currentQuestion = computed(() => {
 function quesexit() {
   router.push("/lessons");
 }
+
 </script>
+
 
 <template>
   <div class="questions-page">
