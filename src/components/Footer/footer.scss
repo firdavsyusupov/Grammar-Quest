@@ -1,7 +1,4 @@
 .footer {
-  &2 {
-    background: #ffefd7;
-  }
   background: #f6f5f4;
   & .container {
     padding: 40px 10px;
@@ -76,4 +73,8 @@
       }
     }
   }
+}
+
+.footer2 {
+  background: #ffefd7;
 }
