@@ -1,9 +1,13 @@
 <script setup>
+import { RouterLink, useRoute } from "vue-router";
+import { computed } from "vue";
+
+const route = useRoute();
+const isLessonsRoute = computed(() => route.path === "/lessons");
 import "./footer.scss";
-import { RouterLink } from "vue-router";
 </script>
 <template>
-  <footer class="footer">
+  <footer class="footer" :class="{ 'footer2': isLessonsRoute }">
     <div class="container">
       <div class="footer-top-block">
         <ul class="footer-top-block-blog">

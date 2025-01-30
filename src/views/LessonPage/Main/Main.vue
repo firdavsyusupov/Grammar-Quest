@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, watch } from "vue";
 import { useRouter } from "vue-router";
+import DisableImg from "@/assets/images/disable-card-img.svg";
 import cardsData from "@/data/cardRu.json";
 import "./main.scss";
 
@@ -21,11 +22,9 @@ const loadCompletedCards = () => {
     completedCards.value.length > 0 ? completedCards.value.at(-1) : null;
 };
 
-const loadCurrentQuestionIndex = () => {
-  const storedIndex = localStorage.getItem("currentQuestionIndex_1") || 0;
-  if (storedIndex !== null) {
-    currentQuestionIndex.value = JSON.parse(storedIndex);
-  }
+const loadCurrentQuestionIndex = (cardId) => {
+  const storedIndex = localStorage.getItem(`currentQuestionIndex_${cardId}`);
+  return storedIndex ? JSON.parse(storedIndex) : 1;
 };
 
 const generateLabel = (level, index) => {
@@ -40,18 +39,11 @@ const generateLabel = (level, index) => {
 };
 
 const updateProgress = (card) => {
-  const answeredQuestionsForCard = completedCards.value.filter(
-    (completedCardId) => completedCardId === card.id
-  ).length;
-
+  const currentIndex = loadCurrentQuestionIndex(card.id);
   const totalQuestions = card.questions?.length || 1;
-
-  const progress =
-    totalQuestions > 0
-      ? Math.round((answeredQuestionsForCard / totalQuestions) * 100)
-      : 0;
-
-  return progress;
+  return currentIndex > 1 && totalQuestions > 0
+    ? Math.round((currentIndex / totalQuestions) * 100)
+    : 0;
 };
 
 const updateCardStyles = () => {
@@ -74,10 +66,14 @@ const updateCardStyles = () => {
 };
 
 const goToQuestionsPage = (id) => {
-  if (cardsWithActiveState.value.find((card) => card.id === id)?.isActive) {
-    selectedCard.value = cardsWithActiveState.value.find(
-      (card) => card.id === id
+  const card = cardsWithActiveState.value.find((card) => card.id === id);
+  if (card?.isActive) {
+    selectedCard.value = card;
+    localStorage.setItem(
+      `currentQuestionIndex_${id}`,
+      JSON.stringify(loadCurrentQuestionIndex(id))
     );
+
     router.push({ name: "Questions", params: { id } });
   }
 };
@@ -107,7 +103,12 @@ const getCardClasses = (card) => ({
 });
 
 watch(currentQuestionIndex, (newIndex) => {
-  localStorage.setItem("currentQuestionIndex", JSON.stringify(newIndex));
+  if (selectedCard.value) {
+    localStorage.setItem(
+      `currentQuestionIndex_${selectedCard.value.id}`,
+      JSON.stringify(newIndex)
+    );
+  }
 });
 
 onMounted(() => {
@@ -120,7 +121,8 @@ const getRectanglePerimeter = (width, height, id) => {
   const storedIndex = JSON.parse(
     localStorage.getItem(`currentQuestionIndex_${id}`) || "0"
   );
-  return storedIndex * 2 * (width + height);
+
+  return storedIndex * (width + height);
 };
 </script>
 
@@ -165,8 +167,17 @@ const getRectanglePerimeter = (width, height, id) => {
               <div v-if="card.isStart" class="start-label">Start</div>
               <span v-if="card.isStart" class="st"></span>
             </div>
+            <img
+              v-if="!card.isActive"
+              :src="DisableImg"
+              alt="Disabled"
+              class="disable-overlay"
+            />
             {{ card.label }}
-            <div v-if="card.progress > 0" class="progress-rectangle">
+            <div
+              v-if="card.progress > 0 && card.isActive"
+              class="progress-rectangle"
+            >
               <svg class="progress-svg" viewBox="0 0 160 100">
                 <rect
                   x="0"
@@ -177,7 +188,6 @@ const getRectanglePerimeter = (width, height, id) => {
                   ry="20"
                   class="circle-background"
                 />
-
                 <rect
                   x="0"
                   y="0"
