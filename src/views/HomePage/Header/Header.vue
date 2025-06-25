@@ -15,7 +15,9 @@ import "./Header.scss";
         <div class="header__text-blog-text2">
           Practice your English and learn new things with the platform.
         </div>
-        <HeaderButton :text="'About platform'" :icon='false' />
+        <RouterLink to="/platform">
+          <HeaderButton :text="'About platform'" :icon='false' />
+        </RouterLink>
         <div class="header__text-blog-info">
           <div class="header__text-blog-info-card header__text-blog-info-card1">
             <div class="header__text-blog-info-card-top">

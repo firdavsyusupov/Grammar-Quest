@@ -1,69 +1,130 @@
 <script setup>
-import { RouterLink } from 'vue-router'
-
-import RightIcon from "../../components/icons/RightIcon.vue";
-import Signup from "@/UI/Buttons/SignUp/SignUp.vue"
-import BottomIcon from "@/components/icons/BottomIcon.vue"
+import { RouterLink, useRoute } from "vue-router";
+import { onMounted, onUnmounted, ref, computed } from "vue";
+import RightIcon from "@/components/icons/RightIcon.vue";
+import BottomIcon from "@/components/icons/BottomIcon.vue";
+import uz from "@/assets/images/uz.png";
+import ru from "@/assets/images/ru.png";
 import "./nav.scss";
+
+const isOpen = ref(false);
+const dropdownOpen = ref(false);
+const route = useRoute();
+const isLessonsRoute = computed(() => route.path === "/lessons");
+const selectedLanguage = ref(localStorage.getItem("selectedLanguage") || "ru");
+const texts = ref({
+  selectedLan:
+    selectedLanguage.value === "uz" ? "Tanlangan til:" : "Выбранный язык:",
+});
+const langDropdownOpen = ref(false);
+
+const toggleMenu = () => (isOpen.value = !isOpen.value);
+const toggleDropdown = (e) => {
+  e.stopPropagation();
+  dropdownOpen.value = !dropdownOpen.value;
+};
+const toggleLangDropdown = (e) => {
+  e.stopPropagation();
+  langDropdownOpen.value = !langDropdownOpen.value;
+};
+const selectLanguage = (lang) => {
+  selectedLanguage.value = lang;
+  localStorage.setItem("selectedLanguage", lang);
+  texts.value.selectedLan =
+    lang === "uz" ? "Tanlangan til:" : "Выбранный язык:";
+  langDropdownOpen.value = false;
+};
+
+const closeMenu = (e) => {
+  if (!e.target.closest(".bar") && !e.target.closest(".nav__links"))
+    isOpen.value = false;
+  if (!e.target.closest(".nav__item2") && dropdownOpen.value)
+    dropdownOpen.value = false;
+  if (!e.target.closest(".lan") && langDropdownOpen.value)
+    langDropdownOpen.value = false;
+};
+const closeMenuOnScroll = () => {
+  if (isOpen.value) isOpen.value = false;
+};
+
+onMounted(() => {
+  document.addEventListener("click", closeMenu);
+  document.addEventListener("scroll", closeMenuOnScroll);
+});
+onUnmounted(() => {
+  document.removeEventListener("click", closeMenu);
+  document.removeEventListener("scroll", closeMenuOnScroll);
+});
 </script>
+
 <template>
-  <nav class="nav">
-    <div class="container">
+  <nav class="nav" :class="{ 'nav--green': isLessonsRoute }">
+    <div class="container" :class="{ 'nav-con': isLessonsRoute }">
       <div class="nav__links">
-        <RouterLink to="/" class="logo">
-          <img src="@/assets/images/logo.svg" alt="" class="logo-img" />
-        </RouterLink>
-        <ul class="nav__items">
+        <div class="add-padding">
+          <RouterLink to="/" class="logo">
+            <img src="@/assets/images/logo.svg" alt="Logo" class="logo-img" />
+          </RouterLink>
+          <div class="bar" :class="{ open: isOpen }" @click="toggleMenu">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <ul class="nav__items" :class="{ active: isOpen }" @click="toggleMenu">
           <li class="nav__item">
-            <RouterLink to="/" class="nav__link">home</RouterLink>
+            <RouterLink to="/" class="nav__link">Home</RouterLink>
           </li>
           <li class="nav__item">
-            <RouterLink to="/textbook" class="nav__link">textbook</RouterLink>
+            <RouterLink to="/textbook" class="nav__link">Textbook</RouterLink>
           </li>
           <li class="nav__item">
-            <RouterLink to="/about" class="nav__link">our team</RouterLink>
+            <RouterLink to="/about" class="nav__link">Our Team</RouterLink>
           </li>
-           <li class="nav__item">
-            <RouterLink to="/platform" class="nav__link">platforms</RouterLink>
+          <li class="nav__item">
+            <RouterLink to="/platform" class="nav__link">Platforms</RouterLink>
           </li>
           <li class="nav__item">
             <RouterLink to="/chat" class="nav__link">Chat</RouterLink>
           </li>
-          <!-- <li class="nav__item">
-            <a href="#" class="nav__link">statistics</a>
-          </li> -->
-          <li class="nav__item nav__item2">
-            <a href="#" class="nav__link">games</a>
-            <BottomIcon :size="25" class="bottom-icon"/>
-            <div class="nav-dropdown">
+          <li class="nav__item nav__item2" @click="toggleDropdown">
+            <a href="#" class="nav__link">Games</a>
+            <BottomIcon :size="25" class="bottom-icon" />
+            <div class="nav-dropdown" v-show="dropdownOpen">
               <RouterLink to="/textbook" class="nav-dropdown-block">
                 <h5 class="nav-dropdown-block-text">Sprint</h5>
-                <RightIcon :size="20" class="nav-dropdown-block-icon"/>
+                <RightIcon :size="20" class="nav-dropdown-block-icon" />
               </RouterLink>
               <RouterLink to="/lessons" class="nav-dropdown-block">
                 <h5 class="nav-dropdown-block-text">Lessons</h5>
-                <RightIcon :size="20" class="nav-dropdown-block-icon"/>
+                <RightIcon :size="20" class="nav-dropdown-block-icon" />
               </RouterLink>
             </div>
           </li>
         </ul>
       </div>
-      <div class="nav__login">
-        <!-- <div class="nav__login-name">
-          <p class="nav__login-name-img">F</p>
-          <p class="nav__login-name-text">Firdavs</p>
-        </div> -->
-
-        <!-- <div class="nav__signout">
-          <p class="nav__signout-text">sign out</p>
-          <SignOut :size="25" />
-        </div> -->
-
-        <!-- <div class="nav__signout">
-          <p class="nav__signout-text">log in</p>
-          <RightIcon :size="25" />
+      <div v-if="route.path === '/lessons'" class="lan" @click="toggleLangDropdown">
+        <h3>{{ texts.selectedLan }}</h3>
+        <div class="lan-img">
+          <img :src="selectedLanguage === 'ru' ? ru : uz" alt="Language" />
         </div>
-        <Signup :text="'sign up'"/> -->
+        <transition name="fade">
+          <div class="lan-dropdown" v-if="langDropdownOpen">
+            <div
+              class="uz"
+              :class="{ selected: selectedLanguage === 'uz' }"
+              @click="selectLanguage('uz')"
+            >
+              <img :src="uz" alt="Uzbek" />
+            </div>
+            <hr />
+            <div
+              class="ru"
+              :class="{ selected: selectedLanguage === 'ru' }"
+              @click="selectLanguage('ru')"
+            >
+              <img :src="ru" alt="Russian" />
+            </div>
+          </div>
+        </transition>
       </div>
     </div>
   </nav>
