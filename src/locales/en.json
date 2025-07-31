@@ -1,0 +1,45 @@
+{
+  "questions": [
+    "Choose the translation of the word 'milk'",
+    "Choose the translation of the word 'salt'",
+    "Choose the translation of the word 'hot'",
+    "Choose the translation of the word 'seven'",
+    "Choose the translation of the number 'two'",
+    "Choose the translation of the letter 'A'",
+    "Choose the translation of the word 'small'",
+    "Choose the translation of the word 'yellow'",
+    "Choose the translation of the word 'Washington'",
+    "Choose the translation of the number 'eight'",
+    "Choose the translation of the word 'Pacific'",
+    "Choose the translation of the word 'Mars'",
+    "Choose the translation of the word 'honey'",
+    "Choose the translation of the word 'continent'",
+    "Choose the translation of the word 'English'",
+    "Choose the translation of the word 'Paris'",
+    "Choose the translation of the word 'avocado'",
+    "Choose the translation of the word 'lion'",
+    "Choose the translation of the number 'twenty-five'",
+    "Choose the translation of the word 'winter'",
+    "Choose the translation of the word 'cheetah'",
+    "Choose the translation of the word 'Tokyo'",
+    "Choose the translation of the word 'dolphin'",
+    "Choose the translation of the number 'six'",
+    "Choose the translation of the word 'carrot'"
+  ],
+  "buttons": {
+    "skip": "Skip",
+    "check": "Check",
+    "nextQuestion": "Next Question",
+    "reviewIncorrectAnswers": "Review Incorrect Answers",
+    "exit": "Exit",
+    "yesExit": "Yes, exit",
+    "cancel": "Cancel"
+  },
+  "texts": {
+    "congratulations": "Congratulations!",
+    "completedAllQuestions": "You have answered all the questions.",
+    "areYouSureExit": "Are you sure you want to exit?",
+    "noQuestionsAvailable": "No questions available for this card.",
+    "selectedLan": "Selected language:"
+  }
+}

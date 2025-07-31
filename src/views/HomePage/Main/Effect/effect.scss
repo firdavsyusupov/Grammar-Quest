@@ -1,0 +1,110 @@
+.effect {
+  margin-bottom: 100px;
+  & .container {
+    background: url(@/assets/images/main/Promo.svg) no-repeat center / cover;
+    min-height: 650px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+  &-img {
+    position: absolute;
+    left: 90px;
+    bottom: 50px;
+  }
+
+  &-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: 100%;
+    gap: 10px;
+    margin-right: 100px;
+    & h2 {
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 1.17391;
+      letter-spacing: -0.02em;
+      color: #232323;
+      margin-bottom: 10px;
+      & span {
+        background: linear-gradient(132deg, #2e90d1 0%, #78258d 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+  &-card {
+    display: flex;
+    gap: 20px;
+    & div {
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2e90d1 0%, #78258d 100%);
+      width: 15px;
+      height: 15px;
+    }
+    & p {
+      width: 90%;
+    }
+  }
+}
+.work {
+  margin-bottom: 100px;
+  &-title {
+    font-weight: 900;
+    font-size: 46px;
+    margin-bottom: 60px;
+    line-height: 1.17391;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #232323;
+  }
+  &-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+  }
+  &-card {
+    border-radius: 20px;
+    padding: 40px;
+    width: 453px;
+    height: 480px;
+    box-shadow: 0 4px 20px 0 #f7f6fb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-num {
+      border-radius: 100px;
+      background: #2e90d1;
+      width: 59px;
+      height: 28px;
+      font-weight: 700;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.13;
+      letter-spacing: 0.01em;
+      color: #fff;
+      &2 {
+        background: #e42125;
+      }
+    }
+    &-title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.33333;
+      color: #232323;
+    }
+    &-text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      letter-spacing: 0.02em;
+      color: #585858;
+    }
+  }
+}

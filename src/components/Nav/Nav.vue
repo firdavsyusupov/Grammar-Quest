@@ -59,49 +59,65 @@ onUnmounted(() => {
 
 <template>
   <nav class="nav" :class="{ 'nav--green': isLessonsRoute }">
-    <div class="container" :class="{ 'nav-con': isLessonsRoute }">
+    <div class="navContainer" :class="{ 'nav-con': isLessonsRoute }">
       <div class="nav__links">
-        <div class="add-padding">
-          <RouterLink to="/" class="logo">
-            <img src="@/assets/images/logo.svg" alt="Logo" class="logo-img" />
-          </RouterLink>
           <div class="bar" :class="{ open: isOpen }" @click="toggleMenu">
             <span></span><span></span><span></span>
           </div>
+        <div class="parent-div">
+          <RouterLink to="/" class="logo">
+            <img
+              src="@/assets/images/logo-e-course.svg"
+              style="width: 70px"
+              alt="Logo"
+              class="logo-img"
+            />
+          </RouterLink>
+          <ul
+            class="nav__items"
+            :class="{ active: isOpen }"
+            @click="toggleMenu"
+          >
+            <li class="nav__item">
+              <RouterLink to="/" class="nav__link">Home</RouterLink>
+            </li>
+            <li class="nav__item">
+              <RouterLink to="/textbook" class="nav__link">Textbook</RouterLink>
+            </li>
+            <li class="nav__item">
+              <RouterLink to="/about" class="nav__link">Our Team</RouterLink>
+            </li>
+            <li class="nav__item">
+              <RouterLink to="/platform" class="nav__link"
+                >Platforms</RouterLink
+              >
+            </li>
+            <li class="nav__item">
+              <RouterLink to="/chat" class="nav__link">Chat</RouterLink>
+            </li>
+            <li class="nav__item nav__item2" @click="toggleDropdown">
+              <a href="#" class="nav__link">Games</a>
+              <BottomIcon :size="25" class="bottom-icon" />
+              <div class="nav-dropdown" v-show="dropdownOpen">
+                <RouterLink to="/textbook" class="nav-dropdown-block">
+                  <h5 class="nav-dropdown-block-text">Sprint</h5>
+                  <RightIcon :size="20" class="nav-dropdown-block-icon" />
+                </RouterLink>
+                <RouterLink to="/lessons" class="nav-dropdown-block">
+                  <h5 class="nav-dropdown-block-text">Lessons</h5>
+                  <RightIcon :size="20" class="nav-dropdown-block-icon" />
+                </RouterLink>
+              </div>
+            </li>
+          </ul>
         </div>
-        <ul class="nav__items" :class="{ active: isOpen }" @click="toggleMenu">
-          <li class="nav__item">
-            <RouterLink to="/" class="nav__link">Home</RouterLink>
-          </li>
-          <li class="nav__item">
-            <RouterLink to="/textbook" class="nav__link">Textbook</RouterLink>
-          </li>
-          <li class="nav__item">
-            <RouterLink to="/about" class="nav__link">Our Team</RouterLink>
-          </li>
-          <li class="nav__item">
-            <RouterLink to="/platform" class="nav__link">Platforms</RouterLink>
-          </li>
-          <li class="nav__item">
-            <RouterLink to="/chat" class="nav__link">Chat</RouterLink>
-          </li>
-          <li class="nav__item nav__item2" @click="toggleDropdown">
-            <a href="#" class="nav__link">Games</a>
-            <BottomIcon :size="25" class="bottom-icon" />
-            <div class="nav-dropdown" v-show="dropdownOpen">
-              <RouterLink to="/textbook" class="nav-dropdown-block">
-                <h5 class="nav-dropdown-block-text">Sprint</h5>
-                <RightIcon :size="20" class="nav-dropdown-block-icon" />
-              </RouterLink>
-              <RouterLink to="/lessons" class="nav-dropdown-block">
-                <h5 class="nav-dropdown-block-text">Lessons</h5>
-                <RightIcon :size="20" class="nav-dropdown-block-icon" />
-              </RouterLink>
-            </div>
-          </li>
-        </ul>
+        <button class="sign">Войти</button>
       </div>
-      <div v-if="route.path === '/lessons'" class="lan" @click="toggleLangDropdown">
+      <div
+        v-if="route.path === '/lessons'"
+        class="lan"
+        @click="toggleLangDropdown"
+      >
         <h3>{{ texts.selectedLan }}</h3>
         <div class="lan-img">
           <img :src="selectedLanguage === 'ru' ? ru : uz" alt="Language" />

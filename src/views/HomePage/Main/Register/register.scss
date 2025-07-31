@@ -1,0 +1,108 @@
+.register {
+  margin-top: 70px;
+  &-person {
+    position: absolute;
+    right: 8%;
+    top: 25%;
+  }
+  & .container {
+    background: url(@/assets/images/main/register-bg.png) no-repeat center /
+      cover;
+    min-height: 525px;
+    position: relative;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &-title {
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 1.17391;
+    letter-spacing: -0.01em;
+    color: #232323;
+    width: 700px;
+    margin-bottom: 40px;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 25px;
+    & div {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      & .input {
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        width: 407px;
+        height: 48px;
+        padding: 0 20px;
+      }
+    }
+  }
+  & .accept {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    width: 600px;
+    & p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: #828282;
+      & span {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #2e90d1;
+        cursor: pointer;
+      }
+    }
+    & input{
+        width: 25px;
+        height: 25px;
+        border: 1px solid #bb92c6;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+  }
+}
+
+.input-container {
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .input-container input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  }
+  
+  .input-container label {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: white;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #4a90e2;
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  
+  .input-container input:focus + label {
+    opacity: 1;
+  }
