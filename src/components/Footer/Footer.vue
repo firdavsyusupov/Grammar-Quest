@@ -23,23 +23,71 @@ const { t } = useI18n();
           <div class="footer-block">
             <p>{{ t("footer.learning") }}</p>
             <ul>
-              <li><RouterLink class="footer-link" to="/">{{ t("footer.allLanguages") }}</RouterLink></li>
-              <li><RouterLink class="footer-link" to="/">{{ t("footer.forAdults") }}</RouterLink></li>
-              <li><RouterLink class="footer-link" to="/">{{ t("footer.forKids") }}</RouterLink></li>
-              <li><RouterLink class="footer-link" to="/">{{ t("footer.miniCourses") }}</RouterLink></li>
-              <li><RouterLink class="footer-link" to="/">{{ t("footer.trainers") }}</RouterLink></li>
-              <li><RouterLink class="footer-link" to="/">{{ t("footer.individual") }}</RouterLink></li>
+              <li>
+                <RouterLink class="footer-link" to="/">{{
+                  t("footer.allLanguages")
+                }}</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/">{{
+                  t("footer.forAdults")
+                }}</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/">{{
+                  t("footer.forKids")
+                }}</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/">{{
+                  t("footer.miniCourses")
+                }}</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/">{{
+                  t("footer.trainers")
+                }}</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/">{{
+                  t("footer.individual")
+                }}</RouterLink>
+              </li>
             </ul>
           </div>
           <div class="footer-block">
             <p>{{ t("footer.info") }}</p>
             <ul>
-              <li><RouterLink class="footer-link" to="/">{{ t("footer.aboutUs") }}</RouterLink></li>
-              <li><RouterLink class="footer-link" to="/">{{ t("footer.reviews") }}</RouterLink></li>
-              <li><RouterLink class="footer-link" to="/">{{ t("footer.news") }}</RouterLink></li>
-              <li><RouterLink class="footer-link" to="/">{{ t("footer.faq") }}</RouterLink></li>
-              <li><RouterLink class="footer-link" to="/">{{ t("footer.paymentTerms") }}</RouterLink></li>
-              <li><RouterLink class="footer-link" to="/">{{ t("footer.contacts") }}</RouterLink></li>
+              <li>
+                <RouterLink class="footer-link" to="/">{{
+                  t("footer.aboutUs")
+                }}</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/">{{
+                  t("footer.reviews")
+                }}</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/">{{
+                  t("footer.news")
+                }}</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/">{{
+                  t("footer.faq")
+                }}</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/">{{
+                  t("footer.paymentTerms")
+                }}</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/">{{
+                  t("footer.contacts")
+                }}</RouterLink>
+              </li>
             </ul>
           </div>
           <div class="footer-block">
@@ -65,4 +113,3 @@ const { t } = useI18n();
     </div>
   </footer>
 </template>
-

@@ -145,10 +145,8 @@ const logout = () => {
             </li>
           </ul>
         </div>
-        <RouterLink to="/auth" v-if="!store.logged">
-          <button class="sign">{{ t("navbar.login") }}</button>
-        </RouterLink>
-        <div v-if="store.logged" class="logged-actions">
+
+        <div class="flex">
           <div class="language-switch" @click="toggleLangDropdown">
             <img class="flag" :src="getFlag(selectedLanguage)" alt="Lang" />
             <transition name="fade">
@@ -177,11 +175,15 @@ const logout = () => {
               </div>
             </transition>
           </div>
-
-          <button @click="openModal = true" class="signout">
-            <span>{{ t("navbar.logout") }}</span>
-            <SignoutIcon class="signout-icon" :size="30" />
-          </button>
+          <RouterLink to="/auth" v-if="!store.logged">
+            <button class="sign">{{ t("navbar.login") }}</button>
+          </RouterLink>
+          <div v-if="store.logged" class="logged-actions">
+            <button @click="openModal = true" class="signout">
+              <span>{{ t("navbar.logout") }}</span>
+              <SignoutIcon class="signout-icon" :size="30" />
+            </button>
+          </div>
         </div>
       </div>
       <div

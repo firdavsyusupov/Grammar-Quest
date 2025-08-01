@@ -17,6 +17,12 @@
   border: 1px solid #641f76;
 }
 
+.flex{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .modal-overlay{
   position: fixed;
   background: #00000024;
