@@ -6,9 +6,13 @@ import BottomIcon from "@/components/icons/BottomIcon.vue";
 import uz from "@/assets/images/uz.png";
 import ru from "@/assets/images/ru.png";
 import "./nav.scss";
+import { useLoginStore } from "@/stores/login";
+import SignoutIcon from "../icons/SignoutIcon.vue";
 
 const isOpen = ref(false);
 const dropdownOpen = ref(false);
+const openModal = ref(false)
+const store = useLoginStore();
 const route = useRoute();
 const isLessonsRoute = computed(() => route.path === "/lessons");
 const selectedLanguage = ref(localStorage.getItem("selectedLanguage") || "ru");
@@ -55,15 +59,22 @@ onUnmounted(() => {
   document.removeEventListener("click", closeMenu);
   document.removeEventListener("scroll", closeMenuOnScroll);
 });
+
+const logout = () => {
+  store.logout();
+  openModal.value = false;
+  location.reload();
+};
+
 </script>
 
 <template>
   <nav class="nav" :class="{ 'nav--green': isLessonsRoute }">
     <div class="navContainer" :class="{ 'nav-con': isLessonsRoute }">
       <div class="nav__links">
-          <div class="bar" :class="{ open: isOpen }" @click="toggleMenu">
-            <span></span><span></span><span></span>
-          </div>
+        <div class="bar" :class="{ open: isOpen }" @click="toggleMenu">
+          <span></span><span></span><span></span>
+        </div>
         <div class="parent-div">
           <RouterLink to="/" class="logo">
             <img
@@ -111,7 +122,13 @@ onUnmounted(() => {
             </li>
           </ul>
         </div>
-        <button class="sign">Войти</button>
+        <RouterLink to="/auth" v-if="!store.logged">
+          <button class="sign">Войти</button>
+        </RouterLink>
+        <button @click="openModal = true" v-if="store.logged" class="signout">
+          <span>Выйти</span>
+          <SignoutIcon class="signout-icon" :size="30" />
+        </button>
       </div>
       <div
         v-if="route.path === '/lessons'"
@@ -144,4 +161,12 @@ onUnmounted(() => {
       </div>
     </div>
   </nav>
+    <div v-if="openModal" class="modal">
+      <span>Вы действительно хотите <br> выйти из аккаунта?</span>
+      <div class="btns">
+        <button @click="openModal = !openModal" class="cancel">Нет, отмена</button>
+        <button @click="logout" class="confirm">Да, выйти</button>
+      </div>
+    </div>
+    <div @click="openModal = !openModal" v-if="openModal" class="modal-overlay"></div>
 </template>

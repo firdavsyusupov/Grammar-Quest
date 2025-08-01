@@ -1,59 +1,94 @@
 <script setup>
-import { RouterLink, useRoute } from "vue-router";
-import { computed } from "vue";
-
-const route = useRoute();
-const isLessonsRoute = computed(() => route.path === "/lessons");
 import "./footer.scss";
 </script>
 <template>
-  <footer class="footer" :class="{ 'footer2': isLessonsRoute }">
-    <div class="container">
-      <div class="footer-top-block">
-        <ul class="footer-top-block-blog">
-          <li class="footer-top-block-blog-item">
-            <RouterLink to="/" class="footer-top-block-blog-item-link"
-              >home</RouterLink
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-blocks">
+          <div class="footer-block">
+            <img
+              src="@/assets/images/logo-e-course.svg"
+              aria-label="Logo"
+              alt="Logo"
+              class="logo"
+            />
+            <span class="bottom-logo"
+              >Language2Go — интерактивная платформа для легкого, удобного и
+              быстрого изучения иностранных языков.</span
             >
-          </li>
-          <li class="footer-top-block-blog-item">
-            <RouterLink to="/textbook" class="footer-top-block-blog-item-link"
-              >textbook</RouterLink
+          </div>
+          <div class="footer-block">
+            <p>Обучение</p>
+            <ul>
+              <li>
+                <RouterLink class="footer-link" to="/">Все языки</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/">Взрослым</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/"
+                  >Детям и подросткам</RouterLink
+                >
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/">Мини-курсы</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/">Тренажеры</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/"
+                  >Индивидуальные занятия</RouterLink
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block">
+            <p>Информация</p>
+            <ul>
+              <li><RouterLink class="footer-link" to="/">О нас</RouterLink></li>
+              <li>
+                <RouterLink class="footer-link" to="/">Отзывы</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/">Новости</RouterLink>
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/"
+                  >Частые вопросы</RouterLink
+                >
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/"
+                  >Условия оплаты</RouterLink
+                >
+              </li>
+              <li>
+                <RouterLink class="footer-link" to="/">Контакты</RouterLink>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-block">
+            <p>Контакты</p>
+            <p>+7 (495) 156-35-50</p>
+            <span
+              >info@language2go.ru support@language2go.ru <br />
+              <br />
+              101000, Москва, Россия</span
             >
-          </li>
-          <li class="footer-top-block-blog-item">
-            <RouterLink to="/about" class="footer-top-block-blog-item-link"
-              >our team</RouterLink
-            >
-          </li>
-          <li class="footer-top-block-blog-item">
-            <RouterLink to="/platform" class="footer-top-block-blog-item-link"
-              >platforms</RouterLink
-            >
-          </li>
-          <!-- <li class="footer-top-block-blog-item">
-            <a href="#" class="footer-top-block-blog-item-link">statisticks</a>
-          </li> -->
-          <li class="footer-top-block-blog-item">
-            <RouterLink to="/textbook" class="footer-top-block-blog-item-link"
-              >sprint</RouterLink
-            >
-          </li>
-          <!-- <li class="footer-top-block-blog-item">
-            <RouterLink to="/audio" href="#" class="footer-top-block-blog-item-link">audio-call</RouterLink>
-          </li> -->
-        </ul>
-      </div>
-      <hr />
-      <div class="footer-bot-block">
-        <div class="footer-bot-block-icons">
-          <img src="@/assets/images/github-icon.svg" alt="" />
-          <img src="@/assets/images/gt-icon.svg" alt="" />
-          <img src="@/assets/images/youtube-icon.svg" alt="" />
+          </div>
         </div>
-        <div class="footer-bot-block-text">
-          <span>©2025 E-Course. Project for </span>
-          <span class="footer-bot-block-text-p">E-Course</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© 2025 E-Course</span>
+        <div>
+          <p>Правовая оговорка</p>
+          <p>Пользовательское соглашение</p>
+          <p>Политика конфиденциальности</p>
         </div>
       </div>
     </div>

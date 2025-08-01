@@ -1,27 +1,33 @@
 <script setup>
 import HeaderButton from "@/UI/Buttons/HeaderButton/HeaderButton.vue";
 import { ref } from "vue";
-
+import PlusIcon from "@/components/icons/PlusIcon.vue";
+import "./faq.scss";
 const faqs = [
   {
-    question: "Qanday ro‘yxatdan o‘tiladi?",
-    answer: "Ro‘yxatdan o‘tish uchun yuqoridagi tugmani bosing.",
+    question: "Как проходит обучение на онлайн-курсах?",
+    answer:
+      "Обучение проходит в формате видео-лекций на нашей интерактивной платформе. После приобретения курса, вы сразу же получаете письмо на почту с доступом в личный кабинет, в котором уже открыты все уроки приобретенного курса. Каждый урок состоит из видео-лекции по теме и нескольких десятков интерактивных заданий на отработку материала.",
   },
   {
-    question: "Telefon raqamni qanday kiritaman?",
-    answer: "Faqat +998 bilan boshlanuvchi raqamni kiriting.",
+    question: "Я покупаю пакет уроков или онлайн-курс, сколько он действует?",
+    answer:
+      "Обучение проходит в формате видео-лекций на нашей интерактивной платформе. После приобретения курса, вы сразу же получаете письмо на почту с доступом в личный кабинет, в котором уже открыты все уроки приобретенного курса. Каждый урок состоит из видео-лекции по теме и нескольких десятков интерактивных заданий на отработку материала.",
   },
   {
-    question: "Parolni unutdim. Nima qilay?",
-    answer: "Parolni tiklash uchun 'Parolni unutdingizmi?' tugmasini bosing.",
+    question: "Как быстро я достигну результатов?",
+    answer:
+      "Обучение проходит в формате видео-лекций на нашей интерактивной платформе. После приобретения курса, вы сразу же получаете письмо на почту с доступом в личный кабинет, в котором уже открыты все уроки приобретенного курса. Каждый урок состоит из видео-лекции по теме и нескольких десятков интерактивных заданий на отработку материала.",
   },
   {
-    question: "Kurslar qancha davom etadi?",
-    answer: "Kurslar o‘rtacha 3 oy davom etadi.",
+    question: "Когда я могу начать обучение?",
+    answer:
+      "Обучение проходит в формате видео-лекций на нашей интерактивной платформе. После приобретения курса, вы сразу же получаете письмо на почту с доступом в личный кабинет, в котором уже открыты все уроки приобретенного курса. Каждый урок состоит из видео-лекции по теме и нескольких десятков интерактивных заданий на отработку материала.",
   },
   {
-    question: "Sertifikat beriladimi?",
-    answer: "Ha, kurs tugagach sertifikat beriladi.",
+    question: "Как проходит обучение на индивидуальных занятиях?",
+    answer:
+      "Обучение проходит в формате видео-лекций на нашей интерактивной платформе. После приобретения курса, вы сразу же получаете письмо на почту с доступом в личный кабинет, в котором уже открыты все уроки приобретенного курса. Каждый урок состоит из видео-лекции по теме и нескольких десятков интерактивных заданий на отработку материала.",
   },
 ];
 
@@ -36,75 +42,43 @@ const toggle = (index) => {
   <section class="faq">
     <div class="container">
       <div class="faq-block">
-        <div class="faq-title">Отвечаем на частые вопросы</div>
-        <HeaderButton :text="'Задать вопрос'" />
+        <div>
+          <div class="faq-title">Отвечаем на частые вопросы</div>
+
+          <HeaderButton :text="'Задать вопрос'" />
+        </div>
         <img
           src="@/assets/images/main/faq-img.png"
           alt="Iamge"
           loading="lazy"
         />
       </div>
-      <div class="faq-item" v-for="(item, index) in faqs" :key="index">
-        <div class="faq-question" @click="toggle(index)">
-          {{ item.question }}
-          <span>+</span>
-        </div>
-
-        <transition name="faq">
-          <div class="faq-answer" v-if="activeIndex === index">
-            {{ item.answer }}
+      <div class="faq-items">
+        <div
+          class="faq-item"
+          v-for="(item, index) in faqs"
+          :key="index"
+          :class="{ active: activeIndex === index }"
+        >
+          <div class="faq-question">
+            {{ item.question }}
+            <PlusIcon
+              :size="30"
+              class="faq-btn"
+              @click="toggle(index)"
+              :class="{ active: activeIndex === index }"
+            />
           </div>
-        </transition>
+
+          <transition name="faq">
+            <div class="faq-answer" v-if="activeIndex === index">
+              {{ item.answer }}
+            </div>
+          </transition>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
-<style scoped lang="scss">
-.faq {
-  padding: 40px 0;
-}
-
-.faq-item {
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.faq-question {
-  font-weight: bold;
-  padding: 5px;
-  background: #f2f2f2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.faq-question span {
-    cursor: pointer;
-  font-size: 30px;
-}
-
-.faq-answer {
-  padding: 15px;
-  background: #fff;
-}
-
-/* Transition styles */
-.faq-enter-active,
-.faq-leave-active {
-  transition: all 0.3s ease;
-}
-.faq-enter-from,
-.faq-leave-to {
-  max-height: 0;
-  opacity: 0;
-  padding: 0 15px;
-}
-.faq-enter-to,
-.faq-leave-from {
-  max-height: 200px;
-  opacity: 1;
-  padding: 15px;
-}
-</style>
+<style scoped lang="scss"></style>
