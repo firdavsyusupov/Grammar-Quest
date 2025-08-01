@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, useRoute } from "vue-router";
-import { onMounted, onUnmounted, ref, computed } from "vue";
+import { onMounted, onUnmounted, ref, computed, watch } from "vue";
 import { useI18n } from "vue-i18n";
 import RightIcon from "@/components/icons/RightIcon.vue";
 import BottomIcon from "@/components/icons/BottomIcon.vue";
@@ -21,7 +21,23 @@ const isLessonsRoute = computed(() => route.path === "/lessons");
 const selectedLanguage = ref(localStorage.getItem("selectedLanguage") || "ru");
 const langDropdownOpen = ref(false);
 import en from "@/assets/images/en.png";
+onUnmounted(() => {
+  document.removeEventListener("click", closeMenu);
+  document.removeEventListener("scroll", closeMenuOnScroll);
+  document.body.style.overflow = "";
+});
 
+watch(openModal, (newVal) => {
+  document.body.style.overflow = newVal ? "hidden" : "";
+});
+
+watch(openModal, (newVal) => {
+  if (newVal) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+}); 
 const getFlag = (lang) => {
   switch (lang) {
     case "uz":
