@@ -5,6 +5,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "./fastLearn.scss";
 import HeaderButton from "@/UI/Buttons/HeaderButton/HeaderButton.vue";
+import { useI18n } from "vue-i18n";
 Swiper.use([Autoplay]);
 
 onMounted(() => {
@@ -27,22 +28,24 @@ onMounted(() => {
     },
   });
 });
+
+const { t } = useI18n();
 </script>
 
 <template>
   <section class="fastLearn">
     <div class="container">
-      <h2 class="fastLearn-title">Почему вы быстро освоите язык</h2>
+      <h2 class="fastLearn-title">{{ t("fastLearn.heading") }}</h2>
+
       <div class="fastLearn-blocks">
         <div class="fastLearn-block">
           <div>
             <p class="number">01</p>
-            <h3>Интересные уроки</h3>
+            <h3>{{ t("fastLearn.title") }}</h3>
             <p>
-              Короткие, но насыщенные уроки до 45 минут.
+              {{ t("fastLearn.description.line1") }}
               <br /><br />
-              Более глубокий объем знаний, чем в других школах и даже чем
-              предусмотрено международными стандартами.
+              {{ t("fastLearn.description.line2") }}
             </p>
           </div>
           <img
@@ -58,7 +61,7 @@ onMounted(() => {
               <div class="swiper-slide fastLearn-swiper-block">
                 <img src="@/assets/images/main/swiper/irina.svg" alt="Person" />
                 <div class="name">
-                  <h2>Ирина</h2>
+                  <h2>{{ t("profile.name1") }}</h2>
                   <div class="stars">
                     <svg
                       width="13"
@@ -123,17 +126,28 @@ onMounted(() => {
                   </div>
                 </div>
                 <div class="text-block">
-                  <p>Местонахождение: <span>Санкт-Петербург</span></p>
-                  <p>Возраст: <span>18 лет</span></p>
-                  <p>Языки, которые я изучаю: <span>Немецкий</span></p>
-                  <p>Хобби: <span>Рисование, музыка, искусство</span></p>
+                  <p>
+                    {{ t("profile.location") }}: <span>Санкт-Петербург</span>
+                  </p>
+                  <p>
+                    {{ t("profile.age") }}:
+                    <span>18 {{ t("profile.years") }}</span>
+                  </p>
+                  <p>
+                    {{ t("profile.languagesLearning") }}: <span>Немецкий</span>
+                  </p>
+                  <p>
+                    {{ t("profile.hobbies") }}:
+                    <span>Рисование, музыка, искусство</span>
+                  </p>
                 </div>
               </div>
 
               <div class="swiper-slide fastLearn-swiper-block">
                 <img src="@/assets/images/main/swiper/anna.svg" alt="Person" />
                 <div class="name">
-                  <h2>Анна</h2>
+                  <h2>{{ t("profile.name2") }}</h2>
+
                   <div class="stars">
                     <svg
                       width="13"
@@ -198,10 +212,20 @@ onMounted(() => {
                   </div>
                 </div>
                 <div class="text-block">
-                  <p>Местонахождение: <span>Санкт-Петербург</span></p>
-                  <p>Возраст: <span>18 лет</span></p>
-                  <p>Языки, которые я изучаю: <span>Немецкий</span></p>
-                  <p>Хобби: <span>Рисование, музыка, искусство</span></p>
+                  <p>
+                    {{ t("profile.location") }}: <span>Санкт-Петербург</span>
+                  </p>
+                  <p>
+                    {{ t("profile.age") }}:
+                    <span>18 {{ t("profile.years") }}</span>
+                  </p>
+                  <p>
+                    {{ t("profile.languagesLearning") }}: <span>Немецкий</span>
+                  </p>
+                  <p>
+                    {{ t("profile.hobbies") }}:
+                    <span>Рисование, музыка, искусство</span>
+                  </p>
                 </div>
               </div>
 
@@ -211,7 +235,8 @@ onMounted(() => {
                   alt="Person"
                 />
                 <div class="name">
-                  <h2>Сергей</h2>
+                  <h2>{{ t("profile.name3") }}</h2>
+
                   <div class="stars">
                     <svg
                       width="13"
@@ -282,10 +307,11 @@ onMounted(() => {
                   <p>Хобби: <span>Рисование, музыка, искусство</span></p>
                 </div>
               </div>
+
               <div class="swiper-slide fastLearn-swiper-block">
                 <img src="@/assets/images/main/swiper/irina.svg" alt="Person" />
                 <div class="name">
-                  <h2>Ирина</h2>
+                  <h2>{{ t("profile.name1") }}</h2>
                   <div class="stars">
                     <svg
                       width="13"
@@ -350,17 +376,28 @@ onMounted(() => {
                   </div>
                 </div>
                 <div class="text-block">
-                  <p>Местонахождение: <span>Санкт-Петербург</span></p>
-                  <p>Возраст: <span>18 лет</span></p>
-                  <p>Языки, которые я изучаю: <span>Немецкий</span></p>
-                  <p>Хобби: <span>Рисование, музыка, искусство</span></p>
+                  <p>
+                    {{ t("profile.location") }}: <span>Санкт-Петербург</span>
+                  </p>
+                  <p>
+                    {{ t("profile.age") }}:
+                    <span>18 {{ t("profile.years") }}</span>
+                  </p>
+                  <p>
+                    {{ t("profile.languagesLearning") }}: <span>Немецкий</span>
+                  </p>
+                  <p>
+                    {{ t("profile.hobbies") }}:
+                    <span>Рисование, музыка, искусство</span>
+                  </p>
                 </div>
               </div>
 
               <div class="swiper-slide fastLearn-swiper-block">
                 <img src="@/assets/images/main/swiper/anna.svg" alt="Person" />
                 <div class="name">
-                  <h2>Анна</h2>
+                  <h2>{{ t("profile.name2") }}</h2>
+
                   <div class="stars">
                     <svg
                       width="13"
@@ -425,10 +462,20 @@ onMounted(() => {
                   </div>
                 </div>
                 <div class="text-block">
-                  <p>Местонахождение: <span>Санкт-Петербург</span></p>
-                  <p>Возраст: <span>18 лет</span></p>
-                  <p>Языки, которые я изучаю: <span>Немецкий</span></p>
-                  <p>Хобби: <span>Рисование, музыка, искусство</span></p>
+                  <p>
+                    {{ t("profile.location") }}: <span>Санкт-Петербург</span>
+                  </p>
+                  <p>
+                    {{ t("profile.age") }}:
+                    <span>18 {{ t("profile.years") }}</span>
+                  </p>
+                  <p>
+                    {{ t("profile.languagesLearning") }}: <span>Немецкий</span>
+                  </p>
+                  <p>
+                    {{ t("profile.hobbies") }}:
+                    <span>Рисование, музыка, искусство</span>
+                  </p>
                 </div>
               </div>
 
@@ -438,7 +485,8 @@ onMounted(() => {
                   alt="Person"
                 />
                 <div class="name">
-                  <h2>Сергей</h2>
+                  <h2>{{ t("profile.name3") }}</h2>
+
                   <div class="stars">
                     <svg
                       width="13"
@@ -513,26 +561,28 @@ onMounted(() => {
           </div>
           <div class="swiper-text">
             <p class="swiper-num">02</p>
-            <h3 class="swiper-title">Общение с другими учащимися</h3>
+            <h3 class="swiper-title">{{ t("swiper.communication.title") }}</h3>
             <p class="swiper-text">
-              Внутренний видеочат для общения с единомышленниками и отработки
-              материала. Завести новых друзей по интересам просто.
+              {{ t("swiper.communication.description") }}
             </p>
           </div>
         </div>
         <div class="format">
           <div class="format-block">
             <p class="swiper-num format-num">03</p>
-            <h2 class="swiper-title">Удобный формат обучения</h2>
+            <h2 class="swiper-title">{{ t("format.title") }}</h2>
             <p class="swiper-text format-text">
-              Полностью автоматический процесс обучения на одной платформе с
-              доступом на любом устройстве.
+              {{ t("format.description") }}
             </p>
             <RouterLink to="/">
-              <HeaderButton :text="'Начать обучение'" />
+              <HeaderButton :text="t('format.button')" />
             </RouterLink>
           </div>
-          <img src="@/assets/images/main/swiper/format-img.png" alt="Image" loading="lazy">
+          <img
+            src="@/assets/images/main/swiper/format-img.png"
+            alt="Image"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
@@ -540,29 +590,31 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.format{
-    display: flex;
-    align-items: center;
-    margin-top: 60px;
-    justify-content: space-between;
+.format {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  justify-content: space-between;
 }
-.format-text{
-    margin-bottom: 20px;
+.format-text {
+  margin-bottom: 20px;
 }
 .text-block {
   display: flex;
   flex-direction: column;
-  gap: 3px;text-align: start;
+  gap: 3px;
+  text-align: start;
 }
-.text-block p, .text-block p span {
+.text-block p,
+.text-block p span {
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.01em;
   color: #232323;
 }
 
-.text-block p span{
-    font-weight: 400;
+.text-block p span {
+  font-weight: 400;
 }
 .name {
   display: flex;

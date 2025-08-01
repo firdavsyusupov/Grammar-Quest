@@ -1,4 +1,6 @@
 <script setup>
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 import "./effect.scss";
 </script>
 <template>
@@ -11,40 +13,33 @@ import "./effect.scss";
         class="effect-img"
       />
       <div class="effect-block">
-        <h2>Эффективная методика изучения языка <span>E-Course</span></h2>
+        <h2>
+          {{ t('effect.title') }} <span>E-Course</span>
+        </h2>
         <div class="effect-card">
           <div></div>
-          <p>
-            Самостоятельно выбираете удобный режим и время прохождения заданий
-          </p>
+          <p>{{ t('effect.point1') }}</p>
         </div>
         <div class="effect-card">
           <div></div>
-          <p>
-            Cовременная эффективная методика обучения гарантирует освоение языка
-            на максимально высоком уровне за короткий срок
-          </p>
+          <p>{{ t('effect.point2') }}</p>
         </div>
         <div class="effect-card">
           <div></div>
-          <p>
-            Полная автоматизация позволяет нам предоставлять самую низку цену -
-            в 2, 3, а то и в 5 раз дешевле других языковых школ.
-          </p>
+          <p>{{ t('effect.point3') }}</p>
         </div>
       </div>
     </div>
   </section>
+
   <section class="work">
     <div class="container">
-      <h2 class="work-title">Как это работает?</h2>
+      <h2 class="work-title">{{ t('work.title') }}</h2>
       <div class="work-cards">
         <div class="work-card">
           <p class="work-card-num">01</p>
-          <h3 class="work-card-title">Регистрация</h3>
-          <p class="work-card-text">
-            Выбирайте интересующий язык и регистрируйтесь.
-          </p>
+          <h3 class="work-card-title">{{ t('work.step1.title') }}</h3>
+          <p class="work-card-text">{{ t('work.step1.text') }}</p>
           <img
             src="@/assets/images/main/work-card-img.png"
             loading="lazy"
@@ -53,10 +48,8 @@ import "./effect.scss";
         </div>
         <div class="work-card">
           <p class="work-card-num">02</p>
-          <h3 class="work-card-title">Регистрация</h3>
-          <p class="work-card-text">
-            Выбирайте интересующий язык и регистрируйтесь.
-          </p>
+          <h3 class="work-card-title">{{ t('work.step2.title') }}</h3>
+          <p class="work-card-text">{{ t('work.step2.text') }}</p>
           <img
             src="@/assets/images/main/work-card-img.png"
             loading="lazy"
@@ -65,10 +58,8 @@ import "./effect.scss";
         </div>
         <div class="work-card">
           <p class="work-card-num work-card-num2">03</p>
-          <h3 class="work-card-title">Обучение</h3>
-          <p class="work-card-text">
-            Всё! Приступайте к первому бесплатному уроку.
-          </p>
+          <h3 class="work-card-title">{{ t('work.step3.title') }}</h3>
+          <p class="work-card-text">{{ t('work.step3.text') }}</p>
           <img
             src="@/assets/images/main/work-card-img.png"
             loading="lazy"
@@ -79,3 +70,4 @@ import "./effect.scss";
     </div>
   </section>
 </template>
+

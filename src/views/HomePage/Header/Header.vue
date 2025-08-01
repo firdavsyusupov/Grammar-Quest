@@ -1,24 +1,21 @@
 <script setup>
 import HeaderButton from "@/UI/Buttons/HeaderButton/HeaderButton.vue";
-import LIghtningIcon from "@/components/icons/LightningIcon.vue";
-import GameIcon from "@/components/icons/GameIcon.vue";
+import { useI18n } from "vue-i18n";
 import "./Header.scss";
+
+const { t } = useI18n();
 </script>
+
 <template>
   <header class="header">
     <div class="container">
       <div class="header__text-blog">
-        <div class="header__text-blog-text">E-COURSE PLATFORM</div>
-        <div class="header__text-blog-title">
-          Онлайн-школа иностранных языков
-        </div>
-        <div class="header__text-blog-text2">
-          Достигайте своих целей с помощью авторских игровых методик от
-          носителей языка
-        </div>
+        <div class="header__text-blog-text">{{ t("header.platform") }}</div>
+        <div class="header__text-blog-title">{{ t("header.title") }}</div>
+        <div class="header__text-blog-text2">{{ t("header.subtitle") }}</div>
         <div class="header-btns">
           <RouterLink class="header-btn" to="/platform">
-            <HeaderButton :text="'Попробовать бесплатно'" />
+            <HeaderButton :text="t('header.tryFree')" />
           </RouterLink>
           <RouterLink class="play-btn" to="/">
             <div class="icon">
@@ -35,7 +32,7 @@ import "./Header.scss";
                 />
               </svg>
             </div>
-            <p>Посмотреть промо-ролик</p>
+            <p>{{ t("header.watchPromo") }}</p>
           </RouterLink>
         </div>
       </div>

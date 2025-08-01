@@ -15,7 +15,9 @@ axios.defaults.baseURL = "http://127.0.0.1:8000";
 const messages = { uz, ru, en };
 
 const i18n = createI18n({
-  locale: "uz",
+  legacy: false,
+  locale: localStorage.getItem("selectedLanguage") || "ru",
+  fallbackLocale: "ru",
   messages,
 });
 

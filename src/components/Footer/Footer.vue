@@ -1,6 +1,9 @@
 <script setup>
 import "./footer.scss";
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 </script>
+
 <template>
   <footer class="footer">
     <div class="footer-top">
@@ -13,71 +16,39 @@ import "./footer.scss";
               alt="Logo"
               class="logo"
             />
-            <span class="bottom-logo"
-              >Language2Go — интерактивная платформа для легкого, удобного и
-              быстрого изучения иностранных языков.</span
-            >
+            <span class="bottom-logo">
+              {{ t("footer.description") }}
+            </span>
           </div>
           <div class="footer-block">
-            <p>Обучение</p>
+            <p>{{ t("footer.learning") }}</p>
             <ul>
-              <li>
-                <RouterLink class="footer-link" to="/">Все языки</RouterLink>
-              </li>
-              <li>
-                <RouterLink class="footer-link" to="/">Взрослым</RouterLink>
-              </li>
-              <li>
-                <RouterLink class="footer-link" to="/"
-                  >Детям и подросткам</RouterLink
-                >
-              </li>
-              <li>
-                <RouterLink class="footer-link" to="/">Мини-курсы</RouterLink>
-              </li>
-              <li>
-                <RouterLink class="footer-link" to="/">Тренажеры</RouterLink>
-              </li>
-              <li>
-                <RouterLink class="footer-link" to="/"
-                  >Индивидуальные занятия</RouterLink
-                >
-              </li>
+              <li><RouterLink class="footer-link" to="/">{{ t("footer.allLanguages") }}</RouterLink></li>
+              <li><RouterLink class="footer-link" to="/">{{ t("footer.forAdults") }}</RouterLink></li>
+              <li><RouterLink class="footer-link" to="/">{{ t("footer.forKids") }}</RouterLink></li>
+              <li><RouterLink class="footer-link" to="/">{{ t("footer.miniCourses") }}</RouterLink></li>
+              <li><RouterLink class="footer-link" to="/">{{ t("footer.trainers") }}</RouterLink></li>
+              <li><RouterLink class="footer-link" to="/">{{ t("footer.individual") }}</RouterLink></li>
             </ul>
           </div>
           <div class="footer-block">
-            <p>Информация</p>
+            <p>{{ t("footer.info") }}</p>
             <ul>
-              <li><RouterLink class="footer-link" to="/">О нас</RouterLink></li>
-              <li>
-                <RouterLink class="footer-link" to="/">Отзывы</RouterLink>
-              </li>
-              <li>
-                <RouterLink class="footer-link" to="/">Новости</RouterLink>
-              </li>
-              <li>
-                <RouterLink class="footer-link" to="/"
-                  >Частые вопросы</RouterLink
-                >
-              </li>
-              <li>
-                <RouterLink class="footer-link" to="/"
-                  >Условия оплаты</RouterLink
-                >
-              </li>
-              <li>
-                <RouterLink class="footer-link" to="/">Контакты</RouterLink>
-              </li>
+              <li><RouterLink class="footer-link" to="/">{{ t("footer.aboutUs") }}</RouterLink></li>
+              <li><RouterLink class="footer-link" to="/">{{ t("footer.reviews") }}</RouterLink></li>
+              <li><RouterLink class="footer-link" to="/">{{ t("footer.news") }}</RouterLink></li>
+              <li><RouterLink class="footer-link" to="/">{{ t("footer.faq") }}</RouterLink></li>
+              <li><RouterLink class="footer-link" to="/">{{ t("footer.paymentTerms") }}</RouterLink></li>
+              <li><RouterLink class="footer-link" to="/">{{ t("footer.contacts") }}</RouterLink></li>
             </ul>
           </div>
           <div class="footer-block">
-            <p>Контакты</p>
+            <p>{{ t("footer.contactsTitle") }}</p>
             <p>+7 (495) 156-35-50</p>
-            <span
-              >info@language2go.ru support@language2go.ru <br />
-              <br />
-              101000, Москва, Россия</span
-            >
+            <span>
+              info@language2go.ru support@language2go.ru <br /><br />
+              101000, {{ t("footer.city") }}
+            </span>
           </div>
         </div>
       </div>
@@ -86,11 +57,12 @@ import "./footer.scss";
       <div class="container">
         <span>© 2025 E-Course</span>
         <div>
-          <p>Правовая оговорка</p>
-          <p>Пользовательское соглашение</p>
-          <p>Политика конфиденциальности</p>
+          <p>{{ t("footer.legalDisclaimer") }}</p>
+          <p>{{ t("footer.userAgreement") }}</p>
+          <p>{{ t("footer.privacyPolicy") }}</p>
         </div>
       </div>
     </div>
   </footer>
 </template>
+

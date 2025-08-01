@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import Nav from "./components/Nav/Nav.vue";
-import Footer from "./components/Footer/Footer.vue";
+import Nav from "@/components/Nav/Nav.vue";
+import Footer from "@/components/Footer/Footer.vue";
 import { useRoute } from "vue-router";
 const route = useRoute();
 </script>

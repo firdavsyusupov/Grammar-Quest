@@ -1,26 +1,39 @@
 <script setup>
 import { RouterLink, useRoute } from "vue-router";
 import { onMounted, onUnmounted, ref, computed } from "vue";
+import { useI18n } from "vue-i18n";
 import RightIcon from "@/components/icons/RightIcon.vue";
 import BottomIcon from "@/components/icons/BottomIcon.vue";
+import SignoutIcon from "../icons/SignoutIcon.vue";
 import uz from "@/assets/images/uz.png";
 import ru from "@/assets/images/ru.png";
 import "./nav.scss";
 import { useLoginStore } from "@/stores/login";
-import SignoutIcon from "../icons/SignoutIcon.vue";
 
 const isOpen = ref(false);
 const dropdownOpen = ref(false);
-const openModal = ref(false)
+const openModal = ref(false);
 const store = useLoginStore();
 const route = useRoute();
+const { t, locale } = useI18n();
+
 const isLessonsRoute = computed(() => route.path === "/lessons");
 const selectedLanguage = ref(localStorage.getItem("selectedLanguage") || "ru");
-const texts = ref({
-  selectedLan:
-    selectedLanguage.value === "uz" ? "Tanlangan til:" : "Выбранный язык:",
-});
 const langDropdownOpen = ref(false);
+import en from "@/assets/images/en.png";
+
+const getFlag = (lang) => {
+  switch (lang) {
+    case "uz":
+      return uz;
+    case "ru":
+      return ru;
+    case "en":
+      return en;
+    default:
+      return ru;
+  }
+};
 
 const toggleMenu = () => (isOpen.value = !isOpen.value);
 const toggleDropdown = (e) => {
@@ -34,8 +47,7 @@ const toggleLangDropdown = (e) => {
 const selectLanguage = (lang) => {
   selectedLanguage.value = lang;
   localStorage.setItem("selectedLanguage", lang);
-  texts.value.selectedLan =
-    lang === "uz" ? "Tanlangan til:" : "Выбранный язык:";
+  locale.value = lang; // <<< MUHIM QATOR
   langDropdownOpen.value = false;
 };
 
@@ -65,7 +77,6 @@ const logout = () => {
   openModal.value = false;
   location.reload();
 };
-
 </script>
 
 <template>
@@ -90,32 +101,44 @@ const logout = () => {
             @click="toggleMenu"
           >
             <li class="nav__item">
-              <RouterLink to="/" class="nav__link">Home</RouterLink>
+              <RouterLink to="/" class="nav__link">{{
+                t("navbar.home")
+              }}</RouterLink>
             </li>
             <li class="nav__item">
-              <RouterLink to="/textbook" class="nav__link">Textbook</RouterLink>
+              <RouterLink to="/textbook" class="nav__link">{{
+                t("navbar.textbook")
+              }}</RouterLink>
             </li>
             <li class="nav__item">
-              <RouterLink to="/about" class="nav__link">Our Team</RouterLink>
+              <RouterLink to="/about" class="nav__link">{{
+                t("navbar.ourTeam")
+              }}</RouterLink>
             </li>
             <li class="nav__item">
-              <RouterLink to="/platform" class="nav__link"
-                >Platforms</RouterLink
-              >
+              <RouterLink to="/platform" class="nav__link">{{
+                t("navbar.platforms")
+              }}</RouterLink>
             </li>
             <li class="nav__item">
-              <RouterLink to="/chat" class="nav__link">Chat</RouterLink>
+              <RouterLink to="/chat" class="nav__link">{{
+                t("navbar.chat")
+              }}</RouterLink>
             </li>
             <li class="nav__item nav__item2" @click="toggleDropdown">
-              <a href="#" class="nav__link">Games</a>
+              <a href="#" class="nav__link">{{ t("navbar.games") }}</a>
               <BottomIcon :size="25" class="bottom-icon" />
               <div class="nav-dropdown" v-show="dropdownOpen">
                 <RouterLink to="/textbook" class="nav-dropdown-block">
-                  <h5 class="nav-dropdown-block-text">Sprint</h5>
+                  <h5 class="nav-dropdown-block-text">
+                    {{ t("navbar.sprint") }}
+                  </h5>
                   <RightIcon :size="20" class="nav-dropdown-block-icon" />
                 </RouterLink>
                 <RouterLink to="/lessons" class="nav-dropdown-block">
-                  <h5 class="nav-dropdown-block-text">Lessons</h5>
+                  <h5 class="nav-dropdown-block-text">
+                    {{ t("navbar.lessons") }}
+                  </h5>
                   <RightIcon :size="20" class="nav-dropdown-block-icon" />
                 </RouterLink>
               </div>
@@ -123,19 +146,50 @@ const logout = () => {
           </ul>
         </div>
         <RouterLink to="/auth" v-if="!store.logged">
-          <button class="sign">Войти</button>
+          <button class="sign">{{ t("navbar.login") }}</button>
         </RouterLink>
-        <button @click="openModal = true" v-if="store.logged" class="signout">
-          <span>Выйти</span>
-          <SignoutIcon class="signout-icon" :size="30" />
-        </button>
+        <div v-if="store.logged" class="logged-actions">
+          <div class="language-switch" @click="toggleLangDropdown">
+            <img class="flag" :src="getFlag(selectedLanguage)" alt="Lang" />
+            <transition name="fade">
+              <div class="language-dropdown" v-if="langDropdownOpen">
+                <div
+                  class="language-option"
+                  :class="{ selected: selectedLanguage === 'uz' }"
+                  @click.stop="selectLanguage('uz')"
+                >
+                  <img :src="uz" /> <span>O‘zbek</span>
+                </div>
+                <div
+                  class="language-option"
+                  :class="{ selected: selectedLanguage === 'ru' }"
+                  @click.stop="selectLanguage('ru')"
+                >
+                  <img :src="ru" /> <span>Русский</span>
+                </div>
+                <div
+                  class="language-option"
+                  :class="{ selected: selectedLanguage === 'en' }"
+                  @click.stop="selectLanguage('en')"
+                >
+                  <img :src="en" /> <span>English</span>
+                </div>
+              </div>
+            </transition>
+          </div>
+
+          <button @click="openModal = true" class="signout">
+            <span>{{ t("navbar.logout") }}</span>
+            <SignoutIcon class="signout-icon" :size="30" />
+          </button>
+        </div>
       </div>
       <div
         v-if="route.path === '/lessons'"
         class="lan"
         @click="toggleLangDropdown"
       >
-        <h3>{{ texts.selectedLan }}</h3>
+        <h3>{{ t("navbar.selectedLan") }}</h3>
         <div class="lan-img">
           <img :src="selectedLanguage === 'ru' ? ru : uz" alt="Language" />
         </div>
@@ -161,12 +215,91 @@ const logout = () => {
       </div>
     </div>
   </nav>
-    <div v-if="openModal" class="modal">
-      <span>Вы действительно хотите <br> выйти из аккаунта?</span>
-      <div class="btns">
-        <button @click="openModal = !openModal" class="cancel">Нет, отмена</button>
-        <button @click="logout" class="confirm">Да, выйти</button>
-      </div>
+
+  <div v-if="openModal" class="modal">
+    <span>{{ t("modal.confirmExit") }}</span>
+    <div class="btns">
+      <button @click="openModal = false" class="cancel">
+        {{ t("modal.noCancel") }}
+      </button>
+      <button @click="logout" class="confirm">
+        {{ t("modal.yesLogout") }}
+      </button>
     </div>
-    <div @click="openModal = !openModal" v-if="openModal" class="modal-overlay"></div>
+  </div>
+  <div @click="openModal = false" v-if="openModal" class="modal-overlay"></div>
 </template>
+
+<style lang="scss" scoped>
+.logged-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.language-switch {
+  position: relative;
+  cursor: pointer;
+  .flag {
+    width: 32px;
+    height: 22px;
+    border-radius: 4px;
+    transition: transform 0.3s;
+  }
+  &:hover .flag {
+    transform: scale(1.05);
+  }
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 120px;
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  cursor: pointer;
+  img {
+    width: 22px;
+    height: 15px;
+    border-radius: 3px;
+  }
+  span {
+    font-size: 14px;
+    color: #333;
+  }
+  &:hover {
+    background-color: #f5f5f5;
+  }
+  &.selected {
+    background-color: #eee;
+    font-weight: bold;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

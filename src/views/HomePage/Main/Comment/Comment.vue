@@ -1,12 +1,14 @@
 <script setup>
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
 import "./comment.scss";
 </script>
 <template>
   <section class="comment">
     <div class="container">
       <div class="comment-top">
-        <h2 class="comment-top-title">Что говорят о нас ученики?</h2>
-        <button class="comment-top-button">Все отзывы</button>
+        <h2 class="comment-top-title">{{ t("comment.title") }}</h2>
+        <button class="comment-top-button">{{ t("comment.button") }}</button>
       </div>
       <div class="comment-blocks">
         <img
@@ -23,10 +25,10 @@ import "./comment.scss";
         />
         <div class="comment-block">
           <div class="comment-block-top">
-            <span class="comment-block-top-title"
-              >Артем М.
-              <p>Студент</p></span
-            >
+            <span class="comment-block-top-title">
+              {{ t("comment.name") }}
+              <p>{{ t("comment.role") }}</p>
+            </span>
             <div class="stars">
               <svg
                 width="30"
@@ -91,12 +93,7 @@ import "./comment.scss";
             </div>
           </div>
           <p class="comment-block-text">
-            Занятия курса очень понравились, в основном благодаря необычной
-            системе — я человек настроения и не могу подстраиваться под график
-            индивидуального репетитора или тем более целой группы. Иногда
-            занимался несколько часов подряд — настолько легко и интересно
-            организована подача материала, а один раз по болезни пропустил целую
-            неделю. Тестов: 5
+            {{ t("comment.text") }}
           </p>
         </div>
       </div>

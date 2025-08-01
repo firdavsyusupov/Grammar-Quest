@@ -1,8 +1,9 @@
 <script setup>
 import HeaderButton from "@/UI/Buttons/HeaderButton/HeaderButton.vue";
 import { ref, watch } from "vue";
+import { useI18n } from "vue-i18n";
 import "./register.scss";
-
+const {t} =useI18n()
 const phoneInput = ref(null);
 const isFocused = ref(false);
 
@@ -29,9 +30,8 @@ const handleKeyDown = (e) => {
   }
 };
 watch(isFocused, (newValue, oldValue) => {
-    isFocused.value = newValue
-    
-})
+  isFocused.value = newValue;
+});
 
 const handleBlur = (e) => {
   if (!e.target.value || e.target.value === "+998") {
@@ -39,8 +39,6 @@ const handleBlur = (e) => {
   }
   isFocused.value = false;
 };
-
-
 </script>
 
 <template>
@@ -52,14 +50,14 @@ const handleBlur = (e) => {
         alt="Person"
       />
       <h2 class="register-title">
-        Регистрируйтесь и приступайте к первому бесплатному уроку
+        {{ t("register.title") }}
       </h2>
       <form class="register-form">
         <div class="form-inputs">
           <div class="phone-input-container">
-            <label class="static-label" :class="{ active: isFocused }"
-              >Телефон</label
-            >
+            <label class="static-label" :class="{ active: isFocused }">
+              {{ t("register.phone") }}
+            </label>
             <div class="input-container" :class="{ focused: isFocused }">
               <input
                 ref="phoneInput"
@@ -77,15 +75,16 @@ const handleBlur = (e) => {
               />
             </div>
           </div>
-          <HeaderButton :text="'Начать обучение'" />
         </div>
       </form>
       <div class="accept">
         <input type="checkbox" />
+
         <p>
-          Отправляя заявку, я соглашаюсь с
-          <span>политикой конфиденциальности</span> и
-          <span>пользовательским соглашением</span>
+          {{ t("register.agree") }}
+          <span>{{ t("register.policy") }}</span>
+          {{ t("register.and") }}
+          <span>{{ t("register.terms") }}</span>
         </p>
       </div>
     </div>
@@ -103,7 +102,7 @@ const handleBlur = (e) => {
   padding: 2px 10px;
   transition: 0.3s;
   color: #828282;
-  &.active{
+  &.active {
     top: 0px;
     transform: scale(0.9);
     color: #000;
