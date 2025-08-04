@@ -24,6 +24,18 @@ const routes = [
     component: () => import("@/pages/LoginPage.vue"),
   },
   {
+    path: "/faq",
+    name: "faq",
+    component: () => import("@/pages/FAQPage.vue"),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: () => import("@/pages/ContactPage.vue"),
+    meta: { requiresAuth: true },
+  },
+  {
     path: "/about",
     name: "about",
     component: () => import("@/pages/AboutPage.vue"),

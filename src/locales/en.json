@@ -54,7 +54,10 @@
     "lessons": "Lessons",
     "login": "Login",
     "logout": "Logout",
-    "selectedLan": "Selected language:"
+    "selectedLan": "Selected language:",
+    "more": "More",
+    "faq": "FAQ"
+
   },
   "modal": {
     "confirmExit": "Are you sure you want to log out?",
@@ -177,7 +180,11 @@
     "q4": "How to contact support?",
     "a4": "You can send us a message via the contact form.",
     "q5": "Are my data safe?",
-    "a5": "Yes, we protect your data with modern encryption technologies."
+    "a5": "Yes, we protect your data with modern encryption technologies.",
+    "text": "Frequently asked questions",
+    "title": "We are always happy to help!",
+    "text2": "Contact our student support team for any questions.",
+    "btn": "Ask a question"
   },
   "footer": {
     "description": "Language2Go — an interactive platform for easy, convenient, and fast language learning.",

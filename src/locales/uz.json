@@ -53,7 +53,9 @@
     "lessons": "Darslar",
     "login": "Kirish",
     "logout": "Chiqish",
-    "selectedLan": "Tanlangan til:"
+    "selectedLan": "Tanlangan til:",
+    "more": "Ko'proq",
+    "faq": "FAQ"
   },
   "modal": {
     "confirmExit": "Haqiqatan ham hisobdan chiqmoqchimisiz?",
@@ -176,7 +178,11 @@
     "q4": "Qo‘llab-quvvatlash bilan qanday bog‘lanish mumkin?",
     "a4": "Biz bilan aloqa sahifasi orqali bog‘lanishingiz mumkin.",
     "q5": "Ma’lumotlarim xavfsizmi?",
-    "a5": "Ha, biz sizning ma’lumotlaringizni zamonaviy shifrlash texnologiyalari bilan himoya qilamiz."
+    "a5": "Ha, biz sizning ma’lumotlaringizni zamonaviy shifrlash texnologiyalari bilan himoya qilamiz.",
+    "text": "Tez-tez so'raladigan savollar",
+    "title": "Biz har doim yordam berishdan xursandmiz!",
+    "text2": "Har qanday savol bilan talabalar yordam guruhimizga murojaat qiling.",
+    "btn": "Savol bering"
   },
   "footer": {
     "description": "Language2Go — chet tillarini oson, qulay va tez o‘rganish uchun interaktiv platforma.",

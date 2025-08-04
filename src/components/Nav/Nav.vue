@@ -63,7 +63,7 @@ const toggleLangDropdown = (e) => {
 const selectLanguage = (lang) => {
   selectedLanguage.value = lang;
   localStorage.setItem("selectedLanguage", lang);
-  locale.value = lang; // <<< MUHIM QATOR
+  locale.value = lang
   langDropdownOpen.value = false;
 };
 
@@ -154,6 +154,24 @@ const logout = () => {
                 <RouterLink to="/lessons" class="nav-dropdown-block">
                   <h5 class="nav-dropdown-block-text">
                     {{ t("navbar.lessons") }}
+                  </h5>
+                  <RightIcon :size="20" class="nav-dropdown-block-icon" />
+                </RouterLink>
+              </div>
+            </li>
+            <li class="nav__item nav__item2" @click="toggleDropdown">
+              <a href="#" class="nav__link">{{ t("navbar.more") }}</a>
+              <BottomIcon :size="25" class="bottom-icon" />
+              <div class="nav-dropdown" v-show="dropdownOpen">
+                <RouterLink to="/faq" class="nav-dropdown-block">
+                  <h5 class="nav-dropdown-block-text">
+                    {{ t("navbar.faq") }}
+                  </h5>
+                  <RightIcon :size="20" class="nav-dropdown-block-icon" />
+                </RouterLink>
+                <RouterLink to="/contact" class="nav-dropdown-block">
+                  <h5 class="nav-dropdown-block-text">
+                    {{ t("footer.contactsTitle") }}
                   </h5>
                   <RightIcon :size="20" class="nav-dropdown-block-icon" />
                 </RouterLink>
