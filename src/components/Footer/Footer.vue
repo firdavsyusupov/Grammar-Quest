@@ -21,11 +21,11 @@ import "./footer.scss";
               >textbook</RouterLink
             >
           </li>
-          <li class="footer-top-block-blog-item">
+          <!-- <li class="footer-top-block-blog-item">
             <RouterLink to="/about" class="footer-top-block-blog-item-link"
               >our team</RouterLink
             >
-          </li>
+          </li> -->
           <li class="footer-top-block-blog-item">
             <RouterLink to="/platform" class="footer-top-block-blog-item-link"
               >platforms</RouterLink
