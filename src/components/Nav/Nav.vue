@@ -76,9 +76,9 @@ onUnmounted(() => {
           <li class="nav__item">
             <RouterLink to="/textbook" class="nav__link">Textbook</RouterLink>
           </li>
-          <li class="nav__item">
+          <!-- <li class="nav__item">
             <RouterLink to="/about" class="nav__link">Our Team</RouterLink>
-          </li>
+          </li> -->
           <li class="nav__item">
             <RouterLink to="/platform" class="nav__link">Platforms</RouterLink>
           </li>
