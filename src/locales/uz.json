@@ -41,5 +41,180 @@
     "areYouSureExit": "Chiqmoqchimisiz?",
     "noQuestionsAvailable": "Bu karta uchun savollar mavjud emas.",
     "selectedLan": "Tanlangan til:"
+  },
+  "navbar": {
+    "home": "Bosh sahifa",
+    "textbook": "Darslik",
+    "ourTeam": "Bizning jamoa",
+    "platforms": "Platformalar",
+    "chat": "Chat",
+    "games": "O‘yinlar",
+    "sprint": "Sprint",
+    "lessons": "Darslar",
+    "login": "Kirish",
+    "logout": "Chiqish",
+    "selectedLan": "Tanlangan til:",
+    "more": "Ko'proq",
+    "faq": "FAQ"
+  },
+  "modal": {
+    "confirmExit": "Haqiqatan ham hisobdan chiqmoqchimisiz?",
+    "noCancel": "Yo‘q, bekor qilish",
+    "yesLogout": "Ha, chiqish"
+  },
+  "header": {
+    "platform": "E-COURSE PLATFORM",
+    "title": "Xorijiy tillar onlayn maktabi",
+    "subtitle": "Maʼnaviy sohiblardan oʻyin metodikalari yordamida maqsadlaringizga erishing",
+    "tryFree": "Bepul sinab ko‘rish",
+    "watchPromo": "Promo videoni ko‘rish"
+  },
+  "learnsection": {
+    "title1": "Kimlar uchun mos",
+    "description": "har qanday odamga mos, agar siz qisqa muddatda sifatli til o‘rganishni istasangiz.",
+    "tryFree": "Bepul sinab ko‘rish",
+    "cards": [
+      {
+        "title": "Maktab o‘quvchilari",
+        "text": "Bitiruv imtihonlarini topshirish yoki OTMga kirish."
+      },
+      {
+        "title": "Talabalar",
+        "text": "Boshqa davlatga o‘qishga ketish yoki yaxshi ish topish."
+      },
+      {
+        "title": "Emigrantlar",
+        "text": "Yangi mamlakatga moslashish, raqobat ustunligini yaratish va ish topish."
+      },
+      {
+        "title": "Muloqatchanlar",
+        "text": "Chet ellik bilan baxtli oila qurish va jamiyatga moslashish."
+      },
+      {
+        "title": "Biznesmenlar",
+        "text": "Foydali tanishlar orttirish va biznesni kengaytirish."
+      },
+      {
+        "title": "Sayohatchilar",
+        "text": "Yangi do‘stlar topish, kundalik muammolarni hal qilish."
+      }
+    ]
+  },
+  "fastLearn": {
+    "title": "Qiziqarli darslar",
+    "heading": "Nega siz tilni tez o‘zlashtirasiz",
+    "description": {
+      "line1": "Qisqa, ammo mazmunli darslar – 45 daqiqagacha.",
+      "line2": "Boshqa maktablar va hatto xalqaro standartlardan ham chuqurroq bilimlar."
+    }
+  },
+"profile": {
+  "name1": "Irina",
+  "name2": "Anna",
+  "name3": "Sergey",
+  "location": "Joylashuv",
+  "age": "Yosh",
+  "years": "yosh",
+  "languagesLearning": "Men o'rganayotgan tillar",
+  "hobbies": "Xobbi"
+},
+"format": {
+  "title": "Qulay o‘quv formati",
+  "description": "Barcha qurilmalarda mavjud bo‘lgan bitta platformada to‘liq avtomatlashtirilgan o‘quv jarayoni.",
+  "button": "O‘qishni boshlash"
+},
+"swiper": {
+  "communication": {
+    "title": "Boshqa o‘quvchilar bilan muloqot",
+    "description": "O‘xshash qiziqishdagi odamlar bilan muloqot qilish va materialni mashq qilish uchun ichki videochat. Qiziqishlaringiz bo‘yicha yangi do‘stlar orttirish oson."
   }
+},
+"effect": {
+  "title": "Til o‘rganishning samarali metodikasi",
+  "point1": "Vazifalarni bajarish uchun qulay vaqt va rejimni o‘zingiz tanlaysiz",
+  "point2": "Zamonaviy va samarali metodika qisqa vaqt ichida yuqori darajadagi natijani kafolatlaydi",
+  "point3": "To‘liq avtomatlashtirilgan tizim tufayli biz boshqa til maktablariga qaraganda 2–5 baravar arzon narxni taklif qilamiz"
+},
+"work": {
+  "title": "Bu qanday ishlaydi?",
+  "step1": {
+    "title": "Ro‘yxatdan o‘tish",
+    "text": "Qiziqqan tilni tanlang va ro‘yxatdan o‘ting."
+  },
+  "step2": {
+    "title": "Sozlash",
+    "text": "O‘quv jadvalingiz va maqsadlaringizni belgilang."
+  },
+  "step3": {
+    "title": "Talim",
+    "text": "Tayyor! Birinchi bepul darsni boshlang."
+  }
+},
+"comment": {
+  "title": "O'quvchilarimiz biz haqimizda nima deydi?",
+  "button": "Barcha fikrlar",
+  "name": "Artyom M.",
+  "role": "Talaba",
+  "text": "Kursdagi mashg'ulotlar juda yoqdi, ayniqsa noodatiy tizimi sababli — men kayfiyatga qarab yashaydigan odamman va repetitor yoki butun guruh jadvaliga moslasha olmayman. Ba'zida bir necha soat ketma-ket shug'ullanganman — materialni taqdim etish juda oson va qiziqarli. Bir safar hatto kasallik tufayli butun haftani o'tkazib yuborganman. Testlar: 5 ta"
+},
+"register": {
+  "title": "Ro‘yxatdan o‘ting va birinchi bepul darsni boshlang",
+  "button": "O‘qishni boshlash",
+  "phone": "Telefon raqam",
+  "agree": "Arizani yuborish orqali men quyidagiga roziman:",
+  "policy": "Maxfiylik siyosati",
+  "and": "va",
+  "terms": "foydalanuvchi shartnomasi"
+},
+
+
+  "faq": {
+    "q1": "Qanday qilib ro‘yxatdan o‘tiladi?",
+    "a1": "Ro‘yxatdan o‘tish tugmasini bosib, barcha maydonlarni to‘ldiring.",
+    "q2": "Parolni qanday tiklash mumkin?",
+    "a2": "Kirish sahifasida 'Parolni unutdingizmi?' havolasidan foydalaning.",
+    "q3": "Qanday tillar qo‘llab-quvvatlanadi?",
+    "a3": "Sayt o‘zbek, rus va ingliz tillarida mavjud.",
+    "q4": "Qo‘llab-quvvatlash bilan qanday bog‘lanish mumkin?",
+    "a4": "Biz bilan aloqa sahifasi orqali bog‘lanishingiz mumkin.",
+    "q5": "Ma’lumotlarim xavfsizmi?",
+    "a5": "Ha, biz sizning ma’lumotlaringizni zamonaviy shifrlash texnologiyalari bilan himoya qilamiz.",
+    "text": "Tez-tez so'raladigan savollar",
+    "title": "Biz har doim yordam berishdan xursandmiz!",
+    "text2": "Har qanday savol bilan talabalar yordam guruhimizga murojaat qiling.",
+    "btn": "Savol bering"
+  },
+  "footer": {
+    "description": "Language2Go — chet tillarini oson, qulay va tez o‘rganish uchun interaktiv platforma.",
+    "learning": "O‘qitish",
+    "allLanguages": "Barcha tillar",
+    "forAdults": "Kattalarga",
+    "forKids": "Bolalar va o‘smirlarga",
+    "miniCourses": "Mini-kurslar",
+    "trainers": "Mashqlar",
+    "individual": "Individual darslar",
+    "info": "Ma'lumot",
+    "aboutUs": "Biz haqimizda",
+    "reviews": "Sharhlar",
+    "news": "Yangiliklar",
+    "faq": "Ko‘p so‘raladigan savollar",
+    "paymentTerms": "To‘lov shartlari",
+    "contacts": "Aloqa",
+    "contactsTitle": "Kontaktlar",
+    "city": "Moskva, Rossiya",
+    "legalDisclaimer": "Huquqiy ogohlantirish",
+    "userAgreement": "Foydalanuvchi shartnomasi",
+    "privacyPolicy": "Maxfiylik siyosati"
+  }
+
+
+
+
+
+
+
+
+
+
+
 }

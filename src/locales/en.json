@@ -1,0 +1,215 @@
+{
+  "questions": [
+    "Choose the translation of the word 'milk'",
+    "Choose the translation of the word 'salt'",
+    "Choose the translation of the word 'hot'",
+    "Choose the translation of the word 'seven'",
+    "Choose the translation of the number 'two'",
+    "Choose the translation of the letter 'A'",
+    "Choose the translation of the word 'small'",
+    "Choose the translation of the word 'yellow'",
+    "Choose the translation of the word 'Washington'",
+    "Choose the translation of the number 'eight'",
+    "Choose the translation of the word 'Pacific'",
+    "Choose the translation of the word 'Mars'",
+    "Choose the translation of the word 'honey'",
+    "Choose the translation of the word 'continent'",
+    "Choose the translation of the word 'English'",
+    "Choose the translation of the word 'Paris'",
+    "Choose the translation of the word 'avocado'",
+    "Choose the translation of the word 'lion'",
+    "Choose the translation of the number 'twenty-five'",
+    "Choose the translation of the word 'winter'",
+    "Choose the translation of the word 'cheetah'",
+    "Choose the translation of the word 'Tokyo'",
+    "Choose the translation of the word 'dolphin'",
+    "Choose the translation of the number 'six'",
+    "Choose the translation of the word 'carrot'"
+  ],
+  "buttons": {
+    "skip": "Skip",
+    "check": "Check",
+    "nextQuestion": "Next Question",
+    "reviewIncorrectAnswers": "Review Incorrect Answers",
+    "exit": "Exit",
+    "yesExit": "Yes, exit",
+    "cancel": "Cancel"
+  },
+  "texts": {
+    "congratulations": "Congratulations!",
+    "completedAllQuestions": "You have answered all the questions.",
+    "areYouSureExit": "Are you sure you want to exit?",
+    "noQuestionsAvailable": "No questions available for this card.",
+    "selectedLan": "Selected language:"
+  },
+
+  "navbar": {
+    "home": "Home",
+    "textbook": "Textbook",
+    "ourTeam": "Our Team",
+    "platforms": "Platforms",
+    "chat": "Chat",
+    "games": "Games",
+    "sprint": "Sprint",
+    "lessons": "Lessons",
+    "login": "Login",
+    "logout": "Logout",
+    "selectedLan": "Selected language:",
+    "more": "More",
+    "faq": "FAQ"
+
+  },
+  "modal": {
+    "confirmExit": "Are you sure you want to log out?",
+    "noCancel": "No, cancel",
+    "yesLogout": "Yes, log out"
+  },
+  "header": {
+    "platform": "E-COURSE PLATFORM",
+    "title": "Online Foreign Language School",
+    "subtitle": "Achieve your goals using native speaker game techniques",
+    "tryFree": "Try for Free",
+    "watchPromo": "Watch Promo Video"
+  },
+  "learnsection": {
+    "title1": "Who is it for",
+    "description": "is suitable for everyone who wants to transform their life by learning a foreign language in a short time.",
+    "tryFree": "Try for free",
+    "cards": [
+      {
+        "title": "Schoolchildren",
+        "text": "Pass final exams or enter a university."
+      },
+      {
+        "title": "Students",
+        "text": "Study abroad or find a high-paying job."
+      },
+      {
+        "title": "Emigrants",
+        "text": "Adapt to a new country, gain a competitive advantage, and get employed."
+      },
+      {
+        "title": "Sociable people",
+        "text": "Create a happy family with a foreigner and integrate into society."
+      },
+      {
+        "title": "Business people",
+        "text": "Make useful connections and scale your business."
+      },
+      {
+        "title": "Travelers",
+        "text": "Communicate freely, make new friends, and resolve everyday issues."
+      }
+    ]
+  },
+  "fastLearn": {
+    "title": "Engaging lessons",
+    "heading": "Why you will quickly master the language",
+    "description": {
+      "line1": "Short but rich lessons up to 45 minutes.",
+      "line2": "Deeper knowledge than in other schools and even more than international standards require."
+    }
+  },
+  "profile": {
+    "name1": "Irina",
+    "name2": "Anna",
+    "name3": "Sergey",
+    "location": "Location",
+    "age": "Age",
+    "years": "years old",
+    "languagesLearning": "Languages I'm learning",
+    "hobbies": "Hobbies"
+  },
+  "format": {
+    "title": "Convenient learning format",
+    "description": "Fully automated learning process on a single platform accessible from any device.",
+    "button": "Start learning"
+  },
+  "swiper": {
+    "communication": {
+      "title": "Communication with other learners",
+      "description": "Internal video chat to communicate with like-minded people and practice the material. It's easy to make new friends with shared interests."
+    }
+  },
+  "effect": {
+    "title": "Effective language learning method",
+    "point1": "You choose a convenient schedule and time to complete tasks",
+    "point2": "A modern and efficient teaching method ensures high-level language mastery in a short period",
+    "point3": "Full automation allows us to offer the lowest price — 2, 3, or even 5 times cheaper than other language schools"
+  },
+  "work": {
+    "title": "How does it work?",
+    "step1": {
+      "title": "Registration",
+      "text": "Choose the language you're interested in and sign up."
+    },
+    "step2": {
+      "title": "Setup",
+      "text": "Set your schedule and learning goals."
+    },
+    "step3": {
+      "title": "Learning",
+      "text": "That's it! Start your first free lesson."
+    }
+  },
+  "comment": {
+    "title": "What do our students say?",
+    "button": "All reviews",
+    "name": "Artyom M.",
+    "role": "Student",
+    "text": "I really enjoyed the course, mainly because of the unique system — I’m a moody person and can’t stick to the schedule of a private tutor or, even worse, a whole group. Sometimes I studied for hours on end — the way the material is presented is so easy and interesting. Once I even missed a whole week due to illness. Tests taken: 5"
+  },
+  "register": {
+  "title": "Register and start your first free lesson",
+  "button": "Start learning",
+  "phone": "Phone",
+  "agree": "By submitting the application, I agree to the",
+  "policy": "privacy policy",
+  "and": "and",
+  "terms": "user agreement"
+},
+
+
+  "faq": {
+    "q1": "How to register on the site?",
+    "a1": "Click the 'Register' button and fill in all fields.",
+    "q2": "How to reset my password?",
+    "a2": "Use the 'Forgot password?' link on the login page.",
+    "q3": "What languages are supported?",
+    "a3": "The site is available in Uzbek, Russian, and English.",
+    "q4": "How to contact support?",
+    "a4": "You can send us a message via the contact form.",
+    "q5": "Are my data safe?",
+    "a5": "Yes, we protect your data with modern encryption technologies.",
+    "text": "Frequently asked questions",
+    "title": "We are always happy to help!",
+    "text2": "Contact our student support team for any questions.",
+    "btn": "Ask a question"
+  },
+  "footer": {
+    "description": "Language2Go — an interactive platform for easy, convenient, and fast language learning.",
+    "learning": "Learning",
+    "allLanguages": "All Languages",
+    "forAdults": "For Adults",
+    "forKids": "For Children and Teenagers",
+    "miniCourses": "Mini Courses",
+    "trainers": "Trainers",
+    "individual": "Individual Lessons",
+    "info": "Information",
+    "aboutUs": "About Us",
+    "reviews": "Reviews",
+    "news": "News",
+    "faq": "Frequently Asked Questions",
+    "paymentTerms": "Payment Terms",
+    "contacts": "Contacts",
+    "contactsTitle": "Contacts",
+    "city": "Moscow, Russia",
+    "legalDisclaimer": "Legal Disclaimer",
+    "userAgreement": "User Agreement",
+    "privacyPolicy": "Privacy Policy"
+  }
+
+
+
+
+}

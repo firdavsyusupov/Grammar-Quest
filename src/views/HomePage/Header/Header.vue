@@ -1,49 +1,44 @@
 <script setup>
 import HeaderButton from "@/UI/Buttons/HeaderButton/HeaderButton.vue";
-import LIghtningIcon from "@/components/icons/LightningIcon.vue";
-import GameIcon from "@/components/icons/GameIcon.vue";
+import { useI18n } from "vue-i18n";
 import "./Header.scss";
+
+const { t } = useI18n();
 </script>
+
 <template>
   <header class="header">
     <div class="container">
       <div class="header__text-blog">
-        <div class="header__text-blog-text">E-COURSE PLATFORM</div>
-        <div class="header__text-blog-title">
-          Learning and teaching online, made easy.
-        </div>
-        <div class="header__text-blog-text2">
-          Practice your English and learn new things with the platform.
-        </div>
-        <RouterLink to="/platform">
-          <HeaderButton :text="'About platform'" :icon='false' />
-        </RouterLink>
-        <div class="header__text-blog-info">
-          <div class="header__text-blog-info-card header__text-blog-info-card1">
-            <div class="header__text-blog-info-card-top">
-              <LIghtningIcon :size="30" />
-              <h4 class="header__text-blog-info-card-top-text">600</h4>
-              <div class="header__text-blog-info-card-top-plusicon">+</div>
+        <div class="header__text-blog-text">{{ t("header.platform") }}</div>
+        <div class="header__text-blog-title">{{ t("header.title") }}</div>
+        <div class="header__text-blog-text2">{{ t("header.subtitle") }}</div>
+        <div class="header-btns">
+          <RouterLink class="header-btn" to="/platform">
+            <HeaderButton :text="t('header.tryFree')" />
+          </RouterLink>
+          <RouterLink class="play-btn" to="/">
+            <div class="icon">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 12 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.2864 9.304C18.5397 10.0873 18.5397 11.9127 17.2864 12.696L3.06 21.5875C1.7279 22.4201 -1.00372e-06 21.4624 -9.35052e-07 19.8915L-1.57732e-07 2.10849C-8.90674e-08 0.537623 1.7279 -0.420062 3.06 0.412498L17.2864 9.304Z"
+                  fill="#F6B5B6"
+                />
+              </svg>
             </div>
-            <div class="header__text-blog-info-card-bot">
-              <p>Popular words</p>
-            </div>
-          </div>
-          <div class="header__text-blog-info-card header__text-blog-info-card2">
-            <div class="header__text-blog-info-card-top">
-              <GameIcon :size="30" />
-              <h4 class="header__text-blog-info-card-top-text">2</h4>
-              <div class="header__text-blog-info-card-top-plusicon">+</div>
-            </div>
-            <div class="header__text-blog-info-card-bot">
-              <p>Mini-games</p>
-            </div>
-          </div>
+            <p>{{ t("header.watchPromo") }}</p>
+          </RouterLink>
         </div>
       </div>
       <div class="header__img-blog">
         <img
-          src="@/assets/images/header-boy.png"
+          src="@/assets/images/header/header-bg.svg"
           alt=""
           class="header__img-blog-boy"
         />

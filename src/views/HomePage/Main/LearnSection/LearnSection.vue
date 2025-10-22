@@ -1,34 +1,44 @@
 <script setup>
-import RightIcon from "@/components/icons/RightIcon.vue"
-import "./learnsection.scss"
+import { useI18n } from 'vue-i18n'
+import HeaderButton from "@/UI/Buttons/HeaderButton/HeaderButton.vue";
+import "./learnsection.scss";
+
+const { t } = useI18n()
+
+const cards = [
+  { icon: 'IconSchool' },
+  { icon: 'IconStudent' },
+  { icon: 'IconEmigrant' },
+  { icon: 'IconSocial' },
+  { icon: 'IconBusiness' },
+  { icon: 'IconTraveler' }
+]
 </script>
+
 <template>
-    <section class="learn">
-        <div class="container">
-            <div class="learn-img-block">
-                <img src="@/assets/images/learn-section-img.svg" alt="">
-            </div>
-            <div class="learn-text-block">
-                <h3 class="learn-text-block-title">Learn a language in a playful way</h3>
-                <p class="learn-text-block-text">Make learning words more fun with mini-games</p>
-                <div class="learn-text-block-buttons">
-                    <RouterLink to="/textbook" class="learn-text-block-button">
-                        <img class="learn-text-block-button-img" src="@/assets/images/learn-section-shoe.svg" alt="">
-                        <div class="learn-text-block-button-text">
-                            <p>Sprint</p>
-                            
-                            <RightIcon :size="15"/>
-                        </div>
-                    </RouterLink>
-                    <!-- <RouterLink to="/audio" class="learn-text-block-button learn-text-block-button2">
-                        <img class="learn-text-block-button-img2" src="@/assets/images/learn-section-button-img.svg" alt="">
-                        <div class="learn-text-block-button-text learn-text-block-button-text2">
-                            <p>Audio-call</p>
-                            <RightIcon :size="15"/>
-                        </div>
-                    </RouterLink> -->
-                </div>
-            </div>
+  <section class="language">
+    <img class="background-image" src="@/assets/images/main/chat-bg.png" loading="lazy" alt="Image">
+    <div class="container">
+      <div class="language-blocks">
+        <div class="language-block language-block1">
+          <h2 class="language-block-title">{{ t('learnsection.title1') }}</h2>
+          <h3 class="language-block-title2">E-Course</h3>
+          <p class="lanugage-block-text">
+            <span>E-Course</span> {{ t('learnsection.description') }}
+          </p>
+          <HeaderButton :text="t('learnsection.tryFree')" />
         </div>
-    </section>
+        <div class="language-block language-block2">
+          <div class="language-card" v-for="(card, index) in cards" :key="index">
+            <div :class="'icon' + (index + 1)">
+              <component :is="card.icon" />
+            </div>
+            <h3>{{ t(`learnsection.cards.${index}.title`) }}</h3>
+            <p>{{ t(`learnsection.cards.${index}.text`) }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
+
